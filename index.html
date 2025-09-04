@@ -34,12 +34,19 @@
             box-sizing: border-box;
         }
         
+        html {
+            overflow-x: hidden;
+            max-width: 100%;
+        }
+        
         body {
             font-family: 'Inter', sans-serif;
             background: var(--dark-bg);
             color: #ffffff;
             overflow-x: hidden;
+            max-width: 100vw;
             line-height: 1.6;
+            position: relative;
         }
         
         /* Neon Background Effect */
@@ -62,6 +69,8 @@
             max-width: 1200px;
             margin: 0 auto;
             padding: 0 20px;
+            width: 100%;
+            overflow-x: hidden;
         }
         
         /* Header */
@@ -332,7 +341,7 @@
         /* Comedians Section */
         .comedians-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 40px;
         }
         
@@ -355,6 +364,7 @@
         .comedian-img {
             width: 150px;
             height: 150px;
+            max-width: 100%;
             border-radius: 50%;
             margin: 0 auto 20px;
             background: linear-gradient(135deg, var(--miami-pink), var(--neon-purple));
@@ -451,7 +461,7 @@
         /* Gallery Grid */
         .gallery-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 20px;
             margin-bottom: 60px;
         }
@@ -621,18 +631,36 @@
         }
         
         @media (max-width: 480px) {
+            html, body {
+                overflow-x: hidden !important;
+                max-width: 100% !important;
+            }
+            
             .hero h1 {
                 font-size: 32px;
+                padding: 0 10px;
             }
             
             .cta-buttons {
                 flex-direction: column;
                 width: 100%;
+                padding: 0 10px;
             }
             
             .btn {
                 width: 100%;
                 min-width: unset;
+                max-width: 100%;
+            }
+            
+            .comedians-grid {
+                grid-template-columns: 1fr !important;
+                padding: 0 10px;
+            }
+            
+            .gallery-grid {
+                grid-template-columns: 1fr !important;
+                padding: 0 10px;
             }
             
             .comedians-roster {
@@ -642,10 +670,19 @@
             .contact-info {
                 flex-direction: column;
                 gap: 20px;
+                padding: 0 10px;
             }
             
             .logo-text {
                 font-size: 18px;
+            }
+            
+            section {
+                overflow-x: hidden;
+            }
+            
+            .event-card, .comedian-card {
+                max-width: calc(100vw - 40px);
             }
         }
         
