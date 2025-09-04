@@ -1,0 +1,984 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>London Comedy Group - Premium Stand-Up Comedy Events | Book Comedians for Private Events</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="London Comedy Group presents the finest stand-up comedy across London. Weekly shows in Hackney Wick, Shoreditch, and Brixton. Book our comedians for private events and corporate functions.">
+    <meta name="keywords" content="London comedy, stand-up comedy London, comedy shows London, book comedians, private comedy events, Ridwan Hussain, Robert Enciu, Arie Dawitt, comedy club London">
+    <meta property="og:title" content="London Comedy Group - Premium Stand-Up Comedy Events">
+    <meta property="og:description" content="Experience the best of London's comedy scene with our weekly shows and talented comedians available for private bookings.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://londoncomedygroup.com">
+    <meta name="twitter:card" content="summary_large_image">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&family=Space+Grotesk:wght@700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --miami-pink: #FF006E;
+            --neon-pink: #FF10F0;
+            --hot-pink: #FF69B4;
+            --electric-blue: #00D9FF;
+            --neon-purple: #B026FF;
+            --dark-bg: #0A0A0A;
+            --card-bg: rgba(255, 255, 255, 0.02);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--dark-bg);
+            color: #ffffff;
+            overflow-x: hidden;
+            line-height: 1.6;
+        }
+        
+        /* Neon Background Effect */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: 
+                radial-gradient(circle at 20% 50%, rgba(255, 0, 110, 0.2) 0%, transparent 50%),
+                radial-gradient(circle at 80% 50%, rgba(176, 38, 255, 0.2) 0%, transparent 50%),
+                radial-gradient(circle at 50% 100%, rgba(0, 217, 255, 0.1) 0%, transparent 50%);
+            pointer-events: none;
+            z-index: -1;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header */
+        header {
+            padding: 30px 0;
+            backdrop-filter: blur(20px);
+            background: rgba(10, 10, 10, 0.8);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid rgba(255, 0, 110, 0.3);
+        }
+        
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .logo img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            border: 2px solid var(--miami-pink);
+        }
+        
+        .logo-text {
+            font-size: 28px;
+            font-weight: 900;
+            background: linear-gradient(135deg, var(--miami-pink), var(--neon-purple));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-transform: uppercase;
+            letter-spacing: -1px;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 40px;
+            list-style: none;
+        }
+        
+        .nav-links a {
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s;
+            position: relative;
+        }
+        
+        .nav-links a:hover {
+            color: var(--miami-pink);
+        }
+        
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: linear-gradient(90deg, var(--miami-pink), var(--neon-purple));
+            transition: width 0.3s;
+        }
+        
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+        
+        /* Hero Section */
+        .hero {
+            margin-top: 120px;
+            padding: 100px 0;
+            text-align: center;
+            position: relative;
+            background: linear-gradient(135deg, rgba(255, 0, 110, 0.05), rgba(176, 38, 255, 0.05));
+        }
+        
+        .hero h1 {
+            font-size: clamp(48px, 8vw, 92px);
+            font-weight: 900;
+            margin-bottom: 20px;
+            background: linear-gradient(135deg, #ffffff, var(--hot-pink), var(--neon-purple));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: glow 3s ease-in-out infinite;
+            line-height: 1.1;
+        }
+        
+        @keyframes glow {
+            0%, 100% { filter: brightness(1); }
+            50% { filter: brightness(1.2); }
+        }
+        
+        .hero-subtitle {
+            font-size: 24px;
+            color: rgba(255, 255, 255, 0.8);
+            margin-bottom: 40px;
+        }
+        
+        .cta-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .btn {
+            padding: 16px 40px;
+            font-size: 18px;
+            font-weight: 600;
+            border-radius: 100px;
+            text-decoration: none;
+            transition: all 0.3s;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            border: 2px solid transparent;
+        }
+        
+        .btn-primary {
+            background: linear-gradient(135deg, var(--miami-pink), var(--neon-purple));
+            color: white;
+            box-shadow: 0 10px 40px rgba(255, 0, 110, 0.4);
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 50px rgba(255, 0, 110, 0.6);
+        }
+        
+        .btn-secondary {
+            background: transparent;
+            color: white;
+            border: 2px solid var(--miami-pink);
+        }
+        
+        .btn-secondary:hover {
+            background: var(--miami-pink);
+            box-shadow: 0 10px 40px rgba(255, 0, 110, 0.4);
+        }
+        
+        /* Section Styles */
+        section {
+            padding: 80px 0;
+        }
+        
+        .section-title {
+            font-size: 48px;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 60px;
+            background: linear-gradient(135deg, var(--miami-pink), var(--neon-purple));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        /* Events Section */
+        .events-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+        
+        .event-card {
+            background: linear-gradient(135deg, rgba(255, 0, 110, 0.1), rgba(176, 38, 255, 0.1));
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 0, 110, 0.3);
+            border-radius: 20px;
+            padding: 30px;
+            transition: all 0.3s;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            min-height: 400px;
+            isolation: isolate;
+        }
+        
+        .event-card > * {
+            position: relative;
+            z-index: 2;
+        }
+        
+        .event-card p:last-of-type {
+            flex-grow: 1;
+        }
+        
+        .event-card .btn {
+            align-self: flex-start;
+            margin-top: auto;
+            position: relative;
+            z-index: 20;
+            display: inline-block;
+            width: auto;
+            min-width: 150px;
+        }
+        
+        .event-card::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255, 16, 240, 0.1) 0%, transparent 70%);
+            animation: rotate 10s linear infinite;
+            pointer-events: none;
+            z-index: 1;
+        }
+        
+        @keyframes rotate {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+        .event-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 60px rgba(255, 0, 110, 0.3);
+            border-color: var(--miami-pink);
+        }
+        
+        .event-date {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--miami-pink), var(--neon-purple));
+            color: white;
+            padding: 6px 16px;
+            border-radius: 100px;
+            font-weight: 600;
+            font-size: 14px;
+            margin-bottom: 15px;
+        }
+        
+        .event-title {
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 10px;
+            color: white;
+        }
+        
+        .event-location {
+            color: var(--electric-blue);
+            margin-bottom: 10px;
+            font-weight: 500;
+        }
+        
+        .event-time {
+            color: rgba(255, 255, 255, 0.7);
+            margin-bottom: 15px;
+        }
+        
+        .event-price {
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--miami-pink);
+        }
+        
+        /* Comedians Section */
+        .comedians-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 40px;
+        }
+        
+        .comedian-card {
+            text-align: center;
+            padding: 40px 20px;
+            background: linear-gradient(135deg, rgba(255, 0, 110, 0.05), rgba(176, 38, 255, 0.05));
+            border-radius: 20px;
+            border: 1px solid rgba(255, 0, 110, 0.2);
+            transition: all 0.3s;
+            position: relative;
+        }
+        
+        .comedian-card:hover {
+            transform: translateY(-10px);
+            border-color: var(--miami-pink);
+            box-shadow: 0 20px 60px rgba(255, 0, 110, 0.2);
+        }
+        
+        .comedian-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin: 0 auto 20px;
+            background: linear-gradient(135deg, var(--miami-pink), var(--neon-purple));
+            padding: 3px;
+            position: relative;
+        }
+        
+        .comedian-img img {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+        
+        .comedian-name {
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 10px;
+            background: linear-gradient(135deg, white, var(--hot-pink));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .comedian-origin {
+            color: var(--electric-blue);
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+        
+        .comedian-bio {
+            color: rgba(255, 255, 255, 0.8);
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+        
+        .comedian-achievements {
+            list-style: none;
+            text-align: left;
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 14px;
+        }
+        
+        .comedian-achievements li {
+            padding: 8px 0;
+            padding-left: 25px;
+            position: relative;
+        }
+        
+        .comedian-achievements li::before {
+            content: '✨';
+            position: absolute;
+            left: 0;
+        }
+        
+        .social-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--miami-pink);
+            text-decoration: none;
+            font-weight: 600;
+            margin-top: 15px;
+            transition: all 0.3s;
+        }
+        
+        .social-link:hover {
+            color: var(--neon-purple);
+            transform: translateX(5px);
+        }
+        
+        /* All Comedians List */
+        .comedians-list {
+            margin-top: 60px;
+            padding: 40px;
+            background: linear-gradient(135deg, rgba(255, 0, 110, 0.05), rgba(176, 38, 255, 0.05));
+            border-radius: 20px;
+            border: 1px solid rgba(255, 0, 110, 0.2);
+        }
+        
+        .comedians-list h3 {
+            font-size: 32px;
+            margin-bottom: 30px;
+            text-align: center;
+            color: var(--miami-pink);
+        }
+        
+        .comedians-roster {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            gap: 20px;
+        }
+        
+        /* Gallery Grid */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            margin-bottom: 60px;
+        }
+        
+        .roster-comedian {
+            padding: 15px;
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 10px;
+            border: 1px solid rgba(255, 0, 110, 0.2);
+            text-align: center;
+            transition: all 0.3s;
+        }
+        
+        .roster-comedian:hover {
+            background: rgba(255, 0, 110, 0.1);
+            border-color: var(--miami-pink);
+            transform: translateY(-3px);
+        }
+        
+        /* Contact Section */
+        .contact {
+            background: linear-gradient(135deg, rgba(255, 0, 110, 0.1), rgba(176, 38, 255, 0.1));
+            border-radius: 30px;
+            padding: 60px;
+            text-align: center;
+        }
+        
+        .contact-content {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .contact h2 {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+        
+        .contact-subtitle {
+            font-size: 20px;
+            color: rgba(255, 255, 255, 0.8);
+            margin-bottom: 40px;
+        }
+        
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+            font-size: 18px;
+        }
+        
+        .contact-item a {
+            color: var(--electric-blue);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .contact-item a:hover {
+            color: var(--miami-pink);
+        }
+        
+        /* Footer */
+        footer {
+            padding: 40px 0;
+            text-align: center;
+            border-top: 1px solid rgba(255, 0, 110, 0.2);
+        }
+        
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 20px;
+        }
+        
+        .social-links a {
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(255, 0, 110, 0.1);
+            border: 1px solid rgba(255, 0, 110, 0.3);
+            border-radius: 50%;
+            color: var(--miami-pink);
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+        
+        .social-links a:hover {
+            background: var(--miami-pink);
+            color: white;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(255, 0, 110, 0.4);
+        }
+        
+        .copyright {
+            color: rgba(255, 255, 255, 0.5);
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            
+            .hero h1 {
+                font-size: 42px;
+                line-height: 1.2;
+            }
+            
+            .hero-subtitle {
+                font-size: 18px;
+                padding: 0 10px;
+            }
+            
+            .section-title {
+                font-size: 32px;
+            }
+            
+            .events-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .comedians-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+            
+            .gallery-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .comedians-roster {
+                grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+            }
+            
+            .contact {
+                padding: 40px 20px;
+            }
+            
+            .cta-buttons {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            
+            .btn {
+                min-width: 140px;
+            }
+            
+            .comedian-card {
+                padding: 30px 15px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .hero h1 {
+                font-size: 32px;
+            }
+            
+            .cta-buttons {
+                flex-direction: column;
+                width: 100%;
+            }
+            
+            .btn {
+                width: 100%;
+                min-width: unset;
+            }
+            
+            .comedians-roster {
+                grid-template-columns: 1fr;
+            }
+            
+            .contact-info {
+                flex-direction: column;
+                gap: 20px;
+            }
+            
+            .logo-text {
+                font-size: 18px;
+            }
+        }
+        
+        /* Scroll animations */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s;
+        }
+        
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav class="container">
+            <div class="logo">
+                <img src="london-comedy-group-logo.jpg" alt="London Comedy Group Logo" />
+                <span class="logo-text">London Comedy Group</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#shows">Shows</a></li>
+                <li><a href="#comedians">Comedians</a></li>
+                <li><a href="#contact">Book Us</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <h1>London's Finest Comedy Collective</h1>
+            <p class="hero-subtitle">The BEST Comedy Shows in LONDON • Free weekly shows in Hackney Wick, Shoreditch & Brixton • Available for private events</p>
+            <div class="cta-buttons">
+                <a href="#shows" class="btn btn-primary">
+                    <span>View Upcoming Shows</span>
+                    <span>→</span>
+                </a>
+                <a href="mailto:londoncomedygroup@gmail.com" class="btn btn-secondary">
+                    <span>Book for Private Event</span>
+                </a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Shows Section -->
+    <section id="shows" class="container">
+        <h2 class="section-title fade-in">Upcoming Shows</h2>
+        <div class="events-grid">
+            <div class="event-card fade-in">
+                <img src="wicked-funnies.jpg" alt="Wicked Funnies" style="width: 100%; height: 200px; object-fit: cover; border-radius: 10px; margin-bottom: 20px;">
+                <span class="event-date">Every Thursday</span>
+                <h3 class="event-title">Wicked Funnies - Hackney Wick</h3>
+                <p class="event-location">📍 HWK Coffee & Cocktail Bar, 29 White Post Lane, Hackney Wick</p>
+                <p class="event-time">🕐 7:30 PM</p>
+                <p class="event-price">FREE ENTRY</p>
+                <p style="color: rgba(255,255,255,0.7); margin-top: 15px;">London's best comedy show! Our flagship show bringing top comedians to Hackney Wick every Thursday night.</p>
+                <a href="https://www.eventbrite.co.uk/e/wicked-funnies-londons-best-comedy-show-hackney-wick-free-entry-tickets-1089967575359" target="_blank" class="btn btn-secondary" style="margin-top: 15px; padding: 10px 20px; font-size: 14px;">
+                    Get Free Tickets →
+                </a>
+            </div>
+            
+            <div class="event-card fade-in">
+                <img src="comedy-venue.jpg" alt="Comedy Club Shoreditch" style="width: 100%; height: 200px; object-fit: cover; border-radius: 10px; margin-bottom: 20px;">
+                <span class="event-date">Every Friday</span>
+                <h3 class="event-title">Comedy Club Shoreditch</h3>
+                <p class="event-location">📍 Bistrot Walluc, 40 Redchurch Street, Shoreditch</p>
+                <p class="event-time">🕐 8:00 PM (Early show at 6:00 PM select Fridays)</p>
+                <p class="event-price">FREE ENTRY</p>
+                <p style="color: rgba(255,255,255,0.7); margin-top: 15px;">Free comedy every Friday in East London! The best stand-up comedy with optional fondue dining. Laughter guaranteed!</p>
+                <a href="https://www.eventbrite.co.uk/e/comedy-club-shoreditch-free-comedy-every-friday-in-east-london-fondue-tickets-1139692814889" target="_blank" class="btn btn-secondary" style="margin-top: 15px; padding: 10px 20px; font-size: 14px;">
+                    Get Free Tickets →
+                </a>
+            </div>
+            
+            <div class="event-card fade-in">
+                <img src="craft-comedy-brixton.jpg" alt="Craft Comedy Brixton" style="width: 100%; height: 200px; object-fit: cover; border-radius: 10px; margin-bottom: 20px;">
+                <span class="event-date">Every Wednesday</span>
+                <h3 class="event-title">Craft Comedy - Brixton</h3>
+                <p class="event-location">📍 The Craft Beer Co. Brixton, 11-13 Brixton Station Road</p>
+                <p class="event-time">🕐 7:00 PM</p>
+                <p class="event-price">FREE ENTRY</p>
+                <p style="color: rgba(255,255,255,0.7); margin-top: 15px;">Free comedy every Wednesday in Brixton! London's best comedy finally lands in South London. Great craft beers, greater laughs!</p>
+                <a href="https://www.eventbrite.co.uk/e/craft-comedy-free-comedy-every-wednesday-in-brixton-tickets-1438683684629" target="_blank" class="btn btn-secondary" style="margin-top: 15px; padding: 10px 20px; font-size: 14px;">
+                    Get Free Tickets →
+                </a>
+            </div>
+        </div>
+        
+        <div style="text-align: center; margin-top: 40px;">
+            <a href="https://www.eventbrite.co.uk/o/london-comedy-group-55764637993" target="_blank" class="btn btn-primary">
+                View All Events on Eventbrite
+            </a>
+        </div>
+    </section>
+    
+    <!-- Comedians Section -->
+    <section id="comedians" class="container">
+        <h2 class="section-title fade-in">Featured Comedians</h2>
+        <div class="comedians-grid">
+            <div class="comedian-card fade-in">
+                <div class="comedian-img">
+                    <img src="ridwan-hussain.jpg" alt="Ridwan Hussain" style="width: 150px; height: 150px; object-fit: cover; border-radius: 50%;">
+                </div>
+                <h3 class="comedian-name">Ridwan Hussain</h3>
+                <p class="comedian-origin">🇮🇳 London • Indian Heritage</p>
+                <p class="comedian-bio">An exciting comedian with quick wit and relatable material. Known for his unique perspective on life's problems and explosive energy on stage.</p>
+                <ul class="comedian-achievements">
+                    <li>Semi-Finalist: "So You Think You're Funny" 2023</li>
+                    <li>Star of Bound & Gagged's AAA Stand-Up Show</li>
+                    <li>Winner: Beat The Blackout at Up The Creek</li>
+                    <li>Regular at Big Belly, The Stand Up Club, Angel Comedy</li>
+                </ul>
+                <a href="https://www.instagram.com/richardhudsoncomedy/" target="_blank" class="social-link">
+                    <span>Follow on Instagram</span>
+                    <span>→</span>
+                </a>
+            </div>
+            
+            <div class="comedian-card fade-in">
+                <div class="comedian-img">
+                    <img src="robert-enciu.jpg" alt="Robert Enciu" style="width: 150px; height: 150px; object-fit: cover; border-radius: 50%;">
+                </div>
+                <h3 class="comedian-name">Robert Enciu</h3>
+                <p class="comedian-origin">🇷🇴 London • Romanian Heritage</p>
+                <p class="comedian-bio">Rising star in London's comedy circuit. Bringing a fresh Eastern European perspective with clever observations and charming stage presence.</p>
+                <ul class="comedian-achievements">
+                    <li>Regular performer at London Comedy Group</li>
+                    <li>Master of Romanian-British cultural comedy fusion</li>
+                    <li>Known for hilarious takes on UK vs Eastern European life</li>
+                    <li>Brings authentic Romanian humor with British wit</li>
+                </ul>
+                <a href="https://www.instagram.com/robert_out_here_/" target="_blank" class="social-link">
+                    <span>Follow on Instagram</span>
+                    <span>→</span>
+                </a>
+            </div>
+            
+            <div class="comedian-card fade-in">
+                <div class="comedian-img">
+                    <img src="arie-david.jpg" alt="Arie David" style="width: 150px; height: 150px; object-fit: cover; border-radius: 50%;">
+                </div>
+                <h3 class="comedian-name">Arie David</h3>
+                <p class="comedian-origin">🎭 London • British</p>
+                <p class="comedian-bio">"When comedy isn't inclusive, it limits whose truths get the mic. The funniest people bring different perspectives that keep comedy surprising, sharp, and full of life."</p>
+                <ul class="comedian-achievements">
+                    <li>Part of @bitchesinstitchesldn all-femme comedy group</li>
+                    <li>Regular performer at London Comedy Group</li>
+                    <li>Advocate for inclusive comedy</li>
+                    <li>Fresh perspective on modern life</li>
+                </ul>
+                <a href="https://www.instagram.com/myarchives00/" target="_blank" class="social-link">
+                    <span>Follow on Instagram</span>
+                    <span>→</span>
+                </a>
+            </div>
+        </div>
+        
+        <!-- All Comedians List -->
+        <div class="comedians-list fade-in">
+            <h3>Our Full Roster</h3>
+            <div class="comedians-roster">
+                <div class="roster-comedian">
+                    <strong>Ridwan Hussain</strong>
+                    <p style="font-size: 14px; color: var(--electric-blue);">Featured Performer</p>
+                </div>
+                <div class="roster-comedian">
+                    <strong>Robert Enciu</strong>
+                    <p style="font-size: 14px; color: var(--electric-blue);">Featured Performer</p>
+                </div>
+                <div class="roster-comedian">
+                    <strong>Arie David</strong>
+                    <p style="font-size: 14px; color: var(--electric-blue);">Featured Performer</p>
+                </div>
+                <div class="roster-comedian">
+                    <strong>Peter Jones</strong>
+                    <p style="font-size: 14px; color: rgba(255,255,255,0.6);">Regular Performer</p>
+                </div>
+                <div class="roster-comedian">
+                    <strong>Mike Rice</strong>
+                    <p style="font-size: 14px; color: rgba(255,255,255,0.6);">Regular Performer</p>
+                </div>
+                <div class="roster-comedian">
+                    <strong>Evaldas Karosas</strong>
+                    <p style="font-size: 14px; color: rgba(255,255,255,0.6);">Regular Performer</p>
+                </div>
+                <div class="roster-comedian">
+                    <strong>Shalaka Kurup</strong>
+                    <p style="font-size: 14px; color: rgba(255,255,255,0.6);">Regular Performer</p>
+                </div>
+                <div class="roster-comedian">
+                    <strong>Dominic Fraser</strong>
+                    <p style="font-size: 14px; color: rgba(255,255,255,0.6);">Host - Craft Comedy</p>
+                </div>
+                <div class="roster-comedian">
+                    <strong>Edinburgh Fringe Acts</strong>
+                    <p style="font-size: 14px; color: rgba(255,255,255,0.6);">Special Guests</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Gallery Section -->
+    <section class="container">
+        <h2 class="section-title fade-in">Comedy Night Gallery</h2>
+        <div class="gallery-grid">
+            <div class="fade-in" style="border-radius: 15px; overflow: hidden; box-shadow: 0 10px 30px rgba(255, 0, 110, 0.3);">
+                <img src="comedy-poster.jpg" alt="Comedy Show Poster" style="width: 100%; height: 250px; object-fit: cover;">
+            </div>
+            <div class="fade-in" style="border-radius: 15px; overflow: hidden; box-shadow: 0 10px 30px rgba(255, 0, 110, 0.3);">
+                <img src="comedy-venue.jpg" alt="Bistrot Walluc Interior" style="width: 100%; height: 250px; object-fit: cover;">
+            </div>
+            <div class="fade-in" style="border-radius: 15px; overflow: hidden; box-shadow: 0 10px 30px rgba(255, 0, 110, 0.3);">
+                <img src="comedy-audience.jpg" alt="Comedy Night Audience" style="width: 100%; height: 250px; object-fit: cover;">
+            </div>
+        </div>
+        <div class="fade-in" style="border-radius: 15px; overflow: hidden; box-shadow: 0 10px 30px rgba(176, 38, 255, 0.3); margin-bottom: 60px;">
+            <img src="comedy-poster.jpg" alt="London Comedy Group Events" style="width: 100%; height: auto;">
+        </div>
+    </section>
+    
+    <!-- Contact Section -->
+    <section id="contact" class="container">
+        <div class="contact fade-in">
+            <div class="contact-content">
+                <h2 class="section-title" style="margin-bottom: 20px;">Book Us for Private Events</h2>
+                <p class="contact-subtitle">
+                    Looking for premium comedy entertainment for your corporate event, private party, or special occasion? 
+                    Our talented comedians are available for bookings across London and the UK.
+                </p>
+                
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <span>🎫</span>
+                        <a href="https://londoncomedygroup.eventbrite.com" target="_blank">londoncomedygroup.eventbrite.com</a>
+                    </div>
+                    <div class="contact-item">
+                        <span>📧</span>
+                        <a href="mailto:londoncomedygroup@gmail.com">londoncomedygroup@gmail.com</a>
+                    </div>
+                    <div class="contact-item">
+                        <span>📍</span>
+                        <span>Shows in Hackney Wick, Shoreditch & Brixton</span>
+                    </div>
+                </div>
+                
+                <div class="cta-buttons" style="justify-content: center;">
+                    <a href="mailto:londoncomedygroup@gmail.com" class="btn btn-primary">
+                        <span>Request Booking</span>
+                        <span>→</span>
+                    </a>
+                    <a href="https://londoncomedygroup.eventbrite.com" target="_blank" class="btn btn-secondary">
+                        <span>View All Shows</span>
+                        <span>→</span>
+                    </a>
+                </div>
+                
+                <div style="margin-top: 40px; padding: 30px; background: rgba(255, 255, 255, 0.03); border-radius: 15px;">
+                    <h4 style="color: var(--miami-pink); margin-bottom: 15px;">What We Offer:</h4>
+                    <ul style="list-style: none; text-align: left; color: rgba(255,255,255,0.8);">
+                        <li style="padding: 8px 0;">✓ Corporate Entertainment</li>
+                        <li style="padding: 8px 0;">✓ Private Parties & Celebrations</li>
+                        <li style="padding: 8px 0;">✓ Comedy Workshops</li>
+                        <li style="padding: 8px 0;">✓ Charity Events</li>
+                        <li style="padding: 8px 0;">✓ Festival Appearances</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="copyright">
+                    © 2025 London Comedy Group. All rights reserved.
+                </div>
+                <div class="social-links">
+                    <a href="https://www.instagram.com/londoncomedygroup/" target="_blank" title="Instagram">
+                        <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zM5.838 12a6.162 6.162 0 1112.324 0 6.162 6.162 0 01-12.324 0zM12 16a4 4 0 110-8 4 4 0 010 8zm4.965-10.405a1.44 1.44 0 112.881.001 1.44 1.44 0 01-2.881-.001z"/>
+                        </svg>
+                    </a>
+                    <a href="https://www.facebook.com/profile.php?id=100089919127479" target="_blank" title="Facebook">
+                        <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <script>
+        // Fade in animations on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+        
+        document.querySelectorAll('.fade-in').forEach(el => {
+            observer.observe(el);
+        });
+        
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+        
+        // Removed parallax effect for simpler scrolling behavior
+    </script>
+</body>
+</html>
