@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Let Us Talk to You for a Second</title>
+  <style>
+    /* Matching site colour scheme */
+    :root {
+      --miami-pink: #FF006E;
+      --neon-pink: #FF10F0;
+      --hot-pink: #FF69B4;
+      --electric-blue: #00D9FF;
+      --neon-purple: #B026FF;
+      --dark-bg: #0A0A0A;
+      --light-text: #FFFFFF;
+    }
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: var(--dark-bg);
+      color: var(--light-text);
+      font-family: Arial, sans-serif;
+    }
+    .container {
+      max-width: 800px;
+      margin: 60px auto;
+      padding: 20px;
+      text-align: center;
+    }
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+      color: var(--miami-pink);
+    }
+    p.intro {
+      font-size: 1.2rem;
+      margin-bottom: 40px;
+    }
+    .embed-frame {
+      width: 100%;
+      height: 600px;
+      border: none;
+      border-radius: 10px;
+      margin-bottom: 40px;
+    }
+    .links {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+      margin-bottom: 40px;
+    }
+    .links a {
+      flex: 1 1 200px;
+      max-width: 220px;
+      padding: 15px 30px;
+      font-size: 1rem;
+      text-decoration: none;
+      color: var(--light-text);
+      border-radius: 5px;
+      transition: background-color 0.2s;
+    }
+    .links a.social-instagram { background-color: #E1306C; }
+    .links a.social-tiktok    { background-color: #000000; }
+    .links a.review            { background-color: #4285F4; }
+    .links a.perform           { background-color: var(--hot-pink); } 
+    .links a:hover {
+      opacity: 0.9;
+    }
+    .footer-note {
+      font-size: 0.9rem;
+      color: #AAA;
+    }
+    @media (max-width: 480px) {
+      h1 { font-size: 2rem; }
+      .embed-frame { height: 500px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Let Us Talk to You for a Second</h1>
+    <p class="intro">
+      Join our fan broadcast, stay updated with the latest from London Comedy Group,
+      and get involved with our community.
+    </p>
+
+    <!-- Beehiiv Signup Embed -->
+    <iframe src="https://lcg-fans-broadcast.beehiiv.com/"
+            class="embed-frame"
+            title="Join our maiing list if you want to be the first to know about the big stuff">
+    </iframe>
+
+    <!-- Links Section -->
+    <div class="links">
+      <a href="https://www.instagram.com/londoncomedygroup/?hl=en" class="social-instagram" target="_blank" rel="noopener noreferrer">
+        Instagram
+      </a>
+      <a href="https://www.tiktok.com/@richardhudsoncomedy?_r=1&_t=zn-91gd4dpiitc" class="social-tiktok" target="_blank" rel="noopener noreferrer">
+        TikTok
+      </a>
+       <a href="https://www.facebook.com/profile.php?id=100089919127479" class="social-tiktok" target="_blank" rel="noopener noreferrer">
+        Facebook
+      </a>
+      <a href="https://g.page/r/YOURGOOGLEREVIEWLINK" class="review" target="_blank" rel="noopener noreferrer">
+        Leave a Review
+      </a>
+      <a href="/perform-with-us.html" class="perform">
+        Perform With Us
+      </a>
+    </div>
+
+    <p class="footer-note">
+      Thanks for being part this — we appreciate you!
+    </p>
+  </div>
+</body>
+</html>
