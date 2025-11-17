@@ -740,6 +740,42 @@
                 transform: none;
             }
         }
+
+/* Animation for entry effect */
+.animated-text {
+  opacity: 0;                   /* start invisible */
+  transform: translateY(20px);  /* start slightly below */
+  animation: fadeSlideIn 1s ease-out forwards;
+  font-size: 2.5rem;            /* default font size */
+  text-align: center;           /* center on page */
+  margin: 20px auto;            /* spacing */
+  line-height: 1.2;
+}
+
+/* Keyframes for fade + slide-up */
+@keyframes fadeSlideIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive adjustments for mobile */
+@media screen and (max-width: 768px) {
+  .animated-text {
+    font-size: 1.8rem;
+    margin: 15px auto;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .animated-text {
+    font-size: 1.4rem;
+    margin: 10px auto;
+  }
+}
+
+        
     </style>
 </head>
 <body>
@@ -764,7 +800,8 @@
     <!-- Hero Section -->
     <section class="hero" id="home">
         <div class="container">
-            <h1>"We bring comedy to you"</h1>
+            <h1 class="animated-text">We bring comedy to you</h1>
+
         
         </div>
     </section>
