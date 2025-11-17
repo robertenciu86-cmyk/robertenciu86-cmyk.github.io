@@ -775,6 +775,37 @@
   }
 }
 
+        /* Hero Text Entry Animation */
+.animated-text {
+    opacity: 0;
+    transform: translateY(20px); /* starts slightly below */
+    animation: fadeInUp 1s ease forwards; /* animate in */
+}
+
+/* Keyframes for fade-in and slide-up */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    60% {
+        opacity: 1;
+        transform: translateY(-5px); /* small bounce for natural feel */
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Optional: scale down slightly on very small screens */
+@media (max-width: 480px) {
+    .animated-text {
+        font-size: 1.8rem;
+        transform: translateY(15px); /* start a bit lower for smaller screens */
+    }
+}
+
         
     </style>
 </head>
