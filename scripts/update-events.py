@@ -388,6 +388,9 @@ def layout(
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="manifest" href="/site.webmanifest">
     <link rel="preconnect" href="https://img.evbuc.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&display=swap">
     <link rel="stylesheet" href="/assets/site.css">{structured}
 </head>
 <body>
@@ -590,7 +593,7 @@ def event_card(event: dict, slug: str, placement: str) -> str:
             <div class="card-body">
                 <div class="pill-row"><span class="pill">{esc(format_day(start))}</span>{status}</div>
                 <h3><a href="{esc(event_path(event, slug))}">{esc(public_title(event))}</a></h3>
-                <p class="card-meta"><strong>{esc(format_time(start))}</strong> · {esc(price)}</p>
+                <p class="card-meta"><strong>{esc(format_time(start))}</strong> · <span class="price{' price-free' if price == 'Free entry' else ''}">{esc(price)}</span></p>
                 <p class="card-meta">{esc(venue_name(event))}<br>{esc(address_display(event))}</p>
                 <div class="card-actions">
                     {ticket_button(event, slug, placement)}
@@ -693,6 +696,61 @@ def render_comedians() -> str:
     </section>"""
 
 
+HOME_FAQ = [
+    (
+        "Is the comedy really free?",
+        "Yes. Most London Comedy Group nights are free to attend — you just reserve a free ticket on Eventbrite so we can hold your seat. A few special shows, such as our Soho night, are a few pounds, and the price is always shown on the show page before you book.",
+    ),
+    (
+        "Do I need to book in advance?",
+        "Booking is free and takes under a minute. Our rooms regularly fill up, so reserving a ticket is the surest way to get in — walk-ups are welcome only if there is space left on the night.",
+    ),
+    (
+        "Where are the shows?",
+        "We run weekly stand-up nights across London, including Islington, Highbury, Battersea, Peckham, Shoreditch, and Soho. Every show page lists the exact venue address with a link to open it in Google Maps.",
+    ),
+    (
+        "What time do shows start and how long do they last?",
+        "Most shows start in the early evening and run for about two hours. Check the show page for the exact start time and arrive a little early to get a good seat.",
+    ),
+    (
+        "Can I come on my own, and is there food and drink?",
+        "Plenty of people come solo or bring a group — either is welcome. Most of our venues serve food and drinks, and a couple are bring-your-own, so it makes an easy night out.",
+    ),
+]
+
+
+def render_faq() -> str:
+    items = "".join(
+        f"""<details class="faq-item">
+            <summary><span>{esc(question)}</span></summary>
+            <p>{esc(answer)}</p>
+        </details>"""
+        for question, answer in HOME_FAQ
+    )
+    return f"""
+    <section id="faq" class="section wrap narrow">
+        <div class="section-heading"><p class="eyebrow">Good to know</p><h2>Coming to a comedy show</h2>
+            <p>Everything you need before your first London Comedy Group night.</p></div>
+        <div class="faq-list">{items}</div>
+    </section>"""
+
+
+def faq_schema() -> dict:
+    return {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": question,
+                "acceptedAnswer": {"@type": "Answer", "text": answer},
+            }
+            for question, answer in HOME_FAQ
+        ],
+    }
+
+
 def render_home(active: dict[str, list[dict]], slugs: dict[str, str], now: dt.datetime) -> str:
     next_events = [preferred_event(events) for events in active.values()]
     next_events.sort(key=event_start)
@@ -709,33 +767,39 @@ def render_home(active: dict[str, list[dict]], slugs: dict[str, str], now: dt.da
         for key, events in sorted(active.items(), key=lambda item: event_start(preferred_event(item[1])))
     )
     area_names = list_text([public_area(event) for event in next_events])
+    weekly_count = len(next_events)
+    area_count = len({public_area(event) for event in next_events})
     hero_copy = (
-        f"Free and low-cost stand-up in {area_names}. Pick a night and reserve your tickets on Eventbrite."
+        f"Most of our shows are free. Pick a night in {area_names}, reserve a seat in under a minute, and turn up ready to laugh."
         if next_events
-        else "Fresh London stand-up dates are added here automatically as soon as booking opens on Eventbrite."
+        else "Fresh London stand-up dates land here automatically the moment booking opens on Eventbrite. Join the mailing list so you hear first."
     )
     directory_copy = (
-        f"{len(next_events)} comedy nights currently booking across London. Choose a night and reserve your spot."
+        f"{weekly_count} stand-up nights on across London this week. Most are free — pick one and grab your seat."
         if next_events
         else "There are no live listings today. New Eventbrite dates will appear here automatically."
     )
+    trust_items = (
+        [f"{weekly_count} shows this week", "Free entry at most nights", f"Across {area_count} London areas"]
+        if next_events
+        else ["Weekly shows", "London venues", "Free and low-cost tickets"]
+    )
+    trust_row = "".join(f"<span>{esc(item)}</span>" for item in trust_items)
     body = f"""
     <section class="hero">
         <div class="wrap hero-grid">
             <div>
                 <p class="eyebrow">Live stand-up across London</p>
-                <h1>Find an upcoming comedy show in London</h1>
+                <h1>Free comedy in London, almost every night</h1>
                 <p class="hero-copy">{esc(hero_copy)}</p>
                 <div class="hero-actions">
-                    <a class="button button-primary" href="#shows">Find an upcoming show</a>
-                    <a class="button button-ghost" href="/shows/">See all comedy nights</a>
+                    <a class="button button-primary" href="#shows">See this week's shows</a>
+                    <a class="button button-ghost" href="/shows/">Browse all comedy nights</a>
                 </div>
-                <div class="trust-row">
-                    <span>Weekly shows</span><span>London venues</span><span>Free and low-cost tickets</span>
-                </div>
+                <div class="trust-row">{trust_row}</div>
             </div>
             <img class="hero-image" src="/comedy-audience.jpg" width="600" height="300" fetchpriority="high"
-                 alt="Audience enjoying a London Comedy Group stand-up show">
+                 alt="Audience laughing at a London Comedy Group stand-up show">
         </div>
     </section>
     <section id="shows" class="section wrap">
@@ -754,25 +818,26 @@ def render_home(active: dict[str, list[dict]], slugs: dict[str, str], now: dt.da
         </div>
     </section>
     <section class="section wrap split">
-        <div><p class="eyebrow">A simple night out</p><h2>A comedy night near you</h2>
-        <p>Choose from weekly shows across London. Check the venue, time, and ticket price, then reserve your spot on Eventbrite.</p></div>
-        <div class="feature-list"><div><strong>Choose a show</strong><span>Browse by date or venue.</span></div>
-        <div><strong>Reserve on Eventbrite</strong><span>Free and affordable options are clearly marked.</span></div>
-        <div><strong>Turn up and laugh</strong><span>All the practical details are on your event page.</span></div></div>
+        <div><p class="eyebrow">A simple night out</p><h2>Booked in three steps</h2>
+        <p>No membership, no faff. Find a night that suits you, reserve a free seat, and show up ready to laugh.</p></div>
+        <div class="feature-list"><div><strong>1 · Pick a show</strong><span>Browse this week's nights by date, area, or venue.</span></div>
+        <div><strong>2 · Reserve your seat</strong><span>Book on Eventbrite in under a minute. Free and £5 tickets are clearly marked.</span></div>
+        <div><strong>3 · Turn up and laugh</strong><span>Your show page has the address, start time, and a map.</span></div></div>
     </section>
     {render_comedians()}
+    {render_faq()}
     <section class="section newsletter"><div class="wrap narrow center">
-        <p class="eyebrow">Hear about new nights first</p><h2>Get comedy shows in your inbox</h2>
-        <p>Join the London Comedy Group mailing list for new venues, special shows, and ticket releases.</p>
+        <p class="eyebrow">Hear about new nights first</p><h2>Never miss a free comedy night</h2>
+        <p>Join the mailing list for new venues, one-off special shows, and ticket releases — straight to your inbox.</p>
         <a class="button button-primary" href="/stay-in-touch/">Join the mailing list</a>
     </div></section>"""
     return layout(
-        title="Upcoming Comedy Shows in London | Free & Low-Cost Tickets",
-        description=f"Find free and low-cost stand-up comedy in {area_names}. Check upcoming dates, venues, and book tickets on Eventbrite.",
+        title="Free Comedy Shows in London | Dates, Venues & Tickets",
+        description="Free and low-cost stand-up comedy across London. Browse this week's shows, venues and times, and book your free tickets on Eventbrite.",
         canonical="/",
         body=body,
         now=now,
-        json_ld=[organizer_schema()],
+        json_ld=[organizer_schema(), faq_schema()],
         image=f"{BASE_URL}/comedy-audience.jpg",
     )
 
@@ -785,7 +850,7 @@ def render_shows_index(active: dict[str, list[dict]], slugs: dict[str, str], now
     body = f"""
     <section class="page-hero"><div class="wrap narrow"><p class="eyebrow">Comedy nights across London</p>
         <h1>Find a London comedy show</h1>
-        <p>Browse upcoming London Comedy Group nights by day and area. Pick a show and reserve your tickets on Eventbrite.</p></div></section>
+        <p>Every London Comedy Group night currently booking, by day and area. Most shows are free — pick one and reserve your seat on Eventbrite.</p></div></section>
     <section class="section wrap"><h2 class="sr-only">Shows currently booking</h2><div class="event-grid">{cards}</div></section>"""
     return layout(
         title="Comedy Shows in London: Dates, Venues & Tickets | London Comedy Group",

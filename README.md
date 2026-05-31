@@ -1,81 +1,141 @@
-# London Comedy Group Website
+# 🎭 London Comedy Group Website — Friendly Guide ✨
 
-This is a static GitHub Pages website for `https://londoncomedygroup.com`.
+Hello! 👋 This is the guide to your comedy website: **https://londoncomedygroup.com**
 
-## How It Works
+The big news: **the website now updates itself.** 🪄 You don't edit the show listings by hand any more. You manage your shows in Eventbrite, and the website copies them over automatically — usually within a few hours. Most of the time you don't have to touch any code at all.
 
-Eventbrite is the source of truth for live show inventory. A scheduled GitHub Action runs every six hours and regenerates the public website automatically.
+This guide explains the easy everyday stuff first, then the technical bits for whoever looks after the code.
 
-When an Eventbrite event is created, updated, sold out, cancelled, or removed, the next workflow run updates the website without manual HTML editing.
+---
 
-The generator produces:
+## 🗝️ The important stuff to know
 
-- The homepage with the next available occurrence from each show series.
-- `/shows/` with every active show.
-- A stable `/shows/{show}/` landing page for each recurring show.
-- A dated `/events/{event}/` page for each Eventbrite occurrence.
-- Event structured data for Google event discovery.
+- **Your website:** 🌐 https://londoncomedygroup.com
+- **Where it lives:** ☁️ GitHub Pages — the code is at https://github.com/robertenciu86-cmyk/robertenciu86-cmyk.github.io
+- **Your email:** 📧 londoncomedygroup@gmail.com
+- **Your accounts that feed the website:**
+  - 🎟️ **Eventbrite** — this is the boss of your shows. Everything on the "shows" pages comes from here.
+  - 📨 **Mailing list (Beehiiv)** — https://lcg-fans-broadcast.beehiiv.com/
+  - 📝 **Google Forms** — one for "hire comedians", one for "perform with us"
+  - 📱 **Socials** — Instagram, TikTok, Facebook (links live in the footer)
+
+You'll need the **GitHub** login (and Eventbrite login) to change things. Keep those passwords somewhere safe. 🔐
+
+---
+
+## 🎟️ How to change a SHOW (the easy way — no code!)
+
+This covers almost everything: a new show, a new date, a different time, a venue change, a price change, a sold-out night, or a cancellation.
+
+👉 **Just do it in Eventbrite.** That's it.
+
+1. Log in to Eventbrite.
+2. Create, edit, or cancel the event like you normally would.
+3. Wait a few hours. ⏳
+
+The website checks Eventbrite **every 6 hours** and rebuilds itself to match:
+
+- ✨ New Eventbrite event → a new page appears on the website.
+- ✏️ Changed time, venue, or price → the website updates to match.
+- 🚫 Cancelled or removed → it stops showing as bookable (cancelled shows show a clear "cancelled" notice for a while, so nobody buys an old ticket).
+- 😴 No live shows at all → the site politely says "new dates coming soon" instead of showing dead links.
+
+> ⚠️ **Please don't hand-edit the show or event pages in GitHub.** The next automatic update will simply overwrite them. Change the show in Eventbrite instead and let the robot do the work. 🤖
+
+---
+
+## 🎤 How to change OTHER stuff (this part needs a small code change)
+
+Some things aren't in Eventbrite — so to change them, someone edits the website code. It's still not scary, and you can ask an AI to do the fiddly part for you (see below). Here's where each thing lives:
+
+| What you want to change | Where it lives |
+|---|---|
+| 🧑‍🎤 Comedian names, photos, bios | `scripts/update-events.py` (look for `render_comedians`) |
+| 💬 Homepage wording, the FAQ, headlines | `scripts/update-events.py` |
+| 🎨 Colours, fonts, the overall look | `assets/site.css` |
+| 🖼️ Photos used on the site | the image files in the main folder |
+| 🔗 Mailing list / hire / perform links | the links near the top of `scripts/update-events.py` |
+
+After someone changes one of these and saves it on GitHub, the website rebuilds and the change goes live. 🎉
+
+### 🤖 The even easier way — ask a robot to do it
+
+1. Go to **Claude** (https://claude.ai) or **ChatGPT** (https://chat.openai.com).
+2. Paste this message and fill in what you want:
+
+   ```
+   Hi! I help run the London Comedy Group website. It's a static site built by
+   a Python script. Here's the generator file:
+   https://github.com/robertenciu86-cmyk/robertenciu86-cmyk.github.io/raw/refs/heads/main/scripts/update-events.py
+   And the styles:
+   https://github.com/robertenciu86-cmyk/robertenciu86-cmyk.github.io/raw/refs/heads/main/assets/site.css
+
+   Please tell me exactly what to change, like I'm not technical:
+   - [for example] Update Robert Enciu's bio to say "British-Romanian"
+   - [for example] Add a new comedian called Sarah with this bio: ...
+   - [for example] Change the homepage headline to ...
+   ```
+
+3. Follow what it tells you to paste into GitHub, then save. The robot is patient and won't judge you. 😄
+
+> 💡 Remember: ask the robot to change the **`scripts/update-events.py`** generator or **`assets/site.css`**, *not* the finished `index.html` or `shows/` pages — those are rebuilt automatically.
+
+---
+
+## 🛠️ For the technical person (under the hood)
+
+This is a static GitHub Pages site generated by a small, dependency-free Python script. **Eventbrite is the editorial source of truth.**
+
+### How the automation works
+A scheduled GitHub Action runs every six hours, reads the Eventbrite organisation's events, regenerates the public site, validates it, and commits only the files that changed. The generator produces:
+
+- The homepage with the next occurrence of each show series, plus an FAQ (with `FAQPage` structured data).
+- `/shows/` listing every active show, and a durable `/shows/{show}/` landing page per recurring series.
+- A dated `/events/{event}/` page per Eventbrite occurrence, with Google-compatible `Event` structured data and UTM-tagged ticket links.
 - `robots.txt` and `sitemap.xml`.
-- Ticket URLs with UTM attribution.
 
-If there are no live listings, the public site automatically switches to an honest empty state instead of leaving expired tickets visible. If a recurring show pauses, its stable page remains available with `noindex,follow` and points visitors toward currently bookable shows.
+Lifecycle is handled honestly: if there are no live listings the homepage shows an empty state instead of stale tickets. A paused recurring show keeps its page with `noindex,follow` and points to bookable shows. Dated pages are retained for 90 days after the event, then removed; cancelled events stay indexable during that window and publish `EventCancelled` data, as Google recommends.
 
-Dated occurrence pages remain available for 90 days after the event ends. Pages that fall out of the Eventbrite inventory point visitors toward currently bookable shows and use `noindex,follow`. If Eventbrite reports a cancellation, the retained page stays indexable during that window and publishes `EventCancelled` structured data as recommended by Google.
-
-## Repository Layout
-
+### Repository layout
 ```text
-assets/site.css                   Shared public styles
-assets/site.js                    Mobile navigation and ticket-click dataLayer hook
-scripts/update-events.py          Eventbrite-driven static-site generator
-scripts/validate-site.py          Dependency-free generated-site validator
-scripts/event-overrides.json      Optional exceptional content overrides
-scripts/site-state.json           Generated stable show URL state
-scripts/generated-files.json      Generated file manifest used for stale-page cleanup
-scripts/refresh-heartbeat.txt      Quiet monthly repository-activity heartbeat
-scripts/test-fixtures/events.json Local deterministic test inventory
-scripts/test-fixtures/empty-events.json Local empty-inventory lifecycle fixture
-.github/workflows/update-events.yml
+assets/site.css                          Shared public styles
+assets/site.js                           Mobile nav + ticket-click dataLayer hook
+scripts/update-events.py                 Eventbrite-driven static-site generator
+scripts/validate-site.py                 Dependency-free generated-site validator
+scripts/event-overrides.json             Optional exceptional content overrides
+scripts/site-state.json                  Generated stable show-URL state
+scripts/generated-files.json             Generated file manifest (for stale-page cleanup)
+scripts/refresh-heartbeat.txt            Quiet monthly repo-activity heartbeat
+scripts/test-fixtures/events.json        Local deterministic test inventory
+scripts/test-fixtures/empty-events.json  Local empty-inventory lifecycle fixture
+.github/workflows/update-events.yml      The scheduled refresh workflow
 ```
+The generated public files (`index.html`, `shows/`, `events/`, `sitemap.xml`, `robots.txt`) are committed for GitHub Pages — but **don't hand-edit them**; the next refresh replaces them. To change generated content, edit the generator instead.
 
-The generated public files include `index.html`, `shows/`, `events/`, `sitemap.xml`, and `robots.txt`. Do not edit generated show or event HTML by hand: the next Eventbrite refresh will replace it.
-
-## Automatic Refresh
-
-GitHub Actions needs one repository secret:
-
+### Automatic refresh
+The workflow needs one repository secret:
 ```text
 EVENTBRITE_TOKEN
 ```
+It reads that secret, runs the generator, validates the output, and commits changed public files. It also touches `scripts/refresh-heartbeat.txt` about once a month so GitHub doesn't disable the schedule after a quiet period.
 
-The existing workflow reads that secret, runs the generator, validates the output, and commits changed public files. It also updates `scripts/refresh-heartbeat.txt` once every 30 days so GitHub does not disable the scheduled workflow after a long period without public-site changes.
-
-## Local Verification
-
-Run the complete local fixture refresh and validation:
-
+### Run it locally
+Deterministic fixture run + validation (no network, no token):
 ```sh
 python3 scripts/update-events.py \
   --fixture scripts/test-fixtures/events.json \
   --now 2026-05-31T13:00:00+01:00
 python3 scripts/validate-site.py
 ```
-
-Run against live Eventbrite:
-
+Against live Eventbrite:
 ```sh
 EVENTBRITE_TOKEN=xxxx python3 scripts/update-events.py
 python3 scripts/validate-site.py
 ```
+Never commit the Eventbrite token. 🙈
 
-Never commit the Eventbrite token.
-
-## Exceptional Overrides
-
-Routine updates belong in Eventbrite. `scripts/event-overrides.json` exists only for exceptional cases where the public website copy must differ from Eventbrite.
-
-Overrides are keyed by Eventbrite series ID or event ID:
-
+### Exceptional overrides
+Routine changes belong in Eventbrite. `scripts/event-overrides.json` exists only for rare cases where the public copy must differ from Eventbrite. Keys are the Eventbrite series ID or event ID:
 ```json
 {
   "123456789": {
@@ -86,13 +146,13 @@ Overrides are keyed by Eventbrite series ID or event ID:
 }
 ```
 
-## Static Conversion Pages
-
-These routes are generated by the site generator so shared navigation and metadata stay consistent:
+### Static conversion pages
+These routes are generated by the script so navigation and metadata stay consistent:
 
 - `/hire-comedians-london/`
 - `/perform-with-us/`
 - `/stay-in-touch/`
 - `/404.html`
 
-The previous `/let-us-talk-to-you.html` URL redirects to `/stay-in-touch/`.
+The old `/let-us-talk-to-you.html` URL redirects to `/stay-in-touch/`.
+</content>
