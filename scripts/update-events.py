@@ -103,6 +103,23 @@ def esc(value: object) -> str:
     return html.escape(str(value or ""), quote=True)
 
 
+_ASSET_VERSION: str | None = None
+
+
+def asset_version() -> str:
+    """Short content hash of the shared assets, appended to their URLs so a
+    CSS/JS change always busts the browser cache instead of serving a stale copy."""
+    global _ASSET_VERSION
+    if _ASSET_VERSION is None:
+        digest = hashlib.sha1()
+        for name in ("assets/site.css", "assets/site.js"):
+            path = ROOT / name
+            if path.exists():
+                digest.update(path.read_bytes())
+        _ASSET_VERSION = digest.hexdigest()[:8]
+    return _ASSET_VERSION
+
+
 def load_json(path: Path, default):
     if not path.exists():
         return default
@@ -391,7 +408,7 @@ def layout(
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&display=swap">
-    <link rel="stylesheet" href="/assets/site.css">{structured}
+    <link rel="stylesheet" href="/assets/site.css?v={asset_version()}">{structured}
 </head>
 <body>
     <a class="skip-link" href="#main">Skip to content</a>
@@ -426,7 +443,7 @@ def layout(
         </div>
         <div class="wrap footer-bottom">© {now.year} London Comedy Group</div>
     </footer>
-    <script src="/assets/site.js" defer></script>
+    <script src="/assets/site.js?v={asset_version()}" defer></script>
 </body>
 </html>
 """
