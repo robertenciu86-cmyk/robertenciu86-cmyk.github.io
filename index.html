@@ -1,1198 +1,329 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="en-GB">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>London Comedy Group - Stand-Up Comedy Events | Book Comedians for Events</title>
-
-    <!-- Favicon links go here -->
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="shortcut icon" href="/favicon.ico">
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="192x192" href="/android-chrome-192x192.png">
-    <link rel="icon" type="image/png" sizes="512x512" href="/android-chrome-512x512.png">
-    <link rel="manifest" href="/site.webmanifest">
-    
-    <!-- SEO Meta Tags -->
-    <meta name="description" content="London Comedy Group presents the finest stand-up comedy across London. Weekly shows in Hoxton, Shoreditch, and Brixton. Book our comedians for private events and corporate functions.">
-    <meta name="keywords" content="London comedy, stand-up comedy London, comedy shows London, book comedians, private comedy events, Ridwan Hussain, Robert Enciu, Arie David, comedy club London">
-    <meta property="og:title" content="London Comedy Group - Premium Stand-Up Comedy Events">
-    <meta property="og:description" content="Experience the best of London's comedy scene with our weekly shows and talented comedians available for private bookings.">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#090811">
+    <title>Upcoming Comedy Shows in London | Free &amp; Low-Cost Tickets</title>
+    <meta name="description" content="Find free and low-cost stand-up comedy in Islington, Battersea, Highbury &amp; Islington, Peckham, Shoreditch, and Soho. Check upcoming dates, venues, and book">
+    <link rel="canonical" href="https://londoncomedygroup.com/">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://londoncomedygroup.com">
+    <meta property="og:title" content="Upcoming Comedy Shows in London | Free &amp; Low-Cost Tickets">
+    <meta property="og:description" content="Find free and low-cost stand-up comedy in Islington, Battersea, Highbury &amp; Islington, Peckham, Shoreditch, and Soho. Check upcoming dates, venues, and book">
+    <meta property="og:url" content="https://londoncomedygroup.com/">
+    <meta property="og:image" content="https://londoncomedygroup.com/comedy-audience.jpg">
     <meta name="twitter:card" content="summary_large_image">
-    
-    <!-- Google Fonts -->
-<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
-
-    
-    <style>
-        :root {
-            --miami-pink: #FF006E;
-            --neon-pink: #FF10F0;
-            --hot-pink: #FF69B4;
-            --electric-blue: #00D9FF;
-            --neon-purple: #B026FF;
-            --dark-bg: #0A0A0A;
-            --card-bg: rgba(255, 255, 255, 0.02);
-        }
-        
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        html {
-            overflow-x: hidden;
-            max-width: 100%;
-            -webkit-overflow-scrolling: touch;
-            scroll-behavior: smooth;
-        }
-        
-        body {
-            font-family: 'Figtree', sans-serif;
-            background: var(--dark-bg);
-            color: #ffffff;
-            overflow-x: hidden;
-            max-width: 100vw;
-            line-height: 1.6;
-            position: relative;
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
-        }
-        
-        /* Neon Background Effect */
-        body::before {
-            content: '';
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: 
-                radial-gradient(circle at 20% 50%, rgba(255, 0, 110, 0.2) 0%, transparent 50%),
-                radial-gradient(circle at 80% 50%, rgba(176, 38, 255, 0.2) 0%, transparent 50%),
-                radial-gradient(circle at 50% 100%, rgba(0, 217, 255, 0.1) 0%, transparent 50%);
-            pointer-events: none;
-            z-index: -1;
-            will-change: transform;
-            transform: translateZ(0);
-            backface-visibility: hidden;
-        }
-        
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-            width: 100%;
-            overflow-x: hidden;
-        }
-        
-        /* Header */
-        header {
-            padding: 30px 0;
-            backdrop-filter: blur(20px);
-            background: rgba(10, 10, 10, 0.8);
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 1000;
-            border-bottom: 1px solid rgba(255, 0, 110, 0.3);
-        }
-        
-        nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        
-        .logo {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-        }
-        
-        .logo img {
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            border: 2px solid var(--miami-pink);
-        }
-        
-        .logo-text {
-            font-size: 28px;
-            font-weight: 900;
-            background: linear-gradient(135deg, var(--miami-pink), var(--neon-purple));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            text-transform: uppercase;
-            letter-spacing: -1px;
-        }
-        
-        .nav-links {
-            display: flex;
-            gap: 40px;
-            list-style: none;
-        }
-        
-        .nav-links a {
-            color: #ffffff;
-            text-decoration: none;
-            font-weight: 500;
-            transition: all 0.3s;
-            position: relative;
-        }
-        
-        .nav-links a:hover {
-            color: var(--miami-pink);
-        }
-        
-        .nav-links a::after {
-            content: '';
-            position: absolute;
-            bottom: -5px;
-            left: 0;
-            width: 0;
-            height: 2px;
-            background: linear-gradient(90deg, var(--miami-pink), var(--neon-purple));
-            transition: width 0.3s;
-        }
-        
-        .nav-links a:hover::after {
-            width: 100%;
-        }
-        
-        /* Hero Section */
-        .hero {
-            margin-top: 120px;
-            padding: 100px 0;
-            text-align: center;
-            position: relative;
-            background: linear-gradient(135deg, rgba(255, 0, 110, 0.05), rgba(176, 38, 255, 0.05));
-            overflow-x: hidden;
-        }
-        
-       .hero h1 {
-    font-size: clamp(48px, 8vw, 92px);
-    font-weight: 900;
-    margin-bottom: 20px;
-    background: linear-gradient(135deg, #ffffff, #ff0070, #b026ff);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    animation: glow 3s ease-in-out infinite;
-    line-height: 1.1;
-}
-
-        
-        @keyframes glow {
-            0%, 100% { filter: brightness(1); }
-            50% { filter: brightness(1.2); }
-        }
-        
-        .hero-subtitle {
-            font-size: 24px;
-            color: rgba(255, 255, 255, 0.8);
-            margin-bottom: 40px;
-        }
-        
-        .cta-buttons {
-            display: flex;
-            gap: 20px;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-        
-        .btn {
-            padding: 16px 40px;
-            font-size: 18px;
-            font-weight: 600;
-            border-radius: 100px;
-            text-decoration: none;
-            transition: all 0.3s;
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            border: 2px solid transparent;
-        }
-        
-        .btn-primary {
-            background: linear-gradient(135deg, var(--miami-pink), var(--neon-purple));
-            color: white;
-            box-shadow: 0 10px 40px rgba(255, 0, 110, 0.4);
-        }
-        
-        .btn-primary:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 15px 50px rgba(255, 0, 110, 0.6);
-        }
-        
-        .btn-secondary {
-            background: transparent;
-            color: white;
-            border: 2px solid var(--miami-pink);
-        }
-        
-        .btn-secondary:hover {
-            background: var(--miami-pink);
-            box-shadow: 0 10px 40px rgba(255, 0, 110, 0.4);
-        }
-        
-        /* Section Styles */
-        section {
-            padding: 80px 0;
-        }
-        
-        .section-title {
-            font-size: 48px;
-            font-weight: 700;
-            text-align: center;
-            margin-bottom: 60px;
-            background: linear-gradient(135deg, var(--miami-pink), var(--neon-purple));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-        
-        /* Events Section */
-        .events-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 30px;
-            margin-bottom: 40px;
-        }
-        
-        .event-card {
-            background: linear-gradient(135deg, rgba(255, 0, 110, 0.1), rgba(176, 38, 255, 0.1));
-            backdrop-filter: blur(10px);
-            -webkit-backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 0, 110, 0.3);
-            border-radius: 20px;
-            padding: 30px;
-            transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
-            position: relative;
-            display: flex;
-            flex-direction: column;
-            min-height: 400px;
-            isolation: isolate;
-            transform: translateZ(0);
-            backface-visibility: hidden;
-        }
-        
-        .event-card > * {
-            position: relative;
-            z-index: 2;
-        }
-        
-        .event-card p:last-of-type {
-            flex-grow: 1;
-        }
-        
-        .event-card .btn {
-            align-self: flex-start;
-            margin-top: auto;
-            position: relative;
-            z-index: 20;
-            display: inline-block;
-            width: auto;
-            min-width: 150px;
-        }
-        
-        @media (min-width: 769px) {
-            .event-card::before {
-                content: '';
-                position: absolute;
-                top: -50%;
-                left: -50%;
-                width: 200%;
-                height: 200%;
-                background: radial-gradient(circle, rgba(255, 16, 240, 0.1) 0%, transparent 70%);
-                animation: rotate 10s linear infinite;
-                pointer-events: none;
-                z-index: 1;
-            }
-        }
-        
-        @media (min-width: 769px) {
-            @keyframes rotate {
-                0% { transform: rotate(0deg); }
-                100% { transform: rotate(360deg); }
-            }
-        }
-        
-        .event-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 20px 60px rgba(255, 0, 110, 0.3);
-            border-color: var(--miami-pink);
-        }
-        
-        .event-date {
-            display: inline-block;
-            background: linear-gradient(135deg, var(--miami-pink), var(--neon-purple));
-            color: white;
-            padding: 6px 16px;
-            border-radius: 100px;
-            font-weight: 600;
-            font-size: 14px;
-            margin-bottom: 15px;
-        }
-        
-        .event-title {
-            font-size: 24px;
-            font-weight: 700;
-            margin-bottom: 10px;
-            color: white;
-        }
-        
-        .event-location {
-            color: var(--electric-blue);
-            margin-bottom: 10px;
-            font-weight: 500;
-        }
-        
-        .event-time {
-            color: rgba(255, 255, 255, 0.7);
-            margin-bottom: 15px;
-        }
-        
-        .event-price {
-            font-size: 20px;
-            font-weight: 700;
-            color: var(--miami-pink);
-        }
-        
-        /* Comedians Section */
-        .comedians-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 40px;
-        }
-        
-        .comedian-card {
-            text-align: center;
-            padding: 40px 20px;
-            background: linear-gradient(135deg, rgba(255, 0, 110, 0.05), rgba(176, 38, 255, 0.05));
-            border-radius: 20px;
-            border: 1px solid rgba(255, 0, 110, 0.2);
-            transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
-            position: relative;
-            transform: translateZ(0);
-            backface-visibility: hidden;
-        }
-        
-        .comedian-card:hover {
-            transform: translateY(-10px);
-            border-color: var(--miami-pink);
-            box-shadow: 0 20px 60px rgba(255, 0, 110, 0.2);
-        }
-        
-        .comedian-img {
-            width: 150px;
-            height: 150px;
-            max-width: 100%;
-            border-radius: 50%;
-            margin: 0 auto 20px;
-            background: linear-gradient(135deg, var(--miami-pink), var(--neon-purple));
-            padding: 3px;
-            position: relative;
-        }
-        
-        .comedian-img img {
-            width: 100%;
-            height: 100%;
-            border-radius: 50%;
-            object-fit: cover;
-        }
-        
-        .comedian-name {
-            font-size: 28px;
-            font-weight: 700;
-            margin-bottom: 10px;
-            background: linear-gradient(135deg, white, var(--hot-pink));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-        
-        .comedian-origin {
-            color: var(--electric-blue);
-            font-weight: 600;
-            margin-bottom: 20px;
-        }
-        
-        .comedian-bio {
-            color: rgba(255, 255, 255, 0.8);
-            line-height: 1.8;
-            margin-bottom: 20px;
-        }
-        
-        .comedian-achievements {
-            list-style: none;
-            text-align: left;
-            color: rgba(255, 255, 255, 0.7);
-            font-size: 14px;
-        }
-        
-        .comedian-achievements li {
-            padding: 8px 0;
-            padding-left: 25px;
-            position: relative;
-        }
-        
-        .comedian-achievements li::before {
-            content: '✨';
-            position: absolute;
-            left: 0;
-        }
-        
-        .social-link {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            color: var(--miami-pink);
-            text-decoration: none;
-            font-weight: 600;
-            margin-top: 15px;
-            transition: all 0.3s;
-        }
-        
-        .social-link:hover {
-            color: var(--neon-purple);
-            transform: translateX(5px);
-        }
-        
-        /* All Comedians List */
-        .comedians-list {
-            margin-top: 60px;
-            padding: 40px;
-            background: linear-gradient(135deg, rgba(255, 0, 110, 0.05), rgba(176, 38, 255, 0.05));
-            border-radius: 20px;
-            border: 1px solid rgba(255, 0, 110, 0.2);
-        }
-        
-        .comedians-list h3 {
-            font-size: 32px;
-            margin-bottom: 30px;
-            text-align: center;
-            color: var(--miami-pink);
-        }
-        
-        .comedians-roster {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-            gap: 20px;
-        }
-        
-        /* Gallery Grid */
-        .gallery-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-            margin-bottom: 60px;
-        }
-        
-        .roster-comedian {
-            padding: 15px;
-            background: rgba(255, 255, 255, 0.03);
-            border-radius: 10px;
-            border: 1px solid rgba(255, 0, 110, 0.2);
-            text-align: center;
-            transition: all 0.3s;
-        }
-        
-        .roster-comedian:hover {
-            background: rgba(255, 0, 110, 0.1);
-            border-color: var(--miami-pink);
-            transform: translateY(-3px);
-        }
-        
-        /* Contact Section */
-        .contact {
-            background: linear-gradient(135deg, rgba(255, 0, 110, 0.1), rgba(176, 38, 255, 0.1));
-            border-radius: 30px;
-            padding: 60px;
-            text-align: center;
-        }
-        
-        .contact-content {
-            max-width: 600px;
-            margin: 0 auto;
-        }
-        
-        .contact h2 {
-            font-size: 48px;
-            margin-bottom: 20px;
-        }
-        
-        .contact-subtitle {
-            font-size: 20px;
-            color: rgba(255, 255, 255, 0.8);
-            margin-bottom: 40px;
-        }
-        
-        .contact-info {
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-            margin-bottom: 40px;
-        }
-        
-        .contact-item {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 15px;
-            font-size: 18px;
-        }
-        
-        .contact-item a {
-            color: var(--electric-blue);
-            text-decoration: none;
-            transition: color 0.3s;
-        }
-        
-        .contact-item a:hover {
-            color: var(--miami-pink);
-        }
-        
-        /* Footer */
-        footer {
-            padding: 40px 0;
-            text-align: center;
-            border-top: 1px solid rgba(255, 0, 110, 0.2);
-        }
-        
-        .footer-content {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 30px;
-        }
-        
-        .social-links {
-            display: flex;
-            gap: 20px;
-        }
-        
-        .social-links a {
-            width: 40px;
-            height: 40px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background: rgba(255, 0, 110, 0.1);
-            border: 1px solid rgba(255, 0, 110, 0.3);
-            border-radius: 50%;
-            color: var(--miami-pink);
-            text-decoration: none;
-            transition: all 0.3s;
-        }
-        
-        .social-links a:hover {
-            background: var(--miami-pink);
-            color: white;
-            transform: translateY(-3px);
-            box-shadow: 0 10px 30px rgba(255, 0, 110, 0.4);
-        }
-        
-        .copyright {
-            color: rgba(255, 255, 255, 0.5);
-        }
-        
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            .nav-links {
-                display: none;
-            }
-            
-            .hero h1 {
-                font-size: 42px;
-                line-height: 1.2;
-            }
-            
-            .hero-subtitle {
-                font-size: 18px;
-                padding: 0 10px;
-            }
-            
-            .section-title {
-                font-size: 32px;
-            }
-            
-            .events-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .comedians-grid {
-                grid-template-columns: 1fr;
-                gap: 30px;
-            }
-            
-            .gallery-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .comedians-roster {
-                grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
-            }
-            
-            .contact {
-                padding: 40px 20px;
-            }
-            
-            .cta-buttons {
-                flex-wrap: wrap;
-                justify-content: center;
-            }
-            
-            .btn {
-                min-width: 140px;
-            }
-            
-            .comedian-card {
-                padding: 30px 15px;
-            }
-        }
-        
-        @media (max-width: 480px) {
-            html, body {
-                overflow-x: hidden !important;
-                max-width: 100% !important;
-                -webkit-overflow-scrolling: touch;
-            }
-            
-            .hero h1 {
-                font-size: 32px;
-                padding: 0 10px;
-            }
-            
-            .cta-buttons {
-                flex-direction: column;
-                width: 100%;
-                padding: 0 10px;
-            }
-            
-            .btn {
-                width: 100%;
-                min-width: unset;
-                max-width: 100%;
-            }
-            
-            .comedians-grid {
-                grid-template-columns: 1fr !important;
-                padding: 0 10px;
-            }
-            
-            .gallery-grid {
-                grid-template-columns: 1fr !important;
-                padding: 0 10px;
-            }
-            
-            .comedians-roster {
-                grid-template-columns: 1fr;
-            }
-            
-            .contact-info {
-                flex-direction: column;
-                gap: 20px;
-                padding: 0 10px;
-            }
-            
-            .logo-text {
-                font-size: 18px;
-            }
-            
-            section {
-                overflow-x: hidden;
-            }
-            
-            .event-card, .comedian-card {
-                max-width: calc(100vw - 40px);
-            }
-        }
-        
-        /* Scroll animations - optimized for mobile */
-        @media (min-width: 769px) {
-            .fade-in {
-                opacity: 0;
-                transform: translateY(30px);
-                transition: opacity 0.6s, transform 0.6s;
-                will-change: opacity, transform;
-            }
-            
-            .fade-in.visible {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-        
-        @media (max-width: 768px) {
-            .fade-in {
-                opacity: 1;
-                transform: none;
-                transition: none;
-            }
-            
-            .fade-in.visible {
-                opacity: 1;
-                transform: none;
-            }
-        }
-        
-    </style>
+    <meta name="twitter:title" content="Upcoming Comedy Shows in London | Free &amp; Low-Cost Tickets">
+    <meta name="twitter:description" content="Find free and low-cost stand-up comedy in Islington, Battersea, Highbury &amp; Islington, Peckham, Shoreditch, and Soho. Check upcoming dates, venues, and book">
+    <meta name="twitter:image" content="https://londoncomedygroup.com/comedy-audience.jpg">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="preconnect" href="https://img.evbuc.com">
+    <link rel="stylesheet" href="/assets/site.css">
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"London Comedy Group","url":"https://londoncomedygroup.com","logo":"https://londoncomedygroup.com/london-comedy-group-logo.jpg","sameAs":["https://www.eventbrite.co.uk/o/london-comedy-group-55764637993","https://www.instagram.com/londoncomedygroup/","https://www.tiktok.com/@londoncomedygroup1","https://www.facebook.com/profile.php?id=100089919127479"]}</script>
 </head>
 <body>
-    <!-- Header -->
-    <header>
-        <nav class="container">
-            <div class="logo">
-                <img src="london-comedy-group-logo.jpg" alt="London Comedy Group Logo" />
-                <span class="logo-text">London Comedy Group</span>
-            </div>
-            <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#shows">Shows</a></li>
-                <li><a href="#comedians">Comedians</a></li>
-                <li><a href="#mailinglist">Mailing List</a></li>
-                <li><a href="#contact">Work With Us</a></li>
-
-            </ul>
-        </nav>
-    </header>
-    
-    <!-- Hero Section -->
-    <section class="hero" id="home">
-        <div class="container">
-            <h1 class="animated-text">We bring comedy to you</h1>
-
-        
-        </div>
-    </section>
-    
-    <!-- Shows Section -->
-    <section id="shows" class="container">
-        <h2 class="section-title fade-in">Upcoming Shows</h2>
-        <div class="events-grid">
-            <!-- EVENTS:START (auto-generated from Eventbrite - do not edit by hand) -->
-            <div class="event-card fade-in">
-                <img src="https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1173215566%2F543747696447%2F1%2Foriginal.20251218-172640?auto=format%2Ccompress&amp;q=75&amp;sharp=10&amp;s=2e8147b3d66dbc25cd453a4108261126" alt="Free Comedy Every Sunday at 6pm in Islington" style="width: 100%; height: 200px; object-fit: cover; border-radius: 10px; margin-bottom: 20px;">
-                <span class="event-date">Next show: Sunday 31 May</span>
-                <h3 class="event-title">Free Comedy Every Sunday at 6pm in Islington</h3>
-                <p class="event-location">📍 Brewhouse &amp; Kitchen - Highbury, 2A Corsica Street, London, N5 1JJ</p>
-                <p class="event-time">🕐 6:00 PM</p>
-                <p class="event-price">FREE ENTRY</p>
-                <p style="color: rgba(255,255,255,0.7); margin-top: 15px;">The best free Stand Up Comedy in London, every Sunday at 6pm at Brewhouse &amp; Kitchen in Islington.</p>
-                <a href="https://www.eventbrite.co.uk/e/free-comedy-every-sunday-at-6pm-in-islington-tickets-1988716789452" target="_blank" class="btn btn-secondary" style="margin-top: 15px; padding: 10px 20px; font-size: 14px;">
-                    Get Free Tickets →
-                </a>
-            </div>
-
-            <div class="event-card fade-in">
-                <img src="https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1179000636%2F543747696447%2F1%2Foriginal.20260304-130103?auto=format%2Ccompress&amp;q=75&amp;sharp=10&amp;s=1d7bbd509c54b602b4b708af828d58a7" alt="Candlemaker Comedy - Free Comedy at Battersea&#x27;s Favourite!" style="width: 100%; height: 200px; object-fit: cover; border-radius: 10px; margin-bottom: 20px;">
-                <span class="event-date">Next show: Sunday 31 May</span>
-                <h3 class="event-title">Candlemaker Comedy - Free Comedy at Battersea&#x27;s Favourite!</h3>
-                <p class="event-location">📍 Candlemaker, 136 Battersea High Street, London, SW11 3JR</p>
-                <p class="event-time">🕐 7:00 PM</p>
-                <p class="event-price">FREE ENTRY</p>
-                <p style="color: rgba(255,255,255,0.7); margin-top: 15px;">At the lovely Candlemaker on Battersea High Street, we run a free stand up comedy show every Sunday! Good priced food and drinks to go with!</p>
-                <a href="https://www.eventbrite.co.uk/e/candlemaker-comedy-free-comedy-at-batterseas-favourite-tickets-1988717027163" target="_blank" class="btn btn-secondary" style="margin-top: 15px; padding: 10px 20px; font-size: 14px;">
-                    Get Free Tickets →
-                </a>
-            </div>
-
-            <div class="event-card fade-in">
-                <img src="https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1176403518%2F543747696447%2F1%2Foriginal.20260201-230633?auto=format%2Ccompress&amp;q=75&amp;sharp=10&amp;s=606020b6ba85db1cbee1a7a6759bd052" alt="Free Comedy Every Sunday at 8pm in Islington" style="width: 100%; height: 200px; object-fit: cover; border-radius: 10px; margin-bottom: 20px;">
-                <span class="event-date">Next show: Sunday 31 May</span>
-                <h3 class="event-title">Free Comedy Every Sunday at 8pm in Islington</h3>
-                <p class="event-location">📍 Brewhouse &amp; Kitchen - Highbury, 2A Corsica Street, London, N5 1JJ</p>
-                <p class="event-time">🕐 8:00 PM</p>
-                <p class="event-price">FREE ENTRY</p>
-                <p style="color: rgba(255,255,255,0.7); margin-top: 15px;">The best free Stand Up Comedy in London, every Sunday at 8pm at Brewhouse &amp; Kitchen in Islington.</p>
-                <a href="https://www.eventbrite.co.uk/e/free-comedy-every-sunday-at-8pm-in-islington-tickets-1988716923854" target="_blank" class="btn btn-secondary" style="margin-top: 15px; padding: 10px 20px; font-size: 14px;">
-                    Get Free Tickets →
-                </a>
-            </div>
-
-            <div class="event-card fade-in">
-                <img src="https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1181543832%2F543747696447%2F1%2Foriginal.20260406-213743?auto=format%2Ccompress&amp;q=75&amp;sharp=10&amp;s=c493f415ef81d17621fe104a48188f24" alt="Is-It-Lington? Free Comedy Every Tuesday at 7:30 pm in Highbury &amp; Islington" style="width: 100%; height: 200px; object-fit: cover; border-radius: 10px; margin-bottom: 20px;">
-                <span class="event-date">Next show: Tuesday 2 June</span>
-                <h3 class="event-title">Is-It-Lington? Free Comedy Every Tuesday at 7:30 pm in Highbury &amp; Islington</h3>
-                <p class="event-location">📍 Hoxley &amp; Porter, 153 Upper Street, London, N1 1RA</p>
-                <p class="event-time">🕐 7:30 PM</p>
-                <p class="event-price">FREE ENTRY</p>
-                <p style="color: rgba(255,255,255,0.7); margin-top: 15px;">The best free Stand Up Comedy in London, every Tuesday at 7:30pm at Hoxley &amp; Porter in Highbury &amp; Islington / Angel.</p>
-                <a href="https://www.eventbrite.co.uk/e/is-it-lington-free-comedy-every-tuesday-at-730-pm-in-highbury-islington-tickets-1986849425115" target="_blank" class="btn btn-secondary" style="margin-top: 15px; padding: 10px 20px; font-size: 14px;">
-                    Get Free Tickets →
-                </a>
-            </div>
-
-            <div class="event-card fade-in">
-                <img src="https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1179214042%2F543747696447%2F1%2Foriginal.20260306-162753?auto=format%2Ccompress&amp;q=75&amp;sharp=10&amp;s=e4014ea77e71c224ce95563687ed09c1" alt="BYOB - Free Comedy Every Thursday in Peckham" style="width: 100%; height: 200px; object-fit: cover; border-radius: 10px; margin-bottom: 20px;">
-                <span class="event-date">Next show: Thursday 4 June</span>
-                <h3 class="event-title">BYOB - Free Comedy Every Thursday in Peckham</h3>
-                <p class="event-location">📍 Eagle Eats Bakery, Station approach, London, SE15 2JR</p>
-                <p class="event-time">🕐 8:00 PM</p>
-                <p class="event-price">FREE ENTRY</p>
-                <p style="color: rgba(255,255,255,0.7); margin-top: 15px;">The best stand-up comedy in Peckham, free every Thursday at 8pm at Eagle Eats Bakery. Bring your own beer!</p>
-                <a href="https://www.eventbrite.co.uk/e/byob-free-comedy-every-thursday-in-peckham-tickets-1988716822551" target="_blank" class="btn btn-secondary" style="margin-top: 15px; padding: 10px 20px; font-size: 14px;">
-                    Get Free Tickets →
-                </a>
-            </div>
-
-            <div class="event-card fade-in">
-                <img src="https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F929389673%2F543747696447%2F1%2Foriginal.20250107-095700?auto=format%2Ccompress&amp;q=75&amp;sharp=10&amp;s=65ed1abbfd9d41ec5447a7305e0772cb" alt="Comedy Club Shoreditch - Free Comedy Every Friday in East London - EARLY!" style="width: 100%; height: 200px; object-fit: cover; border-radius: 10px; margin-bottom: 20px;">
-                <span class="event-date">Next show: Friday 5 June</span>
-                <h3 class="event-title">Comedy Club Shoreditch - Free Comedy Every Friday in East London - EARLY!</h3>
-                <p class="event-location">📍 Bistrot Walluc, 40 Redchurch Street, London, E2 7DP</p>
-                <p class="event-time">🕐 6:00 PM</p>
-                <p class="event-price">FREE ENTRY</p>
-                <p style="color: rgba(255,255,255,0.7); margin-top: 15px;">The best stand-up comedy every Friday at 6pm at Bistrot Walluc in Shoreditch. Early shows added due to high demand! Get tickets now!</p>
-                <a href="https://www.eventbrite.co.uk/e/comedy-club-shoreditch-free-comedy-every-friday-in-east-london-early-tickets-1987144229884" target="_blank" class="btn btn-secondary" style="margin-top: 15px; padding: 10px 20px; font-size: 14px;">
-                    Get Free Tickets →
-                </a>
-            </div>
-
-            <div class="event-card fade-in">
-                <img src="https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F929389673%2F543747696447%2F1%2Foriginal.20250107-095700?auto=format%2Ccompress&amp;q=75&amp;sharp=10&amp;s=65ed1abbfd9d41ec5447a7305e0772cb" alt="Comedy Club Shoreditch - Free Comedy Every Friday in East London + FONDUE" style="width: 100%; height: 200px; object-fit: cover; border-radius: 10px; margin-bottom: 20px;">
-                <span class="event-date">Next show: Friday 5 June</span>
-                <h3 class="event-title">Comedy Club Shoreditch - Free Comedy Every Friday in East London + FONDUE</h3>
-                <p class="event-location">📍 Bistrot Walluc, 40 Redchurch Street, London, E2 7DP</p>
-                <p class="event-time">🕐 8:00 PM</p>
-                <p class="event-price">FREE ENTRY</p>
-                <p style="color: rgba(255,255,255,0.7); margin-top: 15px;">The best stand-up comedy every Friday at 8pm at Bistrot Walluc in Shoreditch. Laughter guaranteed! Fondue optional! Get tickets now!</p>
-                <a href="https://www.eventbrite.co.uk/e/comedy-club-shoreditch-free-comedy-every-friday-in-east-london-fondue-tickets-1990193444166" target="_blank" class="btn btn-secondary" style="margin-top: 15px; padding: 10px 20px; font-size: 14px;">
-                    Get Free Tickets →
-                </a>
-            </div>
-
-            <div class="event-card fade-in">
-                <img src="https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1183161657%2F543747696447%2F1%2Foriginal.20260427-201210?auto=format%2Ccompress&amp;q=75&amp;sharp=10&amp;s=354fff0e628559450ead7b9371bcae81" alt="London Comedy Group - Soho" style="width: 100%; height: 200px; object-fit: cover; border-radius: 10px; margin-bottom: 20px;">
-                <span class="event-date">Next show: Saturday 6 June</span>
-                <h3 class="event-title">London Comedy Group - Soho</h3>
-                <p class="event-location">📍 30 Dean St, 30 Dean Street, London, W1D 3RZ</p>
-                <p class="event-time">🕐 5:30 PM</p>
-                <p class="event-price">£5</p>
-                <p style="color: rgba(255,255,255,0.7); margin-top: 15px;">Early evening Soho comedy with a tight lineup of real comics. Strong sets, proper crowd, no filler. Doors 5:15pm.</p>
-                <a href="https://www.eventbrite.co.uk/e/london-comedy-group-soho-tickets-1988717209709" target="_blank" class="btn btn-secondary" style="margin-top: 15px; padding: 10px 20px; font-size: 14px;">
-                    Get Tickets →
-                </a>
-            </div>
-            <!-- EVENTS:END -->
-        </div>
-        
-        <div style="text-align: center; margin-top: 40px;">
-            <a href="https://www.eventbrite.co.uk/o/london-comedy-group-55764637993" target="_blank" class="btn btn-primary">
-                View All Events on Eventbrite
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+        <div class="wrap nav">
+            <a class="brand" href="/" aria-label="London Comedy Group home">
+                <img src="/london-comedy-group-logo.jpg" width="52" height="52" alt="">
+                <span>London Comedy Group</span>
             </a>
+            <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
+            <nav id="site-nav" class="nav-links" aria-label="Main navigation">
+                <a href="/#shows">This week</a>
+                <a href="/shows/">All shows</a>
+                <a href="/#comedians">Comedians</a>
+                <a href="/stay-in-touch/">Stay in touch</a>
+            </nav>
+        </div>
+    </header>
+    <main id="main">
+    <section class="hero">
+        <div class="wrap hero-grid">
+            <div>
+                <p class="eyebrow">Live stand-up across London</p>
+                <h1>Find an upcoming comedy show in London</h1>
+                <p class="hero-copy">Free and low-cost stand-up in Islington, Battersea, Highbury &amp; Islington, Peckham, Shoreditch, and Soho. Pick a night and reserve your tickets on Eventbrite.</p>
+                <div class="hero-actions">
+                    <a class="button button-primary" href="#shows">Find an upcoming show</a>
+                    <a class="button button-ghost" href="/shows/">See all comedy nights</a>
+                </div>
+                <div class="trust-row">
+                    <span>Weekly shows</span><span>London venues</span><span>Free and low-cost tickets</span>
+                </div>
+            </div>
+            <img class="hero-image" src="/comedy-audience.jpg" width="600" height="300" fetchpriority="high"
+                 alt="Audience enjoying a London Comedy Group stand-up show">
         </div>
     </section>
-    
-    <!-- Comedians Section -->
-    <section id="comedians" class="container">
-        <h2 class="section-title fade-in">Show Runners</h2>
-        <div class="comedians-grid">
-            <div class="comedian-card fade-in">
-                <div class="comedian-img">
-                    <img src="ridwan-hussain.jpg" alt="Ridwan Hussain" style="width: 150px; height: 150px; object-fit: cover; border-radius: 50%;">
-                </div>
-                <h3 class="comedian-name">Ridwan Hussain</h3>
-                <p class="comedian-bio">An exciting comedian with quick wit and relatable material. "Delightfully Funny" - Chortle</p>
-                <ul class="comedian-achievements">
-                    <li>Star of Bound & Gagged's AAA Stand-Up Show</li>
-                    <li>Winner: Crack Comedy New Comedian</li>
-                    <li>Regular at Backyard Comedy Club, Up the Creek, Big Belly, The Comedy Store</li>
-                </ul>
-                <a href="https://www.instagram.com/richardhudsoncomedy/" target="_blank" class="social-link">
-                    <span>Follow on Instagram</span>
-                    <span>→</span>
-                </a>
-            </div>
-            
-            <div class="comedian-card fade-in">
-                <div class="comedian-img">
-                    <img src="robert-enciu.jpg" alt="Robert Enciu" style="width: 150px; height: 150px; object-fit: cover; border-radius: 50%;">
-                </div>
-                <h3 class="comedian-name">Robert Enciu</h3>
-                <p class="comedian-bio">Rising star in London's comedy circuit. Bringing a fresh Eastern European perspective with clever observations and charming stage presence.</p>
-                <ul class="comedian-achievements">
-                    <li>Master of Romanian-British cultural comedy fusion</li>
-                    <li>Known for hilarious takes on UK vs Eastern European life</li>
-                    <li>Views online!</li>
-                </ul>
-                <a href="https://www.instagram.com/robert_out_here_/" target="_blank" class="social-link">
-                    <span>Follow on Instagram</span>
-                    <span>→</span>
-                </a>
-            </div>
-            
-            <div class="comedian-card fade-in">
-                <div class="comedian-img">
-                    <img src="arie-david.jpg" alt="Arie David" style="width: 150px; height: 150px; object-fit: cover; border-radius: 50%;">
-                </div>
-                <h3 class="comedian-name">Arie David</h3>
-                <p class="comedian-bio">East London's own comes at you with her unique brand of politically infused humour informed by the clash between her council estate routes. "clever and biting" - Byline times </p>
-                <ul class="comedian-achievements">
-                    <li>Co-Producer @bitchesinstitchesldn all-femme comedy group</li>
-                    <li>Winner Beat the Blackout</li>
-                </ul>
-                <a href="https://www.instagram.com/myarchives00/" target="_blank" class="social-link">
-                    <span>Follow on Instagram</span>
-                    <span>→</span>
-                </a>
-            </div>
+    <section id="shows" class="section wrap">
+        <div class="section-heading">
+            <p class="eyebrow">Book your next night out</p>
+            <h2>Upcoming comedy shows</h2>
+            <p>8 comedy nights currently booking across London. Choose a night and reserve your spot.</p>
         </div>
-        
-        <!-- All Comedians List -->
-        <div class="comedians-list fade-in">
-            <h3>Some of our Acts</h3>
-                <div class="roster-comedian">
-                    <div class="comedian-img" style="width: 80px; height: 80px; margin: 0 auto 10px;">
-                        <img src="peter_jones.jpg" alt="Peter Jones" style="width: 100%; height: 100%; border-radius: 50%; object-fit: cover;">
-                    </div>
-                    <strong>Peter Jones</strong>
-                    <p style="font-size: 14px; color: rgba(255,255,255,0.6);">Regular Performer</p>
-                </div>
-                <div class="roster-comedian">
-                    <div class="comedian-img" style="width: 80px; height: 80px; margin: 0 auto 10px;">
-                        <img src="mike_rice.jpeg" alt="Mike Rice" style="width: 100%; height: 100%; border-radius: 50%; object-fit: cover;">
-                    </div>
-                    <strong>Mike Rice</strong>
-                    <p style="font-size: 14px; color: rgba(255,255,255,0.6);">Regular Performer</p>
-                </div>
-                <div class="roster-comedian">
-                    <div class="comedian-img" style="width: 80px; height: 80px; margin: 0 auto 10px;">
-                        <img src="evaldas_karosas.jpg" alt="Evaldas Karosas" style="width: 100%; height: 100%; border-radius: 50%; object-fit: cover;">
-                    </div>
-                    <strong>Evaldas Karosas</strong>
-                    <p style="font-size: 14px; color: rgba(255,255,255,0.6);">Regular Performer</p>
-                </div>
-                <div class="roster-comedian">
-                    <div class="comedian-img" style="width: 80px; height: 80px; margin: 0 auto 10px;">
-                        <img src="shalaka_kurup.jpeg" alt="Shalaka Kurup" style="width: 100%; height: 100%; border-radius: 50%; object-fit: cover;">
-                    </div>
-                    <strong>Shalaka Kurup</strong>
-                    <p style="font-size: 14px; color: rgba(255,255,255,0.6);">Regular Performer</p>
-                </div>
-                <div class="roster-comedian">
-                    <div class="comedian-img" style="width: 80px; height: 80px; margin: 0 auto 10px;">
-                        <img src="dominic_fraser.jpg" alt="Dominic Fraser" style="width: 100%; height: 100%; border-radius: 50%; object-fit: cover;">
-                    </div>
-                    <strong>Dominic Fraser</strong>
-                    <p style="font-size: 14px; color: rgba(255,255,255,0.6);">Host - Craft Comedy</p>
-                </div>
-                <div class="roster-comedian">
-                    <div class="comedian-img" style="width: 80px; height: 80px; margin: 0 auto 10px;">
-                        <img src="anno_gomes.jpg" alt="Anno Gomes" style="width: 100%; height: 100%; border-radius: 50%; object-fit: cover;">
-                    </div>
-                    <strong>Anno Gomes</strong>
-                    <p style="font-size: 14px; color: rgba(255,255,255,0.6);">Regular Performer</p>
-                </div>
-                <div class="roster-comedian">
-                    <div class="comedian-img" style="width: 80px; height: 80px; margin: 0 auto 10px;">
-                        <img src="oliver_moore.jpg" alt="Oliver Moore" style="width: 100%; height: 100%; border-radius: 50%; object-fit: cover;">
-                    </div>
-                    <strong>Oliver Moore</strong>
-                    <p style="font-size: 14px; color: rgba(255,255,255,0.6);">Sporadic Performer</p>
-                </div>
-                <div class="roster-comedian">
-                    <div class="comedian-img" style="width: 80px; height: 80px; margin: 0 auto 10px;">
-                        <img src="john_sharp.jpg" alt="John Sharp" style="width: 100%; height: 100%; border-radius: 50%; object-fit: cover;">
-                    </div>
-                    <strong>John Sharp</strong>
-                    <p style="font-size: 14px; color: rgba(255,255,255,0.6);">Regular Performer</p>
-                </div>
-                <div class="roster-comedian">
-                    <div class="comedian-img" style="width: 80px; height: 80px; margin: 0 auto 10px;">
-                        <img src="samma.jpg" alt="Samma" style="width: 100%; height: 100%; border-radius: 50%; object-fit: cover;">
-                    </div>
-                    <strong>Samma</strong>
-                    <p style="font-size: 14px; color: rgba(255,255,255,0.6);">Regular Performer</p>
-                </div>
-                <div class="roster-comedian">
-                    <div class="comedian-img" style="width: 80px; height: 80px; margin: 0 auto 10px;">
-                        <img src="donatas.jpeg" alt="Donatas" style="width: 100%; height: 100%; border-radius: 50%; object-fit: cover;">
-                    </div>
-                    <strong>Donatas</strong>
-                    <p style="font-size: 14px; color: rgba(255,255,255,0.6);">Regular Performer</p>
+        <div class="event-grid">
+        <article class="event-card">
+            <a class="card-image-link" href="/events/islington-sunday-comedy-6pm-2026-05-31-1800-1988716789452/">
+                <img class="card-image" src="https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1173215566%2F543747696447%2F1%2Foriginal.20251218-172640?auto=format%2Ccompress&amp;q=75&amp;sharp=10&amp;s=2e8147b3d66dbc25cd453a4108261126" width="640" height="360"
+                     loading="lazy" alt="Free Sunday Comedy in Islington: 6pm Show">
+            </a>
+            <div class="card-body">
+                <div class="pill-row"><span class="pill">Sunday 31 May</span></div>
+                <h3><a href="/events/islington-sunday-comedy-6pm-2026-05-31-1800-1988716789452/">Free Sunday Comedy in Islington: 6pm Show</a></h3>
+                <p class="card-meta"><strong>6:00 PM</strong> · Free entry</p>
+                <p class="card-meta">Brewhouse &amp; Kitchen - Highbury<br>2A Corsica Street, London, N5 1JJ</p>
+                <div class="card-actions">
+                    <a class="button button-primary" data-ticket-link data-show="islington-sunday-comedy-6pm" data-placement="homepage-card" href="https://www.eventbrite.co.uk/e/free-comedy-every-sunday-at-6pm-in-islington-tickets-1988716789452?utm_source=londoncomedygroup.com&amp;utm_medium=website&amp;utm_campaign=islington-sunday-comedy-6pm&amp;utm_content=homepage-card" rel="noopener noreferrer" target="_blank">Get free tickets</a>
+                    <a class="text-link" href="/events/islington-sunday-comedy-6pm-2026-05-31-1800-1988716789452/">Details</a>
                 </div>
             </div>
+        </article>
+        <article class="event-card">
+            <a class="card-image-link" href="/events/candlemaker-comedy-battersea-2026-05-31-1900-1988717027163/">
+                <img class="card-image" src="https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1179000636%2F543747696447%2F1%2Foriginal.20260304-130103?auto=format%2Ccompress&amp;q=75&amp;sharp=10&amp;s=1d7bbd509c54b602b4b708af828d58a7" width="640" height="360"
+                     loading="lazy" alt="Candlemaker Comedy in Battersea">
+            </a>
+            <div class="card-body">
+                <div class="pill-row"><span class="pill">Sunday 31 May</span></div>
+                <h3><a href="/events/candlemaker-comedy-battersea-2026-05-31-1900-1988717027163/">Candlemaker Comedy in Battersea</a></h3>
+                <p class="card-meta"><strong>7:00 PM</strong> · Free entry</p>
+                <p class="card-meta">Candlemaker<br>136 Battersea High Street, London, SW11 3JR</p>
+                <div class="card-actions">
+                    <a class="button button-primary" data-ticket-link data-show="candlemaker-comedy-battersea" data-placement="homepage-card" href="https://www.eventbrite.co.uk/e/candlemaker-comedy-free-comedy-at-batterseas-favourite-tickets-1988717027163?utm_source=londoncomedygroup.com&amp;utm_medium=website&amp;utm_campaign=candlemaker-comedy-battersea&amp;utm_content=homepage-card" rel="noopener noreferrer" target="_blank">Get free tickets</a>
+                    <a class="text-link" href="/events/candlemaker-comedy-battersea-2026-05-31-1900-1988717027163/">Details</a>
+                </div>
+            </div>
+        </article>
+        <article class="event-card">
+            <a class="card-image-link" href="/events/islington-sunday-comedy-8pm-2026-05-31-2000-1988716923854/">
+                <img class="card-image" src="https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1176403518%2F543747696447%2F1%2Foriginal.20260201-230633?auto=format%2Ccompress&amp;q=75&amp;sharp=10&amp;s=606020b6ba85db1cbee1a7a6759bd052" width="640" height="360"
+                     loading="lazy" alt="Free Sunday Comedy in Islington: 8pm Show">
+            </a>
+            <div class="card-body">
+                <div class="pill-row"><span class="pill">Sunday 31 May</span></div>
+                <h3><a href="/events/islington-sunday-comedy-8pm-2026-05-31-2000-1988716923854/">Free Sunday Comedy in Islington: 8pm Show</a></h3>
+                <p class="card-meta"><strong>8:00 PM</strong> · Free entry</p>
+                <p class="card-meta">Brewhouse &amp; Kitchen - Highbury<br>2A Corsica Street, London, N5 1JJ</p>
+                <div class="card-actions">
+                    <a class="button button-primary" data-ticket-link data-show="islington-sunday-comedy-8pm" data-placement="homepage-card" href="https://www.eventbrite.co.uk/e/free-comedy-every-sunday-at-8pm-in-islington-tickets-1988716923854?utm_source=londoncomedygroup.com&amp;utm_medium=website&amp;utm_campaign=islington-sunday-comedy-8pm&amp;utm_content=homepage-card" rel="noopener noreferrer" target="_blank">Get free tickets</a>
+                    <a class="text-link" href="/events/islington-sunday-comedy-8pm-2026-05-31-2000-1988716923854/">Details</a>
+                </div>
+            </div>
+        </article>
+        <article class="event-card">
+            <a class="card-image-link" href="/events/is-it-lington-tuesday-comedy-2026-06-02-1930-1986849425115/">
+                <img class="card-image" src="https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1181543832%2F543747696447%2F1%2Foriginal.20260406-213743?auto=format%2Ccompress&amp;q=75&amp;sharp=10&amp;s=c493f415ef81d17621fe104a48188f24" width="640" height="360"
+                     loading="lazy" alt="Is-It-Lington? Tuesday Comedy">
+            </a>
+            <div class="card-body">
+                <div class="pill-row"><span class="pill">Tuesday 2 June</span></div>
+                <h3><a href="/events/is-it-lington-tuesday-comedy-2026-06-02-1930-1986849425115/">Is-It-Lington? Tuesday Comedy</a></h3>
+                <p class="card-meta"><strong>7:30 PM</strong> · Free entry</p>
+                <p class="card-meta">Hoxley &amp; Porter<br>153 Upper Street, London, N1 1RA</p>
+                <div class="card-actions">
+                    <a class="button button-primary" data-ticket-link data-show="is-it-lington-tuesday-comedy" data-placement="homepage-card" href="https://www.eventbrite.co.uk/e/is-it-lington-free-comedy-every-tuesday-at-730-pm-in-highbury-islington-tickets-1986849425115?utm_source=londoncomedygroup.com&amp;utm_medium=website&amp;utm_campaign=is-it-lington-tuesday-comedy&amp;utm_content=homepage-card" rel="noopener noreferrer" target="_blank">Get free tickets</a>
+                    <a class="text-link" href="/events/is-it-lington-tuesday-comedy-2026-06-02-1930-1986849425115/">Details</a>
+                </div>
+            </div>
+        </article>
+        <article class="event-card">
+            <a class="card-image-link" href="/events/byob-comedy-peckham-2026-06-04-2000-1988716822551/">
+                <img class="card-image" src="https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1179214042%2F543747696447%2F1%2Foriginal.20260306-162753?auto=format%2Ccompress&amp;q=75&amp;sharp=10&amp;s=e4014ea77e71c224ce95563687ed09c1" width="640" height="360"
+                     loading="lazy" alt="BYOB Comedy in Peckham">
+            </a>
+            <div class="card-body">
+                <div class="pill-row"><span class="pill">Thursday 4 June</span></div>
+                <h3><a href="/events/byob-comedy-peckham-2026-06-04-2000-1988716822551/">BYOB Comedy in Peckham</a></h3>
+                <p class="card-meta"><strong>8:00 PM</strong> · Free entry</p>
+                <p class="card-meta">Eagle Eats Bakery<br>Station Approach, London, SE15 2JR</p>
+                <div class="card-actions">
+                    <a class="button button-primary" data-ticket-link data-show="byob-comedy-peckham" data-placement="homepage-card" href="https://www.eventbrite.co.uk/e/byob-free-comedy-every-thursday-in-peckham-tickets-1988716822551?utm_source=londoncomedygroup.com&amp;utm_medium=website&amp;utm_campaign=byob-comedy-peckham&amp;utm_content=homepage-card" rel="noopener noreferrer" target="_blank">Get free tickets</a>
+                    <a class="text-link" href="/events/byob-comedy-peckham-2026-06-04-2000-1988716822551/">Details</a>
+                </div>
+            </div>
+        </article>
+        <article class="event-card">
+            <a class="card-image-link" href="/events/comedy-club-shoreditch-early-2026-06-05-1800-1987144229884/">
+                <img class="card-image" src="https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F929389673%2F543747696447%2F1%2Foriginal.20250107-095700?auto=format%2Ccompress&amp;q=75&amp;sharp=10&amp;s=65ed1abbfd9d41ec5447a7305e0772cb" width="640" height="360"
+                     loading="lazy" alt="Comedy Club Shoreditch: Early Show">
+            </a>
+            <div class="card-body">
+                <div class="pill-row"><span class="pill">Friday 5 June</span></div>
+                <h3><a href="/events/comedy-club-shoreditch-early-2026-06-05-1800-1987144229884/">Comedy Club Shoreditch: Early Show</a></h3>
+                <p class="card-meta"><strong>6:00 PM</strong> · Free entry</p>
+                <p class="card-meta">Bistrot Walluc<br>40 Redchurch Street, London, E2 7DP</p>
+                <div class="card-actions">
+                    <a class="button button-primary" data-ticket-link data-show="comedy-club-shoreditch-early" data-placement="homepage-card" href="https://www.eventbrite.co.uk/e/comedy-club-shoreditch-free-comedy-every-friday-in-east-london-early-tickets-1987144229884?utm_source=londoncomedygroup.com&amp;utm_medium=website&amp;utm_campaign=comedy-club-shoreditch-early&amp;utm_content=homepage-card" rel="noopener noreferrer" target="_blank">Get free tickets</a>
+                    <a class="text-link" href="/events/comedy-club-shoreditch-early-2026-06-05-1800-1987144229884/">Details</a>
+                </div>
+            </div>
+        </article>
+        <article class="event-card">
+            <a class="card-image-link" href="/events/comedy-club-shoreditch-fondue-2026-06-05-2000-1990193444166/">
+                <img class="card-image" src="https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F929389673%2F543747696447%2F1%2Foriginal.20250107-095700?auto=format%2Ccompress&amp;q=75&amp;sharp=10&amp;s=65ed1abbfd9d41ec5447a7305e0772cb" width="640" height="360"
+                     loading="lazy" alt="Comedy Club Shoreditch: Comedy + Fondue">
+            </a>
+            <div class="card-body">
+                <div class="pill-row"><span class="pill">Friday 5 June</span></div>
+                <h3><a href="/events/comedy-club-shoreditch-fondue-2026-06-05-2000-1990193444166/">Comedy Club Shoreditch: Comedy + Fondue</a></h3>
+                <p class="card-meta"><strong>8:00 PM</strong> · Free entry</p>
+                <p class="card-meta">Bistrot Walluc<br>40 Redchurch Street, London, E2 7DP</p>
+                <div class="card-actions">
+                    <a class="button button-primary" data-ticket-link data-show="comedy-club-shoreditch-fondue" data-placement="homepage-card" href="https://www.eventbrite.co.uk/e/comedy-club-shoreditch-free-comedy-every-friday-in-east-london-fondue-tickets-1990193444166?utm_source=londoncomedygroup.com&amp;utm_medium=website&amp;utm_campaign=comedy-club-shoreditch-fondue&amp;utm_content=homepage-card" rel="noopener noreferrer" target="_blank">Get free tickets</a>
+                    <a class="text-link" href="/events/comedy-club-shoreditch-fondue-2026-06-05-2000-1990193444166/">Details</a>
+                </div>
+            </div>
+        </article>
+        <article class="event-card">
+            <a class="card-image-link" href="/events/saturday-comedy-soho-2026-06-06-1730-1988717209709/">
+                <img class="card-image" src="https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1183161657%2F543747696447%2F1%2Foriginal.20260427-201210?auto=format%2Ccompress&amp;q=75&amp;sharp=10&amp;s=354fff0e628559450ead7b9371bcae81" width="640" height="360"
+                     loading="lazy" alt="Saturday Comedy in Soho">
+            </a>
+            <div class="card-body">
+                <div class="pill-row"><span class="pill">Saturday 6 June</span></div>
+                <h3><a href="/events/saturday-comedy-soho-2026-06-06-1730-1988717209709/">Saturday Comedy in Soho</a></h3>
+                <p class="card-meta"><strong>5:30 PM</strong> · £5</p>
+                <p class="card-meta">30 Dean St<br>30 Dean Street, London, W1D 3RZ</p>
+                <div class="card-actions">
+                    <a class="button button-primary" data-ticket-link data-show="saturday-comedy-soho" data-placement="homepage-card" href="https://www.eventbrite.co.uk/e/london-comedy-group-soho-tickets-1988717209709?utm_source=londoncomedygroup.com&amp;utm_medium=website&amp;utm_campaign=saturday-comedy-soho&amp;utm_content=homepage-card" rel="noopener noreferrer" target="_blank">Get tickets</a>
+                    <a class="text-link" href="/events/saturday-comedy-soho-2026-06-06-1730-1988717209709/">Details</a>
+                </div>
+            </div>
+        </article></div>
+        <div class="center"><a class="button button-ghost" href="/shows/">See all comedy nights</a></div>
+    </section>
+    <section class="section section-alt">
+        <div class="wrap">
+            <div class="section-heading"><p class="eyebrow">Find your local night</p><h2>Comedy around London</h2></div>
+            <div class="area-grid"><a class="area-card" href="/shows/islington-sunday-comedy-6pm/">
+                <span>Brewhouse &amp; Kitchen - Highbury</span>
+                <strong>Free Sunday Comedy in Islington: 6pm Show</strong>
+                <small>Sunday 31 May · 6:00 PM</small>
+            </a><a class="area-card" href="/shows/candlemaker-comedy-battersea/">
+                <span>Candlemaker</span>
+                <strong>Candlemaker Comedy in Battersea</strong>
+                <small>Sunday 31 May · 7:00 PM</small>
+            </a><a class="area-card" href="/shows/islington-sunday-comedy-8pm/">
+                <span>Brewhouse &amp; Kitchen - Highbury</span>
+                <strong>Free Sunday Comedy in Islington: 8pm Show</strong>
+                <small>Sunday 31 May · 8:00 PM</small>
+            </a><a class="area-card" href="/shows/is-it-lington-tuesday-comedy/">
+                <span>Hoxley &amp; Porter</span>
+                <strong>Is-It-Lington? Tuesday Comedy</strong>
+                <small>Tuesday 2 June · 7:30 PM</small>
+            </a><a class="area-card" href="/shows/byob-comedy-peckham/">
+                <span>Eagle Eats Bakery</span>
+                <strong>BYOB Comedy in Peckham</strong>
+                <small>Thursday 4 June · 8:00 PM</small>
+            </a><a class="area-card" href="/shows/comedy-club-shoreditch-early/">
+                <span>Bistrot Walluc</span>
+                <strong>Comedy Club Shoreditch: Early Show</strong>
+                <small>Friday 5 June · 6:00 PM</small>
+            </a><a class="area-card" href="/shows/comedy-club-shoreditch-fondue/">
+                <span>Bistrot Walluc</span>
+                <strong>Comedy Club Shoreditch: Comedy + Fondue</strong>
+                <small>Friday 5 June · 8:00 PM</small>
+            </a><a class="area-card" href="/shows/saturday-comedy-soho/">
+                <span>30 Dean St</span>
+                <strong>Saturday Comedy in Soho</strong>
+                <small>Saturday 6 June · 5:30 PM</small>
+            </a></div>
         </div>
     </section>
+    <section class="section wrap split">
+        <div><p class="eyebrow">A simple night out</p><h2>A comedy night near you</h2>
+        <p>Choose from weekly shows across London. Check the venue, time, and ticket price, then reserve your spot on Eventbrite.</p></div>
+        <div class="feature-list"><div><strong>Choose a show</strong><span>Browse by date or venue.</span></div>
+        <div><strong>Reserve on Eventbrite</strong><span>Free and affordable options are clearly marked.</span></div>
+        <div><strong>Turn up and laugh</strong><span>All the practical details are on your event page.</span></div></div>
+    </section>
     
-    <!-- Gallery Section -->
-    <section class="container">
-        <h2 class="section-title fade-in">Comedy Night Gallery</h2>
+    <section id="comedians" class="section wrap">
+        <div class="section-heading"><p class="eyebrow">The people behind the nights</p><h2>Meet the show runners</h2>
+            <p>London Comedy Group nights are built and hosted by working comics, with regular guest acts from across the circuit.</p></div>
+        <div class="comedian-grid"><article class="comedian-card">
+            <img class="comedian-portrait" src="/ridwan-hussain.jpg" width="180" height="180" loading="lazy" alt="Ridwan Hussain">
+            <h3>Ridwan Hussain</h3>
+            <p>An exciting comedian with quick wit and relatable material. &quot;Delightfully Funny&quot; - Chortle.</p>
+            <ul><li>Star of Bound &amp; Gagged&#x27;s AAA Stand-Up Show</li><li>Winner: Crack Comedy New Comedian</li><li>Regular at Backyard Comedy Club, Up the Creek, Big Belly, and The Comedy Store</li></ul>
+            <a class="text-link" href="https://www.instagram.com/richardhudsoncomedy/" rel="noopener noreferrer" target="_blank">Follow on Instagram</a>
+        </article><article class="comedian-card">
+            <img class="comedian-portrait" src="/robert-enciu.jpg" width="180" height="180" loading="lazy" alt="Robert Enciu">
+            <h3>Robert Enciu</h3>
+            <p>A rising voice on London&#x27;s comedy circuit, bringing an Eastern European perspective, sharp observations, and an easy stage presence.</p>
+            <ul><li>Romanian-British cultural comedy</li><li>Material about UK and Eastern European life</li><li>Comedy clips watched online</li></ul>
+            <a class="text-link" href="https://www.instagram.com/robert_out_here_/" rel="noopener noreferrer" target="_blank">Follow on Instagram</a>
+        </article><article class="comedian-card">
+            <img class="comedian-portrait" src="/brendan-morris.jpg" width="180" height="180" loading="lazy" alt="Brendan Morris">
+            <h3>Brendan Morris</h3>
+            <p>Irish comedian based in East London. An actor by trade, Brendan brings irreverent humour, spontaneous energy, and character-comedy bits to the stage.</p>
+            <ul><li>MC and host at London comedy nights</li><li>Host of Is-It-Lington comedy at Hoxley &amp; Porter</li><li>Actor with a natural, spontaneous performance style</li></ul>
+            <a class="text-link" href="https://www.instagram.com/vagabondbrendan/" rel="noopener noreferrer" target="_blank">Follow on Instagram</a>
+        </article></div>
+        <div class="roster-block"><h2>Some of our acts</h2><div class="act-grid"><article class="act-card">
+            <img src="/peter_jones.jpg" width="112" height="112" loading="lazy" alt="Peter Jones">
+            <strong>Peter Jones</strong><span>Regular performer</span>
+        </article><article class="act-card">
+            <img src="/mike_rice.jpeg" width="112" height="112" loading="lazy" alt="Mike Rice">
+            <strong>Mike Rice</strong><span>Regular performer</span>
+        </article><article class="act-card">
+            <img src="/evaldas_karosas.jpg" width="112" height="112" loading="lazy" alt="Evaldas Karosas">
+            <strong>Evaldas Karosas</strong><span>Regular performer</span>
+        </article><article class="act-card">
+            <img src="/shalaka_kurup.jpeg" width="112" height="112" loading="lazy" alt="Shalaka Kurup">
+            <strong>Shalaka Kurup</strong><span>Regular performer</span>
+        </article><article class="act-card">
+            <img src="/dominic_fraser.jpg" width="112" height="112" loading="lazy" alt="Dominic Fraser">
+            <strong>Dominic Fraser</strong><span>Host - Craft Comedy</span>
+        </article><article class="act-card">
+            <img src="/anno_gomes.jpg" width="112" height="112" loading="lazy" alt="Anno Gomes">
+            <strong>Anno Gomes</strong><span>Regular performer</span>
+        </article><article class="act-card">
+            <img src="/oliver_moore.jpg" width="112" height="112" loading="lazy" alt="Oliver Moore">
+            <strong>Oliver Moore</strong><span>Sporadic performer</span>
+        </article><article class="act-card">
+            <img src="/john_sharp.jpg" width="112" height="112" loading="lazy" alt="John Sharp">
+            <strong>John Sharp</strong><span>Regular performer</span>
+        </article><article class="act-card">
+            <img src="/samma.jpg" width="112" height="112" loading="lazy" alt="Samma">
+            <strong>Samma</strong><span>Regular performer</span>
+        </article><article class="act-card">
+            <img src="/donatas.jpeg" width="112" height="112" loading="lazy" alt="Donatas">
+            <strong>Donatas</strong><span>Regular performer</span>
+        </article></div></div>
+    </section>
+    <section class="section section-alt">
+        <div class="wrap"><div class="section-heading"><p class="eyebrow">From the rooms</p><h2>Comedy night gallery</h2></div>
         <div class="gallery-grid">
-            <div class="fade-in" style="border-radius: 15px; overflow: hidden; box-shadow: 0 10px 30px rgba(255, 0, 110, 0.3);">
-                <img src="comedy-poster.jpg" alt="Comedy Show Poster" style="width: 100%; height: 250px; object-fit: cover;">
-            </div>
-            <div class="fade-in" style="border-radius: 15px; overflow: hidden; box-shadow: 0 10px 30px rgba(255, 0, 110, 0.3);">
-                <img src="comedy-venue.jpg" alt="Bistrot Walluc Interior" style="width: 100%; height: 250px; object-fit: cover;">
-            </div>
-            <div class="fade-in" style="border-radius: 15px; overflow: hidden; box-shadow: 0 10px 30px rgba(255, 0, 110, 0.3);">
-                <img src="comedy-audience.jpg" alt="Comedy Night Audience" style="width: 100%; height: 250px; object-fit: cover;">
-            </div>
-        </div>
-        <div class="fade-in" style="border-radius: 15px; overflow: hidden; box-shadow: 0 10px 30px rgba(176, 38, 255, 0.3); margin-bottom: 60px;">
-            <img src="comedy-poster.jpg" alt="London Comedy Group Events" style="width: 100%; height: auto;">
-        </div>
+            <img src="/comedy-poster.jpg" width="600" height="300" loading="lazy" alt="London Comedy Group show poster">
+            <img src="/comedy-venue.jpg" width="600" height="300" loading="lazy" alt="Bistrot Walluc comedy venue interior">
+            <img src="/comedy-audience.jpg" width="600" height="300" loading="lazy" alt="Audience at a London Comedy Group night">
+        </div></div>
     </section>
-
-  <section id="mailinglist" class="section section--highlight">
-  <div class="contact fade-in">
-    <div class="contact-content">
-      <h2 class="section-title" style="margin-bottom: 20px;">Mailing List and Contacts</h2>
-      <p class="contact-subtitle">
-        Sign up for the mailing list to be the first to hear about big developments!
-      </p>
-
-      <!-- Email signup form -->
-      <form action="https://lcg-fans-broadcast.beehiiv.com/" method="get" target="_blank" class="form-inline" style="margin-top: 20px; display: flex; flex-wrap: wrap; gap: 10px; justify-content: center;">
-        <input type="email" name="email" placeholder="Your email" required class="form-input" style="flex: 1 1 250px; padding: 10px; border-radius: 10px; border: none;">
-        <button type="submit" class="btn btn-primary" style="flex: 0 0 auto;">Sign Up</button>
-      </form>
-
-      <!-- Social media links -->
-      <div class="social-links" style="margin-top: 25px; display: flex; flex-wrap: wrap; justify-content: center; gap: 15px;">
-        <a href="https://www.tiktok.com/@londoncomedygroup1" target="_blank" class="social-link" style="display: inline-flex; align-items: center; gap: 5px;">
-          <img src="tik-tok.png" style="width:24px; height:24px;">
-        </a>
-        <a href="https://www.instagram.com/londoncomedygroup/?hl=en" target="_blank" class="social-link" style="display: inline-flex; align-items: center; gap: 5px;">
-          <img src="instagram.png" style="width:24px; height:24px;">
-        </a>
-        <a href="https://www.facebook.com/profile.php?id=100089919127479" target="_blank" class="social-link" style="display: inline-flex; align-items: center; gap: 5px;">
-          <img src="facebook.png" style="width:24px; height:24px;">
-        </a>
-      </div>
-    </div>
-  </div>
-</section>
-
-    
-    <!-- Contact Section -->
-    <section id="contact" class="container">
-        <div class="contact fade-in">
-            <div class="contact-content">
-                <h2 class="section-title" style="margin-bottom: 20px;">Work With Us</h2>
-                <p class="contact-subtitle">
-                    Looking for comedy entertainment for your venue, corporate event, or private party? 
-                    We'll put on a show for you!
-                </p>
-                
-    <div class="cta-buttons" style="justify-content: center; flex-direction: column; gap: 20px;">
-    <a href="https://docs.google.com/forms/d/e/1FAIpQLSeAX08fLT3mb6UhwyncyRLHd-kmJPoai-x0kPE5TZ6V9kVJ6A/viewform?usp=header" class="btn btn-secondary">
-        <span>I want comedians</span>
-        <span>→</span>
-    </a>
-
-    <!-- New Button for Comedians -->
-    <a href="https://docs.google.com/forms/d/e/1FAIpQLSe0maLGAuPg4ZUZVVOgpWob1n4oLKiT5mTJgfPZZ_o62k_tdg/viewform?usp=sharing&ouid=115747252269731556423" class="btn btn-secondary">
-        I'm a comedian
-    </a>
-</div>
-
-            </div>
-
-                </div>
-                
-                <div style="margin-top: 40px; padding: 30px; background: rgba(255, 255, 255, 0.03); border-radius: 15px;">
-                    <h4 style="color: var(--miami-pink); margin-bottom: 15px;">What We Offer:</h4>
-                    <ul style="list-style: none; text-align: left; color: rgba(255,255,255,0.8);">
-                        <li style="padding: 8px 0;">✓ Comedy at your venue</li>
-                        <li style="padding: 8px 0;">✓ Private Parties & Celebrations</li>
-                        <li style="padding: 8px 0;">✓ Comedy Workshops</li>
-                        <li style="padding: 8px 0;">✓ Charity Events</li>
-                        <li style="padding: 8px 0;">✓ Corporate Entertainment</li>
-                    </ul>
-                </div>
+    <section class="section newsletter"><div class="wrap narrow center">
+        <p class="eyebrow">Hear about new nights first</p><h2>Get comedy shows in your inbox</h2>
+        <p>Join the London Comedy Group mailing list for new venues, special shows, and ticket releases.</p>
+        <a class="button button-primary" href="/stay-in-touch/">Join the mailing list</a>
+    </div></section></main>
+    <footer class="site-footer">
+        <div class="wrap footer-grid">
+            <div><strong>London Comedy Group</strong><p>Live stand-up comedy across London.</p></div>
+            <div class="footer-links">
+                <a href="/shows/">Find a show</a>
+                <a href="/stay-in-touch/">Mailing list</a>
+                <a href="/hire-comedians-london/">Hire comedians</a>
+                <a href="/perform-with-us/">Perform with us</a>
+                <a href="https://www.instagram.com/londoncomedygroup/" rel="noopener noreferrer" target="_blank">Instagram</a>
+                <a href="https://www.tiktok.com/@londoncomedygroup1" rel="noopener noreferrer" target="_blank">TikTok</a>
+                <a href="https://www.facebook.com/profile.php?id=100089919127479" rel="noopener noreferrer" target="_blank">Facebook</a>
             </div>
         </div>
-    </section>
-
-
-    
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div class="copyright">
-                    © 2025 London Comedy Group. All rights reserved.
-                </div>
-                <div class="social-links">
-                    <a href="https://www.instagram.com/londoncomedygroup/" target="_blank" title="Instagram">
-                        <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
-                            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zM5.838 12a6.162 6.162 0 1112.324 0 6.162 6.162 0 01-12.324 0zM12 16a4 4 0 110-8 4 4 0 010 8zm4.965-10.405a1.44 1.44 0 112.881.001 1.44 1.44 0 01-2.881-.001z"/>
-                        </svg>
-                    </a>
-                    <a href="https://www.facebook.com/profile.php?id=100089919127479" target="_blank" title="Facebook">
-                        <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
-                            <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
-                        </svg>
-                    </a>
-                </div>
-            </div>
-        </div>
+        <div class="wrap footer-bottom">© 2026 London Comedy Group</div>
     </footer>
-    
-    <script>
-        // Fade in animations on scroll - disabled on mobile for performance
-        const isMobile = window.matchMedia('(max-width: 768px)').matches;
-        
-        if (!isMobile) {
-            const observerOptions = {
-                threshold: 0.1,
-                rootMargin: '0px 0px -50px 0px'
-            };
-            
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('visible');
-                    }
-                });
-            }, observerOptions);
-            
-            document.querySelectorAll('.fade-in').forEach(el => {
-                observer.observe(el);
-            });
-        } else {
-            // On mobile, immediately show all elements
-            document.querySelectorAll('.fade-in').forEach(el => {
-                el.classList.add('visible');
-            });
-        }
-        
-        // Smooth scrolling for navigation links with passive listeners
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    // Use native smooth scrolling on mobile for better performance
-                    const isMobile = window.matchMedia('(max-width: 768px)').matches;
-                    if (isMobile) {
-                        // Simple scroll for mobile
-                        const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - 100;
-                        window.scrollTo(0, targetPosition);
-                    } else {
-                        target.scrollIntoView({
-                            behavior: 'smooth',
-                            block: 'start'
-                        });
-                    }
-                }
-            }, { passive: false });
-        });
-        
-        // Add passive touch listeners for better scroll performance
-        document.addEventListener('touchstart', function() {}, { passive: true });
-        document.addEventListener('touchmove', function() {}, { passive: true });
-        
-        // Removed parallax effect for simpler scrolling behavior
-    </script>
+    <script src="/assets/site.js" defer></script>
 </body>
 </html>

@@ -1,0 +1,109 @@
+{
+  "events": [
+    {
+      "id": "1988716789452",
+      "series_id": "islington-sunday-6pm",
+      "name": {"text": "Free Comedy Every Sunday at 6pm in Islington"},
+      "summary": "Free stand-up comedy every Sunday at 6pm at Brewhouse & Kitchen in Islington.",
+      "url": "https://www.eventbrite.co.uk/e/free-comedy-every-sunday-at-6pm-in-islington-tickets-1988716789452",
+      "created": "2025-12-18T17:26:40",
+      "start": {"local": "2026-05-31T18:00:00"},
+      "end": {"local": "2026-05-31T20:00:00"},
+      "logo": {"url": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1173215566%2F543747696447%2F1%2Foriginal.20251218-172640?auto=format%2Ccompress&q=75&sharp=10&s=2e8147b3d66dbc25cd453a4108261126"},
+      "venue": {"name": "Brewhouse & Kitchen - Highbury", "address": {"address_1": "2A Corsica Street", "city": "London", "postal_code": "N5 1JJ", "country": "GB", "localized_address_display": "2A Corsica Street, London, N5 1JJ"}},
+      "ticket_availability": {"is_sold_out": false, "minimum_ticket_price": {"major_value": "0.00"}, "maximum_ticket_price": {"major_value": "0.00"}}
+    },
+    {
+      "id": "1988717027163",
+      "series_id": "battersea-candlemaker-sunday",
+      "name": {"text": "Candlemaker Comedy - Free Comedy at Battersea's Favourite!"},
+      "summary": "Free stand-up comedy every Sunday at The Candlemaker on Battersea High Street, with food and drinks available.",
+      "url": "https://www.eventbrite.co.uk/e/candlemaker-comedy-free-comedy-at-batterseas-favourite-tickets-1988717027163",
+      "created": "2026-03-04T13:01:03",
+      "start": {"local": "2026-05-31T19:00:00"},
+      "end": {"local": "2026-05-31T21:00:00"},
+      "logo": {"url": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1179000636%2F543747696447%2F1%2Foriginal.20260304-130103?auto=format%2Ccompress&q=75&sharp=10&s=1d7bbd509c54b602b4b708af828d58a7"},
+      "venue": {"name": "Candlemaker", "address": {"address_1": "136 Battersea High Street", "city": "London", "postal_code": "SW11 3JR", "country": "GB", "localized_address_display": "136 Battersea High Street, London, SW11 3JR"}},
+      "ticket_availability": {"is_sold_out": false, "minimum_ticket_price": {"major_value": "0.00"}, "maximum_ticket_price": {"major_value": "0.00"}}
+    },
+    {
+      "id": "1988716923854",
+      "series_id": "islington-sunday-8pm",
+      "name": {"text": "Free Comedy Every Sunday at 8pm in Islington"},
+      "summary": "Free stand-up comedy every Sunday at 8pm at Brewhouse & Kitchen in Islington.",
+      "url": "https://www.eventbrite.co.uk/e/free-comedy-every-sunday-at-8pm-in-islington-tickets-1988716923854",
+      "created": "2026-02-01T23:06:33",
+      "start": {"local": "2026-05-31T20:00:00"},
+      "end": {"local": "2026-05-31T22:00:00"},
+      "logo": {"url": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1176403518%2F543747696447%2F1%2Foriginal.20260201-230633?auto=format%2Ccompress&q=75&sharp=10&s=606020b6ba85db1cbee1a7a6759bd052"},
+      "venue": {"name": "Brewhouse & Kitchen - Highbury", "address": {"address_1": "2A Corsica Street", "city": "London", "postal_code": "N5 1JJ", "country": "GB", "localized_address_display": "2A Corsica Street, London, N5 1JJ"}},
+      "ticket_availability": {"is_sold_out": false, "minimum_ticket_price": {"major_value": "0.00"}, "maximum_ticket_price": {"major_value": "0.00"}}
+    },
+    {
+      "id": "1986849425115",
+      "series_id": "is-it-lington-tuesday",
+      "name": {"text": "Is-It-Lington? Free Comedy Every Tuesday at 7:30 pm in Highbury & Islington"},
+      "summary": "Free stand-up comedy every Tuesday at 7:30pm at Hoxley & Porter in Highbury & Islington and Angel.",
+      "url": "https://www.eventbrite.co.uk/e/is-it-lington-free-comedy-every-tuesday-at-730-pm-in-highbury-islington-tickets-1986849425115",
+      "created": "2026-04-06T21:37:43",
+      "start": {"local": "2026-06-02T19:30:00"},
+      "end": {"local": "2026-06-02T21:30:00"},
+      "logo": {"url": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1181543832%2F543747696447%2F1%2Foriginal.20260406-213743?auto=format%2Ccompress&q=75&sharp=10&s=c493f415ef81d17621fe104a48188f24"},
+      "venue": {"name": "Hoxley & Porter", "address": {"address_1": "153 Upper Street", "city": "London", "postal_code": "N1 1RA", "country": "GB", "localized_address_display": "153 Upper Street, London, N1 1RA"}},
+      "ticket_availability": {"is_sold_out": false, "minimum_ticket_price": {"major_value": "0.00"}, "maximum_ticket_price": {"major_value": "0.00"}}
+    },
+    {
+      "id": "1988716822551",
+      "series_id": "peckham-byob-thursday",
+      "name": {"text": "BYOB - Free Comedy Every Thursday in Peckham"},
+      "summary": "Free stand-up comedy in Peckham every Thursday at 8pm at Eagle Eats Bakery. Bring your own beer.",
+      "url": "https://www.eventbrite.co.uk/e/byob-free-comedy-every-thursday-in-peckham-tickets-1988716822551",
+      "created": "2026-03-06T16:27:53",
+      "start": {"local": "2026-06-04T20:00:00"},
+      "end": {"local": "2026-06-04T22:00:00"},
+      "logo": {"url": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1179214042%2F543747696447%2F1%2Foriginal.20260306-162753?auto=format%2Ccompress&q=75&sharp=10&s=e4014ea77e71c224ce95563687ed09c1"},
+      "venue": {"name": "Eagle Eats Bakery", "address": {"address_1": "Station Approach", "city": "London", "postal_code": "SE15 2JR", "country": "GB", "localized_address_display": "Station Approach, London, SE15 2JR"}},
+      "ticket_availability": {"is_sold_out": false, "minimum_ticket_price": {"major_value": "0.00"}, "maximum_ticket_price": {"major_value": "0.00"}}
+    },
+    {
+      "id": "1987144229884",
+      "series_id": "shoreditch-friday-early",
+      "name": {"text": "Comedy Club Shoreditch - Free Comedy Every Friday in East London - EARLY!"},
+      "summary": "Free stand-up comedy every Friday at 6pm at Bistrot Walluc in Shoreditch.",
+      "url": "https://www.eventbrite.co.uk/e/comedy-club-shoreditch-free-comedy-every-friday-in-east-london-early-tickets-1987144229884",
+      "created": "2025-01-07T09:57:00",
+      "start": {"local": "2026-06-05T18:00:00"},
+      "end": {"local": "2026-06-05T20:00:00"},
+      "logo": {"url": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F929389673%2F543747696447%2F1%2Foriginal.20250107-095700?auto=format%2Ccompress&q=75&sharp=10&s=65ed1abbfd9d41ec5447a7305e0772cb"},
+      "venue": {"name": "Bistrot Walluc", "address": {"address_1": "40 Redchurch Street", "city": "London", "postal_code": "E2 7DP", "country": "GB", "localized_address_display": "40 Redchurch Street, London, E2 7DP"}},
+      "ticket_availability": {"is_sold_out": false, "minimum_ticket_price": {"major_value": "0.00"}, "maximum_ticket_price": {"major_value": "0.00"}}
+    },
+    {
+      "id": "1990193444166",
+      "series_id": "shoreditch-friday-fondue",
+      "name": {"text": "Comedy Club Shoreditch - Free Comedy Every Friday in East London + FONDUE"},
+      "summary": "Free stand-up comedy every Friday at 8pm at Bistrot Walluc in Shoreditch. Fondue is optional.",
+      "url": "https://www.eventbrite.co.uk/e/comedy-club-shoreditch-free-comedy-every-friday-in-east-london-fondue-tickets-1990193444166",
+      "created": "2025-01-07T09:57:00",
+      "start": {"local": "2026-06-05T20:00:00"},
+      "end": {"local": "2026-06-05T22:00:00"},
+      "logo": {"url": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F929389673%2F543747696447%2F1%2Foriginal.20250107-095700?auto=format%2Ccompress&q=75&sharp=10&s=65ed1abbfd9d41ec5447a7305e0772cb"},
+      "venue": {"name": "Bistrot Walluc", "address": {"address_1": "40 Redchurch Street", "city": "London", "postal_code": "E2 7DP", "country": "GB", "localized_address_display": "40 Redchurch Street, London, E2 7DP"}},
+      "ticket_availability": {"is_sold_out": false, "minimum_ticket_price": {"major_value": "0.00"}, "maximum_ticket_price": {"major_value": "0.00"}}
+    },
+    {
+      "id": "1988717209709",
+      "series_id": "soho-saturday",
+      "name": {"text": "London Comedy Group - Soho"},
+      "summary": "Early evening Soho comedy with a tight lineup of stand-up comics. Doors open at 5:15pm.",
+      "url": "https://www.eventbrite.co.uk/e/london-comedy-group-soho-tickets-1988717209709",
+      "created": "2026-04-27T20:12:10",
+      "start": {"local": "2026-06-06T17:30:00"},
+      "end": {"local": "2026-06-06T19:00:00"},
+      "logo": {"url": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1183161657%2F543747696447%2F1%2Foriginal.20260427-201210?auto=format%2Ccompress&q=75&sharp=10&s=354fff0e628559450ead7b9371bcae81"},
+      "venue": {"name": "30 Dean St", "address": {"address_1": "30 Dean Street", "city": "London", "postal_code": "W1D 3RZ", "country": "GB", "localized_address_display": "30 Dean Street, London, W1D 3RZ"}},
+      "ticket_availability": {"is_sold_out": false, "minimum_ticket_price": {"major_value": "5.00"}, "maximum_ticket_price": {"major_value": "5.00"}}
+    }
+  ],
+  "cancelled_events": []
+}

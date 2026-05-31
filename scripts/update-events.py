@@ -1,224 +1,1108 @@
 #!/usr/bin/env python3
+"""Generate the London Comedy Group website from Eventbrite.
+
+Eventbrite is the editorial source of truth. The generated site contains:
+- a conversion-focused homepage
+- a show directory and durable recurring-show landing pages
+- one Google-compatible leaf page per dated Eventbrite occurrence
+- robots.txt and sitemap.xml
+
+Run against live Eventbrite:
+    EVENTBRITE_TOKEN=xxxx python3 scripts/update-events.py
+
+Run deterministically without network access:
+    python3 scripts/update-events.py \
+        --fixture scripts/test-fixtures/events.json \
+        --now 2026-05-31T13:00:00+01:00
 """
-Auto-update the "Upcoming Shows" grid in index.html from Eventbrite.
 
-Pulls every LIVE event for the London Comedy Group organization, collapses each
-recurring series down to its next occurrence, and rewrites the cards between the
-<!-- EVENTS:START --> / <!-- EVENTS:END --> markers in index.html.
+from __future__ import annotations
 
-Needs one secret: the Eventbrite PRIVATE token, supplied via the EVENTBRITE_TOKEN
-environment variable (set as a GitHub Actions secret). Stdlib only - no pip install.
-
-Run locally:  EVENTBRITE_TOKEN=xxxx python3 scripts/update-events.py
-"""
-
-import os
-import sys
-import json
+import argparse
+import datetime as dt
+import hashlib
 import html
-import datetime
+import json
+import os
 import re
+import sys
 import unicodedata
-from urllib import request, parse, error
+from pathlib import Path
+from urllib import error, parse, request
+from zoneinfo import ZoneInfo, ZoneInfoNotFoundError
 
-ORG_ID = "1234539271983"                       # London Comedy Group
+ORG_ID = "1234539271983"
 API = "https://www.eventbriteapi.com/v3"
-ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-INDEX = os.path.join(ROOT, "index.html")
-OVERRIDES = os.path.join(os.path.dirname(os.path.abspath(__file__)), "event-overrides.json")
-START_MARK = "<!-- EVENTS:START (auto-generated from Eventbrite - do not edit by hand) -->"
-END_MARK = "<!-- EVENTS:END -->"
+ROOT = Path(__file__).resolve().parent.parent
+OVERRIDES = ROOT / "scripts" / "event-overrides.json"
+STATE = ROOT / "scripts" / "site-state.json"
+MANIFEST = ROOT / "scripts" / "generated-files.json"
+HEARTBEAT = ROOT / "scripts" / "refresh-heartbeat.txt"
+BASE_URL = "https://londoncomedygroup.com"
+OCCURRENCE_RETENTION_DAYS = 90
+HEARTBEAT_INTERVAL_DAYS = 30
+try:
+    LONDON = ZoneInfo("Europe/London")
+except ZoneInfoNotFoundError:
+    # Minimal environments such as Termux may omit the system timezone database.
+    # GitHub Actions has it; this fallback keeps local generation dependency-free.
+    LONDON = dt.datetime.now().astimezone().tzinfo or dt.timezone.utc
+ORG_NAME = "London Comedy Group"
+ORG_EVENTBRITE = "https://www.eventbrite.co.uk/o/london-comedy-group-55764637993"
+INSTAGRAM = "https://www.instagram.com/londoncomedygroup/"
+TIKTOK = "https://www.tiktok.com/@londoncomedygroup1"
+FACEBOOK = "https://www.facebook.com/profile.php?id=100089919127479"
+BEEHIIV = "https://lcg-fans-broadcast.beehiiv.com/"
+HIRE_FORM = "https://docs.google.com/forms/d/e/1FAIpQLSeAX08fLT3mb6UhwyncyRLHd-kmJPoai-x0kPE5TZ6V9kVJ6A/viewform?usp=header"
+PERFORM_FORM = "https://docs.google.com/forms/d/e/1FAIpQLSe0maLGAuPg4ZUZVVOgpWob1n4oLKiT5mTJgfPZZ_o62k_tdg/viewform?usp=sharing&ouid=115747252269731556423"
+PUBLIC_SHOWS = {
+    "freecomedyeverysundayat6pminislington": {
+        "title": "Free Sunday Comedy in Islington: 6pm Show",
+        "slug": "islington-sunday-comedy-6pm",
+        "area": "Islington",
+    },
+    "candlemakercomedyfreecomedyatbatterseasfavourite": {
+        "title": "Candlemaker Comedy in Battersea",
+        "slug": "candlemaker-comedy-battersea",
+        "area": "Battersea",
+    },
+    "freecomedyeverysundayat8pminislington": {
+        "title": "Free Sunday Comedy in Islington: 8pm Show",
+        "slug": "islington-sunday-comedy-8pm",
+        "area": "Islington",
+    },
+    "isitlingtonfreecomedyeverytuesdayat730pminhighburyislington": {
+        "title": "Is-It-Lington? Tuesday Comedy",
+        "slug": "is-it-lington-tuesday-comedy",
+        "area": "Highbury & Islington",
+    },
+    "byobfreecomedyeverythursdayinpeckham": {
+        "title": "BYOB Comedy in Peckham",
+        "slug": "byob-comedy-peckham",
+        "area": "Peckham",
+    },
+    "comedyclubshoreditchfreecomedyeveryfridayineastlondonearly": {
+        "title": "Comedy Club Shoreditch: Early Show",
+        "slug": "comedy-club-shoreditch-early",
+        "area": "Shoreditch",
+    },
+    "comedyclubshoreditchfreecomedyeveryfridayineastlondonfondue": {
+        "title": "Comedy Club Shoreditch: Comedy + Fondue",
+        "slug": "comedy-club-shoreditch-fondue",
+        "area": "Shoreditch",
+    },
+    "londoncomedygroupsoho": {
+        "title": "Saturday Comedy in Soho",
+        "slug": "saturday-comedy-soho",
+        "area": "Soho",
+    },
+}
 
 
-def api_get(path, params):
+def esc(value: object) -> str:
+    return html.escape(str(value or ""), quote=True)
+
+
+def load_json(path: Path, default):
+    if not path.exists():
+        return default
+    with path.open(encoding="utf-8") as f:
+        return json.load(f)
+
+
+def save_json(path: Path, value) -> None:
+    path.parent.mkdir(parents=True, exist_ok=True)
+    text = json.dumps(value, indent=2, ensure_ascii=False, sort_keys=True) + "\n"
+    write_text(path, text)
+
+
+def write_text(path: Path, text: str) -> None:
+    path.parent.mkdir(parents=True, exist_ok=True)
+    if path.exists() and path.read_text(encoding="utf-8") == text:
+        return
+    path.write_text(text, encoding="utf-8")
+
+
+def api_get(path: str, params: dict) -> dict:
+    token = os.environ.get("EVENTBRITE_TOKEN")
+    if not token:
+        raise RuntimeError("Set EVENTBRITE_TOKEN or use --fixture.")
     qs = parse.urlencode(params)
-    req = request.Request(f"{API}{path}?{qs}",
-                          headers={"Authorization": f"Bearer {TOKEN}"})
-    with request.urlopen(req, timeout=30) as r:
-        return json.load(r)
-
-
-def fetch_live_events():
-    """All live events for the org, following pagination."""
-    events, page = [], 1
-    while True:
-        data = api_get(f"/organizations/{ORG_ID}/events/", {
-            "status": "live",
-            "order_by": "start_asc",
-            "expand": "venue,ticket_availability",
-            "page_size": 50,
-            "page": page,
-        })
-        events.extend(data.get("events", []))
-        pg = data.get("pagination", {})
-        if not pg.get("has_more_items"):
-            break
-        page += 1
-    return events
-
-
-def dedupe_series(events):
-    """Keep the earliest upcoming occurrence per series (or per event if no series)."""
-    seen = {}
-    for e in events:
-        key = e.get("series_id") or e["id"]
-        current = seen.get(key)
-        if current is None or e["start"]["utc"] < current["start"]["utc"]:
-            seen[key] = e
-    return list(seen.values())
-
-
-def normalized_text(value):
-    """Normalize Eventbrite text so formatting differences do not defeat deduping."""
-    text = unicodedata.normalize("NFKD", value or "").casefold()
-    return re.sub(r"[^a-z0-9]+", "", text)
-
-
-def occurrence_key(e):
-    """Identify duplicate listings for the same performance."""
-    venue = e.get("venue") or {}
-    address = venue.get("address") or {}
-    place = address.get("localized_address_display") or venue.get("name") or ""
-    return normalized_text(place), e["start"]["local"]
-
-
-def dedupe_occurrences(events):
-    """Collapse separately-created Eventbrite listings for the same show occurrence."""
-    seen = {}
-    for e in events:
-        key = occurrence_key(e)
-        current = seen.get(key)
-        if current is None or e["id"] < current["id"]:
-            seen[key] = e
-    return list(seen.values())
-
-
-def fmt_time(local_iso):
-    # "2026-06-05T18:00:00" -> "6:00 PM"
-    dt = datetime.datetime.fromisoformat(local_iso)
-    return dt.strftime("%I:%M %p").lstrip("0")
-
-
-def next_show_badge(local_iso):
-    dt = datetime.datetime.fromisoformat(local_iso)
-    return f"Next show: {dt.strftime('%A')} {dt.day} {dt.strftime('%B')}"
-
-
-def fmt_price(ta):
-    minp = (ta or {}).get("minimum_ticket_price") or {}
-    maxp = (ta or {}).get("maximum_ticket_price") or {}
-    lo = minp.get("major_value")
-    hi = maxp.get("major_value")
-    if lo is None:
-        return None, False
-    is_free = float(lo) == 0 and (hi is None or float(hi) == 0)
-    if is_free:
-        return "FREE ENTRY", True
-
-    def money(v):
-        f = float(v)
-        return f"£{int(f)}" if f == int(f) else f"£{f:.2f}"
-
-    if hi and float(hi) != float(lo):
-        return f"{money(lo)} - {money(hi)}", False
-    return money(lo), False
-
-
-def venue_line(e):
-    v = e.get("venue") or {}
-    name = v.get("name")
-    addr = (v.get("address") or {}).get("localized_address_display")
-    parts = [p for p in (name, addr) if p]
-    return ", ".join(parts) if parts else "London"
-
-
-def best_image(e):
-    logo = e.get("logo") or {}
-    orig = (logo.get("original") or {}).get("url")
-    return orig or logo.get("url")
-
-
-def build_card(e, overrides):
-    o = overrides.get(str(e.get("series_id") or e["id"]), {})
-
-    title = o.get("title", e["name"]["text"])
-    image = o.get("image", best_image(e))
-    badge = o.get("date_badge", next_show_badge(e["start"]["local"]))
-    time = o.get("time", fmt_time(e["start"]["local"]))
-    venue = o.get("venue", venue_line(e))
-    blurb = o.get("blurb", (e.get("summary") or "").strip())
-
-    auto_price, is_free = fmt_price(e.get("ticket_availability"))
-    price = o.get("price", auto_price)
-    cta = o.get("cta", "Get Free Tickets" if is_free else "Get Tickets")
-    url = o.get("url", e["url"])
-
-    esc = html.escape
-    rows = [
-        f'                <img src="{esc(image or "")}" alt="{esc(title)}" '
-        f'style="width: 100%; height: 200px; object-fit: cover; border-radius: 10px; margin-bottom: 20px;">',
-        f'                <span class="event-date">{esc(badge)}</span>',
-        f'                <h3 class="event-title">{esc(title)}</h3>',
-        f'                <p class="event-location">📍 {esc(venue)}</p>',
-        f'                <p class="event-time">🕐 {esc(time)}</p>',
-    ]
-    if price:
-        rows.append(f'                <p class="event-price">{esc(price)}</p>')
-    if blurb:
-        rows.append(f'                <p style="color: rgba(255,255,255,0.7); margin-top: 15px;">{esc(blurb)}</p>')
-    rows.append(
-        f'                <a href="{esc(url)}" target="_blank" class="btn btn-secondary" '
-        f'style="margin-top: 15px; padding: 10px 20px; font-size: 14px;">\n'
-        f'                    {esc(cta)} →\n'
-        f'                </a>'
+    req = request.Request(
+        f"{API}{path}?{qs}", headers={"Authorization": f"Bearer {token}"}
     )
-    inner = "\n".join(rows)
-    return f'            <div class="event-card fade-in">\n{inner}\n            </div>'
+    with request.urlopen(req, timeout=30) as response:
+        return json.load(response)
 
 
-def main():
-    overrides = {}
-    if os.path.exists(OVERRIDES):
-        with open(OVERRIDES, encoding="utf-8") as f:
-            overrides = json.load(f)
+def fetch_events(status: str) -> list[dict]:
+    events: list[dict] = []
+    page = 1
+    while True:
+        data = api_get(
+            f"/organizations/{ORG_ID}/events/",
+            {
+                "status": status,
+                "order_by": "start_asc",
+                "expand": "venue,ticket_availability",
+                "page_size": 50,
+                "page": page,
+            },
+        )
+        events.extend(data.get("events", []))
+        pagination = data.get("pagination", {})
+        if not pagination.get("has_more_items"):
+            return events
+        page += 1
 
-    events = dedupe_occurrences(dedupe_series(fetch_live_events()))
-    events.sort(key=lambda e: e["start"]["local"])
-    if not events:
-        print("No live events returned - leaving index.html untouched.", file=sys.stderr)
-        return 1
 
-    cards = "\n\n".join(build_card(e, overrides) for e in events)
-    block = f"{START_MARK}\n{cards}\n            {END_MARK}"
+def load_events(fixture: str | None) -> tuple[list[dict], list[dict]]:
+    if fixture:
+        data = load_json(Path(fixture), {})
+        return data.get("events", []), data.get("cancelled_events", [])
+    live = fetch_events("live")
+    try:
+        cancelled = fetch_events("canceled")
+    except error.HTTPError as ex:
+        # A live refresh must never fail because cancellation history is unavailable.
+        print(f"Warning: could not fetch cancelled events ({ex.code}).", file=sys.stderr)
+        cancelled = []
+    return live, cancelled
 
-    with open(INDEX, encoding="utf-8") as f:
-        page = f.read()
 
-    if START_MARK not in page or END_MARK not in page:
-        print("Markers not found in index.html - aborting.", file=sys.stderr)
-        return 2
+def parse_local(value: str) -> dt.datetime:
+    parsed = dt.datetime.fromisoformat(value)
+    if parsed.tzinfo is None:
+        parsed = parsed.replace(tzinfo=LONDON)
+    return parsed
 
-    pre, rest = page.split(START_MARK, 1)
-    _, post = rest.split(END_MARK, 1)
-    new_page = f"{pre}{block}{post}"
 
-    if new_page == page:
-        print(f"No changes - {len(events)} events already up to date.")
-        return 0
+def event_start(event: dict) -> dt.datetime:
+    return parse_local(event["start"]["local"])
 
-    with open(INDEX, "w", encoding="utf-8") as f:
-        f.write(new_page)
-    print(f"Updated index.html with {len(events)} events.")
+
+def event_end(event: dict) -> dt.datetime:
+    end = (event.get("end") or {}).get("local")
+    return parse_local(end) if end else event_start(event) + dt.timedelta(hours=2)
+
+
+def series_key(event: dict) -> str:
+    return str(event.get("series_id") or event["id"])
+
+
+def normalized_text(value: str) -> str:
+    text = unicodedata.normalize("NFKD", value or "").encode("ascii", "ignore").decode()
+    return re.sub(r"[^a-z0-9]+", "", text.casefold())
+
+
+def slugify(value: str) -> str:
+    text = unicodedata.normalize("NFKD", value or "").encode("ascii", "ignore").decode()
+    slug = re.sub(r"[^a-z0-9]+", "-", text.casefold()).strip("-")
+    return slug[:72].rstrip("-") or "comedy-show"
+
+
+def venue(event: dict) -> dict:
+    return event.get("venue") or {}
+
+
+def address(event: dict) -> dict:
+    return venue(event).get("address") or {}
+
+
+def venue_name(event: dict) -> str:
+    return venue(event).get("name") or "London venue"
+
+
+def address_display(event: dict) -> str:
+    data = address(event)
+    return data.get("localized_address_display") or ", ".join(
+        value
+        for value in (
+            data.get("address_1"),
+            data.get("city"),
+            data.get("postal_code"),
+        )
+        if value
+    )
+
+
+def occurrence_key(event: dict) -> tuple[str, str, str]:
+    place = address_display(event) or venue_name(event)
+    return series_key(event), normalized_text(place), event["start"]["local"]
+
+
+def dedupe_occurrences(events: list[dict]) -> list[dict]:
+    seen: dict[tuple[str, str], dict] = {}
+    for event in events:
+        key = occurrence_key(event)
+        if key not in seen or str(event["id"]) < str(seen[key]["id"]):
+            seen[key] = event
+    return list(seen.values())
+
+
+def event_title(event: dict) -> str:
+    return (event.get("name") or {}).get("text") or "Stand-up comedy in London"
+
+
+def public_details(event: dict) -> dict:
+    return PUBLIC_SHOWS.get(normalized_text(event_title(event)), {})
+
+
+def public_title(event: dict) -> str:
+    return public_details(event).get("title") or event_title(event)
+
+
+def public_area(event: dict) -> str:
+    return public_details(event).get("area") or "London"
+
+
+def event_summary(event: dict) -> str:
+    summary = (event.get("summary") or "").strip()
+    if summary:
+        return summary
+    return f"Live stand-up comedy at {venue_name(event)} in London."
+
+
+def best_image(event: dict) -> str:
+    logo = event.get("logo") or {}
+    return ((logo.get("original") or {}).get("url") or logo.get("url") or
+            f"{BASE_URL}/london-comedy-group-logo.jpg")
+
+
+def ticket_data(event: dict) -> tuple[str, str, bool]:
+    availability = event.get("ticket_availability") or {}
+    minimum = availability.get("minimum_ticket_price") or {}
+    maximum = availability.get("maximum_ticket_price") or {}
+    low = minimum.get("major_value")
+    high = maximum.get("major_value")
+    sold_out = bool(availability.get("is_sold_out"))
+    if low is None:
+        return "Check Eventbrite", "", sold_out
+
+    def money(value: str) -> str:
+        amount = float(value)
+        return f"£{int(amount)}" if amount == int(amount) else f"£{amount:.2f}"
+
+    if float(low) == 0 and (high is None or float(high) == 0):
+        return "Free entry", "0", sold_out
+    if high is not None and float(high) != float(low):
+        return f"{money(low)} - {money(high)}", str(low), sold_out
+    return money(low), str(low), sold_out
+
+
+def tracked_url(url: str, campaign: str, content: str) -> str:
+    parsed = parse.urlsplit(url)
+    query = dict(parse.parse_qsl(parsed.query, keep_blank_values=True))
+    query.update(
+        {
+            "utm_source": "londoncomedygroup.com",
+            "utm_medium": "website",
+            "utm_campaign": campaign,
+            "utm_content": content,
+        }
+    )
+    return parse.urlunsplit(
+        (parsed.scheme, parsed.netloc, parsed.path, parse.urlencode(query), parsed.fragment)
+    )
+
+
+def format_day(value: dt.datetime) -> str:
+    return f"{value.strftime('%A')} {value.day} {value.strftime('%B')}"
+
+
+def format_full_date(value: dt.datetime) -> str:
+    return f"{value.strftime('%A')} {value.day} {value.strftime('%B %Y')}"
+
+
+def format_time(value: dt.datetime) -> str:
+    return value.strftime("%I:%M %p").lstrip("0")
+
+
+def iso_with_zone(value: dt.datetime) -> str:
+    return value.isoformat()
+
+
+def json_script(data: dict) -> str:
+    payload = json.dumps(data, ensure_ascii=False, separators=(",", ":")).replace("</", "<\\/")
+    return f'<script type="application/ld+json">{payload}</script>'
+
+
+def meta_description(text: str) -> str:
+    text = re.sub(r"\s+", " ", text).strip()
+    if len(text) <= 156:
+        return text
+    return text[:157].rsplit(" ", 1)[0].rstrip(" ,.;:-")
+
+
+def absolute(path: str) -> str:
+    return BASE_URL + (path if path.startswith("/") else f"/{path}")
+
+
+def list_text(values: list[str]) -> str:
+    values = list(dict.fromkeys(value for value in values if value))
+    if not values:
+        return "London"
+    if len(values) == 1:
+        return values[0]
+    if len(values) == 2:
+        return f"{values[0]} and {values[1]}"
+    return f"{', '.join(values[:-1])}, and {values[-1]}"
+
+
+def layout(
+    *,
+    title: str,
+    description: str,
+    canonical: str,
+    body: str,
+    now: dt.datetime,
+    image: str | None = None,
+    json_ld: list[dict] | None = None,
+    robots: str | None = None,
+) -> str:
+    canonical_url = absolute(canonical)
+    social_image = image or f"{BASE_URL}/london-comedy-group-logo.jpg"
+    robot_tag = f'\n    <meta name="robots" content="{esc(robots)}">' if robots else ""
+    structured = "\n    ".join(json_script(item) for item in (json_ld or []))
+    if structured:
+        structured = "\n    " + structured
+    return f"""<!doctype html>
+<html lang="en-GB">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#090811">
+    <title>{esc(title)}</title>
+    <meta name="description" content="{esc(meta_description(description))}">
+    <link rel="canonical" href="{esc(canonical_url)}">{robot_tag}
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="{esc(title)}">
+    <meta property="og:description" content="{esc(meta_description(description))}">
+    <meta property="og:url" content="{esc(canonical_url)}">
+    <meta property="og:image" content="{esc(social_image)}">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="{esc(title)}">
+    <meta name="twitter:description" content="{esc(meta_description(description))}">
+    <meta name="twitter:image" content="{esc(social_image)}">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="preconnect" href="https://img.evbuc.com">
+    <link rel="stylesheet" href="/assets/site.css">{structured}
+</head>
+<body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+        <div class="wrap nav">
+            <a class="brand" href="/" aria-label="London Comedy Group home">
+                <img src="/london-comedy-group-logo.jpg" width="52" height="52" alt="">
+                <span>London Comedy Group</span>
+            </a>
+            <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
+            <nav id="site-nav" class="nav-links" aria-label="Main navigation">
+                <a href="/#shows">This week</a>
+                <a href="/shows/">All shows</a>
+                <a href="/#comedians">Comedians</a>
+                <a href="/stay-in-touch/">Stay in touch</a>
+            </nav>
+        </div>
+    </header>
+    <main id="main">{body}</main>
+    <footer class="site-footer">
+        <div class="wrap footer-grid">
+            <div><strong>London Comedy Group</strong><p>Live stand-up comedy across London.</p></div>
+            <div class="footer-links">
+                <a href="/shows/">Find a show</a>
+                <a href="/stay-in-touch/">Mailing list</a>
+                <a href="/hire-comedians-london/">Hire comedians</a>
+                <a href="/perform-with-us/">Perform with us</a>
+                <a href="{esc(INSTAGRAM)}" rel="noopener noreferrer" target="_blank">Instagram</a>
+                <a href="{esc(TIKTOK)}" rel="noopener noreferrer" target="_blank">TikTok</a>
+                <a href="{esc(FACEBOOK)}" rel="noopener noreferrer" target="_blank">Facebook</a>
+            </div>
+        </div>
+        <div class="wrap footer-bottom">© {now.year} London Comedy Group</div>
+    </footer>
+    <script src="/assets/site.js" defer></script>
+</body>
+</html>
+"""
+
+
+def show_slug(series: str, event: dict, state: dict, used: set[str]) -> str:
+    entry = state["series"].get(series)
+    if entry and entry.get("slug"):
+        used.add(entry["slug"])
+        return entry["slug"]
+    base = public_details(event).get("slug") or slugify(public_title(event))
+    slug = base
+    if slug in used:
+        slug = f"{base}-{series[-6:]}"
+    used.add(slug)
+    return slug
+
+
+def update_state(live_events: list[dict], state: dict, today: str) -> dict[str, str]:
+    state.setdefault("series", {})
+    used = {item["slug"] for item in state["series"].values() if item.get("slug")}
+    live_keys = {series_key(event) for event in live_events}
+    slugs: dict[str, str] = {}
+    for event in sorted(live_events, key=event_start):
+        key = series_key(event)
+        if key not in state["series"]:
+            # Adopt a previously-seen show's durable URL when Eventbrite changes
+            # its series identifier or when the initial fixture is replaced by
+            # the first live API refresh.
+            for old_key, old_entry in list(state["series"].items()):
+                source_title = old_entry.get("source_title") or old_entry.get("title", "")
+                same_title = normalized_text(source_title) == normalized_text(event_title(event))
+                same_venue = normalized_text(old_entry.get("venue_name", "")) == normalized_text(venue_name(event))
+                if old_key not in live_keys and same_title and same_venue:
+                    state["series"][key] = state["series"].pop(old_key)
+                    break
+        slug = show_slug(key, event, state, used)
+        slugs[key] = slug
+        state["series"][key] = {
+            "slug": slug,
+            "title": public_title(event),
+            "source_title": event_title(event),
+            "summary": event_summary(event),
+            "image": best_image(event),
+            "venue_name": venue_name(event),
+            "address": address(event),
+            "last_seen": today,
+        }
+    return slugs
+
+
+def group_by_series(events: list[dict]) -> dict[str, list[dict]]:
+    grouped: dict[str, list[dict]] = {}
+    for event in sorted(events, key=event_start):
+        grouped.setdefault(series_key(event), []).append(event)
+    return grouped
+
+
+def annotate_event_path(event: dict, slug: str, occurrences: dict) -> str:
+    previous = occurrences.get(str(event["id"]), {})
+    path = previous.get("path") or event_path(event, slug)
+    event["_site_path"] = path
+    return path
+
+
+def retention_deadline(event: dict) -> dt.datetime:
+    return event_end(event) + dt.timedelta(days=OCCURRENCE_RETENTION_DAYS)
+
+
+def update_occurrences(
+    live: list[dict],
+    cancelled: list[dict],
+    state: dict,
+    slugs: dict[str, str],
+    now: dt.datetime,
+) -> dict[str, dict]:
+    occurrences = state.setdefault("occurrences", {})
+    observed: set[str] = set()
+    today = now.date().isoformat()
+
+    for event in live:
+        event_id = str(event["id"])
+        annotate_event_path(event, slugs[series_key(event)], occurrences)
+        occurrences[event_id] = {
+            "event": public_event(event),
+            "last_seen": today,
+            "path": event_path(event, slugs[series_key(event)]),
+            "status": "live",
+        }
+        observed.add(event_id)
+
+    for event in cancelled:
+        event_id = str(event["id"])
+        key = series_key(event)
+        entry = state["series"].get(key)
+        if not entry:
+            continue
+        annotate_event_path(event, entry["slug"], occurrences)
+        occurrences[event_id] = {
+            "event": public_event(event),
+            "last_seen": today,
+            "path": event_path(event, entry["slug"]),
+            "status": "cancelled",
+        }
+        observed.add(event_id)
+
+    for event_id, item in list(occurrences.items()):
+        event = item.get("event") or {}
+        if event_id not in observed and item.get("status") == "live":
+            item["status"] = "expired"
+        if not event or retention_deadline(event) < now:
+            occurrences.pop(event_id)
+
+    return occurrences
+
+
+def event_path(event: dict, slug: str) -> str:
+    if event.get("_site_path"):
+        return event["_site_path"]
+    stamp = event_start(event).strftime("%Y-%m-%d-%H%M")
+    return f"/events/{slug}-{stamp}-{event['id']}/"
+
+
+def public_event(event: dict) -> dict:
+    return {key: value for key, value in event.items() if not key.startswith("_")}
+
+
+def preferred_event(events: list[dict]) -> dict:
+    return next((event for event in events if not ticket_data(event)[2]), events[0])
+
+
+def breadcrumb(items: list[tuple[str, str]]) -> dict:
+    return {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {"@type": "ListItem", "position": pos, "name": name, "item": absolute(path)}
+            for pos, (name, path) in enumerate(items, 1)
+        ],
+    }
+
+
+def ticket_button(event: dict, slug: str, content: str, label: str | None = None) -> str:
+    price, _, sold_out = ticket_data(event)
+    url = tracked_url(event["url"], slug, content)
+    text = label or ("View sold-out event" if sold_out else ("Get free tickets" if price == "Free entry" else "Get tickets"))
+    return (
+        f'<a class="button button-primary" data-ticket-link data-show="{esc(slug)}" '
+        f'data-placement="{esc(content)}" href="{esc(url)}" rel="noopener noreferrer" '
+        f'target="_blank">{esc(text)}</a>'
+    )
+
+
+def event_card(event: dict, slug: str, placement: str) -> str:
+    start = event_start(event)
+    price, _, sold_out = ticket_data(event)
+    status = '<span class="pill pill-muted">Sold out</span>' if sold_out else ""
+    return f"""
+        <article class="event-card">
+            <a class="card-image-link" href="{esc(event_path(event, slug))}">
+                <img class="card-image" src="{esc(best_image(event))}" width="640" height="360"
+                     loading="lazy" alt="{esc(public_title(event))}">
+            </a>
+            <div class="card-body">
+                <div class="pill-row"><span class="pill">{esc(format_day(start))}</span>{status}</div>
+                <h3><a href="{esc(event_path(event, slug))}">{esc(public_title(event))}</a></h3>
+                <p class="card-meta"><strong>{esc(format_time(start))}</strong> · {esc(price)}</p>
+                <p class="card-meta">{esc(venue_name(event))}<br>{esc(address_display(event))}</p>
+                <div class="card-actions">
+                    {ticket_button(event, slug, placement)}
+                    <a class="text-link" href="{esc(event_path(event, slug))}">Details</a>
+                </div>
+            </div>
+        </article>"""
+
+
+def organizer_schema() -> dict:
+    return {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": ORG_NAME,
+        "url": BASE_URL,
+        "logo": f"{BASE_URL}/london-comedy-group-logo.jpg",
+        "sameAs": [ORG_EVENTBRITE, INSTAGRAM, TIKTOK, FACEBOOK],
+    }
+
+
+def render_comedians() -> str:
+    runners = [
+        {
+            "name": "Ridwan Hussain",
+            "image": "/ridwan-hussain.jpg",
+            "bio": 'An exciting comedian with quick wit and relatable material. "Delightfully Funny" - Chortle.',
+            "highlights": [
+                "Star of Bound & Gagged's AAA Stand-Up Show",
+                "Winner: Crack Comedy New Comedian",
+                "Regular at Backyard Comedy Club, Up the Creek, Big Belly, and The Comedy Store",
+            ],
+            "instagram": "https://www.instagram.com/richardhudsoncomedy/",
+        },
+        {
+            "name": "Robert Enciu",
+            "image": "/robert-enciu.jpg",
+            "bio": "A rising voice on London's comedy circuit, bringing an Eastern European perspective, sharp observations, and an easy stage presence.",
+            "highlights": [
+                "Romanian-British cultural comedy",
+                "Material about UK and Eastern European life",
+                "Comedy clips watched online",
+            ],
+            "instagram": "https://www.instagram.com/robert_out_here_/",
+        },
+        {
+            "name": "Brendan Morris",
+            "image": "/brendan-morris.jpg",
+            "bio": "Irish comedian based in East London. An actor by trade, Brendan brings irreverent humour, spontaneous energy, and character-comedy bits to the stage.",
+            "highlights": [
+                "MC and host at London comedy nights",
+                "Host of Is-It-Lington comedy at Hoxley & Porter",
+                "Actor with a natural, spontaneous performance style",
+            ],
+            "instagram": "https://www.instagram.com/vagabondbrendan/",
+        },
+    ]
+    regulars = [
+        ("Peter Jones", "/peter_jones.jpg", "Regular performer"),
+        ("Mike Rice", "/mike_rice.jpeg", "Regular performer"),
+        ("Evaldas Karosas", "/evaldas_karosas.jpg", "Regular performer"),
+        ("Shalaka Kurup", "/shalaka_kurup.jpeg", "Regular performer"),
+        ("Dominic Fraser", "/dominic_fraser.jpg", "Host - Craft Comedy"),
+        ("Anno Gomes", "/anno_gomes.jpg", "Regular performer"),
+        ("Oliver Moore", "/oliver_moore.jpg", "Sporadic performer"),
+        ("John Sharp", "/john_sharp.jpg", "Regular performer"),
+        ("Samma", "/samma.jpg", "Regular performer"),
+        ("Donatas", "/donatas.jpeg", "Regular performer"),
+    ]
+    runner_cards = "".join(
+        f"""<article class="comedian-card">
+            <img class="comedian-portrait" src="{esc(runner["image"])}" width="180" height="180" loading="lazy" alt="{esc(runner["name"])}">
+            <h3>{esc(runner["name"])}</h3>
+            <p>{esc(runner["bio"])}</p>
+            <ul>{"".join(f"<li>{esc(item)}</li>" for item in runner["highlights"])}</ul>
+            <a class="text-link" href="{esc(runner["instagram"])}" rel="noopener noreferrer" target="_blank">Follow on Instagram</a>
+        </article>"""
+        for runner in runners
+    )
+    regular_cards = "".join(
+        f"""<article class="act-card">
+            <img src="{esc(image)}" width="112" height="112" loading="lazy" alt="{esc(name)}">
+            <strong>{esc(name)}</strong><span>{esc(role)}</span>
+        </article>"""
+        for name, image, role in regulars
+    )
+    return f"""
+    <section id="comedians" class="section wrap">
+        <div class="section-heading"><p class="eyebrow">The people behind the nights</p><h2>Meet the show runners</h2>
+            <p>London Comedy Group nights are built and hosted by working comics, with regular guest acts from across the circuit.</p></div>
+        <div class="comedian-grid">{runner_cards}</div>
+        <div class="roster-block"><h2>Some of our acts</h2><div class="act-grid">{regular_cards}</div></div>
+    </section>
+    <section class="section section-alt">
+        <div class="wrap"><div class="section-heading"><p class="eyebrow">From the rooms</p><h2>Comedy night gallery</h2></div>
+        <div class="gallery-grid">
+            <img src="/comedy-poster.jpg" width="600" height="300" loading="lazy" alt="London Comedy Group show poster">
+            <img src="/comedy-venue.jpg" width="600" height="300" loading="lazy" alt="Bistrot Walluc comedy venue interior">
+            <img src="/comedy-audience.jpg" width="600" height="300" loading="lazy" alt="Audience at a London Comedy Group night">
+        </div></div>
+    </section>"""
+
+
+def render_home(active: dict[str, list[dict]], slugs: dict[str, str], now: dt.datetime) -> str:
+    next_events = [preferred_event(events) for events in active.values()]
+    next_events.sort(key=event_start)
+    cards = "".join(event_card(event, slugs[series_key(event)], "homepage-card") for event in next_events) or """
+        <div class="empty-state"><h3>New comedy dates are on the way</h3>
+            <p>There are no live Eventbrite listings right now. Join the mailing list to hear when the next London shows open.</p>
+            <a class="button button-primary" href="/stay-in-touch/">Join the mailing list</a></div>"""
+    areas = "".join(
+        f"""<a class="area-card" href="/shows/{esc(slugs[key])}/">
+                <span>{esc(venue_name(preferred_event(events)))}</span>
+                <strong>{esc(public_title(preferred_event(events)))}</strong>
+                <small>{esc(format_day(event_start(preferred_event(events))))} · {esc(format_time(event_start(preferred_event(events))))}</small>
+            </a>"""
+        for key, events in sorted(active.items(), key=lambda item: event_start(preferred_event(item[1])))
+    )
+    area_names = list_text([public_area(event) for event in next_events])
+    hero_copy = (
+        f"Free and low-cost stand-up in {area_names}. Pick a night and reserve your tickets on Eventbrite."
+        if next_events
+        else "Fresh London stand-up dates are added here automatically as soon as booking opens on Eventbrite."
+    )
+    directory_copy = (
+        f"{len(next_events)} comedy nights currently booking across London. Choose a night and reserve your spot."
+        if next_events
+        else "There are no live listings today. New Eventbrite dates will appear here automatically."
+    )
+    body = f"""
+    <section class="hero">
+        <div class="wrap hero-grid">
+            <div>
+                <p class="eyebrow">Live stand-up across London</p>
+                <h1>Find an upcoming comedy show in London</h1>
+                <p class="hero-copy">{esc(hero_copy)}</p>
+                <div class="hero-actions">
+                    <a class="button button-primary" href="#shows">Find an upcoming show</a>
+                    <a class="button button-ghost" href="/shows/">See all comedy nights</a>
+                </div>
+                <div class="trust-row">
+                    <span>Weekly shows</span><span>London venues</span><span>Free and low-cost tickets</span>
+                </div>
+            </div>
+            <img class="hero-image" src="/comedy-audience.jpg" width="600" height="300" fetchpriority="high"
+                 alt="Audience enjoying a London Comedy Group stand-up show">
+        </div>
+    </section>
+    <section id="shows" class="section wrap">
+        <div class="section-heading">
+            <p class="eyebrow">Book your next night out</p>
+            <h2>Upcoming comedy shows</h2>
+            <p>{esc(directory_copy)}</p>
+        </div>
+        <div class="event-grid">{cards}</div>
+        <div class="center"><a class="button button-ghost" href="/shows/">See all comedy nights</a></div>
+    </section>
+    <section class="section section-alt">
+        <div class="wrap">
+            <div class="section-heading"><p class="eyebrow">Find your local night</p><h2>Comedy around London</h2></div>
+            <div class="area-grid">{areas or '<p>New venue dates will appear here automatically.</p>'}</div>
+        </div>
+    </section>
+    <section class="section wrap split">
+        <div><p class="eyebrow">A simple night out</p><h2>A comedy night near you</h2>
+        <p>Choose from weekly shows across London. Check the venue, time, and ticket price, then reserve your spot on Eventbrite.</p></div>
+        <div class="feature-list"><div><strong>Choose a show</strong><span>Browse by date or venue.</span></div>
+        <div><strong>Reserve on Eventbrite</strong><span>Free and affordable options are clearly marked.</span></div>
+        <div><strong>Turn up and laugh</strong><span>All the practical details are on your event page.</span></div></div>
+    </section>
+    {render_comedians()}
+    <section class="section newsletter"><div class="wrap narrow center">
+        <p class="eyebrow">Hear about new nights first</p><h2>Get comedy shows in your inbox</h2>
+        <p>Join the London Comedy Group mailing list for new venues, special shows, and ticket releases.</p>
+        <a class="button button-primary" href="/stay-in-touch/">Join the mailing list</a>
+    </div></section>"""
+    return layout(
+        title="Upcoming Comedy Shows in London | Free & Low-Cost Tickets",
+        description=f"Find free and low-cost stand-up comedy in {area_names}. Check upcoming dates, venues, and book tickets on Eventbrite.",
+        canonical="/",
+        body=body,
+        now=now,
+        json_ld=[organizer_schema()],
+        image=f"{BASE_URL}/comedy-audience.jpg",
+    )
+
+
+def render_shows_index(active: dict[str, list[dict]], slugs: dict[str, str], now: dt.datetime) -> str:
+    cards = "".join(event_card(preferred_event(events), slugs[key], "shows-directory") for key, events in sorted(active.items(), key=lambda item: event_start(preferred_event(item[1])))) or """
+        <div class="empty-state"><h2>New comedy dates are on the way</h2>
+            <p>There are no live Eventbrite listings right now. Join the mailing list for new London shows.</p>
+            <a class="button button-primary" href="/stay-in-touch/">Join the mailing list</a></div>"""
+    body = f"""
+    <section class="page-hero"><div class="wrap narrow"><p class="eyebrow">Comedy nights across London</p>
+        <h1>Find a London comedy show</h1>
+        <p>Browse upcoming London Comedy Group nights by day and area. Pick a show and reserve your tickets on Eventbrite.</p></div></section>
+    <section class="section wrap"><h2 class="sr-only">Shows currently booking</h2><div class="event-grid">{cards}</div></section>"""
+    return layout(
+        title="Comedy Shows in London: Dates, Venues & Tickets | London Comedy Group",
+        description="Browse upcoming London Comedy Group stand-up nights. Find free and affordable comedy shows, venue details, dates, and Eventbrite tickets.",
+        canonical="/shows/",
+        body=body,
+        now=now,
+        json_ld=[breadcrumb([("Home", "/"), ("Shows", "/shows/")])],
+    )
+
+
+def render_show_page(
+    key: str,
+    entry: dict,
+    events: list[dict],
+    active: dict[str, list[dict]],
+    slugs: dict[str, str],
+    now: dt.datetime,
+) -> str:
+    slug = entry["slug"]
+    is_active = bool(events)
+    if is_active:
+        event = preferred_event(events)
+        title = public_title(event)
+        summary = event_summary(event)
+        image = best_image(event)
+        upcoming = "".join(
+            f"""<li><div><strong>{esc(format_full_date(event_start(item)))}</strong><span>{esc(format_time(event_start(item)))} · {esc(ticket_data(item)[0])}</span></div>
+                <div class="list-actions"><a class="text-link" href="{esc(event_path(item, slug))}">Details</a>{ticket_button(item, slug, "show-upcoming-list")}</div></li>"""
+            for item in events
+        )
+        next_block = f"""<div class="booking-panel"><p class="eyebrow">Next show</p>
+            <h2>{esc(format_full_date(event_start(event)))}</h2>
+            <p><strong>{esc(format_time(event_start(event)))}</strong> · {esc(ticket_data(event)[0])}</p>
+            <p>{esc(venue_name(event))}<br>{esc(address_display(event))}</p>
+            {ticket_button(event, slug, "show-hero")}</div>"""
+        venue_block = f"""<h2>Venue details</h2><p><strong>{esc(venue_name(event))}</strong><br>{esc(address_display(event))}</p>
+            <a class="text-link" href="https://www.google.com/maps/search/?api=1&amp;query={esc(parse.quote_plus(venue_name(event) + ' ' + address_display(event)))}" rel="noopener noreferrer" target="_blank">Open in Google Maps</a>"""
+    else:
+        title = entry["title"]
+        summary = entry.get("summary") or f"Stand-up comedy at {entry.get('venue_name', 'a London venue')}."
+        image = entry.get("image")
+        upcoming = "<li><div><strong>No upcoming dates currently listed</strong><span>Browse the live shows directory for another comedy night.</span></div></li>"
+        next_block = """<div class="booking-panel"><p class="eyebrow">Currently paused</p>
+            <h2>No new dates are listed</h2><p>This night is not currently booking. See the live show directory for the latest options.</p>
+            <a class="button button-primary" href="/shows/">Find another comedy show</a></div>"""
+        old_address = entry.get("address") or {}
+        previous_address = old_address.get("localized_address_display") or ", ".join(
+            value
+            for value in (old_address.get("address_1"), old_address.get("city"), old_address.get("postal_code"))
+            if value
+        )
+        venue_block = f"<h2>Previous venue</h2><p><strong>{esc(entry.get('venue_name'))}</strong><br>{esc(previous_address)}</p>"
+    alternatives = "".join(
+        f'<a class="text-link" href="/shows/{esc(slugs[other_key])}/">{esc(public_title(other_events[0]))}</a>'
+        for other_key, other_events in active.items()
+        if other_key != key
+    )
+    body = f"""
+    <section class="page-hero"><div class="wrap detail-grid"><div><p class="eyebrow">London comedy show</p>
+        <h1>{esc(title)}</h1><p>{esc(summary)}</p></div>{next_block}</div></section>
+    <section class="section wrap detail-grid"><div><h2>Upcoming dates</h2><ul class="date-list">{upcoming}</ul></div>
+        <aside class="info-card">{venue_block}</aside></section>
+    <section class="section section-alt"><div class="wrap narrow"><h2>Explore other London comedy nights</h2>
+        <div class="link-cloud">{alternatives or '<a class="text-link" href="/shows/">Browse live shows</a>'}</div></div></section>"""
+    return layout(
+        title=f"{title} | Dates & Tickets | London Comedy Group",
+        description=summary,
+        canonical=f"/shows/{slug}/",
+        body=body,
+        now=now,
+        image=image,
+        json_ld=[breadcrumb([("Home", "/"), ("Shows", "/shows/"), (title, f"/shows/{slug}/")])],
+        robots=None if is_active else "noindex,follow",
+    )
+
+
+def schema_address(event: dict) -> dict:
+    data = address(event)
+    return {
+        "@type": "PostalAddress",
+        "streetAddress": data.get("address_1") or address_display(event),
+        "addressLocality": data.get("city") or "London",
+        "postalCode": data.get("postal_code") or "",
+        "addressCountry": data.get("country") or "GB",
+    }
+
+
+def render_event_page(event: dict, slug: str, status_name: str, now: dt.datetime) -> str:
+    start = event_start(event)
+    title = public_title(event)
+    source_title = event_title(event)
+    summary = event_summary(event)
+    path = event_path(event, slug)
+    price_label, schema_price, sold_out = ticket_data(event)
+    cancelled = status_name == "cancelled"
+    expired = status_name == "expired"
+    if cancelled:
+        status = "Cancelled"
+        action = '<a class="button button-primary" href="/shows/">Find another comedy show</a>'
+        notice = '<div class="notice"><strong>This event has been cancelled.</strong> Browse the live shows directory for another date.</div>'
+    elif expired:
+        status = "Event finished" if event_end(event) < now else "No longer listed"
+        action = '<a class="button button-primary" href="/shows/">Find an upcoming comedy show</a>'
+        notice = '<div class="notice"><strong>This date is no longer booking.</strong> Browse the live shows directory for the latest options.</div>'
+    else:
+        status = "Sold out" if sold_out else "Booking now"
+        action = ticket_button(event, slug, "event-page")
+        notice = ""
+    offer_availability = "https://schema.org/SoldOut" if sold_out else "https://schema.org/InStock"
+    schema = {
+        "@context": "https://schema.org",
+        "@type": "Event",
+        "name": source_title,
+        "description": summary,
+        "image": [best_image(event)],
+        "url": absolute(path),
+        "startDate": iso_with_zone(start),
+        "endDate": iso_with_zone(event_end(event)),
+        "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+        "eventStatus": "https://schema.org/EventCancelled" if cancelled else "https://schema.org/EventScheduled",
+        "location": {"@type": "Place", "name": venue_name(event), "address": schema_address(event)},
+        "organizer": {"@type": "Organization", "name": ORG_NAME, "url": BASE_URL},
+    }
+    if status_name == "live":
+        schema["offers"] = {
+            "@type": "Offer",
+            "url": tracked_url(event["url"], slug, "structured-data"),
+            "price": schema_price or "0",
+            "priceCurrency": "GBP",
+            "availability": offer_availability,
+            "validFrom": (event.get("created") or event["start"]["local"]),
+        }
+    body = f"""
+    <section class="page-hero"><div class="wrap detail-grid"><div><p class="eyebrow">London stand-up comedy event</p>
+        <h1>{esc(title)}</h1><p>{esc(summary)}</p>{notice}</div>
+        <div class="booking-panel"><p class="eyebrow">{esc(status)}</p><h2>{esc(format_full_date(start))}</h2>
+            <p><strong>{esc(format_time(start))}</strong> · {esc(price_label)}</p>
+            <p>{esc(venue_name(event))}<br>{esc(address_display(event))}</p>{action}</div></div></section>
+    <section class="section wrap detail-grid"><div><h2>Plan your night</h2>
+        <p><strong>Show time:</strong> {esc(format_time(start))}<br><strong>Ticket price:</strong> {esc(price_label)}</p>
+        <p><a class="text-link" href="/shows/{esc(slug)}/">See every upcoming date for this night</a></p></div>
+        <aside class="info-card"><h2>Venue</h2><p><strong>{esc(venue_name(event))}</strong><br>{esc(address_display(event))}</p>
+        <a class="text-link" href="https://www.google.com/maps/search/?api=1&amp;query={esc(parse.quote_plus(venue_name(event) + ' ' + address_display(event)))}" rel="noopener noreferrer" target="_blank">Open in Google Maps</a></aside></section>"""
+    return layout(
+        title=f"{title} - {format_day(start)} | Tickets",
+        description=f"{title} at {venue_name(event)}, {public_area(event)}, on {format_full_date(start)} at {format_time(start)}. {price_label}. Reserve on Eventbrite.",
+        canonical=path,
+        body=body,
+        now=now,
+        image=best_image(event),
+        json_ld=[
+            schema,
+            breadcrumb([("Home", "/"), ("Shows", "/shows/"), (title, f"/shows/{slug}/"), (format_day(start), path)]),
+        ],
+        robots="noindex,follow" if expired else None,
+    )
+
+
+def render_static_pages(now: dt.datetime) -> dict[str, str]:
+    hire_body = f"""
+    <section class="page-hero"><div class="wrap narrow"><p class="eyebrow">Comedy for your event or venue</p>
+        <h1>Hire comedians in London</h1><p>Planning a private party, company event, charity night, or a regular venue show? Tell us what you need and London Comedy Group will help shape the right comedy night.</p>
+        <a class="button button-primary" href="{esc(HIRE_FORM)}" rel="noopener noreferrer" target="_blank">Tell us about your event</a></div></section>
+    <div class="section wrap feature-list three"><div><strong>Venue comedy nights</strong><span>Bring recurring stand-up to your room.</span></div>
+        <div><strong>Private and corporate events</strong><span>Comedy tailored to your audience and occasion.</span></div>
+        <div><strong>Charity nights and workshops</strong><span>Tell us what you are planning, including the format, venue, and budget.</span></div></div>"""
+    perform_body = f"""
+    <section class="page-hero"><div class="wrap narrow"><p class="eyebrow">For comedians</p>
+        <h1>Perform with London Comedy Group</h1><p>Apply for spots at London Comedy Group nights using the performer form. Share your details once and the team can contact you when a suitable opportunity comes up.</p>
+        <a class="button button-primary" href="{esc(PERFORM_FORM)}" rel="noopener noreferrer" target="_blank">Apply to perform</a></div></section>"""
+    newsletter_body = f"""
+    <section class="page-hero"><div class="wrap narrow center"><p class="eyebrow">Stay in touch</p>
+        <h1>Get London comedy nights in your inbox</h1><p>Join the London Comedy Group mailing list for new venues, special shows, and ticket releases.</p>
+        <a class="button button-primary" href="{esc(BEEHIIV)}" rel="noopener noreferrer" target="_blank">Join the mailing list</a></div></section>"""
+    redirect_body = """<section class="page-hero"><div class="wrap narrow center"><h1>Mailing list moved</h1>
+        <p>The London Comedy Group mailing list now has a simpler home.</p><a class="button button-primary" href="/stay-in-touch/">Go to the mailing list</a></div></section>"""
+    not_found_body = """<section class="page-hero"><div class="wrap narrow center"><p class="eyebrow">404</p><h1>That page is not on the bill</h1>
+        <p>Find a live London comedy show instead.</p><a class="button button-primary" href="/shows/">See upcoming shows</a></div></section>"""
+    redirect = layout(title="Mailing List | London Comedy Group", description="Join the London Comedy Group mailing list.", canonical="/stay-in-touch/", body=redirect_body, now=now, robots="noindex,follow")
+    redirect = redirect.replace("</head>", '    <meta http-equiv="refresh" content="0; url=/stay-in-touch/">\n</head>')
+    return {
+        "hire-comedians-london/index.html": layout(title="Hire Comedians in London | London Comedy Group", description="Hire London comedians for venue nights, corporate events, private parties, charity events, and comedy workshops.", canonical="/hire-comedians-london/", body=hire_body, now=now, json_ld=[breadcrumb([("Home", "/"), ("Hire comedians", "/hire-comedians-london/")])]),
+        "perform-with-us/index.html": layout(title="Perform With Us | London Comedy Group", description="Apply to perform at London Comedy Group stand-up nights across London.", canonical="/perform-with-us/", body=perform_body, now=now, robots="noindex,follow"),
+        "stay-in-touch/index.html": layout(title="London Comedy Shows Mailing List | London Comedy Group", description="Join the London Comedy Group mailing list for new venues, special comedy shows, and ticket releases.", canonical="/stay-in-touch/", body=newsletter_body, now=now),
+        "let-us-talk-to-you.html": redirect,
+        "404.html": layout(title="Page Not Found | London Comedy Group", description="Find upcoming London Comedy Group stand-up shows.", canonical="/404.html", body=not_found_body, now=now, robots="noindex,follow"),
+    }
+
+
+def route_file(path: str) -> str:
+    return "index.html" if path == "/" else path.lstrip("/") + ("index.html" if path.endswith("/") else "")
+
+
+def significant_lastmods(paths: list[str], generated: dict[str, str], state: dict, today: str) -> dict[str, str]:
+    previous = state.setdefault("lastmod", {})
+    current: dict[str, str] = {}
+    for path in paths:
+        relative = route_file(path)
+        old_text = (ROOT / relative).read_text(encoding="utf-8") if (ROOT / relative).exists() else None
+        current[path] = today if old_text != generated[relative] else previous.get(path, today)
+    state["lastmod"] = current
+    return current
+
+
+def sitemap(paths: list[str], lastmods: dict[str, str]) -> str:
+    urls = "\n".join(f"  <url><loc>{esc(absolute(path))}</loc><lastmod>{lastmods[path]}</lastmod></url>" for path in paths)
+    return f"""<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+{urls}
+</urlset>
+"""
+
+
+def cleanup(previous: list[str], current: set[str]) -> None:
+    for relative in previous:
+        if relative in current:
+            continue
+        path = ROOT / relative
+        if path.exists() and path.is_file():
+            path.unlink()
+        parent = path.parent
+        while parent != ROOT:
+            try:
+                parent.rmdir()
+            except OSError:
+                break
+            parent = parent.parent
+
+
+def refresh_heartbeat(now: dt.datetime) -> None:
+    previous = None
+    if HEARTBEAT.exists():
+        try:
+            previous = dt.date.fromisoformat(HEARTBEAT.read_text(encoding="utf-8").strip())
+        except ValueError:
+            pass
+    if previous is None or previous + dt.timedelta(days=HEARTBEAT_INTERVAL_DAYS) <= now.date():
+        write_text(HEARTBEAT, now.date().isoformat() + "\n")
+
+
+def parse_args() -> argparse.Namespace:
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--fixture", help="Read Eventbrite-shaped JSON instead of calling the API.")
+    parser.add_argument("--now", help="Override the current ISO datetime for deterministic generation.")
+    return parser.parse_args()
+
+
+def main() -> int:
+    args = parse_args()
+    now = parse_local(args.now) if args.now else dt.datetime.now(LONDON)
+    today = now.date().isoformat()
+    live, cancelled = load_events(args.fixture)
+    live = dedupe_occurrences([event for event in live if event_end(event) >= now])
+    cancelled = dedupe_occurrences([event for event in cancelled if retention_deadline(event) >= now])
+    state = load_json(STATE, {"series": {}})
+    overrides = load_json(OVERRIDES, {})
+    for event in [*live, *cancelled]:
+        override = {**overrides.get(series_key(event), {}), **overrides.get(str(event["id"]), {})}
+        if override.get("title"):
+            event["name"] = {"text": override["title"]}
+        for field in ("summary", "url"):
+            if override.get(field):
+                event[field] = override[field]
+    slugs = update_state(live, state, today)
+    occurrences = update_occurrences(live, cancelled, state, slugs, now)
+    active = group_by_series(live)
+    generated: dict[str, str] = {
+        "index.html": render_home(active, slugs, now),
+        "shows/index.html": render_shows_index(active, slugs, now),
+        "robots.txt": f"User-agent: *\nAllow: /\n\nSitemap: {BASE_URL}/sitemap.xml\n",
+    }
+    generated.update(render_static_pages(now))
+
+    for key, entry in state["series"].items():
+        generated[f"shows/{entry['slug']}/index.html"] = render_show_page(
+            key, entry, active.get(key, []), active, slugs, now
+        )
+
+    indexable_event_paths: list[str] = []
+    for item in sorted(occurrences.values(), key=lambda value: value["path"]):
+        event = {**item["event"], "_site_path": item["path"]}
+        key = series_key(event)
+        entry = state["series"].get(key)
+        if not entry:
+            continue
+        slug = entry["slug"]
+        path = event_path(event, slug)
+        generated[path.lstrip("/") + "index.html"] = render_event_page(event, slug, item["status"], now)
+        if item["status"] in {"live", "cancelled"}:
+            indexable_event_paths.append(path)
+
+    sitemap_paths = [
+        "/",
+        "/shows/",
+        "/hire-comedians-london/",
+        "/stay-in-touch/",
+        *[f"/shows/{slugs[key]}/" for key in active],
+        *indexable_event_paths,
+    ]
+    generated["sitemap.xml"] = sitemap(sitemap_paths, significant_lastmods(sitemap_paths, generated, state, today))
+
+    previous = load_json(MANIFEST, [])
+    current = set(generated)
+    cleanup(previous, current)
+    for relative, text in generated.items():
+        write_text(ROOT / relative, text)
+    save_json(STATE, state)
+    save_json(MANIFEST, sorted(current))
+    refresh_heartbeat(now)
+    print(f"Generated {len(generated)} files from {len(live)} live events across {len(active)} shows.")
     return 0
 
 
 if __name__ == "__main__":
-    TOKEN = os.environ.get("EVENTBRITE_TOKEN")
-    if not TOKEN:
-        print("ERROR: set EVENTBRITE_TOKEN environment variable.", file=sys.stderr)
-        sys.exit(3)
     try:
-        sys.exit(main())
-    except error.HTTPError as ex:
-        print(f"Eventbrite API error {ex.code}: {ex.read().decode(errors='ignore')[:300]}", file=sys.stderr)
-        sys.exit(4)
+        raise SystemExit(main())
+    except (error.HTTPError, error.URLError, RuntimeError) as ex:
+        print(f"Eventbrite refresh failed: {ex}", file=sys.stderr)
+        raise SystemExit(2)

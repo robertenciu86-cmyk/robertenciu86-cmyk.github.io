@@ -24,14 +24,19 @@ jobs:
           EVENTBRITE_TOKEN: ${{ secrets.EVENTBRITE_TOKEN }}
         run: python3 scripts/update-events.py
 
+      - name: Validate generated website
+        run: python3 scripts/validate-site.py
+
       - name: Commit changes
         run: |
-          if git diff --quiet -- index.html; then
-            echo "Upcoming shows are already up to date."
+          if [ -z "$(git status --porcelain -- index.html shows events robots.txt sitemap.xml 404.html hire-comedians-london perform-with-us stay-in-touch let-us-talk-to-you.html scripts/site-state.json scripts/generated-files.json scripts/refresh-heartbeat.txt)" ]; then
+            echo "Website is already up to date."
             exit 0
           fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add index.html
-          git commit -m "Update events from Eventbrite"
+          git add -A -- index.html shows events robots.txt sitemap.xml 404.html \
+            hire-comedians-london perform-with-us stay-in-touch let-us-talk-to-you.html \
+            scripts/site-state.json scripts/generated-files.json scripts/refresh-heartbeat.txt
+          git commit -m "Update website from Eventbrite"
           git push
