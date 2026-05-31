@@ -167,6 +167,13 @@ This is a **single-page website** built with:
 - `_config.yml` - Jekyll config (DON'T CHANGE!)
 - `*.jpg` - All image files
 
+### Automatic Eventbrite Updates:
+- `.github/workflows/update-events.yml` refreshes the upcoming shows every 6 hours.
+- `scripts/update-events.py` asks Eventbrite for all live shows, keeps the next date from each recurring series, removes duplicate listings for the same venue and start time, and regenerates the cards in `index.html`.
+- Add the Eventbrite private token as a GitHub Actions repository secret named `EVENTBRITE_TOKEN`. Never paste the token into a file.
+- Run the workflow manually from GitHub's **Actions** tab after adding or replacing the secret.
+- `scripts/event-overrides.json` can hold optional hand-written replacements keyed by an Eventbrite series ID or event ID. Supported fields are `title`, `image`, `date_badge`, `time`, `venue`, `price`, `blurb`, `cta`, and `url`.
+
 ### Color Scheme:
 ```css
 --miami-pink: #FF006E;

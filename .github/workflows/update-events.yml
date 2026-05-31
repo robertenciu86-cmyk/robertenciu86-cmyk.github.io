@@ -1,0 +1,37 @@
+name: Update Eventbrite events
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "17 */6 * * *"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: update-eventbrite-events
+  cancel-in-progress: true
+
+jobs:
+  update-events:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out the website
+        uses: actions/checkout@v4
+
+      - name: Refresh upcoming shows
+        env:
+          EVENTBRITE_TOKEN: ${{ secrets.EVENTBRITE_TOKEN }}
+        run: python3 scripts/update-events.py
+
+      - name: Commit changes
+        run: |
+          if git diff --quiet -- index.html; then
+            echo "Upcoming shows are already up to date."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add index.html
+          git commit -m "Update events from Eventbrite"
+          git push
