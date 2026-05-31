@@ -28,7 +28,6 @@
     "/events/comedy-club-shoreditch-fondue-2026-07-10-2000-1990193449181/": "2026-05-31",
     "/events/comedy-club-shoreditch-fondue-2026-07-17-2000-1990193450184/": "2026-05-31",
     "/events/comedy-club-shoreditch-fondue-2026-07-24-2000-1990193451187/": "2026-05-31",
-    "/events/free-comedy-every-sunday-at-6pm-in-north-london-2026-05-31-1800-1988717052238/": "2026-05-31",
     "/events/free-comedy-every-sunday-at-6pm-in-north-london-2026-06-07-1800-1988717053241/": "2026-05-31",
     "/events/free-comedy-every-sunday-at-6pm-in-north-london-2026-06-14-1800-1988717054244/": "2026-05-31",
     "/events/free-comedy-every-sunday-at-6pm-in-north-london-2026-06-21-1800-1988717055247/": "2026-05-31",
@@ -2969,7 +2968,7 @@
         "capacity": 80,
         "capacity_is_custom": false,
         "category_id": "105",
-        "changed": "2026-05-03T18:23:52Z",
+        "changed": "2026-05-31T19:41:00Z",
         "created": "2026-05-03T18:23:52Z",
         "currency": "GBP",
         "description": {
@@ -3039,7 +3038,7 @@
           "timezone": "Europe/London",
           "utc": "2026-05-31T19:00:00Z"
         },
-        "status": "live",
+        "status": "started",
         "subcategory_id": "5010",
         "summary": "The best free Stand Up Comedy in London, every Sunday at 8pm at Brewhouse & Kitchen in Islington.",
         "ticket_availability": {
@@ -3755,7 +3754,7 @@
         "capacity": 60,
         "capacity_is_custom": false,
         "category_id": "105",
-        "changed": "2026-05-03T18:26:14Z",
+        "changed": "2026-05-31T19:41:00Z",
         "created": "2026-05-03T18:26:14Z",
         "currency": "GBP",
         "description": {
@@ -3825,12 +3824,12 @@
           "timezone": "Europe/London",
           "utc": "2026-05-31T18:00:00Z"
         },
-        "status": "live",
+        "status": "started",
         "subcategory_id": "5010",
         "summary": "At the lovely Candlemaker on Battersea High Street, we run a free stand up comedy show every Sunday! Good priced food and drinks to go with!",
         "ticket_availability": {
-          "has_available_tickets": true,
-          "is_sold_out": false,
+          "has_available_tickets": false,
+          "is_sold_out": true,
           "maximum_ticket_price": {
             "currency": "GBP",
             "display": "0.00 GBP",
@@ -4665,7 +4664,7 @@
       },
       "last_seen": "2026-05-31",
       "path": "/events/free-comedy-every-sunday-at-6pm-in-north-london-2026-05-31-1800-1988717052238/",
-      "status": "live"
+      "status": "expired"
     },
     "1988717053241": {
       "event": {
