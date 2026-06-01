@@ -1,12 +1,11 @@
 {
   "lastmod": {
-    "/": "2026-05-31",
+    "/": "2026-06-01",
     "/events/byob-comedy-peckham-2026-06-04-2000-1988716822551/": "2026-05-31",
     "/events/byob-comedy-peckham-2026-06-11-2000-1988716823554/": "2026-05-31",
     "/events/byob-comedy-peckham-2026-06-18-2000-1988716824557/": "2026-05-31",
     "/events/byob-comedy-peckham-2026-06-25-2000-1988716825560/": "2026-05-31",
     "/events/byob-comedy-peckham-2026-07-02-2000-1988716826563/": "2026-05-31",
-    "/events/candlemaker-comedy-battersea-2026-05-31-1900-1988717027163/": "2026-05-31",
     "/events/candlemaker-comedy-battersea-2026-06-07-1900-1988717028166/": "2026-05-31",
     "/events/candlemaker-comedy-battersea-2026-06-14-1900-1988717029169/": "2026-05-31",
     "/events/candlemaker-comedy-battersea-2026-06-21-1900-1988717030172/": "2026-05-31",
@@ -43,7 +42,6 @@
     "/events/islington-sunday-comedy-6pm-2026-06-21-1800-1988716792461/": "2026-05-31",
     "/events/islington-sunday-comedy-6pm-2026-06-28-1800-1988716793464/": "2026-05-31",
     "/events/islington-sunday-comedy-6pm-2026-07-05-1800-1988716794467/": "2026-05-31",
-    "/events/islington-sunday-comedy-8pm-2026-05-31-2000-1988716923854/": "2026-05-31",
     "/events/islington-sunday-comedy-8pm-2026-06-04-2000-1988716839602/": "2026-05-31",
     "/events/islington-sunday-comedy-8pm-2026-06-07-2000-1988716924857/": "2026-05-31",
     "/events/islington-sunday-comedy-8pm-2026-06-11-2000-1988716840605/": "2026-05-31",
@@ -60,16 +58,16 @@
     "/events/saturday-comedy-soho-2026-06-27-1730-1988717212718/": "2026-05-31",
     "/events/saturday-comedy-soho-2026-07-04-1730-1988717213721/": "2026-05-31",
     "/hire-comedians-london/": "2026-05-31",
-    "/shows/": "2026-05-31",
-    "/shows/byob-comedy-peckham/": "2026-05-31",
-    "/shows/candlemaker-comedy-battersea/": "2026-05-31",
-    "/shows/comedy-club-shoreditch-early/": "2026-05-31",
-    "/shows/comedy-club-shoreditch-fondue/": "2026-05-31",
-    "/shows/free-comedy-every-sunday-at-6pm-in-north-london/": "2026-05-31",
-    "/shows/is-it-lington-tuesday-comedy/": "2026-05-31",
-    "/shows/islington-sunday-comedy-6pm/": "2026-05-31",
-    "/shows/islington-sunday-comedy-8pm/": "2026-05-31",
-    "/shows/saturday-comedy-soho/": "2026-05-31",
+    "/shows/": "2026-06-01",
+    "/shows/byob-comedy-peckham/": "2026-06-01",
+    "/shows/candlemaker-comedy-battersea/": "2026-06-01",
+    "/shows/comedy-club-shoreditch-early/": "2026-06-01",
+    "/shows/comedy-club-shoreditch-fondue/": "2026-06-01",
+    "/shows/free-comedy-every-sunday-at-6pm-in-north-london/": "2026-06-01",
+    "/shows/is-it-lington-tuesday-comedy/": "2026-06-01",
+    "/shows/islington-sunday-comedy-6pm/": "2026-06-01",
+    "/shows/islington-sunday-comedy-8pm/": "2026-06-01",
+    "/shows/saturday-comedy-soho/": "2026-06-01",
     "/stay-in-touch/": "2026-05-31"
   },
   "occurrences": {
@@ -193,7 +191,7 @@
         "venue_id": "296067959",
         "version": null
       },
-      "last_seen": "2026-05-31",
+      "last_seen": "2026-06-01",
       "path": "/events/is-it-lington-tuesday-comedy-2026-06-02-1930-1986849425115/",
       "status": "live"
     },
@@ -324,7 +322,7 @@
         "venue_id": "287334223",
         "version": null
       },
-      "last_seen": "2026-05-31",
+      "last_seen": "2026-06-01",
       "path": "/events/comedy-club-shoreditch-early-2026-06-05-1800-1987144229884/",
       "status": "live"
     },
@@ -455,7 +453,7 @@
         "venue_id": "287334223",
         "version": null
       },
-      "last_seen": "2026-05-31",
+      "last_seen": "2026-06-01",
       "path": "/events/comedy-club-shoreditch-early-2026-06-12-1800-1987144230887/",
       "status": "live"
     },
@@ -579,7 +577,7 @@
         "venue_id": "296067959",
         "version": null
       },
-      "last_seen": "2026-05-31",
+      "last_seen": "2026-06-01",
       "path": "/events/is-it-lington-tuesday-comedy-2026-06-03-1930-1987915967171/",
       "status": "live"
     },
@@ -703,7 +701,7 @@
         "venue_id": "296067959",
         "version": null
       },
-      "last_seen": "2026-05-31",
+      "last_seen": "2026-06-01",
       "path": "/events/is-it-lington-tuesday-comedy-2026-06-10-1930-1987915968174/",
       "status": "live"
     },
@@ -827,7 +825,7 @@
         "venue_id": "296067959",
         "version": null
       },
-      "last_seen": "2026-05-31",
+      "last_seen": "2026-06-01",
       "path": "/events/is-it-lington-tuesday-comedy-2026-06-17-1930-1987915969177/",
       "status": "live"
     },
@@ -951,7 +949,7 @@
         "venue_id": "296067959",
         "version": null
       },
-      "last_seen": "2026-05-31",
+      "last_seen": "2026-06-01",
       "path": "/events/is-it-lington-tuesday-comedy-2026-06-24-1930-1987915970180/",
       "status": "live"
     },
@@ -1125,7 +1123,7 @@
         "venue_id": "295458905",
         "version": null
       },
-      "last_seen": "2026-05-31",
+      "last_seen": "2026-06-01",
       "path": "/events/islington-sunday-comedy-6pm-2026-06-07-1800-1988716790455/",
       "status": "live"
     },
@@ -1256,7 +1254,7 @@
         "venue_id": "295458905",
         "version": null
       },
-      "last_seen": "2026-05-31",
+      "last_seen": "2026-06-01",
       "path": "/events/islington-sunday-comedy-6pm-2026-06-14-1800-1988716791458/",
       "status": "live"
     },
@@ -1387,7 +1385,7 @@
         "venue_id": "295458905",
         "version": null
       },
-      "last_seen": "2026-05-31",
+      "last_seen": "2026-06-01",
       "path": "/events/islington-sunday-comedy-6pm-2026-06-21-1800-1988716792461/",
       "status": "live"
     },
@@ -1518,7 +1516,7 @@
         "venue_id": "295458905",
         "version": null
       },
-      "last_seen": "2026-05-31",
+      "last_seen": "2026-06-01",
       "path": "/events/islington-sunday-comedy-6pm-2026-06-28-1800-1988716793464/",
       "status": "live"
     },
@@ -1649,7 +1647,7 @@
         "venue_id": "295458905",
         "version": null
       },
-      "last_seen": "2026-05-31",
+      "last_seen": "2026-06-01",
       "path": "/events/islington-sunday-comedy-6pm-2026-07-05-1800-1988716794467/",
       "status": "live"
     },
@@ -1780,7 +1778,7 @@
         "venue_id": "296067022",
         "version": null
       },
-      "last_seen": "2026-05-31",
+      "last_seen": "2026-06-01",
       "path": "/events/byob-comedy-peckham-2026-06-04-2000-1988716822551/",
       "status": "live"
     },
@@ -1911,7 +1909,7 @@
         "venue_id": "296067022",
         "version": null
       },
-      "last_seen": "2026-05-31",
+      "last_seen": "2026-06-01",
       "path": "/events/byob-comedy-peckham-2026-06-11-2000-1988716823554/",
       "status": "live"
     },
@@ -2042,7 +2040,7 @@
         "venue_id": "296067022",
         "version": null
       },
-      "last_seen": "2026-05-31",
+      "last_seen": "2026-06-01",
       "path": "/events/byob-comedy-peckham-2026-06-18-2000-1988716824557/",
       "status": "live"
     },
@@ -2173,7 +2171,7 @@
         "venue_id": "296067022",
         "version": null
       },
-      "last_seen": "2026-05-31",
+      "last_seen": "2026-06-01",
       "path": "/events/byob-comedy-peckham-2026-06-25-2000-1988716825560/",
       "status": "live"
     },
@@ -2304,7 +2302,7 @@
         "venue_id": "296067022",
         "version": null
       },
-      "last_seen": "2026-05-31",
+      "last_seen": "2026-06-01",
       "path": "/events/byob-comedy-peckham-2026-07-02-2000-1988716826563/",
       "status": "live"
     },
@@ -2435,7 +2433,7 @@
         "venue_id": "296236287",
         "version": null
       },
-      "last_seen": "2026-05-31",
+      "last_seen": "2026-06-01",
       "path": "/events/islington-sunday-comedy-8pm-2026-06-04-2000-1988716839602/",
       "status": "live"
     },
@@ -2566,7 +2564,7 @@
         "venue_id": "296236287",
         "version": null
       },
-      "last_seen": "2026-05-31",
+      "last_seen": "2026-06-01",
       "path": "/events/islington-sunday-comedy-8pm-2026-06-11-2000-1988716840605/",
       "status": "live"
     },
@@ -2697,7 +2695,7 @@
         "venue_id": "296236287",
         "version": null
       },
-      "last_seen": "2026-05-31",
+      "last_seen": "2026-06-01",
       "path": "/events/islington-sunday-comedy-8pm-2026-06-18-2000-1988716841608/",
       "status": "live"
     },
@@ -2828,7 +2826,7 @@
         "venue_id": "296236287",
         "version": null
       },
-      "last_seen": "2026-05-31",
+      "last_seen": "2026-06-01",
       "path": "/events/islington-sunday-comedy-8pm-2026-06-25-2000-1988716842611/",
       "status": "live"
     },
@@ -2959,7 +2957,7 @@
         "venue_id": "296236287",
         "version": null
       },
-      "last_seen": "2026-05-31",
+      "last_seen": "2026-06-01",
       "path": "/events/islington-sunday-comedy-8pm-2026-07-02-2000-1988716843614/",
       "status": "live"
     },
@@ -3092,7 +3090,7 @@
       },
       "last_seen": "2026-05-31",
       "path": "/events/islington-sunday-comedy-8pm-2026-05-31-2000-1988716923854/",
-      "status": "live"
+      "status": "expired"
     },
     "1988716924857": {
       "event": {
@@ -3221,7 +3219,7 @@
         "venue_id": "296236287",
         "version": null
       },
-      "last_seen": "2026-05-31",
+      "last_seen": "2026-06-01",
       "path": "/events/islington-sunday-comedy-8pm-2026-06-07-2000-1988716924857/",
       "status": "live"
     },
@@ -3352,7 +3350,7 @@
         "venue_id": "296236287",
         "version": null
       },
-      "last_seen": "2026-05-31",
+      "last_seen": "2026-06-01",
       "path": "/events/islington-sunday-comedy-8pm-2026-06-14-2000-1988716925860/",
       "status": "live"
     },
@@ -3483,7 +3481,7 @@
         "venue_id": "296236287",
         "version": null
       },
-      "last_seen": "2026-05-31",
+      "last_seen": "2026-06-01",
       "path": "/events/islington-sunday-comedy-8pm-2026-06-21-2000-1988716926863/",
       "status": "live"
     },
@@ -3614,7 +3612,7 @@
         "venue_id": "296236287",
         "version": null
       },
-      "last_seen": "2026-05-31",
+      "last_seen": "2026-06-01",
       "path": "/events/islington-sunday-comedy-8pm-2026-06-28-2000-1988716927866/",
       "status": "live"
     },
@@ -3745,7 +3743,7 @@
         "venue_id": "296236287",
         "version": null
       },
-      "last_seen": "2026-05-31",
+      "last_seen": "2026-06-01",
       "path": "/events/islington-sunday-comedy-8pm-2026-07-05-2000-1988716928869/",
       "status": "live"
     },
@@ -3878,7 +3876,7 @@
       },
       "last_seen": "2026-05-31",
       "path": "/events/candlemaker-comedy-battersea-2026-05-31-1900-1988717027163/",
-      "status": "live"
+      "status": "expired"
     },
     "1988717028166": {
       "event": {
@@ -4007,7 +4005,7 @@
         "venue_id": "296705621",
         "version": null
       },
-      "last_seen": "2026-05-31",
+      "last_seen": "2026-06-01",
       "path": "/events/candlemaker-comedy-battersea-2026-06-07-1900-1988717028166/",
       "status": "live"
     },
@@ -4138,7 +4136,7 @@
         "venue_id": "296705621",
         "version": null
       },
-      "last_seen": "2026-05-31",
+      "last_seen": "2026-06-01",
       "path": "/events/candlemaker-comedy-battersea-2026-06-14-1900-1988717029169/",
       "status": "live"
     },
@@ -4269,7 +4267,7 @@
         "venue_id": "296705621",
         "version": null
       },
-      "last_seen": "2026-05-31",
+      "last_seen": "2026-06-01",
       "path": "/events/candlemaker-comedy-battersea-2026-06-21-1900-1988717030172/",
       "status": "live"
     },
@@ -4400,7 +4398,7 @@
         "venue_id": "296705621",
         "version": null
       },
-      "last_seen": "2026-05-31",
+      "last_seen": "2026-06-01",
       "path": "/events/candlemaker-comedy-battersea-2026-06-28-1900-1988717031175/",
       "status": "live"
     },
@@ -4531,7 +4529,7 @@
         "venue_id": "296705621",
         "version": null
       },
-      "last_seen": "2026-05-31",
+      "last_seen": "2026-06-01",
       "path": "/events/candlemaker-comedy-battersea-2026-07-05-1900-1988717032178/",
       "status": "live"
     },
@@ -4793,7 +4791,7 @@
         "venue_id": "295674687",
         "version": null
       },
-      "last_seen": "2026-05-31",
+      "last_seen": "2026-06-01",
       "path": "/events/free-comedy-every-sunday-at-6pm-in-north-london-2026-06-07-1800-1988717053241/",
       "status": "live"
     },
@@ -4924,7 +4922,7 @@
         "venue_id": "295674687",
         "version": null
       },
-      "last_seen": "2026-05-31",
+      "last_seen": "2026-06-01",
       "path": "/events/free-comedy-every-sunday-at-6pm-in-north-london-2026-06-14-1800-1988717054244/",
       "status": "live"
     },
@@ -5055,7 +5053,7 @@
         "venue_id": "295674687",
         "version": null
       },
-      "last_seen": "2026-05-31",
+      "last_seen": "2026-06-01",
       "path": "/events/free-comedy-every-sunday-at-6pm-in-north-london-2026-06-21-1800-1988717055247/",
       "status": "live"
     },
@@ -5186,7 +5184,7 @@
         "venue_id": "295674687",
         "version": null
       },
-      "last_seen": "2026-05-31",
+      "last_seen": "2026-06-01",
       "path": "/events/free-comedy-every-sunday-at-6pm-in-north-london-2026-06-28-1800-1988717056250/",
       "status": "live"
     },
@@ -5317,7 +5315,7 @@
         "venue_id": "295674687",
         "version": null
       },
-      "last_seen": "2026-05-31",
+      "last_seen": "2026-06-01",
       "path": "/events/free-comedy-every-sunday-at-6pm-in-north-london-2026-07-05-1800-1988717057253/",
       "status": "live"
     },
@@ -5441,7 +5439,7 @@
         "venue_id": "297596662",
         "version": null
       },
-      "last_seen": "2026-05-31",
+      "last_seen": "2026-06-01",
       "path": "/events/saturday-comedy-soho-2026-06-06-1730-1988717209709/",
       "status": "live"
     },
@@ -5565,7 +5563,7 @@
         "venue_id": "297596662",
         "version": null
       },
-      "last_seen": "2026-05-31",
+      "last_seen": "2026-06-01",
       "path": "/events/saturday-comedy-soho-2026-06-13-1730-1988717210712/",
       "status": "live"
     },
@@ -5689,7 +5687,7 @@
         "venue_id": "297596662",
         "version": null
       },
-      "last_seen": "2026-05-31",
+      "last_seen": "2026-06-01",
       "path": "/events/saturday-comedy-soho-2026-06-20-1730-1988717211715/",
       "status": "live"
     },
@@ -5813,7 +5811,7 @@
         "venue_id": "297596662",
         "version": null
       },
-      "last_seen": "2026-05-31",
+      "last_seen": "2026-06-01",
       "path": "/events/saturday-comedy-soho-2026-06-27-1730-1988717212718/",
       "status": "live"
     },
@@ -5937,7 +5935,7 @@
         "venue_id": "297596662",
         "version": null
       },
-      "last_seen": "2026-05-31",
+      "last_seen": "2026-06-01",
       "path": "/events/saturday-comedy-soho-2026-07-04-1730-1988717213721/",
       "status": "live"
     },
@@ -6068,7 +6066,7 @@
         "venue_id": "249024753",
         "version": null
       },
-      "last_seen": "2026-05-31",
+      "last_seen": "2026-06-01",
       "path": "/events/comedy-club-shoreditch-fondue-2026-06-05-2000-1990193444166/",
       "status": "live"
     },
@@ -6199,7 +6197,7 @@
         "venue_id": "249024753",
         "version": null
       },
-      "last_seen": "2026-05-31",
+      "last_seen": "2026-06-01",
       "path": "/events/comedy-club-shoreditch-fondue-2026-06-12-2000-1990193445169/",
       "status": "live"
     },
@@ -6330,7 +6328,7 @@
         "venue_id": "249024753",
         "version": null
       },
-      "last_seen": "2026-05-31",
+      "last_seen": "2026-06-01",
       "path": "/events/comedy-club-shoreditch-fondue-2026-06-19-2000-1990193446172/",
       "status": "live"
     },
@@ -6461,7 +6459,7 @@
         "venue_id": "249024753",
         "version": null
       },
-      "last_seen": "2026-05-31",
+      "last_seen": "2026-06-01",
       "path": "/events/comedy-club-shoreditch-fondue-2026-06-26-2000-1990193447175/",
       "status": "live"
     },
@@ -6592,7 +6590,7 @@
         "venue_id": "249024753",
         "version": null
       },
-      "last_seen": "2026-05-31",
+      "last_seen": "2026-06-01",
       "path": "/events/comedy-club-shoreditch-fondue-2026-07-03-2000-1990193448178/",
       "status": "live"
     },
@@ -6723,7 +6721,7 @@
         "venue_id": "249024753",
         "version": null
       },
-      "last_seen": "2026-05-31",
+      "last_seen": "2026-06-01",
       "path": "/events/comedy-club-shoreditch-fondue-2026-07-10-2000-1990193449181/",
       "status": "live"
     },
@@ -6854,7 +6852,7 @@
         "venue_id": "249024753",
         "version": null
       },
-      "last_seen": "2026-05-31",
+      "last_seen": "2026-06-01",
       "path": "/events/comedy-club-shoreditch-fondue-2026-07-17-2000-1990193450184/",
       "status": "live"
     },
@@ -6985,7 +6983,7 @@
         "venue_id": "249024753",
         "version": null
       },
-      "last_seen": "2026-05-31",
+      "last_seen": "2026-06-01",
       "path": "/events/comedy-club-shoreditch-fondue-2026-07-24-2000-1990193451187/",
       "status": "live"
     },
@@ -7116,7 +7114,7 @@
         "venue_id": "287334223",
         "version": null
       },
-      "last_seen": "2026-05-31",
+      "last_seen": "2026-06-01",
       "path": "/events/comedy-club-shoreditch-early-2026-06-19-1800-1990193928615/",
       "status": "live"
     },
@@ -7247,7 +7245,7 @@
         "venue_id": "287334223",
         "version": null
       },
-      "last_seen": "2026-05-31",
+      "last_seen": "2026-06-01",
       "path": "/events/comedy-club-shoreditch-early-2026-06-26-1800-1990193929618/",
       "status": "live"
     },
@@ -7378,7 +7376,7 @@
         "venue_id": "287334223",
         "version": null
       },
-      "last_seen": "2026-05-31",
+      "last_seen": "2026-06-01",
       "path": "/events/comedy-club-shoreditch-early-2026-07-03-1800-1990193930621/",
       "status": "live"
     },
@@ -7509,7 +7507,7 @@
         "venue_id": "287334223",
         "version": null
       },
-      "last_seen": "2026-05-31",
+      "last_seen": "2026-06-01",
       "path": "/events/comedy-club-shoreditch-early-2026-07-10-1800-1990193931624/",
       "status": "live"
     },
@@ -7640,7 +7638,7 @@
         "venue_id": "287334223",
         "version": null
       },
-      "last_seen": "2026-05-31",
+      "last_seen": "2026-06-01",
       "path": "/events/comedy-club-shoreditch-early-2026-07-17-1800-1990193932627/",
       "status": "live"
     },
@@ -7771,7 +7769,7 @@
         "venue_id": "287334223",
         "version": null
       },
-      "last_seen": "2026-05-31",
+      "last_seen": "2026-06-01",
       "path": "/events/comedy-club-shoreditch-early-2026-07-24-1800-1990193933630/",
       "status": "live"
     }
@@ -7796,7 +7794,7 @@
         "region": "England"
       },
       "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F929389673%2F543747696447%2F1%2Foriginal.20250107-095700?auto=format%2Ccompress&q=75&sharp=10&s=65ed1abbfd9d41ec5447a7305e0772cb",
-      "last_seen": "2026-05-31",
+      "last_seen": "2026-06-01",
       "slug": "comedy-club-shoreditch-fondue",
       "source_title": "Comedy Club Shoreditch - Free Comedy Every Friday in East London + FONDUE",
       "summary": "The best stand-up comedy every Friday at 8pm at Bistrot Walluc in Shoreditch. Laughter guaranteed! Fondue optional! Get tickets now!",
@@ -7822,7 +7820,7 @@
         "region": "England"
       },
       "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F929389673%2F543747696447%2F1%2Foriginal.20250107-095700?auto=format%2Ccompress&q=75&sharp=10&s=65ed1abbfd9d41ec5447a7305e0772cb",
-      "last_seen": "2026-05-31",
+      "last_seen": "2026-06-01",
       "slug": "comedy-club-shoreditch-early",
       "source_title": "Comedy Club Shoreditch - Free Comedy Every Friday in East London - EARLY!",
       "summary": "The best stand-up comedy every Friday at 6pm at Bistrot Walluc in Shoreditch. Early shows added due to high demand! Get tickets now!",
@@ -7848,7 +7846,7 @@
         "region": "England"
       },
       "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1173215566%2F543747696447%2F1%2Foriginal.20251218-172640?auto=format%2Ccompress&q=75&sharp=10&s=2e8147b3d66dbc25cd453a4108261126",
-      "last_seen": "2026-05-31",
+      "last_seen": "2026-06-01",
       "slug": "islington-sunday-comedy-6pm",
       "source_title": "Free Comedy Every Sunday at 6pm in Islington",
       "summary": "The best free Stand Up Comedy in London, every Sunday at 6pm at Brewhouse & Kitchen in Islington.",
@@ -7874,7 +7872,7 @@
         "region": "England"
       },
       "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1181543832%2F543747696447%2F1%2Foriginal.20260406-213743?auto=format%2Ccompress&q=75&sharp=10&s=c493f415ef81d17621fe104a48188f24",
-      "last_seen": "2026-05-31",
+      "last_seen": "2026-06-01",
       "slug": "is-it-lington-tuesday-comedy",
       "source_title": "Is-It-Lington? Free Comedy Every Tuesday at 7:30 pm in Highbury & Islington",
       "summary": "The best free Stand Up Comedy in London, every Tuesday at 7:30pm at Hoxley & Porter in Highbury & Islington / Angel.",
@@ -7900,7 +7898,7 @@
         "region": "England"
       },
       "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1173216047%2F543747696447%2F1%2Foriginal.20251218-173229?auto=format%2Ccompress&q=75&sharp=10&s=6cf6c102ff0d264fbe9faed8c07aac2b",
-      "last_seen": "2026-05-31",
+      "last_seen": "2026-06-01",
       "slug": "free-comedy-every-sunday-at-6pm-in-north-london",
       "source_title": "Free Comedy Every Sunday at 6pm in North London",
       "summary": "The best free Stand Up Comedy in London, every Sunday at 6pm at Brewhouse & Kitchen in North London.",
@@ -7926,7 +7924,7 @@
         "region": "England"
       },
       "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1179214042%2F543747696447%2F1%2Foriginal.20260306-162753?auto=format%2Ccompress&q=75&sharp=10&s=e4014ea77e71c224ce95563687ed09c1",
-      "last_seen": "2026-05-31",
+      "last_seen": "2026-06-01",
       "slug": "byob-comedy-peckham",
       "source_title": "BYOB - Free Comedy Every Thursday in Peckham",
       "summary": "The best stand-up comedy in Peckham, free every Thursday at 8pm at Eagle Eats Bakery. Bring your own beer!",
@@ -7952,7 +7950,7 @@
         "region": "England"
       },
       "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1176403518%2F543747696447%2F1%2Foriginal.20260201-230633?auto=format%2Ccompress&q=75&sharp=10&s=606020b6ba85db1cbee1a7a6759bd052",
-      "last_seen": "2026-05-31",
+      "last_seen": "2026-06-01",
       "slug": "islington-sunday-comedy-8pm",
       "source_title": "Free Comedy Every Sunday at 8pm in Islington",
       "summary": "The best free Stand Up Comedy in London, every Sunday at 8pm at Brewhouse & Kitchen in Islington.",
@@ -7978,7 +7976,7 @@
         "region": "England"
       },
       "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1179000636%2F543747696447%2F1%2Foriginal.20260304-130103?auto=format%2Ccompress&q=75&sharp=10&s=1d7bbd509c54b602b4b708af828d58a7",
-      "last_seen": "2026-05-31",
+      "last_seen": "2026-06-01",
       "slug": "candlemaker-comedy-battersea",
       "source_title": "Candlemaker Comedy - Free Comedy at Battersea's Favourite!",
       "summary": "At the lovely Candlemaker on Battersea High Street, we run a free stand up comedy show every Sunday! Good priced food and drinks to go with!",
@@ -8004,7 +8002,7 @@
         "region": "England"
       },
       "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1183161657%2F543747696447%2F1%2Foriginal.20260427-201210?auto=format%2Ccompress&q=75&sharp=10&s=354fff0e628559450ead7b9371bcae81",
-      "last_seen": "2026-05-31",
+      "last_seen": "2026-06-01",
       "slug": "saturday-comedy-soho",
       "source_title": "London Comedy Group - Soho",
       "summary": "Early evening Soho comedy with a tight lineup of real comics. Strong sets, proper crowd, no filler. Doors 5:15pm.",
