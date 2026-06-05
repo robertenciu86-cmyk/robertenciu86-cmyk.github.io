@@ -17,7 +17,6 @@
     "/events/candlemaker-comedy-battersea-2026-09-13-1900-1991188789270/": "2026-06-05",
     "/events/candlemaker-comedy-battersea-2026-09-20-1900-1991188790273/": "2026-06-05",
     "/events/candlemaker-comedy-battersea-2026-09-27-1900-1991188791276/": "2026-06-05",
-    "/events/comedy-club-shoreditch-early-2026-06-05-1800-1987144229884/": "2026-06-05",
     "/events/comedy-club-shoreditch-early-2026-06-12-1800-1987144230887/": "2026-06-05",
     "/events/comedy-club-shoreditch-early-2026-06-19-1800-1990193928615/": "2026-06-05",
     "/events/comedy-club-shoreditch-early-2026-06-26-1800-1990193929618/": "2026-06-05",
@@ -337,7 +336,7 @@
       },
       "last_seen": "2026-06-05",
       "path": "/events/comedy-club-shoreditch-early-2026-06-05-1800-1987144229884/",
-      "status": "live"
+      "status": "expired"
     },
     "1987144230887": {
       "event": {
@@ -5957,7 +5956,7 @@
         "capacity": 60,
         "capacity_is_custom": false,
         "category_id": "105",
-        "changed": "2026-05-22T18:32:29Z",
+        "changed": "2026-06-05T19:38:09Z",
         "created": "2026-05-22T18:32:29Z",
         "currency": "GBP",
         "description": {
@@ -6027,7 +6026,7 @@
           "timezone": "Europe/London",
           "utc": "2026-06-05T19:00:00Z"
         },
-        "status": "live",
+        "status": "started",
         "subcategory_id": "5010",
         "summary": "The best stand-up comedy every Friday at 8pm at Bistrot Walluc in Shoreditch. Laughter guaranteed! Fondue optional! Get tickets now!",
         "ticket_availability": {
