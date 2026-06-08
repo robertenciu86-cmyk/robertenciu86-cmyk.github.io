@@ -30,7 +30,6 @@
     "/events/comedy-club-shoreditch-fondue-2026-07-10-2000-1990193449181/": "2026-05-31",
     "/events/comedy-club-shoreditch-fondue-2026-07-17-2000-1990193450184/": "2026-05-31",
     "/events/comedy-club-shoreditch-fondue-2026-07-24-2000-1990193451187/": "2026-05-31",
-    "/events/comedy-club-shoreditch-free-new-material-mondays-2026-06-08-1930-1990806506853/": "2026-06-02",
     "/events/comedy-club-shoreditch-free-new-material-mondays-2026-06-15-1930-1990806507856/": "2026-06-02",
     "/events/comedy-club-shoreditch-free-new-material-mondays-2026-06-22-1930-1990806508859/": "2026-06-02",
     "/events/comedy-club-shoreditch-free-new-material-mondays-2026-06-29-1930-1990806509862/": "2026-06-02",
@@ -7901,7 +7900,7 @@
       },
       "last_seen": "2026-06-08",
       "path": "/events/comedy-club-shoreditch-free-new-material-mondays-2026-06-08-1930-1990806506853/",
-      "status": "live"
+      "status": "expired"
     },
     "1990806507856": {
       "event": {
