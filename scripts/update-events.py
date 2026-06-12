@@ -26,6 +26,7 @@ import json
 import os
 import re
 import sys
+import time
 import unicodedata
 from pathlib import Path
 from urllib import error, parse, request
@@ -55,6 +56,10 @@ FACEBOOK = "https://www.facebook.com/profile.php?id=100089919127479"
 BEEHIIV = "https://lcg-fans-broadcast.beehiiv.com/"
 HIRE_FORM = "https://docs.google.com/forms/d/e/1FAIpQLSeAX08fLT3mb6UhwyncyRLHd-kmJPoai-x0kPE5TZ6V9kVJ6A/viewform?usp=header"
 PERFORM_FORM = "https://docs.google.com/forms/d/e/1FAIpQLSe0maLGAuPg4ZUZVVOgpWob1n4oLKiT5mTJgfPZZ_o62k_tdg/viewform?usp=sharing&ouid=115747252269731556423"
+# Paste your Google Analytics 4 Measurement ID here, e.g. "G-AB12CD34EF".
+# Leave it empty to ship no analytics at all. See google-analytics-setup.txt
+# (one folder up from this repo) for where to find this ID.
+GA_MEASUREMENT_ID = "G-C2RBGG9435"
 PUBLIC_SHOWS = {
     "freecomedyeverysundayat6pminislington": {
         "title": "Free Sunday Comedy in Islington: 6pm Show",
@@ -120,6 +125,35 @@ def asset_version() -> str:
     return _ASSET_VERSION
 
 
+def analytics_snippet() -> str:
+    """Google Analytics 4 in cookieless mode.
+
+    Consent Mode v2 defaults every storage type to "denied", so gtag.js never
+    writes a cookie or touches localStorage. With no client-side storage there
+    is nothing for UK PECR / the ePrivacy rules to require consent for, so the
+    site needs no cookie banner — GA4 simply falls back to aggregated,
+    cookieless measurement (pageviews and our ticket_click events still count).
+
+    Returns an empty string until GA_MEASUREMENT_ID is filled in, so the site
+    ships clean with no analytics until you opt in."""
+    if not GA_MEASUREMENT_ID:
+        return ""
+    return f"""
+    <script async src="https://www.googletagmanager.com/gtag/js?id={esc(GA_MEASUREMENT_ID)}"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){{dataLayer.push(arguments);}}
+      gtag('consent', 'default', {{
+        'ad_storage': 'denied',
+        'ad_user_data': 'denied',
+        'ad_personalization': 'denied',
+        'analytics_storage': 'denied'
+      }});
+      gtag('js', new Date());
+      gtag('config', '{esc(GA_MEASUREMENT_ID)}');
+    </script>"""
+
+
 def load_json(path: Path, default):
     if not path.exists():
         return default
@@ -140,6 +174,12 @@ def write_text(path: Path, text: str) -> None:
     path.write_text(text, encoding="utf-8")
 
 
+# Eventbrite occasionally returns a transient 403/429/5xx; the scheduled run
+# should ride those out rather than emailing a failure that self-heals 6h later.
+RETRY_STATUSES = {403, 429, 500, 502, 503, 504}
+MAX_ATTEMPTS = 4
+
+
 def api_get(path: str, params: dict) -> dict:
     token = os.environ.get("EVENTBRITE_TOKEN")
     if not token:
@@ -148,8 +188,26 @@ def api_get(path: str, params: dict) -> dict:
     req = request.Request(
         f"{API}{path}?{qs}", headers={"Authorization": f"Bearer {token}"}
     )
-    with request.urlopen(req, timeout=30) as response:
-        return json.load(response)
+    for attempt in range(1, MAX_ATTEMPTS + 1):
+        try:
+            with request.urlopen(req, timeout=30) as response:
+                return json.load(response)
+        except error.HTTPError as ex:
+            if ex.code not in RETRY_STATUSES or attempt == MAX_ATTEMPTS:
+                raise
+            reason: object = ex.code
+        except error.URLError as ex:
+            if attempt == MAX_ATTEMPTS:
+                raise
+            reason = ex.reason
+        delay = 2 ** attempt
+        print(
+            f"Eventbrite API transient error ({reason}); retrying in {delay}s "
+            f"(attempt {attempt}/{MAX_ATTEMPTS - 1}).",
+            file=sys.stderr,
+        )
+        time.sleep(delay)
+    raise RuntimeError("Eventbrite API retries exhausted.")
 
 
 def fetch_events(status: str) -> list[dict]:
@@ -408,7 +466,7 @@ def layout(
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&display=swap">
-    <link rel="stylesheet" href="/assets/site.css?v={asset_version()}">{structured}
+    <link rel="stylesheet" href="/assets/site.css?v={asset_version()}">{structured}{analytics_snippet()}
 </head>
 <body>
     <a class="skip-link" href="#main">Skip to content</a>
@@ -642,6 +700,9 @@ def render_comedians() -> str:
                 "Winner: Crack Comedy New Comedian",
                 "Regular at Backyard Comedy Club, Up the Creek, Big Belly, and The Comedy Store",
             ],
+            # NOT a typo / wrong link — this is deliberate. The bit is that
+            # Ridwan (an Indian comic) runs his Instagram under a deadpan
+            # "white guy" stage name, Richard Hudson. Leave the handle as-is.
             "instagram": "https://www.instagram.com/richardhudsoncomedy/",
         },
         {
