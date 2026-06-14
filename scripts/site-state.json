@@ -1,10 +1,9 @@
 {
   "lastmod": {
-    "/": "2026-06-13",
+    "/": "2026-06-14",
     "/events/byob-comedy-peckham-2026-06-18-2000-1988716824557/": "2026-06-12",
     "/events/byob-comedy-peckham-2026-06-25-2000-1988716825560/": "2026-06-12",
     "/events/byob-comedy-peckham-2026-07-02-2000-1988716826563/": "2026-06-12",
-    "/events/candlemaker-comedy-battersea-2026-06-14-1900-1988717029169/": "2026-06-12",
     "/events/candlemaker-comedy-battersea-2026-07-26-1900-1991188782249/": "2026-06-12",
     "/events/candlemaker-comedy-battersea-2026-08-02-1900-1991188783252/": "2026-06-12",
     "/events/candlemaker-comedy-battersea-2026-08-09-1900-1991188784255/": "2026-06-12",
@@ -39,17 +38,15 @@
     "/events/comedy-club-shoreditch-free-new-material-mondays-2026-07-20-1930-1990806512871/": "2026-06-12",
     "/events/comedy-club-shoreditch-free-new-material-mondays-2026-07-27-1930-1990806513874/": "2026-06-12",
     "/events/comedy-club-shoreditch-free-new-material-mondays-2026-08-03-1930-1990806514877/": "2026-06-12",
-    "/events/free-comedy-every-sunday-at-6pm-in-north-london-2026-06-14-1800-1988717054244/": "2026-06-12",
     "/events/free-comedy-every-sunday-at-6pm-in-north-london-2026-06-21-1800-1988717055247/": "2026-06-12",
     "/events/free-comedy-every-sunday-at-6pm-in-north-london-2026-06-28-1800-1988717056250/": "2026-06-12",
     "/events/free-comedy-every-sunday-at-6pm-in-north-london-2026-07-05-1800-1988717057253/": "2026-06-12",
     "/events/is-it-lington-tuesday-comedy-2026-06-17-1930-1987915969177/": "2026-06-12",
     "/events/is-it-lington-tuesday-comedy-2026-06-24-1930-1987915970180/": "2026-06-12",
-    "/events/islington-sunday-comedy-6pm-2026-06-14-1800-1988716791458/": "2026-06-12",
     "/events/islington-sunday-comedy-6pm-2026-06-21-1800-1988716792461/": "2026-06-12",
     "/events/islington-sunday-comedy-6pm-2026-06-28-1800-1988716793464/": "2026-06-12",
     "/events/islington-sunday-comedy-6pm-2026-07-05-1800-1988716794467/": "2026-06-12",
-    "/events/islington-sunday-comedy-8pm-2026-06-14-2000-1988716925860/": "2026-06-12",
+    "/events/islington-sunday-comedy-8pm-2026-06-14-2000-1988716925860/": "2026-06-14",
     "/events/islington-sunday-comedy-8pm-2026-06-18-2000-1988716841608/": "2026-06-12",
     "/events/islington-sunday-comedy-8pm-2026-06-21-2000-1988716926863/": "2026-06-12",
     "/events/islington-sunday-comedy-8pm-2026-06-25-2000-1988716842611/": "2026-06-12",
@@ -60,17 +57,17 @@
     "/events/saturday-comedy-soho-2026-06-27-1730-1988717212718/": "2026-06-12",
     "/events/saturday-comedy-soho-2026-07-04-1730-1988717213721/": "2026-06-12",
     "/hire-comedians-london/": "2026-06-12",
-    "/shows/": "2026-06-13",
-    "/shows/byob-comedy-peckham/": "2026-06-13",
-    "/shows/candlemaker-comedy-battersea/": "2026-06-13",
-    "/shows/comedy-club-shoreditch-early/": "2026-06-13",
-    "/shows/comedy-club-shoreditch-fondue/": "2026-06-13",
-    "/shows/comedy-club-shoreditch-free-new-material-mondays/": "2026-06-13",
-    "/shows/free-comedy-every-sunday-at-6pm-in-north-london/": "2026-06-13",
-    "/shows/is-it-lington-tuesday-comedy/": "2026-06-13",
-    "/shows/islington-sunday-comedy-6pm/": "2026-06-13",
-    "/shows/islington-sunday-comedy-8pm/": "2026-06-13",
-    "/shows/saturday-comedy-soho/": "2026-06-13",
+    "/shows/": "2026-06-14",
+    "/shows/byob-comedy-peckham/": "2026-06-14",
+    "/shows/candlemaker-comedy-battersea/": "2026-06-14",
+    "/shows/comedy-club-shoreditch-early/": "2026-06-14",
+    "/shows/comedy-club-shoreditch-fondue/": "2026-06-14",
+    "/shows/comedy-club-shoreditch-free-new-material-mondays/": "2026-06-14",
+    "/shows/free-comedy-every-sunday-at-6pm-in-north-london/": "2026-06-14",
+    "/shows/is-it-lington-tuesday-comedy/": "2026-06-14",
+    "/shows/islington-sunday-comedy-6pm/": "2026-06-14",
+    "/shows/islington-sunday-comedy-8pm/": "2026-06-14",
+    "/shows/saturday-comedy-soho/": "2026-06-14",
     "/stay-in-touch/": "2026-06-12"
   },
   "occurrences": {
@@ -1259,7 +1256,7 @@
       },
       "last_seen": "2026-06-14",
       "path": "/events/islington-sunday-comedy-6pm-2026-06-14-1800-1988716791458/",
-      "status": "live"
+      "status": "expired"
     },
     "1988716792461": {
       "event": {
@@ -3231,7 +3228,7 @@
         "capacity": 80,
         "capacity_is_custom": false,
         "category_id": "105",
-        "changed": "2026-05-03T18:23:52Z",
+        "changed": "2026-06-14T19:45:05Z",
         "created": "2026-05-03T18:23:52Z",
         "currency": "GBP",
         "description": {
@@ -3301,12 +3298,12 @@
           "timezone": "Europe/London",
           "utc": "2026-06-14T19:00:00Z"
         },
-        "status": "live",
+        "status": "started",
         "subcategory_id": "5010",
         "summary": "The best free Stand Up Comedy in London, every Sunday at 8pm at Brewhouse & Kitchen in Islington.",
         "ticket_availability": {
-          "has_available_tickets": true,
-          "is_sold_out": false,
+          "has_available_tickets": false,
+          "is_sold_out": true,
           "maximum_ticket_price": {
             "currency": "GBP",
             "display": "0.00 GBP",
@@ -4141,7 +4138,7 @@
       },
       "last_seen": "2026-06-14",
       "path": "/events/candlemaker-comedy-battersea-2026-06-14-1900-1988717029169/",
-      "status": "live"
+      "status": "expired"
     },
     "1988717030172": {
       "event": {
@@ -4927,7 +4924,7 @@
       },
       "last_seen": "2026-06-14",
       "path": "/events/free-comedy-every-sunday-at-6pm-in-north-london-2026-06-14-1800-1988717054244/",
-      "status": "live"
+      "status": "expired"
     },
     "1988717055247": {
       "event": {
