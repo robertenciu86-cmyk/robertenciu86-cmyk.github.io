@@ -23,7 +23,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&display=swap">
-    <link rel="stylesheet" href="/assets/site.css?v=c0f302ea">
+    <link rel="stylesheet" href="/assets/site.css?v=8b8502b4">
     <script type="application/ld+json">{"@context":"https://schema.org","@type":"Event","name":"Candlemaker Comedy - Free Comedy at Battersea's Favourite!","description":"At the lovely Candlemaker on Battersea High Street, we run a free stand up comedy show every Sunday! Good priced food and drinks to go with!","image":["https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1179000636%2F543747696447%2F1%2Foriginal.20260304-130103?auto=format%2Ccompress&q=75&sharp=10&s=1d7bbd509c54b602b4b708af828d58a7"],"url":"https://londoncomedygroup.com/events/candlemaker-comedy-battersea-2026-09-13-1900-1991188789270/","startDate":"2026-09-13T19:00:00+01:00","endDate":"2026-09-13T20:30:00+01:00","eventAttendanceMode":"https://schema.org/OfflineEventAttendanceMode","eventStatus":"https://schema.org/EventScheduled","location":{"@type":"Place","name":"Candlemaker","address":{"@type":"PostalAddress","streetAddress":"136 Battersea High Street","addressLocality":"London","postalCode":"SW11 3JR","addressCountry":"GB"}},"organizer":{"@type":"Organization","name":"London Comedy Group","url":"https://londoncomedygroup.com"},"offers":{"@type":"Offer","url":"https://www.eventbrite.co.uk/e/candlemaker-comedy-free-comedy-at-batterseas-favourite-tickets-1991188789270?utm_source=londoncomedygroup.com&utm_medium=website&utm_campaign=candlemaker-comedy-battersea&utm_content=structured-data","price":"0","priceCurrency":"GBP","availability":"https://schema.org/InStock","validFrom":"2026-06-05T11:26:02Z"}}</script>
     <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://londoncomedygroup.com/"},{"@type":"ListItem","position":2,"name":"Shows","item":"https://londoncomedygroup.com/shows/"},{"@type":"ListItem","position":3,"name":"Candlemaker Comedy in Battersea","item":"https://londoncomedygroup.com/shows/candlemaker-comedy-battersea/"},{"@type":"ListItem","position":4,"name":"Sunday 13 September","item":"https://londoncomedygroup.com/events/candlemaker-comedy-battersea-2026-09-13-1900-1991188789270/"}]}</script>
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-C2RBGG9435"></script>
@@ -36,6 +36,11 @@
         'ad_personalization': 'denied',
         'analytics_storage': 'denied'
       });
+      try {
+        if (localStorage.getItem('lcg-analytics-consent') === 'granted') {
+          gtag('consent', 'update', { 'analytics_storage': 'granted' });
+        }
+      } catch (e) {}
       gtag('js', new Date());
       gtag('config', 'G-C2RBGG9435');
     </script>
@@ -83,6 +88,13 @@
         </div>
         <div class="wrap footer-bottom">© 2026 London Comedy Group</div>
     </footer>
-    <script src="/assets/site.js?v=c0f302ea" defer></script>
+    <div class="consent-banner" id="consent-banner" role="dialog" aria-live="polite" aria-label="Cookie consent" hidden>
+        <p class="consent-text">We use cookies to measure how the site is used. You can accept analytics cookies or keep browsing without them.</p>
+        <div class="consent-actions">
+            <button class="button button-ghost" type="button" data-consent="denied">Decline</button>
+            <button class="button button-primary" type="button" data-consent="granted">Accept analytics</button>
+        </div>
+    </div>
+    <script src="/assets/site.js?v=8b8502b4" defer></script>
 </body>
 </html>

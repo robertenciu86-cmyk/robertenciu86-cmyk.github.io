@@ -23,7 +23,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&display=swap">
-    <link rel="stylesheet" href="/assets/site.css?v=c0f302ea">
+    <link rel="stylesheet" href="/assets/site.css?v=8b8502b4">
     <script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"London Comedy Group","url":"https://londoncomedygroup.com","logo":"https://londoncomedygroup.com/london-comedy-group-logo.jpg","sameAs":["https://www.eventbrite.co.uk/o/london-comedy-group-55764637993","https://www.instagram.com/londoncomedygroup/","https://www.tiktok.com/@londoncomedygroup1","https://www.facebook.com/profile.php?id=100089919127479"]}</script>
     <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Is the comedy really free?","acceptedAnswer":{"@type":"Answer","text":"Yes. Most London Comedy Group nights are free to attend — you just reserve a free ticket on Eventbrite so we can hold your seat. A few special shows, such as our Soho night, are a few pounds, and the price is always shown on the show page before you book."}},{"@type":"Question","name":"Do I need to book in advance?","acceptedAnswer":{"@type":"Answer","text":"Booking is free and takes under a minute. Our rooms regularly fill up, so reserving a ticket is the surest way to get in — walk-ups are welcome only if there is space left on the night."}},{"@type":"Question","name":"Where are the shows?","acceptedAnswer":{"@type":"Answer","text":"We run weekly stand-up nights across London, including Islington, Highbury, Battersea, Peckham, Shoreditch, and Soho. Every show page lists the exact venue address with a link to open it in Google Maps."}},{"@type":"Question","name":"What time do shows start and how long do they last?","acceptedAnswer":{"@type":"Answer","text":"Most shows start in the early evening and run for about two hours. Check the show page for the exact start time and arrive a little early to get a good seat."}},{"@type":"Question","name":"Can I come on my own, and is there food and drink?","acceptedAnswer":{"@type":"Answer","text":"Plenty of people come solo or bring a group — either is welcome. Most of our venues serve food and drinks, and a couple are bring-your-own, so it makes an easy night out."}}]}</script>
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-C2RBGG9435"></script>
@@ -36,6 +36,11 @@
         'ad_personalization': 'denied',
         'analytics_storage': 'denied'
       });
+      try {
+        if (localStorage.getItem('lcg-analytics-consent') === 'granted') {
+          gtag('consent', 'update', { 'analytics_storage': 'granted' });
+        }
+      } catch (e) {}
       gtag('js', new Date());
       gtag('config', 'G-C2RBGG9435');
     </script>
@@ -349,6 +354,12 @@
         </article><article class="act-card">
             <img src="/donatas.jpeg" width="112" height="112" loading="lazy" alt="Donatas">
             <strong>Donatas</strong><span>Regular performer</span>
+        </article><article class="act-card">
+            <img src="/ramsey_smith.jpg" width="112" height="112" loading="lazy" alt="Ramsey Smith">
+            <strong>Ramsey Smith</strong><span>Regular performer</span>
+        </article><article class="act-card">
+            <img src="/thomas_noack.jpg" width="112" height="112" loading="lazy" alt="Thomas Noack">
+            <strong>Thomas Noack</strong><span>Regular performer</span>
         </article></div></div>
     </section>
     <section class="section section-alt">
@@ -400,6 +411,13 @@
         </div>
         <div class="wrap footer-bottom">© 2026 London Comedy Group</div>
     </footer>
-    <script src="/assets/site.js?v=c0f302ea" defer></script>
+    <div class="consent-banner" id="consent-banner" role="dialog" aria-live="polite" aria-label="Cookie consent" hidden>
+        <p class="consent-text">We use cookies to measure how the site is used. You can accept analytics cookies or keep browsing without them.</p>
+        <div class="consent-actions">
+            <button class="button button-ghost" type="button" data-consent="denied">Decline</button>
+            <button class="button button-primary" type="button" data-consent="granted">Accept analytics</button>
+        </div>
+    </div>
+    <script src="/assets/site.js?v=8b8502b4" defer></script>
 </body>
 </html>

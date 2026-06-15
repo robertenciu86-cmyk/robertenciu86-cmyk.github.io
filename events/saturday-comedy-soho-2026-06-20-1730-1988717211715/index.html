@@ -23,7 +23,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&display=swap">
-    <link rel="stylesheet" href="/assets/site.css?v=c0f302ea">
+    <link rel="stylesheet" href="/assets/site.css?v=8b8502b4">
     <script type="application/ld+json">{"@context":"https://schema.org","@type":"Event","name":"London Comedy Group - Soho","description":"Early evening Soho comedy with a tight lineup of real comics. Strong sets, proper crowd, no filler. Doors 5:15pm.","image":["https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1183161657%2F543747696447%2F1%2Foriginal.20260427-201210?auto=format%2Ccompress&q=75&sharp=10&s=354fff0e628559450ead7b9371bcae81"],"url":"https://londoncomedygroup.com/events/saturday-comedy-soho-2026-06-20-1730-1988717211715/","startDate":"2026-06-20T17:30:00+01:00","endDate":"2026-06-20T19:00:00+01:00","eventAttendanceMode":"https://schema.org/OfflineEventAttendanceMode","eventStatus":"https://schema.org/EventScheduled","location":{"@type":"Place","name":"30 Dean St","address":{"@type":"PostalAddress","streetAddress":"30 Dean Street","addressLocality":"London","postalCode":"W1D 3RZ","addressCountry":"GB"}},"organizer":{"@type":"Organization","name":"London Comedy Group","url":"https://londoncomedygroup.com"},"offers":{"@type":"Offer","url":"https://www.eventbrite.co.uk/e/london-comedy-group-soho-tickets-1988717211715?utm_source=londoncomedygroup.com&utm_medium=website&utm_campaign=saturday-comedy-soho&utm_content=structured-data","price":"5.00","priceCurrency":"GBP","availability":"https://schema.org/InStock","validFrom":"2026-05-03T18:35:55Z"}}</script>
     <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://londoncomedygroup.com/"},{"@type":"ListItem","position":2,"name":"Shows","item":"https://londoncomedygroup.com/shows/"},{"@type":"ListItem","position":3,"name":"Saturday Comedy in Soho","item":"https://londoncomedygroup.com/shows/saturday-comedy-soho/"},{"@type":"ListItem","position":4,"name":"Saturday 20 June","item":"https://londoncomedygroup.com/events/saturday-comedy-soho-2026-06-20-1730-1988717211715/"}]}</script>
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-C2RBGG9435"></script>
@@ -36,6 +36,11 @@
         'ad_personalization': 'denied',
         'analytics_storage': 'denied'
       });
+      try {
+        if (localStorage.getItem('lcg-analytics-consent') === 'granted') {
+          gtag('consent', 'update', { 'analytics_storage': 'granted' });
+        }
+      } catch (e) {}
       gtag('js', new Date());
       gtag('config', 'G-C2RBGG9435');
     </script>
@@ -83,6 +88,13 @@
         </div>
         <div class="wrap footer-bottom">© 2026 London Comedy Group</div>
     </footer>
-    <script src="/assets/site.js?v=c0f302ea" defer></script>
+    <div class="consent-banner" id="consent-banner" role="dialog" aria-live="polite" aria-label="Cookie consent" hidden>
+        <p class="consent-text">We use cookies to measure how the site is used. You can accept analytics cookies or keep browsing without them.</p>
+        <div class="consent-actions">
+            <button class="button button-ghost" type="button" data-consent="denied">Decline</button>
+            <button class="button button-primary" type="button" data-consent="granted">Accept analytics</button>
+        </div>
+    </div>
+    <script src="/assets/site.js?v=8b8502b4" defer></script>
 </body>
 </html>

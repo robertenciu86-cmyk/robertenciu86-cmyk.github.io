@@ -23,7 +23,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&display=swap">
-    <link rel="stylesheet" href="/assets/site.css?v=c0f302ea">
+    <link rel="stylesheet" href="/assets/site.css?v=8b8502b4">
     <script type="application/ld+json">{"@context":"https://schema.org","@type":"Event","name":"Comedy Club Shoreditch - Free New Material Mondays","description":"Our Favourite Stand Up Comedy in London, every Monday at 7:30pm at Aura X in Shoreditch","image":["https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1185895006%2F543747696447%2F1%2Foriginal.20260601-191738?auto=format%2Ccompress&q=75&sharp=10&s=37262c3c10ca2cec67a49cee21a387ca"],"url":"https://londoncomedygroup.com/events/comedy-club-shoreditch-free-new-material-mondays-2026-06-22-1930-1990806508859/","startDate":"2026-06-22T19:30:00+01:00","endDate":"2026-06-22T21:00:00+01:00","eventAttendanceMode":"https://schema.org/OfflineEventAttendanceMode","eventStatus":"https://schema.org/EventScheduled","location":{"@type":"Place","name":"Aura x","address":{"@type":"PostalAddress","streetAddress":"145 Shoreditch High Street","addressLocality":"London","postalCode":"E1 6JE","addressCountry":"GB"}},"organizer":{"@type":"Organization","name":"London Comedy Group","url":"https://londoncomedygroup.com"},"offers":{"@type":"Offer","url":"https://www.eventbrite.co.uk/e/comedy-club-shoreditch-free-new-material-mondays-tickets-1990806508859?utm_source=londoncomedygroup.com&utm_medium=website&utm_campaign=comedy-club-shoreditch-free-new-material-mondays&utm_content=structured-data","price":"0","priceCurrency":"GBP","availability":"https://schema.org/InStock","validFrom":"2026-06-01T18:11:33Z"}}</script>
     <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://londoncomedygroup.com/"},{"@type":"ListItem","position":2,"name":"Shows","item":"https://londoncomedygroup.com/shows/"},{"@type":"ListItem","position":3,"name":"Comedy Club Shoreditch - Free New Material Mondays","item":"https://londoncomedygroup.com/shows/comedy-club-shoreditch-free-new-material-mondays/"},{"@type":"ListItem","position":4,"name":"Monday 22 June","item":"https://londoncomedygroup.com/events/comedy-club-shoreditch-free-new-material-mondays-2026-06-22-1930-1990806508859/"}]}</script>
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-C2RBGG9435"></script>
@@ -36,6 +36,11 @@
         'ad_personalization': 'denied',
         'analytics_storage': 'denied'
       });
+      try {
+        if (localStorage.getItem('lcg-analytics-consent') === 'granted') {
+          gtag('consent', 'update', { 'analytics_storage': 'granted' });
+        }
+      } catch (e) {}
       gtag('js', new Date());
       gtag('config', 'G-C2RBGG9435');
     </script>
@@ -83,6 +88,13 @@
         </div>
         <div class="wrap footer-bottom">© 2026 London Comedy Group</div>
     </footer>
-    <script src="/assets/site.js?v=c0f302ea" defer></script>
+    <div class="consent-banner" id="consent-banner" role="dialog" aria-live="polite" aria-label="Cookie consent" hidden>
+        <p class="consent-text">We use cookies to measure how the site is used. You can accept analytics cookies or keep browsing without them.</p>
+        <div class="consent-actions">
+            <button class="button button-ghost" type="button" data-consent="denied">Decline</button>
+            <button class="button button-primary" type="button" data-consent="granted">Accept analytics</button>
+        </div>
+    </div>
+    <script src="/assets/site.js?v=8b8502b4" defer></script>
 </body>
 </html>

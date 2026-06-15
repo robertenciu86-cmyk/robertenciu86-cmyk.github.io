@@ -23,7 +23,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&display=swap">
-    <link rel="stylesheet" href="/assets/site.css?v=c0f302ea">
+    <link rel="stylesheet" href="/assets/site.css?v=8b8502b4">
     <script type="application/ld+json">{"@context":"https://schema.org","@type":"Event","name":"Comedy Club Shoreditch - Free Comedy Every Wednesday in East London","description":"The best stand-up comedy every Wednesday at 7:30pm at Bistrot Walluc in Shoreditch. Laughter guaranteed! 1 drink minimum! Get tickets now!","image":["https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F929389673%2F543747696447%2F1%2Foriginal.20250107-095700?auto=format%2Ccompress&q=75&sharp=10&s=65ed1abbfd9d41ec5447a7305e0772cb"],"url":"https://londoncomedygroup.com/events/comedy-club-shoreditch-fondue-2026-06-24-1930-1991775775963/","startDate":"2026-06-24T19:30:00+01:00","endDate":"2026-06-24T21:00:00+01:00","eventAttendanceMode":"https://schema.org/OfflineEventAttendanceMode","eventStatus":"https://schema.org/EventScheduled","location":{"@type":"Place","name":"Bistrot Walluc","address":{"@type":"PostalAddress","streetAddress":"40 Redchurch Street","addressLocality":"London","postalCode":"E2 7DP","addressCountry":"GB"}},"organizer":{"@type":"Organization","name":"London Comedy Group","url":"https://londoncomedygroup.com"},"offers":{"@type":"Offer","url":"https://www.eventbrite.co.uk/e/comedy-club-shoreditch-free-comedy-every-wednesday-in-east-london-tickets-1991775775963?utm_source=londoncomedygroup.com&utm_medium=website&utm_campaign=comedy-club-shoreditch-fondue&utm_content=structured-data","price":"0","priceCurrency":"GBP","availability":"https://schema.org/InStock","validFrom":"2026-06-12T13:32:19Z"}}</script>
     <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://londoncomedygroup.com/"},{"@type":"ListItem","position":2,"name":"Shows","item":"https://londoncomedygroup.com/shows/"},{"@type":"ListItem","position":3,"name":"Comedy Club Shoreditch - Free Comedy Every Wednesday in East London","item":"https://londoncomedygroup.com/shows/comedy-club-shoreditch-fondue/"},{"@type":"ListItem","position":4,"name":"Wednesday 24 June","item":"https://londoncomedygroup.com/events/comedy-club-shoreditch-fondue-2026-06-24-1930-1991775775963/"}]}</script>
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-C2RBGG9435"></script>
@@ -36,6 +36,11 @@
         'ad_personalization': 'denied',
         'analytics_storage': 'denied'
       });
+      try {
+        if (localStorage.getItem('lcg-analytics-consent') === 'granted') {
+          gtag('consent', 'update', { 'analytics_storage': 'granted' });
+        }
+      } catch (e) {}
       gtag('js', new Date());
       gtag('config', 'G-C2RBGG9435');
     </script>
@@ -83,6 +88,13 @@
         </div>
         <div class="wrap footer-bottom">© 2026 London Comedy Group</div>
     </footer>
-    <script src="/assets/site.js?v=c0f302ea" defer></script>
+    <div class="consent-banner" id="consent-banner" role="dialog" aria-live="polite" aria-label="Cookie consent" hidden>
+        <p class="consent-text">We use cookies to measure how the site is used. You can accept analytics cookies or keep browsing without them.</p>
+        <div class="consent-actions">
+            <button class="button button-ghost" type="button" data-consent="denied">Decline</button>
+            <button class="button button-primary" type="button" data-consent="granted">Accept analytics</button>
+        </div>
+    </div>
+    <script src="/assets/site.js?v=8b8502b4" defer></script>
 </body>
 </html>
