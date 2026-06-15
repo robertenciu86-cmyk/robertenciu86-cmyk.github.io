@@ -20,17 +20,16 @@
     "/events/comedy-club-shoreditch-early-2026-07-10-1800-1990193931624/": "2026-06-12",
     "/events/comedy-club-shoreditch-early-2026-07-17-1800-1990193932627/": "2026-06-12",
     "/events/comedy-club-shoreditch-early-2026-07-24-1800-1990193933630/": "2026-06-12",
-    "/events/comedy-club-shoreditch-fondue-2026-06-17-1930-1991775774960/": "2026-06-12",
-    "/events/comedy-club-shoreditch-fondue-2026-06-24-1930-1991775775963/": "2026-06-12",
-    "/events/comedy-club-shoreditch-fondue-2026-07-01-1930-1991775776966/": "2026-06-12",
-    "/events/comedy-club-shoreditch-fondue-2026-07-08-1930-1991775777969/": "2026-06-12",
-    "/events/comedy-club-shoreditch-fondue-2026-07-15-1930-1991775778972/": "2026-06-12",
-    "/events/comedy-club-shoreditch-fondue-2026-07-22-1930-1991775779975/": "2026-06-12",
-    "/events/comedy-club-shoreditch-fondue-2026-07-29-1930-1991775780978/": "2026-06-12",
-    "/events/comedy-club-shoreditch-fondue-2026-08-05-1930-1991775781981/": "2026-06-12",
-    "/events/comedy-club-shoreditch-fondue-2026-08-12-1930-1991775782984/": "2026-06-12",
-    "/events/comedy-club-shoreditch-fondue-2026-08-19-1930-1991775783987/": "2026-06-12",
-    "/events/comedy-club-shoreditch-free-new-material-mondays-2026-06-15-1930-1990806507856/": "2026-06-12",
+    "/events/comedy-club-shoreditch-fondue-2026-06-17-1930-1991775774960/": "2026-06-15",
+    "/events/comedy-club-shoreditch-fondue-2026-06-24-1930-1991775775963/": "2026-06-15",
+    "/events/comedy-club-shoreditch-fondue-2026-07-01-1930-1991775776966/": "2026-06-15",
+    "/events/comedy-club-shoreditch-fondue-2026-07-08-1930-1991775777969/": "2026-06-15",
+    "/events/comedy-club-shoreditch-fondue-2026-07-15-1930-1991775778972/": "2026-06-15",
+    "/events/comedy-club-shoreditch-fondue-2026-07-22-1930-1991775779975/": "2026-06-15",
+    "/events/comedy-club-shoreditch-fondue-2026-07-29-1930-1991775780978/": "2026-06-15",
+    "/events/comedy-club-shoreditch-fondue-2026-08-05-1930-1991775781981/": "2026-06-15",
+    "/events/comedy-club-shoreditch-fondue-2026-08-12-1930-1991775782984/": "2026-06-15",
+    "/events/comedy-club-shoreditch-fondue-2026-08-19-1930-1991775783987/": "2026-06-15",
     "/events/comedy-club-shoreditch-free-new-material-mondays-2026-06-22-1930-1990806508859/": "2026-06-12",
     "/events/comedy-club-shoreditch-free-new-material-mondays-2026-06-29-1930-1990806509862/": "2026-06-12",
     "/events/comedy-club-shoreditch-free-new-material-mondays-2026-07-06-1930-1990806510865/": "2026-06-12",
@@ -8018,7 +8017,7 @@
       },
       "last_seen": "2026-06-15",
       "path": "/events/comedy-club-shoreditch-free-new-material-mondays-2026-06-15-1930-1990806507856/",
-      "status": "live"
+      "status": "expired"
     },
     "1990806508859": {
       "event": {
@@ -10203,7 +10202,7 @@
         "capacity": 60,
         "capacity_is_custom": false,
         "category_id": "105",
-        "changed": "2026-06-12T13:32:19Z",
+        "changed": "2026-06-15T15:43:42Z",
         "created": "2026-06-12T13:32:19Z",
         "currency": "GBP",
         "description": {
@@ -10252,8 +10251,8 @@
         },
         "logo_id": "929389673",
         "name": {
-          "html": "Comedy Club Shoreditch - Free Comedy Every Wednesdayin East London",
-          "text": "Comedy Club Shoreditch - Free Comedy Every Wednesdayin East London"
+          "html": "Comedy Club Shoreditch - Free Comedy Every Wednesday in East London",
+          "text": "Comedy Club Shoreditch - Free Comedy Every Wednesday in East London"
         },
         "online_event": false,
         "organization_id": "1234539271983",
@@ -10295,7 +10294,7 @@
           "waitlist_available": false
         },
         "tx_time_limit": 1200,
-        "url": "https://www.eventbrite.co.uk/e/comedy-club-shoreditch-free-comedy-every-wednesdayin-east-london-tickets-1991775774960",
+        "url": "https://www.eventbrite.co.uk/e/comedy-club-shoreditch-free-comedy-every-wednesday-in-east-london-tickets-1991775774960",
         "venue": {
           "address": {
             "address_1": "40 Redchurch Street",
@@ -10334,7 +10333,7 @@
         "capacity": 60,
         "capacity_is_custom": false,
         "category_id": "105",
-        "changed": "2026-06-12T13:32:19Z",
+        "changed": "2026-06-15T15:43:42Z",
         "created": "2026-06-12T13:32:19Z",
         "currency": "GBP",
         "description": {
@@ -10383,8 +10382,8 @@
         },
         "logo_id": "929389673",
         "name": {
-          "html": "Comedy Club Shoreditch - Free Comedy Every Wednesdayin East London",
-          "text": "Comedy Club Shoreditch - Free Comedy Every Wednesdayin East London"
+          "html": "Comedy Club Shoreditch - Free Comedy Every Wednesday in East London",
+          "text": "Comedy Club Shoreditch - Free Comedy Every Wednesday in East London"
         },
         "online_event": false,
         "organization_id": "1234539271983",
@@ -10426,7 +10425,7 @@
           "waitlist_available": false
         },
         "tx_time_limit": 1200,
-        "url": "https://www.eventbrite.co.uk/e/comedy-club-shoreditch-free-comedy-every-wednesdayin-east-london-tickets-1991775775963",
+        "url": "https://www.eventbrite.co.uk/e/comedy-club-shoreditch-free-comedy-every-wednesday-in-east-london-tickets-1991775775963",
         "venue": {
           "address": {
             "address_1": "40 Redchurch Street",
@@ -10465,7 +10464,7 @@
         "capacity": 60,
         "capacity_is_custom": false,
         "category_id": "105",
-        "changed": "2026-06-12T13:32:19Z",
+        "changed": "2026-06-15T15:43:42Z",
         "created": "2026-06-12T13:32:19Z",
         "currency": "GBP",
         "description": {
@@ -10514,8 +10513,8 @@
         },
         "logo_id": "929389673",
         "name": {
-          "html": "Comedy Club Shoreditch - Free Comedy Every Wednesdayin East London",
-          "text": "Comedy Club Shoreditch - Free Comedy Every Wednesdayin East London"
+          "html": "Comedy Club Shoreditch - Free Comedy Every Wednesday in East London",
+          "text": "Comedy Club Shoreditch - Free Comedy Every Wednesday in East London"
         },
         "online_event": false,
         "organization_id": "1234539271983",
@@ -10557,7 +10556,7 @@
           "waitlist_available": false
         },
         "tx_time_limit": 1200,
-        "url": "https://www.eventbrite.co.uk/e/comedy-club-shoreditch-free-comedy-every-wednesdayin-east-london-tickets-1991775776966",
+        "url": "https://www.eventbrite.co.uk/e/comedy-club-shoreditch-free-comedy-every-wednesday-in-east-london-tickets-1991775776966",
         "venue": {
           "address": {
             "address_1": "40 Redchurch Street",
@@ -10596,7 +10595,7 @@
         "capacity": 60,
         "capacity_is_custom": false,
         "category_id": "105",
-        "changed": "2026-06-12T13:32:19Z",
+        "changed": "2026-06-15T15:43:42Z",
         "created": "2026-06-12T13:32:19Z",
         "currency": "GBP",
         "description": {
@@ -10645,8 +10644,8 @@
         },
         "logo_id": "929389673",
         "name": {
-          "html": "Comedy Club Shoreditch - Free Comedy Every Wednesdayin East London",
-          "text": "Comedy Club Shoreditch - Free Comedy Every Wednesdayin East London"
+          "html": "Comedy Club Shoreditch - Free Comedy Every Wednesday in East London",
+          "text": "Comedy Club Shoreditch - Free Comedy Every Wednesday in East London"
         },
         "online_event": false,
         "organization_id": "1234539271983",
@@ -10688,7 +10687,7 @@
           "waitlist_available": false
         },
         "tx_time_limit": 1200,
-        "url": "https://www.eventbrite.co.uk/e/comedy-club-shoreditch-free-comedy-every-wednesdayin-east-london-tickets-1991775777969",
+        "url": "https://www.eventbrite.co.uk/e/comedy-club-shoreditch-free-comedy-every-wednesday-in-east-london-tickets-1991775777969",
         "venue": {
           "address": {
             "address_1": "40 Redchurch Street",
@@ -10727,7 +10726,7 @@
         "capacity": 60,
         "capacity_is_custom": false,
         "category_id": "105",
-        "changed": "2026-06-12T13:32:19Z",
+        "changed": "2026-06-15T15:43:42Z",
         "created": "2026-06-12T13:32:19Z",
         "currency": "GBP",
         "description": {
@@ -10776,8 +10775,8 @@
         },
         "logo_id": "929389673",
         "name": {
-          "html": "Comedy Club Shoreditch - Free Comedy Every Wednesdayin East London",
-          "text": "Comedy Club Shoreditch - Free Comedy Every Wednesdayin East London"
+          "html": "Comedy Club Shoreditch - Free Comedy Every Wednesday in East London",
+          "text": "Comedy Club Shoreditch - Free Comedy Every Wednesday in East London"
         },
         "online_event": false,
         "organization_id": "1234539271983",
@@ -10819,7 +10818,7 @@
           "waitlist_available": false
         },
         "tx_time_limit": 1200,
-        "url": "https://www.eventbrite.co.uk/e/comedy-club-shoreditch-free-comedy-every-wednesdayin-east-london-tickets-1991775778972",
+        "url": "https://www.eventbrite.co.uk/e/comedy-club-shoreditch-free-comedy-every-wednesday-in-east-london-tickets-1991775778972",
         "venue": {
           "address": {
             "address_1": "40 Redchurch Street",
@@ -10858,7 +10857,7 @@
         "capacity": 60,
         "capacity_is_custom": false,
         "category_id": "105",
-        "changed": "2026-06-12T13:32:19Z",
+        "changed": "2026-06-15T15:43:42Z",
         "created": "2026-06-12T13:32:19Z",
         "currency": "GBP",
         "description": {
@@ -10907,8 +10906,8 @@
         },
         "logo_id": "929389673",
         "name": {
-          "html": "Comedy Club Shoreditch - Free Comedy Every Wednesdayin East London",
-          "text": "Comedy Club Shoreditch - Free Comedy Every Wednesdayin East London"
+          "html": "Comedy Club Shoreditch - Free Comedy Every Wednesday in East London",
+          "text": "Comedy Club Shoreditch - Free Comedy Every Wednesday in East London"
         },
         "online_event": false,
         "organization_id": "1234539271983",
@@ -10950,7 +10949,7 @@
           "waitlist_available": false
         },
         "tx_time_limit": 1200,
-        "url": "https://www.eventbrite.co.uk/e/comedy-club-shoreditch-free-comedy-every-wednesdayin-east-london-tickets-1991775779975",
+        "url": "https://www.eventbrite.co.uk/e/comedy-club-shoreditch-free-comedy-every-wednesday-in-east-london-tickets-1991775779975",
         "venue": {
           "address": {
             "address_1": "40 Redchurch Street",
@@ -10989,7 +10988,7 @@
         "capacity": 60,
         "capacity_is_custom": false,
         "category_id": "105",
-        "changed": "2026-06-12T13:32:19Z",
+        "changed": "2026-06-15T15:43:42Z",
         "created": "2026-06-12T13:32:19Z",
         "currency": "GBP",
         "description": {
@@ -11038,8 +11037,8 @@
         },
         "logo_id": "929389673",
         "name": {
-          "html": "Comedy Club Shoreditch - Free Comedy Every Wednesdayin East London",
-          "text": "Comedy Club Shoreditch - Free Comedy Every Wednesdayin East London"
+          "html": "Comedy Club Shoreditch - Free Comedy Every Wednesday in East London",
+          "text": "Comedy Club Shoreditch - Free Comedy Every Wednesday in East London"
         },
         "online_event": false,
         "organization_id": "1234539271983",
@@ -11081,7 +11080,7 @@
           "waitlist_available": false
         },
         "tx_time_limit": 1200,
-        "url": "https://www.eventbrite.co.uk/e/comedy-club-shoreditch-free-comedy-every-wednesdayin-east-london-tickets-1991775780978",
+        "url": "https://www.eventbrite.co.uk/e/comedy-club-shoreditch-free-comedy-every-wednesday-in-east-london-tickets-1991775780978",
         "venue": {
           "address": {
             "address_1": "40 Redchurch Street",
@@ -11120,7 +11119,7 @@
         "capacity": 60,
         "capacity_is_custom": false,
         "category_id": "105",
-        "changed": "2026-06-12T13:32:19Z",
+        "changed": "2026-06-15T15:43:42Z",
         "created": "2026-06-12T13:32:19Z",
         "currency": "GBP",
         "description": {
@@ -11169,8 +11168,8 @@
         },
         "logo_id": "929389673",
         "name": {
-          "html": "Comedy Club Shoreditch - Free Comedy Every Wednesdayin East London",
-          "text": "Comedy Club Shoreditch - Free Comedy Every Wednesdayin East London"
+          "html": "Comedy Club Shoreditch - Free Comedy Every Wednesday in East London",
+          "text": "Comedy Club Shoreditch - Free Comedy Every Wednesday in East London"
         },
         "online_event": false,
         "organization_id": "1234539271983",
@@ -11212,7 +11211,7 @@
           "waitlist_available": false
         },
         "tx_time_limit": 1200,
-        "url": "https://www.eventbrite.co.uk/e/comedy-club-shoreditch-free-comedy-every-wednesdayin-east-london-tickets-1991775781981",
+        "url": "https://www.eventbrite.co.uk/e/comedy-club-shoreditch-free-comedy-every-wednesday-in-east-london-tickets-1991775781981",
         "venue": {
           "address": {
             "address_1": "40 Redchurch Street",
@@ -11251,7 +11250,7 @@
         "capacity": 60,
         "capacity_is_custom": false,
         "category_id": "105",
-        "changed": "2026-06-12T13:32:19Z",
+        "changed": "2026-06-15T15:43:42Z",
         "created": "2026-06-12T13:32:19Z",
         "currency": "GBP",
         "description": {
@@ -11300,8 +11299,8 @@
         },
         "logo_id": "929389673",
         "name": {
-          "html": "Comedy Club Shoreditch - Free Comedy Every Wednesdayin East London",
-          "text": "Comedy Club Shoreditch - Free Comedy Every Wednesdayin East London"
+          "html": "Comedy Club Shoreditch - Free Comedy Every Wednesday in East London",
+          "text": "Comedy Club Shoreditch - Free Comedy Every Wednesday in East London"
         },
         "online_event": false,
         "organization_id": "1234539271983",
@@ -11343,7 +11342,7 @@
           "waitlist_available": false
         },
         "tx_time_limit": 1200,
-        "url": "https://www.eventbrite.co.uk/e/comedy-club-shoreditch-free-comedy-every-wednesdayin-east-london-tickets-1991775782984",
+        "url": "https://www.eventbrite.co.uk/e/comedy-club-shoreditch-free-comedy-every-wednesday-in-east-london-tickets-1991775782984",
         "venue": {
           "address": {
             "address_1": "40 Redchurch Street",
@@ -11382,7 +11381,7 @@
         "capacity": 60,
         "capacity_is_custom": false,
         "category_id": "105",
-        "changed": "2026-06-12T13:32:19Z",
+        "changed": "2026-06-15T15:43:42Z",
         "created": "2026-06-12T13:32:19Z",
         "currency": "GBP",
         "description": {
@@ -11431,8 +11430,8 @@
         },
         "logo_id": "929389673",
         "name": {
-          "html": "Comedy Club Shoreditch - Free Comedy Every Wednesdayin East London",
-          "text": "Comedy Club Shoreditch - Free Comedy Every Wednesdayin East London"
+          "html": "Comedy Club Shoreditch - Free Comedy Every Wednesday in East London",
+          "text": "Comedy Club Shoreditch - Free Comedy Every Wednesday in East London"
         },
         "online_event": false,
         "organization_id": "1234539271983",
@@ -11474,7 +11473,7 @@
           "waitlist_available": false
         },
         "tx_time_limit": 1200,
-        "url": "https://www.eventbrite.co.uk/e/comedy-club-shoreditch-free-comedy-every-wednesdayin-east-london-tickets-1991775783987",
+        "url": "https://www.eventbrite.co.uk/e/comedy-club-shoreditch-free-comedy-every-wednesday-in-east-london-tickets-1991775783987",
         "venue": {
           "address": {
             "address_1": "40 Redchurch Street",
@@ -11531,9 +11530,9 @@
       "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F929389673%2F543747696447%2F1%2Foriginal.20250107-095700?auto=format%2Ccompress&q=75&sharp=10&s=65ed1abbfd9d41ec5447a7305e0772cb",
       "last_seen": "2026-06-15",
       "slug": "comedy-club-shoreditch-fondue",
-      "source_title": "Comedy Club Shoreditch - Free Comedy Every Wednesdayin East London",
+      "source_title": "Comedy Club Shoreditch - Free Comedy Every Wednesday in East London",
       "summary": "The best stand-up comedy every Wednesday at 7:30pm at Bistrot Walluc in Shoreditch. Laughter guaranteed! 1 drink minimum! Get tickets now!",
-      "title": "Comedy Club Shoreditch - Free Comedy Every Wednesdayin East London",
+      "title": "Comedy Club Shoreditch - Free Comedy Every Wednesday in East London",
       "venue_name": "Bistrot Walluc"
     },
     "1704625774579": {
