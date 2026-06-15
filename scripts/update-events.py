@@ -766,6 +766,8 @@ def render_comedians() -> str:
         ("John Sharp", "/john_sharp.jpg", "Regular performer"),
         ("Samma", "/samma.jpg", "Regular performer"),
         ("Donatas", "/donatas.jpeg", "Regular performer"),
+        ("Ramsey Smith", "/ramsey_smith.jpg", "Regular performer"),
+        ("Thomas Noack", "/thomas_noack.jpg", "Regular performer"),
     ]
     runner_cards = "".join(
         f"""<article class="comedian-card">
