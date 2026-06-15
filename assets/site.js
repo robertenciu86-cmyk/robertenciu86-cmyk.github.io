@@ -8,6 +8,36 @@ if (toggle && nav) {
   });
 }
 
+// Cookie consent. The inline GA snippet defaults analytics_storage to "denied"
+// and replays a stored "granted" choice before init, so here we only handle the
+// banner: show it when no choice exists, then record the visitor's decision.
+const CONSENT_KEY = "lcg-analytics-consent";
+const banner = document.getElementById("consent-banner");
+
+if (banner) {
+  let stored = null;
+  try {
+    stored = localStorage.getItem(CONSENT_KEY);
+  } catch (e) {}
+
+  if (stored !== "granted" && stored !== "denied") {
+    banner.hidden = false;
+  }
+
+  banner.querySelectorAll("[data-consent]").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const choice = btn.dataset.consent;
+      try {
+        localStorage.setItem(CONSENT_KEY, choice);
+      } catch (e) {}
+      if (choice === "granted" && typeof window.gtag === "function") {
+        window.gtag("consent", "update", { analytics_storage: "granted" });
+      }
+      banner.hidden = true;
+    });
+  });
+}
+
 document.querySelectorAll("[data-ticket-link]").forEach((link) => {
   link.addEventListener("click", () => {
     const detail = {

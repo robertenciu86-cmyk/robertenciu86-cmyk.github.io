@@ -126,13 +126,15 @@ def asset_version() -> str:
 
 
 def analytics_snippet() -> str:
-    """Google Analytics 4 in cookieless mode.
+    """Google Analytics 4 with Consent Mode v2.
 
-    Consent Mode v2 defaults every storage type to "denied", so gtag.js never
-    writes a cookie or touches localStorage. With no client-side storage there
-    is nothing for UK PECR / the ePrivacy rules to require consent for, so the
-    site needs no cookie banner — GA4 simply falls back to aggregated,
-    cookieless measurement (pageviews and our ticket_click events still count).
+    Every storage type defaults to "denied", so gtag.js never writes a cookie
+    until the visitor opts in. Returning visitors who already accepted have their
+    choice replayed from localStorage *before* gtag init, so the very first
+    page_view of the session is measured with cookies. Everyone else stays in
+    cookieless (aggregated) mode until they accept via the banner (see site.js).
+    Declining or ignoring the banner leaves analytics_storage denied, which under
+    UK PECR / ePrivacy needs no consent because nothing is stored.
 
     Returns an empty string until GA_MEASUREMENT_ID is filled in, so the site
     ships clean with no analytics until you opt in."""
@@ -149,9 +151,33 @@ def analytics_snippet() -> str:
         'ad_personalization': 'denied',
         'analytics_storage': 'denied'
       }});
+      try {{
+        if (localStorage.getItem('lcg-analytics-consent') === 'granted') {{
+          gtag('consent', 'update', {{ 'analytics_storage': 'granted' }});
+        }}
+      }} catch (e) {{}}
       gtag('js', new Date());
       gtag('config', '{esc(GA_MEASUREMENT_ID)}');
     </script>"""
+
+
+def consent_banner() -> str:
+    """Cookie-consent banner for the analytics opt-in.
+
+    Ships hidden (the `hidden` attribute); site.js reveals it only when the
+    visitor has not yet made a choice, so returning visitors never see it again.
+    Accepting flips analytics_storage to granted and remembers the choice; see
+    site.js. Returns empty when analytics is off, so there is nothing to consent
+    to and no banner."""
+    if not GA_MEASUREMENT_ID:
+        return ""
+    return """<div class="consent-banner" id="consent-banner" role="dialog" aria-live="polite" aria-label="Cookie consent" hidden>
+        <p class="consent-text">We use cookies to measure how the site is used. You can accept analytics cookies or keep browsing without them.</p>
+        <div class="consent-actions">
+            <button class="button button-ghost" type="button" data-consent="denied">Decline</button>
+            <button class="button button-primary" type="button" data-consent="granted">Accept analytics</button>
+        </div>
+    </div>"""
 
 
 def load_json(path: Path, default):
@@ -501,6 +527,7 @@ def layout(
         </div>
         <div class="wrap footer-bottom">© {now.year} London Comedy Group</div>
     </footer>
+    {consent_banner()}
     <script src="/assets/site.js?v={asset_version()}" defer></script>
 </body>
 </html>
