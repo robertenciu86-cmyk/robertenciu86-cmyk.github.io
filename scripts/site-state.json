@@ -46,20 +46,19 @@
     "/events/islington-sunday-comedy-8pm-2026-06-28-2000-1988716927866/": "2026-06-15",
     "/events/islington-sunday-comedy-8pm-2026-07-02-2000-1988716843614/": "2026-06-15",
     "/events/islington-sunday-comedy-8pm-2026-07-05-2000-1988716928869/": "2026-06-15",
-    "/events/saturday-comedy-soho-2026-06-20-1730-1988717211715/": "2026-06-20",
     "/events/saturday-comedy-soho-2026-06-27-1730-1988717212718/": "2026-06-15",
     "/events/saturday-comedy-soho-2026-07-04-1730-1988717213721/": "2026-06-15",
     "/hire-comedians-london/": "2026-06-15",
     "/shows/": "2026-06-20",
-    "/shows/byob-comedy-peckham/": "2026-06-19",
-    "/shows/candlemaker-comedy-battersea/": "2026-06-19",
-    "/shows/comedy-club-shoreditch-early/": "2026-06-19",
-    "/shows/comedy-club-shoreditch-fondue/": "2026-06-19",
+    "/shows/byob-comedy-peckham/": "2026-06-20",
+    "/shows/candlemaker-comedy-battersea/": "2026-06-20",
+    "/shows/comedy-club-shoreditch-early/": "2026-06-20",
+    "/shows/comedy-club-shoreditch-fondue/": "2026-06-20",
     "/shows/comedy-club-shoreditch-free-new-material-mondays/": "2026-06-20",
-    "/shows/free-comedy-every-sunday-at-6pm-in-north-london/": "2026-06-19",
-    "/shows/is-it-lington-tuesday-comedy/": "2026-06-19",
-    "/shows/islington-sunday-comedy-6pm/": "2026-06-19",
-    "/shows/islington-sunday-comedy-8pm/": "2026-06-19",
+    "/shows/free-comedy-every-sunday-at-6pm-in-north-london/": "2026-06-20",
+    "/shows/is-it-lington-tuesday-comedy/": "2026-06-20",
+    "/shows/islington-sunday-comedy-6pm/": "2026-06-20",
+    "/shows/islington-sunday-comedy-8pm/": "2026-06-20",
     "/shows/saturday-comedy-soho/": "2026-06-20",
     "/stay-in-touch/": "2026-06-15"
   },
@@ -5682,7 +5681,7 @@
       },
       "last_seen": "2026-06-20",
       "path": "/events/saturday-comedy-soho-2026-06-20-1730-1988717211715/",
-      "status": "live"
+      "status": "expired"
     },
     "1988717212718": {
       "event": {
