@@ -11511,7 +11511,7 @@
         "capacity": 80,
         "capacity_is_custom": false,
         "category_id": "105",
-        "changed": "2026-06-22T22:50:11Z",
+        "changed": "2026-06-23T19:33:35Z",
         "created": "2026-06-22T22:50:11Z",
         "currency": "GBP",
         "description": {
@@ -11574,12 +11574,12 @@
           "timezone": "Europe/London",
           "utc": "2026-06-23T18:30:00Z"
         },
-        "status": "live",
+        "status": "started",
         "subcategory_id": "5010",
         "summary": "The best free Stand Up Comedy in London, every Tuesday at 7:30pm at Hoxley & Porter in Highbury & Islington / Angel.",
         "ticket_availability": {
-          "has_available_tickets": true,
-          "is_sold_out": false,
+          "has_available_tickets": false,
+          "is_sold_out": true,
           "maximum_ticket_price": {
             "currency": "GBP",
             "display": "0.00 GBP",
