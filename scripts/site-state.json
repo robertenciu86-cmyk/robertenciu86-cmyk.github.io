@@ -1,6 +1,6 @@
 {
   "lastmod": {
-    "/": "2026-06-24",
+    "/": "2026-06-25",
     "/events/byob-comedy-peckham-2026-06-25-2000-1988716825560/": "2026-06-15",
     "/events/byob-comedy-peckham-2026-07-02-2000-1988716826563/": "2026-06-15",
     "/events/candlemaker-comedy-battersea-2026-07-26-1900-1991188782249/": "2026-06-15",
@@ -45,14 +45,14 @@
     "/events/is-it-lington-tuesday-comedy-2026-08-25-1930-1992392257877/": "2026-06-23",
     "/events/islington-sunday-comedy-6pm-2026-06-28-1800-1988716793464/": "2026-06-15",
     "/events/islington-sunday-comedy-6pm-2026-07-05-1800-1988716794467/": "2026-06-15",
-    "/events/islington-sunday-comedy-8pm-2026-06-25-2000-1988716842611/": "2026-06-15",
+    "/events/islington-sunday-comedy-8pm-2026-06-25-2000-1988716842611/": "2026-06-25",
     "/events/islington-sunday-comedy-8pm-2026-06-28-2000-1988716927866/": "2026-06-15",
     "/events/islington-sunday-comedy-8pm-2026-07-02-2000-1988716843614/": "2026-06-15",
     "/events/islington-sunday-comedy-8pm-2026-07-05-2000-1988716928869/": "2026-06-15",
     "/events/saturday-comedy-soho-2026-06-27-1730-1988717212718/": "2026-06-15",
     "/events/saturday-comedy-soho-2026-07-04-1730-1988717213721/": "2026-06-15",
     "/hire-comedians-london/": "2026-06-15",
-    "/shows/": "2026-06-24",
+    "/shows/": "2026-06-25",
     "/shows/byob-comedy-peckham/": "2026-06-24",
     "/shows/candlemaker-comedy-battersea/": "2026-06-24",
     "/shows/comedy-club-shoreditch-early/": "2026-06-24",
@@ -61,7 +61,7 @@
     "/shows/free-comedy-every-sunday-at-6pm-in-north-london/": "2026-06-24",
     "/shows/is-it-lington-tuesday-comedy/": "2026-06-24",
     "/shows/islington-sunday-comedy-6pm/": "2026-06-24",
-    "/shows/islington-sunday-comedy-8pm/": "2026-06-24",
+    "/shows/islington-sunday-comedy-8pm/": "2026-06-25",
     "/shows/saturday-comedy-soho/": "2026-06-24",
     "/stay-in-touch/": "2026-06-15"
   },
@@ -2044,7 +2044,7 @@
         "capacity": 40,
         "capacity_is_custom": false,
         "category_id": "110",
-        "changed": "2026-05-03T18:21:43Z",
+        "changed": "2026-06-25T19:49:10Z",
         "created": "2026-05-03T18:21:43Z",
         "currency": "GBP",
         "description": {
@@ -2114,7 +2114,7 @@
           "timezone": "Europe/London",
           "utc": "2026-06-25T19:00:00Z"
         },
-        "status": "live",
+        "status": "started",
         "subcategory_id": "10003",
         "summary": "The best stand-up comedy in Peckham, free every Thursday at 8pm at Eagle Eats Bakery. Bring your own beer!",
         "ticket_availability": {
@@ -2699,7 +2699,7 @@
         "capacity": 80,
         "capacity_is_custom": false,
         "category_id": "105",
-        "changed": "2026-05-03T18:22:54Z",
+        "changed": "2026-06-25T19:49:10Z",
         "created": "2026-05-03T18:22:54Z",
         "currency": "GBP",
         "description": {
@@ -2769,12 +2769,12 @@
           "timezone": "Europe/London",
           "utc": "2026-06-25T19:00:00Z"
         },
-        "status": "live",
+        "status": "started",
         "subcategory_id": "5010",
         "summary": "The best free Stand Up Comedy in London, every Sunday at 8pm at Brewhouse & Kitchen in Islington.",
         "ticket_availability": {
-          "has_available_tickets": true,
-          "is_sold_out": false,
+          "has_available_tickets": false,
+          "is_sold_out": true,
           "maximum_ticket_price": {
             "currency": "GBP",
             "display": "0.00 GBP",
