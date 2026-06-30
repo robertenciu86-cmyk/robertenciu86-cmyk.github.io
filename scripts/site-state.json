@@ -1,6 +1,6 @@
 {
   "lastmod": {
-    "/": "2026-06-29",
+    "/": "2026-06-30",
     "/events/byob-comedy-peckham-2026-07-02-2000-1988716826563/": "2026-06-15",
     "/events/candlemaker-comedy-battersea-2026-07-26-1900-1991188782249/": "2026-06-15",
     "/events/candlemaker-comedy-battersea-2026-08-02-1900-1991188783252/": "2026-06-15",
@@ -30,7 +30,7 @@
     "/events/comedy-club-shoreditch-free-new-material-mondays-2026-07-27-1930-1990806513874/": "2026-06-20",
     "/events/comedy-club-shoreditch-free-new-material-mondays-2026-08-03-1930-1990806514877/": "2026-06-20",
     "/events/free-comedy-every-sunday-at-6pm-in-north-london-2026-07-05-1800-1988717057253/": "2026-06-15",
-    "/events/is-it-lington-tuesday-comedy-2026-06-30-1930-1992392249853/": "2026-06-23",
+    "/events/is-it-lington-tuesday-comedy-2026-06-30-1930-1992392249853/": "2026-06-30",
     "/events/is-it-lington-tuesday-comedy-2026-07-07-1930-1992392250856/": "2026-06-23",
     "/events/is-it-lington-tuesday-comedy-2026-07-14-1930-1992392251859/": "2026-06-23",
     "/events/is-it-lington-tuesday-comedy-2026-07-21-1930-1992392252862/": "2026-06-23",
@@ -44,14 +44,14 @@
     "/events/islington-sunday-comedy-8pm-2026-07-05-2000-1988716928869/": "2026-06-15",
     "/events/saturday-comedy-soho-2026-07-04-1730-1988717213721/": "2026-06-15",
     "/hire-comedians-london/": "2026-06-15",
-    "/shows/": "2026-06-29",
+    "/shows/": "2026-06-30",
     "/shows/byob-comedy-peckham/": "2026-06-29",
     "/shows/candlemaker-comedy-battersea/": "2026-06-29",
     "/shows/comedy-club-shoreditch-early/": "2026-06-29",
     "/shows/comedy-club-shoreditch-fondue/": "2026-06-29",
     "/shows/comedy-club-shoreditch-free-new-material-mondays/": "2026-06-29",
     "/shows/free-comedy-every-sunday-at-6pm-in-north-london/": "2026-06-29",
-    "/shows/is-it-lington-tuesday-comedy/": "2026-06-29",
+    "/shows/is-it-lington-tuesday-comedy/": "2026-06-30",
     "/shows/islington-sunday-comedy-6pm/": "2026-06-29",
     "/shows/islington-sunday-comedy-8pm/": "2026-06-29",
     "/shows/saturday-comedy-soho/": "2026-06-29",
@@ -11625,7 +11625,7 @@
         "capacity": 80,
         "capacity_is_custom": false,
         "category_id": "105",
-        "changed": "2026-06-22T22:50:11Z",
+        "changed": "2026-06-30T19:36:54Z",
         "created": "2026-06-22T22:50:11Z",
         "currency": "GBP",
         "description": {
@@ -11688,12 +11688,12 @@
           "timezone": "Europe/London",
           "utc": "2026-06-30T18:30:00Z"
         },
-        "status": "live",
+        "status": "started",
         "subcategory_id": "5010",
         "summary": "The best free Stand Up Comedy in London, every Tuesday at 7:30pm at Hoxley & Porter in Highbury & Islington / Angel.",
         "ticket_availability": {
-          "has_available_tickets": true,
-          "is_sold_out": false,
+          "has_available_tickets": false,
+          "is_sold_out": true,
           "maximum_ticket_price": {
             "currency": "GBP",
             "display": "0.00 GBP",
