@@ -1,7 +1,16 @@
 {
   "lastmod": {
-    "/": "2026-07-01",
-    "/events/byob-comedy-peckham-2026-07-02-2000-1988716826563/": "2026-06-15",
+    "/": "2026-07-02",
+    "/events/byob-comedy-peckham-2026-07-02-2000-1988716826563/": "2026-07-02",
+    "/events/byob-comedy-peckham-2026-07-09-2000-1993027894082/": "2026-07-02",
+    "/events/byob-comedy-peckham-2026-07-16-2000-1993027895085/": "2026-07-02",
+    "/events/byob-comedy-peckham-2026-07-23-2000-1993027896088/": "2026-07-02",
+    "/events/byob-comedy-peckham-2026-07-30-2000-1993027897091/": "2026-07-02",
+    "/events/byob-comedy-peckham-2026-08-06-2000-1993027898094/": "2026-07-02",
+    "/events/byob-comedy-peckham-2026-08-13-2000-1993027899097/": "2026-07-02",
+    "/events/byob-comedy-peckham-2026-08-20-2000-1993027900100/": "2026-07-02",
+    "/events/byob-comedy-peckham-2026-08-27-2000-1993027901103/": "2026-07-02",
+    "/events/byob-comedy-peckham-2026-09-03-2000-1993027902106/": "2026-07-02",
     "/events/candlemaker-comedy-battersea-2026-07-26-1900-1991188782249/": "2026-06-15",
     "/events/candlemaker-comedy-battersea-2026-08-02-1900-1991188783252/": "2026-06-15",
     "/events/candlemaker-comedy-battersea-2026-08-09-1900-1991188784255/": "2026-06-15",
@@ -38,12 +47,12 @@
     "/events/is-it-lington-tuesday-comedy-2026-08-18-1930-1992392256874/": "2026-06-23",
     "/events/is-it-lington-tuesday-comedy-2026-08-25-1930-1992392257877/": "2026-06-23",
     "/events/islington-sunday-comedy-6pm-2026-07-05-1800-1988716794467/": "2026-06-15",
-    "/events/islington-sunday-comedy-8pm-2026-07-02-2000-1988716843614/": "2026-06-15",
+    "/events/islington-sunday-comedy-8pm-2026-07-02-2000-1988716843614/": "2026-07-02",
     "/events/islington-sunday-comedy-8pm-2026-07-05-2000-1988716928869/": "2026-06-15",
     "/events/saturday-comedy-soho-2026-07-04-1730-1988717213721/": "2026-06-15",
     "/hire-comedians-london/": "2026-06-15",
-    "/shows/": "2026-07-01",
-    "/shows/byob-comedy-peckham/": "2026-07-01",
+    "/shows/": "2026-07-02",
+    "/shows/byob-comedy-peckham/": "2026-07-02",
     "/shows/candlemaker-comedy-battersea/": "2026-07-01",
     "/shows/comedy-club-shoreditch-early/": "2026-07-01",
     "/shows/comedy-club-shoreditch-fondue/": "2026-07-01",
@@ -51,7 +60,7 @@
     "/shows/free-comedy-every-sunday-at-6pm-in-north-london/": "2026-07-01",
     "/shows/is-it-lington-tuesday-comedy/": "2026-07-01",
     "/shows/islington-sunday-comedy-6pm/": "2026-07-01",
-    "/shows/islington-sunday-comedy-8pm/": "2026-07-01",
+    "/shows/islington-sunday-comedy-8pm/": "2026-07-02",
     "/shows/saturday-comedy-soho/": "2026-07-01",
     "/stay-in-touch/": "2026-06-15"
   },
@@ -2165,7 +2174,7 @@
         "capacity": 40,
         "capacity_is_custom": false,
         "category_id": "110",
-        "changed": "2026-05-03T18:21:43Z",
+        "changed": "2026-07-02T19:47:36Z",
         "created": "2026-05-03T18:21:43Z",
         "currency": "GBP",
         "description": {
@@ -2235,12 +2244,12 @@
           "timezone": "Europe/London",
           "utc": "2026-07-02T19:00:00Z"
         },
-        "status": "live",
+        "status": "started",
         "subcategory_id": "10003",
         "summary": "The best stand-up comedy in Peckham, free every Thursday at 8pm at Eagle Eats Bakery. Bring your own beer!",
         "ticket_availability": {
-          "has_available_tickets": true,
-          "is_sold_out": false,
+          "has_available_tickets": false,
+          "is_sold_out": true,
           "maximum_ticket_price": {
             "currency": "GBP",
             "display": "0.00 GBP",
@@ -2820,7 +2829,7 @@
         "capacity": 80,
         "capacity_is_custom": false,
         "category_id": "105",
-        "changed": "2026-05-03T18:22:54Z",
+        "changed": "2026-07-02T19:47:36Z",
         "created": "2026-05-03T18:22:54Z",
         "currency": "GBP",
         "description": {
@@ -2890,12 +2899,12 @@
           "timezone": "Europe/London",
           "utc": "2026-07-02T19:00:00Z"
         },
-        "status": "live",
+        "status": "started",
         "subcategory_id": "5010",
         "summary": "The best free Stand Up Comedy in London, every Sunday at 8pm at Brewhouse & Kitchen in Islington.",
         "ticket_availability": {
-          "has_available_tickets": true,
-          "is_sold_out": false,
+          "has_available_tickets": false,
+          "is_sold_out": true,
           "maximum_ticket_price": {
             "currency": "GBP",
             "display": "0.00 GBP",
@@ -12732,6 +12741,1185 @@
       },
       "last_seen": "2026-07-02",
       "path": "/events/is-it-lington-tuesday-comedy-2026-08-25-1930-1992392257877/",
+      "status": "live"
+    },
+    "1993027894082": {
+      "event": {
+        "capacity": 40,
+        "capacity_is_custom": false,
+        "category_id": "110",
+        "changed": "2026-07-02T17:43:37Z",
+        "created": "2026-07-02T17:42:52Z",
+        "currency": "GBP",
+        "description": {
+          "html": "The best stand-up comedy in Peckham, free every Thursday at 8pm at Eagle Eats Bakery. Bring your own beer!",
+          "text": "The best stand-up comedy in Peckham, free every Thursday at 8pm at Eagle Eats Bakery. Bring your own beer!"
+        },
+        "end": {
+          "local": "2026-07-09T21:30:00",
+          "timezone": "Europe/London",
+          "utc": "2026-07-09T20:30:00Z"
+        },
+        "facebook_event_id": null,
+        "format_id": "11",
+        "hide_end_date": false,
+        "hide_start_date": false,
+        "id": "1993027894082",
+        "inventory_type": "limited",
+        "invite_only": false,
+        "is_externally_ticketed": false,
+        "is_free": true,
+        "is_locked": false,
+        "is_reserved_seating": false,
+        "is_series": true,
+        "is_series_parent": false,
+        "listed": true,
+        "locale": "en_US",
+        "logo": {
+          "aspect_ratio": "2",
+          "crop_mask": {
+            "height": 1080,
+            "top_left": {
+              "x": 0,
+              "y": 0
+            },
+            "width": 2160
+          },
+          "edge_color": "#f5e2a7",
+          "edge_color_set": true,
+          "id": "1179214042",
+          "original": {
+            "height": 1080,
+            "url": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1179214042%2F543747696447%2F1%2Foriginal.20260306-162753?auto=format%2Ccompress&q=75&sharp=10&s=e4014ea77e71c224ce95563687ed09c1",
+            "width": 2160
+          },
+          "url": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1179214042%2F543747696447%2F1%2Foriginal.20260306-162753?h=200&w=450&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C0%2C2160%2C1080&s=2049ef6e056f7fa642baa7c1b214d09a"
+        },
+        "logo_id": "1179214042",
+        "name": {
+          "html": "BYOB - Free Comedy Every Thursday in Peckham",
+          "text": "BYOB - Free Comedy Every Thursday in Peckham"
+        },
+        "online_event": false,
+        "organization_id": "1234539271983",
+        "organizer_id": "55764637993",
+        "privacy_setting": "unlocked",
+        "published": "2026-01-21T11:06:36Z",
+        "resource_uri": "https://www.eventbriteapi.com/v3/events/1993027894082/",
+        "series_id": "1981104014437",
+        "shareable": true,
+        "show_colors_in_seatmap_thumbnail": false,
+        "show_pick_a_seat": false,
+        "show_remaining": false,
+        "show_seatmap_thumbnail": false,
+        "source": "coyote",
+        "start": {
+          "local": "2026-07-09T20:00:00",
+          "timezone": "Europe/London",
+          "utc": "2026-07-09T19:00:00Z"
+        },
+        "status": "live",
+        "subcategory_id": "10003",
+        "summary": "The best stand-up comedy in Peckham, free every Thursday at 8pm at Eagle Eats Bakery. Bring your own beer!",
+        "ticket_availability": {
+          "has_available_tickets": true,
+          "is_sold_out": false,
+          "maximum_ticket_price": {
+            "currency": "GBP",
+            "display": "0.00 GBP",
+            "major_value": "0.00",
+            "value": 0
+          },
+          "minimum_ticket_price": {
+            "currency": "GBP",
+            "display": "0.00 GBP",
+            "major_value": "0.00",
+            "value": 0
+          },
+          "start_sales_date": null,
+          "waitlist_available": false
+        },
+        "tx_time_limit": 1200,
+        "url": "https://www.eventbrite.co.uk/e/byob-free-comedy-every-thursday-in-peckham-tickets-1993027894082",
+        "venue": {
+          "address": {
+            "address_1": "Station approach",
+            "address_2": "",
+            "city": "London",
+            "country": "GB",
+            "latitude": "51.47380090000001",
+            "localized_address_display": "Station approach, London, SE15 2JR",
+            "localized_area_display": "London",
+            "localized_multi_line_address_display": [
+              "Station approach",
+              "London",
+              "SE15 2JR"
+            ],
+            "longitude": "-0.0573",
+            "postal_code": "SE15 2JR",
+            "region": "England"
+          },
+          "age_restriction": null,
+          "capacity": null,
+          "id": "296067022",
+          "latitude": "51.47380090000001",
+          "longitude": "-0.0573",
+          "name": "Eagle Eats Bakery",
+          "resource_uri": "https://www.eventbriteapi.com/v3/venues/296067022/"
+        },
+        "venue_id": "296067022",
+        "version": null
+      },
+      "last_seen": "2026-07-02",
+      "path": "/events/byob-comedy-peckham-2026-07-09-2000-1993027894082/",
+      "status": "live"
+    },
+    "1993027895085": {
+      "event": {
+        "capacity": 40,
+        "capacity_is_custom": false,
+        "category_id": "110",
+        "changed": "2026-07-02T17:43:37Z",
+        "created": "2026-07-02T17:42:52Z",
+        "currency": "GBP",
+        "description": {
+          "html": "The best stand-up comedy in Peckham, free every Thursday at 8pm at Eagle Eats Bakery. Bring your own beer!",
+          "text": "The best stand-up comedy in Peckham, free every Thursday at 8pm at Eagle Eats Bakery. Bring your own beer!"
+        },
+        "end": {
+          "local": "2026-07-16T21:30:00",
+          "timezone": "Europe/London",
+          "utc": "2026-07-16T20:30:00Z"
+        },
+        "facebook_event_id": null,
+        "format_id": "11",
+        "hide_end_date": false,
+        "hide_start_date": false,
+        "id": "1993027895085",
+        "inventory_type": "limited",
+        "invite_only": false,
+        "is_externally_ticketed": false,
+        "is_free": true,
+        "is_locked": false,
+        "is_reserved_seating": false,
+        "is_series": true,
+        "is_series_parent": false,
+        "listed": true,
+        "locale": "en_US",
+        "logo": {
+          "aspect_ratio": "2",
+          "crop_mask": {
+            "height": 1080,
+            "top_left": {
+              "x": 0,
+              "y": 0
+            },
+            "width": 2160
+          },
+          "edge_color": "#f5e2a7",
+          "edge_color_set": true,
+          "id": "1179214042",
+          "original": {
+            "height": 1080,
+            "url": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1179214042%2F543747696447%2F1%2Foriginal.20260306-162753?auto=format%2Ccompress&q=75&sharp=10&s=e4014ea77e71c224ce95563687ed09c1",
+            "width": 2160
+          },
+          "url": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1179214042%2F543747696447%2F1%2Foriginal.20260306-162753?h=200&w=450&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C0%2C2160%2C1080&s=2049ef6e056f7fa642baa7c1b214d09a"
+        },
+        "logo_id": "1179214042",
+        "name": {
+          "html": "BYOB - Free Comedy Every Thursday in Peckham",
+          "text": "BYOB - Free Comedy Every Thursday in Peckham"
+        },
+        "online_event": false,
+        "organization_id": "1234539271983",
+        "organizer_id": "55764637993",
+        "privacy_setting": "unlocked",
+        "published": "2026-01-21T11:06:36Z",
+        "resource_uri": "https://www.eventbriteapi.com/v3/events/1993027895085/",
+        "series_id": "1981104014437",
+        "shareable": true,
+        "show_colors_in_seatmap_thumbnail": false,
+        "show_pick_a_seat": false,
+        "show_remaining": false,
+        "show_seatmap_thumbnail": false,
+        "source": "coyote",
+        "start": {
+          "local": "2026-07-16T20:00:00",
+          "timezone": "Europe/London",
+          "utc": "2026-07-16T19:00:00Z"
+        },
+        "status": "live",
+        "subcategory_id": "10003",
+        "summary": "The best stand-up comedy in Peckham, free every Thursday at 8pm at Eagle Eats Bakery. Bring your own beer!",
+        "ticket_availability": {
+          "has_available_tickets": true,
+          "is_sold_out": false,
+          "maximum_ticket_price": {
+            "currency": "GBP",
+            "display": "0.00 GBP",
+            "major_value": "0.00",
+            "value": 0
+          },
+          "minimum_ticket_price": {
+            "currency": "GBP",
+            "display": "0.00 GBP",
+            "major_value": "0.00",
+            "value": 0
+          },
+          "start_sales_date": null,
+          "waitlist_available": false
+        },
+        "tx_time_limit": 1200,
+        "url": "https://www.eventbrite.co.uk/e/byob-free-comedy-every-thursday-in-peckham-tickets-1993027895085",
+        "venue": {
+          "address": {
+            "address_1": "Station approach",
+            "address_2": "",
+            "city": "London",
+            "country": "GB",
+            "latitude": "51.47380090000001",
+            "localized_address_display": "Station approach, London, SE15 2JR",
+            "localized_area_display": "London",
+            "localized_multi_line_address_display": [
+              "Station approach",
+              "London",
+              "SE15 2JR"
+            ],
+            "longitude": "-0.0573",
+            "postal_code": "SE15 2JR",
+            "region": "England"
+          },
+          "age_restriction": null,
+          "capacity": null,
+          "id": "296067022",
+          "latitude": "51.47380090000001",
+          "longitude": "-0.0573",
+          "name": "Eagle Eats Bakery",
+          "resource_uri": "https://www.eventbriteapi.com/v3/venues/296067022/"
+        },
+        "venue_id": "296067022",
+        "version": null
+      },
+      "last_seen": "2026-07-02",
+      "path": "/events/byob-comedy-peckham-2026-07-16-2000-1993027895085/",
+      "status": "live"
+    },
+    "1993027896088": {
+      "event": {
+        "capacity": 40,
+        "capacity_is_custom": false,
+        "category_id": "110",
+        "changed": "2026-07-02T17:43:37Z",
+        "created": "2026-07-02T17:42:52Z",
+        "currency": "GBP",
+        "description": {
+          "html": "The best stand-up comedy in Peckham, free every Thursday at 8pm at Eagle Eats Bakery. Bring your own beer!",
+          "text": "The best stand-up comedy in Peckham, free every Thursday at 8pm at Eagle Eats Bakery. Bring your own beer!"
+        },
+        "end": {
+          "local": "2026-07-23T21:30:00",
+          "timezone": "Europe/London",
+          "utc": "2026-07-23T20:30:00Z"
+        },
+        "facebook_event_id": null,
+        "format_id": "11",
+        "hide_end_date": false,
+        "hide_start_date": false,
+        "id": "1993027896088",
+        "inventory_type": "limited",
+        "invite_only": false,
+        "is_externally_ticketed": false,
+        "is_free": true,
+        "is_locked": false,
+        "is_reserved_seating": false,
+        "is_series": true,
+        "is_series_parent": false,
+        "listed": true,
+        "locale": "en_US",
+        "logo": {
+          "aspect_ratio": "2",
+          "crop_mask": {
+            "height": 1080,
+            "top_left": {
+              "x": 0,
+              "y": 0
+            },
+            "width": 2160
+          },
+          "edge_color": "#f5e2a7",
+          "edge_color_set": true,
+          "id": "1179214042",
+          "original": {
+            "height": 1080,
+            "url": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1179214042%2F543747696447%2F1%2Foriginal.20260306-162753?auto=format%2Ccompress&q=75&sharp=10&s=e4014ea77e71c224ce95563687ed09c1",
+            "width": 2160
+          },
+          "url": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1179214042%2F543747696447%2F1%2Foriginal.20260306-162753?h=200&w=450&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C0%2C2160%2C1080&s=2049ef6e056f7fa642baa7c1b214d09a"
+        },
+        "logo_id": "1179214042",
+        "name": {
+          "html": "BYOB - Free Comedy Every Thursday in Peckham",
+          "text": "BYOB - Free Comedy Every Thursday in Peckham"
+        },
+        "online_event": false,
+        "organization_id": "1234539271983",
+        "organizer_id": "55764637993",
+        "privacy_setting": "unlocked",
+        "published": "2026-01-21T11:06:36Z",
+        "resource_uri": "https://www.eventbriteapi.com/v3/events/1993027896088/",
+        "series_id": "1981104014437",
+        "shareable": true,
+        "show_colors_in_seatmap_thumbnail": false,
+        "show_pick_a_seat": false,
+        "show_remaining": false,
+        "show_seatmap_thumbnail": false,
+        "source": "coyote",
+        "start": {
+          "local": "2026-07-23T20:00:00",
+          "timezone": "Europe/London",
+          "utc": "2026-07-23T19:00:00Z"
+        },
+        "status": "live",
+        "subcategory_id": "10003",
+        "summary": "The best stand-up comedy in Peckham, free every Thursday at 8pm at Eagle Eats Bakery. Bring your own beer!",
+        "ticket_availability": {
+          "has_available_tickets": true,
+          "is_sold_out": false,
+          "maximum_ticket_price": {
+            "currency": "GBP",
+            "display": "0.00 GBP",
+            "major_value": "0.00",
+            "value": 0
+          },
+          "minimum_ticket_price": {
+            "currency": "GBP",
+            "display": "0.00 GBP",
+            "major_value": "0.00",
+            "value": 0
+          },
+          "start_sales_date": null,
+          "waitlist_available": false
+        },
+        "tx_time_limit": 1200,
+        "url": "https://www.eventbrite.co.uk/e/byob-free-comedy-every-thursday-in-peckham-tickets-1993027896088",
+        "venue": {
+          "address": {
+            "address_1": "Station approach",
+            "address_2": "",
+            "city": "London",
+            "country": "GB",
+            "latitude": "51.47380090000001",
+            "localized_address_display": "Station approach, London, SE15 2JR",
+            "localized_area_display": "London",
+            "localized_multi_line_address_display": [
+              "Station approach",
+              "London",
+              "SE15 2JR"
+            ],
+            "longitude": "-0.0573",
+            "postal_code": "SE15 2JR",
+            "region": "England"
+          },
+          "age_restriction": null,
+          "capacity": null,
+          "id": "296067022",
+          "latitude": "51.47380090000001",
+          "longitude": "-0.0573",
+          "name": "Eagle Eats Bakery",
+          "resource_uri": "https://www.eventbriteapi.com/v3/venues/296067022/"
+        },
+        "venue_id": "296067022",
+        "version": null
+      },
+      "last_seen": "2026-07-02",
+      "path": "/events/byob-comedy-peckham-2026-07-23-2000-1993027896088/",
+      "status": "live"
+    },
+    "1993027897091": {
+      "event": {
+        "capacity": 40,
+        "capacity_is_custom": false,
+        "category_id": "110",
+        "changed": "2026-07-02T17:43:37Z",
+        "created": "2026-07-02T17:42:52Z",
+        "currency": "GBP",
+        "description": {
+          "html": "The best stand-up comedy in Peckham, free every Thursday at 8pm at Eagle Eats Bakery. Bring your own beer!",
+          "text": "The best stand-up comedy in Peckham, free every Thursday at 8pm at Eagle Eats Bakery. Bring your own beer!"
+        },
+        "end": {
+          "local": "2026-07-30T21:30:00",
+          "timezone": "Europe/London",
+          "utc": "2026-07-30T20:30:00Z"
+        },
+        "facebook_event_id": null,
+        "format_id": "11",
+        "hide_end_date": false,
+        "hide_start_date": false,
+        "id": "1993027897091",
+        "inventory_type": "limited",
+        "invite_only": false,
+        "is_externally_ticketed": false,
+        "is_free": true,
+        "is_locked": false,
+        "is_reserved_seating": false,
+        "is_series": true,
+        "is_series_parent": false,
+        "listed": true,
+        "locale": "en_US",
+        "logo": {
+          "aspect_ratio": "2",
+          "crop_mask": {
+            "height": 1080,
+            "top_left": {
+              "x": 0,
+              "y": 0
+            },
+            "width": 2160
+          },
+          "edge_color": "#f5e2a7",
+          "edge_color_set": true,
+          "id": "1179214042",
+          "original": {
+            "height": 1080,
+            "url": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1179214042%2F543747696447%2F1%2Foriginal.20260306-162753?auto=format%2Ccompress&q=75&sharp=10&s=e4014ea77e71c224ce95563687ed09c1",
+            "width": 2160
+          },
+          "url": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1179214042%2F543747696447%2F1%2Foriginal.20260306-162753?h=200&w=450&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C0%2C2160%2C1080&s=2049ef6e056f7fa642baa7c1b214d09a"
+        },
+        "logo_id": "1179214042",
+        "name": {
+          "html": "BYOB - Free Comedy Every Thursday in Peckham",
+          "text": "BYOB - Free Comedy Every Thursday in Peckham"
+        },
+        "online_event": false,
+        "organization_id": "1234539271983",
+        "organizer_id": "55764637993",
+        "privacy_setting": "unlocked",
+        "published": "2026-01-21T11:06:36Z",
+        "resource_uri": "https://www.eventbriteapi.com/v3/events/1993027897091/",
+        "series_id": "1981104014437",
+        "shareable": true,
+        "show_colors_in_seatmap_thumbnail": false,
+        "show_pick_a_seat": false,
+        "show_remaining": false,
+        "show_seatmap_thumbnail": false,
+        "source": "coyote",
+        "start": {
+          "local": "2026-07-30T20:00:00",
+          "timezone": "Europe/London",
+          "utc": "2026-07-30T19:00:00Z"
+        },
+        "status": "live",
+        "subcategory_id": "10003",
+        "summary": "The best stand-up comedy in Peckham, free every Thursday at 8pm at Eagle Eats Bakery. Bring your own beer!",
+        "ticket_availability": {
+          "has_available_tickets": true,
+          "is_sold_out": false,
+          "maximum_ticket_price": {
+            "currency": "GBP",
+            "display": "0.00 GBP",
+            "major_value": "0.00",
+            "value": 0
+          },
+          "minimum_ticket_price": {
+            "currency": "GBP",
+            "display": "0.00 GBP",
+            "major_value": "0.00",
+            "value": 0
+          },
+          "start_sales_date": null,
+          "waitlist_available": false
+        },
+        "tx_time_limit": 1200,
+        "url": "https://www.eventbrite.co.uk/e/byob-free-comedy-every-thursday-in-peckham-tickets-1993027897091",
+        "venue": {
+          "address": {
+            "address_1": "Station approach",
+            "address_2": "",
+            "city": "London",
+            "country": "GB",
+            "latitude": "51.47380090000001",
+            "localized_address_display": "Station approach, London, SE15 2JR",
+            "localized_area_display": "London",
+            "localized_multi_line_address_display": [
+              "Station approach",
+              "London",
+              "SE15 2JR"
+            ],
+            "longitude": "-0.0573",
+            "postal_code": "SE15 2JR",
+            "region": "England"
+          },
+          "age_restriction": null,
+          "capacity": null,
+          "id": "296067022",
+          "latitude": "51.47380090000001",
+          "longitude": "-0.0573",
+          "name": "Eagle Eats Bakery",
+          "resource_uri": "https://www.eventbriteapi.com/v3/venues/296067022/"
+        },
+        "venue_id": "296067022",
+        "version": null
+      },
+      "last_seen": "2026-07-02",
+      "path": "/events/byob-comedy-peckham-2026-07-30-2000-1993027897091/",
+      "status": "live"
+    },
+    "1993027898094": {
+      "event": {
+        "capacity": 40,
+        "capacity_is_custom": false,
+        "category_id": "110",
+        "changed": "2026-07-02T17:43:37Z",
+        "created": "2026-07-02T17:42:52Z",
+        "currency": "GBP",
+        "description": {
+          "html": "The best stand-up comedy in Peckham, free every Thursday at 8pm at Eagle Eats Bakery. Bring your own beer!",
+          "text": "The best stand-up comedy in Peckham, free every Thursday at 8pm at Eagle Eats Bakery. Bring your own beer!"
+        },
+        "end": {
+          "local": "2026-08-06T21:30:00",
+          "timezone": "Europe/London",
+          "utc": "2026-08-06T20:30:00Z"
+        },
+        "facebook_event_id": null,
+        "format_id": "11",
+        "hide_end_date": false,
+        "hide_start_date": false,
+        "id": "1993027898094",
+        "inventory_type": "limited",
+        "invite_only": false,
+        "is_externally_ticketed": false,
+        "is_free": true,
+        "is_locked": false,
+        "is_reserved_seating": false,
+        "is_series": true,
+        "is_series_parent": false,
+        "listed": true,
+        "locale": "en_US",
+        "logo": {
+          "aspect_ratio": "2",
+          "crop_mask": {
+            "height": 1080,
+            "top_left": {
+              "x": 0,
+              "y": 0
+            },
+            "width": 2160
+          },
+          "edge_color": "#f5e2a7",
+          "edge_color_set": true,
+          "id": "1179214042",
+          "original": {
+            "height": 1080,
+            "url": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1179214042%2F543747696447%2F1%2Foriginal.20260306-162753?auto=format%2Ccompress&q=75&sharp=10&s=e4014ea77e71c224ce95563687ed09c1",
+            "width": 2160
+          },
+          "url": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1179214042%2F543747696447%2F1%2Foriginal.20260306-162753?h=200&w=450&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C0%2C2160%2C1080&s=2049ef6e056f7fa642baa7c1b214d09a"
+        },
+        "logo_id": "1179214042",
+        "name": {
+          "html": "BYOB - Free Comedy Every Thursday in Peckham",
+          "text": "BYOB - Free Comedy Every Thursday in Peckham"
+        },
+        "online_event": false,
+        "organization_id": "1234539271983",
+        "organizer_id": "55764637993",
+        "privacy_setting": "unlocked",
+        "published": "2026-01-21T11:06:36Z",
+        "resource_uri": "https://www.eventbriteapi.com/v3/events/1993027898094/",
+        "series_id": "1981104014437",
+        "shareable": true,
+        "show_colors_in_seatmap_thumbnail": false,
+        "show_pick_a_seat": false,
+        "show_remaining": false,
+        "show_seatmap_thumbnail": false,
+        "source": "coyote",
+        "start": {
+          "local": "2026-08-06T20:00:00",
+          "timezone": "Europe/London",
+          "utc": "2026-08-06T19:00:00Z"
+        },
+        "status": "live",
+        "subcategory_id": "10003",
+        "summary": "The best stand-up comedy in Peckham, free every Thursday at 8pm at Eagle Eats Bakery. Bring your own beer!",
+        "ticket_availability": {
+          "has_available_tickets": true,
+          "is_sold_out": false,
+          "maximum_ticket_price": {
+            "currency": "GBP",
+            "display": "0.00 GBP",
+            "major_value": "0.00",
+            "value": 0
+          },
+          "minimum_ticket_price": {
+            "currency": "GBP",
+            "display": "0.00 GBP",
+            "major_value": "0.00",
+            "value": 0
+          },
+          "start_sales_date": null,
+          "waitlist_available": false
+        },
+        "tx_time_limit": 1200,
+        "url": "https://www.eventbrite.co.uk/e/byob-free-comedy-every-thursday-in-peckham-tickets-1993027898094",
+        "venue": {
+          "address": {
+            "address_1": "Station approach",
+            "address_2": "",
+            "city": "London",
+            "country": "GB",
+            "latitude": "51.47380090000001",
+            "localized_address_display": "Station approach, London, SE15 2JR",
+            "localized_area_display": "London",
+            "localized_multi_line_address_display": [
+              "Station approach",
+              "London",
+              "SE15 2JR"
+            ],
+            "longitude": "-0.0573",
+            "postal_code": "SE15 2JR",
+            "region": "England"
+          },
+          "age_restriction": null,
+          "capacity": null,
+          "id": "296067022",
+          "latitude": "51.47380090000001",
+          "longitude": "-0.0573",
+          "name": "Eagle Eats Bakery",
+          "resource_uri": "https://www.eventbriteapi.com/v3/venues/296067022/"
+        },
+        "venue_id": "296067022",
+        "version": null
+      },
+      "last_seen": "2026-07-02",
+      "path": "/events/byob-comedy-peckham-2026-08-06-2000-1993027898094/",
+      "status": "live"
+    },
+    "1993027899097": {
+      "event": {
+        "capacity": 40,
+        "capacity_is_custom": false,
+        "category_id": "110",
+        "changed": "2026-07-02T17:43:37Z",
+        "created": "2026-07-02T17:42:52Z",
+        "currency": "GBP",
+        "description": {
+          "html": "The best stand-up comedy in Peckham, free every Thursday at 8pm at Eagle Eats Bakery. Bring your own beer!",
+          "text": "The best stand-up comedy in Peckham, free every Thursday at 8pm at Eagle Eats Bakery. Bring your own beer!"
+        },
+        "end": {
+          "local": "2026-08-13T21:30:00",
+          "timezone": "Europe/London",
+          "utc": "2026-08-13T20:30:00Z"
+        },
+        "facebook_event_id": null,
+        "format_id": "11",
+        "hide_end_date": false,
+        "hide_start_date": false,
+        "id": "1993027899097",
+        "inventory_type": "limited",
+        "invite_only": false,
+        "is_externally_ticketed": false,
+        "is_free": true,
+        "is_locked": false,
+        "is_reserved_seating": false,
+        "is_series": true,
+        "is_series_parent": false,
+        "listed": true,
+        "locale": "en_US",
+        "logo": {
+          "aspect_ratio": "2",
+          "crop_mask": {
+            "height": 1080,
+            "top_left": {
+              "x": 0,
+              "y": 0
+            },
+            "width": 2160
+          },
+          "edge_color": "#f5e2a7",
+          "edge_color_set": true,
+          "id": "1179214042",
+          "original": {
+            "height": 1080,
+            "url": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1179214042%2F543747696447%2F1%2Foriginal.20260306-162753?auto=format%2Ccompress&q=75&sharp=10&s=e4014ea77e71c224ce95563687ed09c1",
+            "width": 2160
+          },
+          "url": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1179214042%2F543747696447%2F1%2Foriginal.20260306-162753?h=200&w=450&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C0%2C2160%2C1080&s=2049ef6e056f7fa642baa7c1b214d09a"
+        },
+        "logo_id": "1179214042",
+        "name": {
+          "html": "BYOB - Free Comedy Every Thursday in Peckham",
+          "text": "BYOB - Free Comedy Every Thursday in Peckham"
+        },
+        "online_event": false,
+        "organization_id": "1234539271983",
+        "organizer_id": "55764637993",
+        "privacy_setting": "unlocked",
+        "published": "2026-01-21T11:06:36Z",
+        "resource_uri": "https://www.eventbriteapi.com/v3/events/1993027899097/",
+        "series_id": "1981104014437",
+        "shareable": true,
+        "show_colors_in_seatmap_thumbnail": false,
+        "show_pick_a_seat": false,
+        "show_remaining": false,
+        "show_seatmap_thumbnail": false,
+        "source": "coyote",
+        "start": {
+          "local": "2026-08-13T20:00:00",
+          "timezone": "Europe/London",
+          "utc": "2026-08-13T19:00:00Z"
+        },
+        "status": "live",
+        "subcategory_id": "10003",
+        "summary": "The best stand-up comedy in Peckham, free every Thursday at 8pm at Eagle Eats Bakery. Bring your own beer!",
+        "ticket_availability": {
+          "has_available_tickets": true,
+          "is_sold_out": false,
+          "maximum_ticket_price": {
+            "currency": "GBP",
+            "display": "0.00 GBP",
+            "major_value": "0.00",
+            "value": 0
+          },
+          "minimum_ticket_price": {
+            "currency": "GBP",
+            "display": "0.00 GBP",
+            "major_value": "0.00",
+            "value": 0
+          },
+          "start_sales_date": null,
+          "waitlist_available": false
+        },
+        "tx_time_limit": 1200,
+        "url": "https://www.eventbrite.co.uk/e/byob-free-comedy-every-thursday-in-peckham-tickets-1993027899097",
+        "venue": {
+          "address": {
+            "address_1": "Station approach",
+            "address_2": "",
+            "city": "London",
+            "country": "GB",
+            "latitude": "51.47380090000001",
+            "localized_address_display": "Station approach, London, SE15 2JR",
+            "localized_area_display": "London",
+            "localized_multi_line_address_display": [
+              "Station approach",
+              "London",
+              "SE15 2JR"
+            ],
+            "longitude": "-0.0573",
+            "postal_code": "SE15 2JR",
+            "region": "England"
+          },
+          "age_restriction": null,
+          "capacity": null,
+          "id": "296067022",
+          "latitude": "51.47380090000001",
+          "longitude": "-0.0573",
+          "name": "Eagle Eats Bakery",
+          "resource_uri": "https://www.eventbriteapi.com/v3/venues/296067022/"
+        },
+        "venue_id": "296067022",
+        "version": null
+      },
+      "last_seen": "2026-07-02",
+      "path": "/events/byob-comedy-peckham-2026-08-13-2000-1993027899097/",
+      "status": "live"
+    },
+    "1993027900100": {
+      "event": {
+        "capacity": 40,
+        "capacity_is_custom": false,
+        "category_id": "110",
+        "changed": "2026-07-02T17:43:37Z",
+        "created": "2026-07-02T17:42:52Z",
+        "currency": "GBP",
+        "description": {
+          "html": "The best stand-up comedy in Peckham, free every Thursday at 8pm at Eagle Eats Bakery. Bring your own beer!",
+          "text": "The best stand-up comedy in Peckham, free every Thursday at 8pm at Eagle Eats Bakery. Bring your own beer!"
+        },
+        "end": {
+          "local": "2026-08-20T21:30:00",
+          "timezone": "Europe/London",
+          "utc": "2026-08-20T20:30:00Z"
+        },
+        "facebook_event_id": null,
+        "format_id": "11",
+        "hide_end_date": false,
+        "hide_start_date": false,
+        "id": "1993027900100",
+        "inventory_type": "limited",
+        "invite_only": false,
+        "is_externally_ticketed": false,
+        "is_free": true,
+        "is_locked": false,
+        "is_reserved_seating": false,
+        "is_series": true,
+        "is_series_parent": false,
+        "listed": true,
+        "locale": "en_US",
+        "logo": {
+          "aspect_ratio": "2",
+          "crop_mask": {
+            "height": 1080,
+            "top_left": {
+              "x": 0,
+              "y": 0
+            },
+            "width": 2160
+          },
+          "edge_color": "#f5e2a7",
+          "edge_color_set": true,
+          "id": "1179214042",
+          "original": {
+            "height": 1080,
+            "url": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1179214042%2F543747696447%2F1%2Foriginal.20260306-162753?auto=format%2Ccompress&q=75&sharp=10&s=e4014ea77e71c224ce95563687ed09c1",
+            "width": 2160
+          },
+          "url": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1179214042%2F543747696447%2F1%2Foriginal.20260306-162753?h=200&w=450&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C0%2C2160%2C1080&s=2049ef6e056f7fa642baa7c1b214d09a"
+        },
+        "logo_id": "1179214042",
+        "name": {
+          "html": "BYOB - Free Comedy Every Thursday in Peckham",
+          "text": "BYOB - Free Comedy Every Thursday in Peckham"
+        },
+        "online_event": false,
+        "organization_id": "1234539271983",
+        "organizer_id": "55764637993",
+        "privacy_setting": "unlocked",
+        "published": "2026-01-21T11:06:36Z",
+        "resource_uri": "https://www.eventbriteapi.com/v3/events/1993027900100/",
+        "series_id": "1981104014437",
+        "shareable": true,
+        "show_colors_in_seatmap_thumbnail": false,
+        "show_pick_a_seat": false,
+        "show_remaining": false,
+        "show_seatmap_thumbnail": false,
+        "source": "coyote",
+        "start": {
+          "local": "2026-08-20T20:00:00",
+          "timezone": "Europe/London",
+          "utc": "2026-08-20T19:00:00Z"
+        },
+        "status": "live",
+        "subcategory_id": "10003",
+        "summary": "The best stand-up comedy in Peckham, free every Thursday at 8pm at Eagle Eats Bakery. Bring your own beer!",
+        "ticket_availability": {
+          "has_available_tickets": true,
+          "is_sold_out": false,
+          "maximum_ticket_price": {
+            "currency": "GBP",
+            "display": "0.00 GBP",
+            "major_value": "0.00",
+            "value": 0
+          },
+          "minimum_ticket_price": {
+            "currency": "GBP",
+            "display": "0.00 GBP",
+            "major_value": "0.00",
+            "value": 0
+          },
+          "start_sales_date": null,
+          "waitlist_available": false
+        },
+        "tx_time_limit": 1200,
+        "url": "https://www.eventbrite.co.uk/e/byob-free-comedy-every-thursday-in-peckham-tickets-1993027900100",
+        "venue": {
+          "address": {
+            "address_1": "Station approach",
+            "address_2": "",
+            "city": "London",
+            "country": "GB",
+            "latitude": "51.47380090000001",
+            "localized_address_display": "Station approach, London, SE15 2JR",
+            "localized_area_display": "London",
+            "localized_multi_line_address_display": [
+              "Station approach",
+              "London",
+              "SE15 2JR"
+            ],
+            "longitude": "-0.0573",
+            "postal_code": "SE15 2JR",
+            "region": "England"
+          },
+          "age_restriction": null,
+          "capacity": null,
+          "id": "296067022",
+          "latitude": "51.47380090000001",
+          "longitude": "-0.0573",
+          "name": "Eagle Eats Bakery",
+          "resource_uri": "https://www.eventbriteapi.com/v3/venues/296067022/"
+        },
+        "venue_id": "296067022",
+        "version": null
+      },
+      "last_seen": "2026-07-02",
+      "path": "/events/byob-comedy-peckham-2026-08-20-2000-1993027900100/",
+      "status": "live"
+    },
+    "1993027901103": {
+      "event": {
+        "capacity": 40,
+        "capacity_is_custom": false,
+        "category_id": "110",
+        "changed": "2026-07-02T17:43:37Z",
+        "created": "2026-07-02T17:42:52Z",
+        "currency": "GBP",
+        "description": {
+          "html": "The best stand-up comedy in Peckham, free every Thursday at 8pm at Eagle Eats Bakery. Bring your own beer!",
+          "text": "The best stand-up comedy in Peckham, free every Thursday at 8pm at Eagle Eats Bakery. Bring your own beer!"
+        },
+        "end": {
+          "local": "2026-08-27T21:30:00",
+          "timezone": "Europe/London",
+          "utc": "2026-08-27T20:30:00Z"
+        },
+        "facebook_event_id": null,
+        "format_id": "11",
+        "hide_end_date": false,
+        "hide_start_date": false,
+        "id": "1993027901103",
+        "inventory_type": "limited",
+        "invite_only": false,
+        "is_externally_ticketed": false,
+        "is_free": true,
+        "is_locked": false,
+        "is_reserved_seating": false,
+        "is_series": true,
+        "is_series_parent": false,
+        "listed": true,
+        "locale": "en_US",
+        "logo": {
+          "aspect_ratio": "2",
+          "crop_mask": {
+            "height": 1080,
+            "top_left": {
+              "x": 0,
+              "y": 0
+            },
+            "width": 2160
+          },
+          "edge_color": "#f5e2a7",
+          "edge_color_set": true,
+          "id": "1179214042",
+          "original": {
+            "height": 1080,
+            "url": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1179214042%2F543747696447%2F1%2Foriginal.20260306-162753?auto=format%2Ccompress&q=75&sharp=10&s=e4014ea77e71c224ce95563687ed09c1",
+            "width": 2160
+          },
+          "url": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1179214042%2F543747696447%2F1%2Foriginal.20260306-162753?h=200&w=450&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C0%2C2160%2C1080&s=2049ef6e056f7fa642baa7c1b214d09a"
+        },
+        "logo_id": "1179214042",
+        "name": {
+          "html": "BYOB - Free Comedy Every Thursday in Peckham",
+          "text": "BYOB - Free Comedy Every Thursday in Peckham"
+        },
+        "online_event": false,
+        "organization_id": "1234539271983",
+        "organizer_id": "55764637993",
+        "privacy_setting": "unlocked",
+        "published": "2026-01-21T11:06:36Z",
+        "resource_uri": "https://www.eventbriteapi.com/v3/events/1993027901103/",
+        "series_id": "1981104014437",
+        "shareable": true,
+        "show_colors_in_seatmap_thumbnail": false,
+        "show_pick_a_seat": false,
+        "show_remaining": false,
+        "show_seatmap_thumbnail": false,
+        "source": "coyote",
+        "start": {
+          "local": "2026-08-27T20:00:00",
+          "timezone": "Europe/London",
+          "utc": "2026-08-27T19:00:00Z"
+        },
+        "status": "live",
+        "subcategory_id": "10003",
+        "summary": "The best stand-up comedy in Peckham, free every Thursday at 8pm at Eagle Eats Bakery. Bring your own beer!",
+        "ticket_availability": {
+          "has_available_tickets": true,
+          "is_sold_out": false,
+          "maximum_ticket_price": {
+            "currency": "GBP",
+            "display": "0.00 GBP",
+            "major_value": "0.00",
+            "value": 0
+          },
+          "minimum_ticket_price": {
+            "currency": "GBP",
+            "display": "0.00 GBP",
+            "major_value": "0.00",
+            "value": 0
+          },
+          "start_sales_date": null,
+          "waitlist_available": false
+        },
+        "tx_time_limit": 1200,
+        "url": "https://www.eventbrite.co.uk/e/byob-free-comedy-every-thursday-in-peckham-tickets-1993027901103",
+        "venue": {
+          "address": {
+            "address_1": "Station approach",
+            "address_2": "",
+            "city": "London",
+            "country": "GB",
+            "latitude": "51.47380090000001",
+            "localized_address_display": "Station approach, London, SE15 2JR",
+            "localized_area_display": "London",
+            "localized_multi_line_address_display": [
+              "Station approach",
+              "London",
+              "SE15 2JR"
+            ],
+            "longitude": "-0.0573",
+            "postal_code": "SE15 2JR",
+            "region": "England"
+          },
+          "age_restriction": null,
+          "capacity": null,
+          "id": "296067022",
+          "latitude": "51.47380090000001",
+          "longitude": "-0.0573",
+          "name": "Eagle Eats Bakery",
+          "resource_uri": "https://www.eventbriteapi.com/v3/venues/296067022/"
+        },
+        "venue_id": "296067022",
+        "version": null
+      },
+      "last_seen": "2026-07-02",
+      "path": "/events/byob-comedy-peckham-2026-08-27-2000-1993027901103/",
+      "status": "live"
+    },
+    "1993027902106": {
+      "event": {
+        "capacity": 40,
+        "capacity_is_custom": false,
+        "category_id": "110",
+        "changed": "2026-07-02T17:43:37Z",
+        "created": "2026-07-02T17:42:52Z",
+        "currency": "GBP",
+        "description": {
+          "html": "The best stand-up comedy in Peckham, free every Thursday at 8pm at Eagle Eats Bakery. Bring your own beer!",
+          "text": "The best stand-up comedy in Peckham, free every Thursday at 8pm at Eagle Eats Bakery. Bring your own beer!"
+        },
+        "end": {
+          "local": "2026-09-03T21:30:00",
+          "timezone": "Europe/London",
+          "utc": "2026-09-03T20:30:00Z"
+        },
+        "facebook_event_id": null,
+        "format_id": "11",
+        "hide_end_date": false,
+        "hide_start_date": false,
+        "id": "1993027902106",
+        "inventory_type": "limited",
+        "invite_only": false,
+        "is_externally_ticketed": false,
+        "is_free": true,
+        "is_locked": false,
+        "is_reserved_seating": false,
+        "is_series": true,
+        "is_series_parent": false,
+        "listed": true,
+        "locale": "en_US",
+        "logo": {
+          "aspect_ratio": "2",
+          "crop_mask": {
+            "height": 1080,
+            "top_left": {
+              "x": 0,
+              "y": 0
+            },
+            "width": 2160
+          },
+          "edge_color": "#f5e2a7",
+          "edge_color_set": true,
+          "id": "1179214042",
+          "original": {
+            "height": 1080,
+            "url": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1179214042%2F543747696447%2F1%2Foriginal.20260306-162753?auto=format%2Ccompress&q=75&sharp=10&s=e4014ea77e71c224ce95563687ed09c1",
+            "width": 2160
+          },
+          "url": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1179214042%2F543747696447%2F1%2Foriginal.20260306-162753?h=200&w=450&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C0%2C2160%2C1080&s=2049ef6e056f7fa642baa7c1b214d09a"
+        },
+        "logo_id": "1179214042",
+        "name": {
+          "html": "BYOB - Free Comedy Every Thursday in Peckham",
+          "text": "BYOB - Free Comedy Every Thursday in Peckham"
+        },
+        "online_event": false,
+        "organization_id": "1234539271983",
+        "organizer_id": "55764637993",
+        "privacy_setting": "unlocked",
+        "published": "2026-01-21T11:06:36Z",
+        "resource_uri": "https://www.eventbriteapi.com/v3/events/1993027902106/",
+        "series_id": "1981104014437",
+        "shareable": true,
+        "show_colors_in_seatmap_thumbnail": false,
+        "show_pick_a_seat": false,
+        "show_remaining": false,
+        "show_seatmap_thumbnail": false,
+        "source": "coyote",
+        "start": {
+          "local": "2026-09-03T20:00:00",
+          "timezone": "Europe/London",
+          "utc": "2026-09-03T19:00:00Z"
+        },
+        "status": "live",
+        "subcategory_id": "10003",
+        "summary": "The best stand-up comedy in Peckham, free every Thursday at 8pm at Eagle Eats Bakery. Bring your own beer!",
+        "ticket_availability": {
+          "has_available_tickets": true,
+          "is_sold_out": false,
+          "maximum_ticket_price": {
+            "currency": "GBP",
+            "display": "0.00 GBP",
+            "major_value": "0.00",
+            "value": 0
+          },
+          "minimum_ticket_price": {
+            "currency": "GBP",
+            "display": "0.00 GBP",
+            "major_value": "0.00",
+            "value": 0
+          },
+          "start_sales_date": null,
+          "waitlist_available": false
+        },
+        "tx_time_limit": 1200,
+        "url": "https://www.eventbrite.co.uk/e/byob-free-comedy-every-thursday-in-peckham-tickets-1993027902106",
+        "venue": {
+          "address": {
+            "address_1": "Station approach",
+            "address_2": "",
+            "city": "London",
+            "country": "GB",
+            "latitude": "51.47380090000001",
+            "localized_address_display": "Station approach, London, SE15 2JR",
+            "localized_area_display": "London",
+            "localized_multi_line_address_display": [
+              "Station approach",
+              "London",
+              "SE15 2JR"
+            ],
+            "longitude": "-0.0573",
+            "postal_code": "SE15 2JR",
+            "region": "England"
+          },
+          "age_restriction": null,
+          "capacity": null,
+          "id": "296067022",
+          "latitude": "51.47380090000001",
+          "longitude": "-0.0573",
+          "name": "Eagle Eats Bakery",
+          "resource_uri": "https://www.eventbriteapi.com/v3/venues/296067022/"
+        },
+        "venue_id": "296067022",
+        "version": null
+      },
+      "last_seen": "2026-07-02",
+      "path": "/events/byob-comedy-peckham-2026-09-03-2000-1993027902106/",
       "status": "live"
     }
   },
