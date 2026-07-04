@@ -1,6 +1,6 @@
 {
   "lastmod": {
-    "/": "2026-07-03",
+    "/": "2026-07-04",
     "/events/byob-comedy-peckham-2026-07-09-2000-1993027894082/": "2026-07-02",
     "/events/byob-comedy-peckham-2026-07-16-2000-1993027895085/": "2026-07-02",
     "/events/byob-comedy-peckham-2026-07-23-2000-1993027896088/": "2026-07-02",
@@ -46,19 +46,17 @@
     "/events/is-it-lington-tuesday-comedy-2026-08-25-1930-1992392257877/": "2026-06-23",
     "/events/islington-sunday-comedy-6pm-2026-07-05-1800-1988716794467/": "2026-06-15",
     "/events/islington-sunday-comedy-8pm-2026-07-05-2000-1988716928869/": "2026-06-15",
-    "/events/saturday-comedy-soho-2026-07-04-1730-1988717213721/": "2026-06-15",
     "/hire-comedians-london/": "2026-06-15",
-    "/shows/": "2026-07-03",
-    "/shows/byob-comedy-peckham/": "2026-07-03",
-    "/shows/candlemaker-comedy-battersea/": "2026-07-03",
-    "/shows/comedy-club-shoreditch-early/": "2026-07-03",
-    "/shows/comedy-club-shoreditch-fondue/": "2026-07-03",
-    "/shows/comedy-club-shoreditch-free-new-material-mondays/": "2026-07-03",
-    "/shows/free-comedy-every-sunday-at-6pm-in-north-london/": "2026-07-03",
-    "/shows/is-it-lington-tuesday-comedy/": "2026-07-03",
-    "/shows/islington-sunday-comedy-6pm/": "2026-07-03",
-    "/shows/islington-sunday-comedy-8pm/": "2026-07-03",
-    "/shows/saturday-comedy-soho/": "2026-07-03",
+    "/shows/": "2026-07-04",
+    "/shows/byob-comedy-peckham/": "2026-07-04",
+    "/shows/candlemaker-comedy-battersea/": "2026-07-04",
+    "/shows/comedy-club-shoreditch-early/": "2026-07-04",
+    "/shows/comedy-club-shoreditch-fondue/": "2026-07-04",
+    "/shows/comedy-club-shoreditch-free-new-material-mondays/": "2026-07-04",
+    "/shows/free-comedy-every-sunday-at-6pm-in-north-london/": "2026-07-04",
+    "/shows/is-it-lington-tuesday-comedy/": "2026-07-04",
+    "/shows/islington-sunday-comedy-6pm/": "2026-07-04",
+    "/shows/islington-sunday-comedy-8pm/": "2026-07-04",
     "/stay-in-touch/": "2026-06-15"
   },
   "occurrences": {
@@ -5928,7 +5926,7 @@
       },
       "last_seen": "2026-07-04",
       "path": "/events/saturday-comedy-soho-2026-07-04-1730-1988717213721/",
-      "status": "live"
+      "status": "expired"
     },
     "1990193444166": {
       "event": {
