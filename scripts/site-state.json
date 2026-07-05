@@ -36,6 +36,15 @@
     "/events/comedy-club-shoreditch-free-new-material-mondays-2026-07-27-1930-1990806513874/": "2026-06-20",
     "/events/comedy-club-shoreditch-free-new-material-mondays-2026-08-03-1930-1990806514877/": "2026-06-20",
     "/events/free-comedy-every-sunday-at-6pm-in-north-london-2026-07-05-1800-1988717057253/": "2026-06-15",
+    "/events/free-comedy-every-sunday-at-6pm-in-north-london-2026-07-12-1800-1993262476725/": "2026-07-05",
+    "/events/free-comedy-every-sunday-at-6pm-in-north-london-2026-07-19-1800-1993262477728/": "2026-07-05",
+    "/events/free-comedy-every-sunday-at-6pm-in-north-london-2026-07-26-1800-1993262478731/": "2026-07-05",
+    "/events/free-comedy-every-sunday-at-6pm-in-north-london-2026-08-02-1800-1993262479734/": "2026-07-05",
+    "/events/free-comedy-every-sunday-at-6pm-in-north-london-2026-08-09-1800-1993262480737/": "2026-07-05",
+    "/events/free-comedy-every-sunday-at-6pm-in-north-london-2026-08-16-1800-1993262481740/": "2026-07-05",
+    "/events/free-comedy-every-sunday-at-6pm-in-north-london-2026-08-23-1800-1993262482743/": "2026-07-05",
+    "/events/free-comedy-every-sunday-at-6pm-in-north-london-2026-08-30-1800-1993262483746/": "2026-07-05",
+    "/events/free-comedy-every-sunday-at-6pm-in-north-london-2026-09-06-1800-1993262484749/": "2026-07-05",
     "/events/is-it-lington-tuesday-comedy-2026-07-07-1930-1992392250856/": "2026-06-23",
     "/events/is-it-lington-tuesday-comedy-2026-07-14-1930-1992392251859/": "2026-06-23",
     "/events/is-it-lington-tuesday-comedy-2026-07-21-1930-1992392252862/": "2026-06-23",
@@ -45,7 +54,25 @@
     "/events/is-it-lington-tuesday-comedy-2026-08-18-1930-1992392256874/": "2026-06-23",
     "/events/is-it-lington-tuesday-comedy-2026-08-25-1930-1992392257877/": "2026-06-23",
     "/events/islington-sunday-comedy-6pm-2026-07-05-1800-1988716794467/": "2026-06-15",
+    "/events/islington-sunday-comedy-6pm-2026-07-12-1800-1993262349344/": "2026-07-05",
+    "/events/islington-sunday-comedy-6pm-2026-07-19-1800-1993262350347/": "2026-07-05",
+    "/events/islington-sunday-comedy-6pm-2026-07-26-1800-1993262351350/": "2026-07-05",
+    "/events/islington-sunday-comedy-6pm-2026-08-02-1800-1993262352353/": "2026-07-05",
+    "/events/islington-sunday-comedy-6pm-2026-08-09-1800-1993262353356/": "2026-07-05",
+    "/events/islington-sunday-comedy-6pm-2026-08-16-1800-1993262354359/": "2026-07-05",
+    "/events/islington-sunday-comedy-6pm-2026-08-23-1800-1993262355362/": "2026-07-05",
+    "/events/islington-sunday-comedy-6pm-2026-08-30-1800-1993262356365/": "2026-07-05",
+    "/events/islington-sunday-comedy-6pm-2026-09-06-1800-1993262357368/": "2026-07-05",
     "/events/islington-sunday-comedy-8pm-2026-07-05-2000-1988716928869/": "2026-06-15",
+    "/events/islington-sunday-comedy-8pm-2026-07-12-2000-1993262500797/": "2026-07-05",
+    "/events/islington-sunday-comedy-8pm-2026-07-19-2000-1993262501800/": "2026-07-05",
+    "/events/islington-sunday-comedy-8pm-2026-07-26-2000-1993262502803/": "2026-07-05",
+    "/events/islington-sunday-comedy-8pm-2026-08-02-2000-1993262503806/": "2026-07-05",
+    "/events/islington-sunday-comedy-8pm-2026-08-09-2000-1993262504809/": "2026-07-05",
+    "/events/islington-sunday-comedy-8pm-2026-08-16-2000-1993262505812/": "2026-07-05",
+    "/events/islington-sunday-comedy-8pm-2026-08-23-2000-1993262506815/": "2026-07-05",
+    "/events/islington-sunday-comedy-8pm-2026-08-30-2000-1993262507818/": "2026-07-05",
+    "/events/islington-sunday-comedy-8pm-2026-09-06-2000-1993262508821/": "2026-07-05",
     "/hire-comedians-london/": "2026-06-15",
     "/shows/": "2026-07-04",
     "/shows/byob-comedy-peckham/": "2026-07-04",
@@ -53,10 +80,10 @@
     "/shows/comedy-club-shoreditch-early/": "2026-07-04",
     "/shows/comedy-club-shoreditch-fondue/": "2026-07-04",
     "/shows/comedy-club-shoreditch-free-new-material-mondays/": "2026-07-04",
-    "/shows/free-comedy-every-sunday-at-6pm-in-north-london/": "2026-07-04",
+    "/shows/free-comedy-every-sunday-at-6pm-in-north-london/": "2026-07-05",
     "/shows/is-it-lington-tuesday-comedy/": "2026-07-04",
-    "/shows/islington-sunday-comedy-6pm/": "2026-07-04",
-    "/shows/islington-sunday-comedy-8pm/": "2026-07-04",
+    "/shows/islington-sunday-comedy-6pm/": "2026-07-05",
+    "/shows/islington-sunday-comedy-8pm/": "2026-07-05",
     "/stay-in-touch/": "2026-06-15"
   },
   "occurrences": {
@@ -13915,6 +13942,3543 @@
       },
       "last_seen": "2026-07-05",
       "path": "/events/byob-comedy-peckham-2026-09-03-2000-1993027902106/",
+      "status": "live"
+    },
+    "1993262349344": {
+      "event": {
+        "capacity": 80,
+        "capacity_is_custom": false,
+        "category_id": "105",
+        "changed": "2026-07-05T13:46:20Z",
+        "created": "2026-07-05T13:46:20Z",
+        "currency": "GBP",
+        "description": {
+          "html": "The best free Stand Up Comedy in London, every Sunday at 6pm at Brewhouse &amp; Kitchen in Islington.",
+          "text": "The best free Stand Up Comedy in London, every Sunday at 6pm at Brewhouse & Kitchen in Islington."
+        },
+        "end": {
+          "local": "2026-07-12T19:30:00",
+          "timezone": "Europe/London",
+          "utc": "2026-07-12T18:30:00Z"
+        },
+        "facebook_event_id": null,
+        "format_id": "6",
+        "hide_end_date": false,
+        "hide_start_date": false,
+        "id": "1993262349344",
+        "inventory_type": "limited",
+        "invite_only": false,
+        "is_externally_ticketed": false,
+        "is_free": true,
+        "is_locked": false,
+        "is_reserved_seating": false,
+        "is_series": true,
+        "is_series_parent": false,
+        "listed": true,
+        "locale": "en_GB",
+        "logo": {
+          "aspect_ratio": "2",
+          "crop_mask": {
+            "height": 1080,
+            "top_left": {
+              "x": 0,
+              "y": 0
+            },
+            "width": 2160
+          },
+          "edge_color": "#cb6be6",
+          "edge_color_set": true,
+          "id": "1173215566",
+          "original": {
+            "height": 1080,
+            "url": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1173215566%2F543747696447%2F1%2Foriginal.20251218-172640?auto=format%2Ccompress&q=75&sharp=10&s=2e8147b3d66dbc25cd453a4108261126",
+            "width": 2160
+          },
+          "url": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1173215566%2F543747696447%2F1%2Foriginal.20251218-172640?h=200&w=450&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C0%2C2160%2C1080&s=c619897ae16423e35d885c3570d6e1d5"
+        },
+        "logo_id": "1173215566",
+        "name": {
+          "html": "Free Comedy Every Sunday at 6pm in Islington",
+          "text": "Free Comedy Every Sunday at 6pm in Islington"
+        },
+        "online_event": false,
+        "organization_id": "1234539271983",
+        "organizer_id": "55764637993",
+        "privacy_setting": "unlocked",
+        "published": "2025-12-02T00:59:18Z",
+        "resource_uri": "https://www.eventbriteapi.com/v3/events/1993262349344/",
+        "series_id": "1976522523073",
+        "shareable": true,
+        "show_colors_in_seatmap_thumbnail": false,
+        "show_pick_a_seat": false,
+        "show_remaining": false,
+        "show_seatmap_thumbnail": false,
+        "source": "coyote",
+        "start": {
+          "local": "2026-07-12T18:00:00",
+          "timezone": "Europe/London",
+          "utc": "2026-07-12T17:00:00Z"
+        },
+        "status": "live",
+        "subcategory_id": "5010",
+        "summary": "The best free Stand Up Comedy in London, every Sunday at 6pm at Brewhouse & Kitchen in Islington.",
+        "ticket_availability": {
+          "has_available_tickets": true,
+          "is_sold_out": false,
+          "maximum_ticket_price": {
+            "currency": "GBP",
+            "display": "0.00 GBP",
+            "major_value": "0.00",
+            "value": 0
+          },
+          "minimum_ticket_price": {
+            "currency": "GBP",
+            "display": "0.00 GBP",
+            "major_value": "0.00",
+            "value": 0
+          },
+          "start_sales_date": null,
+          "waitlist_available": false
+        },
+        "tx_time_limit": 1200,
+        "url": "https://www.eventbrite.co.uk/e/free-comedy-every-sunday-at-6pm-in-islington-tickets-1993262349344",
+        "venue": {
+          "address": {
+            "address_1": "2A Corsica Street",
+            "address_2": "",
+            "city": "London",
+            "country": "GB",
+            "latitude": "51.5463543",
+            "localized_address_display": "2A Corsica Street, London, N5 1JJ",
+            "localized_area_display": "London",
+            "localized_multi_line_address_display": [
+              "2A Corsica Street",
+              "London",
+              "N5 1JJ"
+            ],
+            "longitude": "-0.1017174",
+            "postal_code": "N5 1JJ",
+            "region": "England"
+          },
+          "age_restriction": null,
+          "capacity": null,
+          "id": "295458905",
+          "latitude": "51.5463543",
+          "longitude": "-0.1017174",
+          "name": "Brewhouse & Kitchen - Highbury",
+          "resource_uri": "https://www.eventbriteapi.com/v3/venues/295458905/"
+        },
+        "venue_id": "295458905",
+        "version": null
+      },
+      "last_seen": "2026-07-05",
+      "path": "/events/islington-sunday-comedy-6pm-2026-07-12-1800-1993262349344/",
+      "status": "live"
+    },
+    "1993262350347": {
+      "event": {
+        "capacity": 80,
+        "capacity_is_custom": false,
+        "category_id": "105",
+        "changed": "2026-07-05T13:46:20Z",
+        "created": "2026-07-05T13:46:20Z",
+        "currency": "GBP",
+        "description": {
+          "html": "The best free Stand Up Comedy in London, every Sunday at 6pm at Brewhouse &amp; Kitchen in Islington.",
+          "text": "The best free Stand Up Comedy in London, every Sunday at 6pm at Brewhouse & Kitchen in Islington."
+        },
+        "end": {
+          "local": "2026-07-19T19:30:00",
+          "timezone": "Europe/London",
+          "utc": "2026-07-19T18:30:00Z"
+        },
+        "facebook_event_id": null,
+        "format_id": "6",
+        "hide_end_date": false,
+        "hide_start_date": false,
+        "id": "1993262350347",
+        "inventory_type": "limited",
+        "invite_only": false,
+        "is_externally_ticketed": false,
+        "is_free": true,
+        "is_locked": false,
+        "is_reserved_seating": false,
+        "is_series": true,
+        "is_series_parent": false,
+        "listed": true,
+        "locale": "en_GB",
+        "logo": {
+          "aspect_ratio": "2",
+          "crop_mask": {
+            "height": 1080,
+            "top_left": {
+              "x": 0,
+              "y": 0
+            },
+            "width": 2160
+          },
+          "edge_color": "#cb6be6",
+          "edge_color_set": true,
+          "id": "1173215566",
+          "original": {
+            "height": 1080,
+            "url": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1173215566%2F543747696447%2F1%2Foriginal.20251218-172640?auto=format%2Ccompress&q=75&sharp=10&s=2e8147b3d66dbc25cd453a4108261126",
+            "width": 2160
+          },
+          "url": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1173215566%2F543747696447%2F1%2Foriginal.20251218-172640?h=200&w=450&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C0%2C2160%2C1080&s=c619897ae16423e35d885c3570d6e1d5"
+        },
+        "logo_id": "1173215566",
+        "name": {
+          "html": "Free Comedy Every Sunday at 6pm in Islington",
+          "text": "Free Comedy Every Sunday at 6pm in Islington"
+        },
+        "online_event": false,
+        "organization_id": "1234539271983",
+        "organizer_id": "55764637993",
+        "privacy_setting": "unlocked",
+        "published": "2025-12-02T00:59:18Z",
+        "resource_uri": "https://www.eventbriteapi.com/v3/events/1993262350347/",
+        "series_id": "1976522523073",
+        "shareable": true,
+        "show_colors_in_seatmap_thumbnail": false,
+        "show_pick_a_seat": false,
+        "show_remaining": false,
+        "show_seatmap_thumbnail": false,
+        "source": "coyote",
+        "start": {
+          "local": "2026-07-19T18:00:00",
+          "timezone": "Europe/London",
+          "utc": "2026-07-19T17:00:00Z"
+        },
+        "status": "live",
+        "subcategory_id": "5010",
+        "summary": "The best free Stand Up Comedy in London, every Sunday at 6pm at Brewhouse & Kitchen in Islington.",
+        "ticket_availability": {
+          "has_available_tickets": true,
+          "is_sold_out": false,
+          "maximum_ticket_price": {
+            "currency": "GBP",
+            "display": "0.00 GBP",
+            "major_value": "0.00",
+            "value": 0
+          },
+          "minimum_ticket_price": {
+            "currency": "GBP",
+            "display": "0.00 GBP",
+            "major_value": "0.00",
+            "value": 0
+          },
+          "start_sales_date": null,
+          "waitlist_available": false
+        },
+        "tx_time_limit": 1200,
+        "url": "https://www.eventbrite.co.uk/e/free-comedy-every-sunday-at-6pm-in-islington-tickets-1993262350347",
+        "venue": {
+          "address": {
+            "address_1": "2A Corsica Street",
+            "address_2": "",
+            "city": "London",
+            "country": "GB",
+            "latitude": "51.5463543",
+            "localized_address_display": "2A Corsica Street, London, N5 1JJ",
+            "localized_area_display": "London",
+            "localized_multi_line_address_display": [
+              "2A Corsica Street",
+              "London",
+              "N5 1JJ"
+            ],
+            "longitude": "-0.1017174",
+            "postal_code": "N5 1JJ",
+            "region": "England"
+          },
+          "age_restriction": null,
+          "capacity": null,
+          "id": "295458905",
+          "latitude": "51.5463543",
+          "longitude": "-0.1017174",
+          "name": "Brewhouse & Kitchen - Highbury",
+          "resource_uri": "https://www.eventbriteapi.com/v3/venues/295458905/"
+        },
+        "venue_id": "295458905",
+        "version": null
+      },
+      "last_seen": "2026-07-05",
+      "path": "/events/islington-sunday-comedy-6pm-2026-07-19-1800-1993262350347/",
+      "status": "live"
+    },
+    "1993262351350": {
+      "event": {
+        "capacity": 80,
+        "capacity_is_custom": false,
+        "category_id": "105",
+        "changed": "2026-07-05T13:46:20Z",
+        "created": "2026-07-05T13:46:20Z",
+        "currency": "GBP",
+        "description": {
+          "html": "The best free Stand Up Comedy in London, every Sunday at 6pm at Brewhouse &amp; Kitchen in Islington.",
+          "text": "The best free Stand Up Comedy in London, every Sunday at 6pm at Brewhouse & Kitchen in Islington."
+        },
+        "end": {
+          "local": "2026-07-26T19:30:00",
+          "timezone": "Europe/London",
+          "utc": "2026-07-26T18:30:00Z"
+        },
+        "facebook_event_id": null,
+        "format_id": "6",
+        "hide_end_date": false,
+        "hide_start_date": false,
+        "id": "1993262351350",
+        "inventory_type": "limited",
+        "invite_only": false,
+        "is_externally_ticketed": false,
+        "is_free": true,
+        "is_locked": false,
+        "is_reserved_seating": false,
+        "is_series": true,
+        "is_series_parent": false,
+        "listed": true,
+        "locale": "en_GB",
+        "logo": {
+          "aspect_ratio": "2",
+          "crop_mask": {
+            "height": 1080,
+            "top_left": {
+              "x": 0,
+              "y": 0
+            },
+            "width": 2160
+          },
+          "edge_color": "#cb6be6",
+          "edge_color_set": true,
+          "id": "1173215566",
+          "original": {
+            "height": 1080,
+            "url": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1173215566%2F543747696447%2F1%2Foriginal.20251218-172640?auto=format%2Ccompress&q=75&sharp=10&s=2e8147b3d66dbc25cd453a4108261126",
+            "width": 2160
+          },
+          "url": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1173215566%2F543747696447%2F1%2Foriginal.20251218-172640?h=200&w=450&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C0%2C2160%2C1080&s=c619897ae16423e35d885c3570d6e1d5"
+        },
+        "logo_id": "1173215566",
+        "name": {
+          "html": "Free Comedy Every Sunday at 6pm in Islington",
+          "text": "Free Comedy Every Sunday at 6pm in Islington"
+        },
+        "online_event": false,
+        "organization_id": "1234539271983",
+        "organizer_id": "55764637993",
+        "privacy_setting": "unlocked",
+        "published": "2025-12-02T00:59:18Z",
+        "resource_uri": "https://www.eventbriteapi.com/v3/events/1993262351350/",
+        "series_id": "1976522523073",
+        "shareable": true,
+        "show_colors_in_seatmap_thumbnail": false,
+        "show_pick_a_seat": false,
+        "show_remaining": false,
+        "show_seatmap_thumbnail": false,
+        "source": "coyote",
+        "start": {
+          "local": "2026-07-26T18:00:00",
+          "timezone": "Europe/London",
+          "utc": "2026-07-26T17:00:00Z"
+        },
+        "status": "live",
+        "subcategory_id": "5010",
+        "summary": "The best free Stand Up Comedy in London, every Sunday at 6pm at Brewhouse & Kitchen in Islington.",
+        "ticket_availability": {
+          "has_available_tickets": true,
+          "is_sold_out": false,
+          "maximum_ticket_price": {
+            "currency": "GBP",
+            "display": "0.00 GBP",
+            "major_value": "0.00",
+            "value": 0
+          },
+          "minimum_ticket_price": {
+            "currency": "GBP",
+            "display": "0.00 GBP",
+            "major_value": "0.00",
+            "value": 0
+          },
+          "start_sales_date": null,
+          "waitlist_available": false
+        },
+        "tx_time_limit": 1200,
+        "url": "https://www.eventbrite.co.uk/e/free-comedy-every-sunday-at-6pm-in-islington-tickets-1993262351350",
+        "venue": {
+          "address": {
+            "address_1": "2A Corsica Street",
+            "address_2": "",
+            "city": "London",
+            "country": "GB",
+            "latitude": "51.5463543",
+            "localized_address_display": "2A Corsica Street, London, N5 1JJ",
+            "localized_area_display": "London",
+            "localized_multi_line_address_display": [
+              "2A Corsica Street",
+              "London",
+              "N5 1JJ"
+            ],
+            "longitude": "-0.1017174",
+            "postal_code": "N5 1JJ",
+            "region": "England"
+          },
+          "age_restriction": null,
+          "capacity": null,
+          "id": "295458905",
+          "latitude": "51.5463543",
+          "longitude": "-0.1017174",
+          "name": "Brewhouse & Kitchen - Highbury",
+          "resource_uri": "https://www.eventbriteapi.com/v3/venues/295458905/"
+        },
+        "venue_id": "295458905",
+        "version": null
+      },
+      "last_seen": "2026-07-05",
+      "path": "/events/islington-sunday-comedy-6pm-2026-07-26-1800-1993262351350/",
+      "status": "live"
+    },
+    "1993262352353": {
+      "event": {
+        "capacity": 80,
+        "capacity_is_custom": false,
+        "category_id": "105",
+        "changed": "2026-07-05T13:46:20Z",
+        "created": "2026-07-05T13:46:20Z",
+        "currency": "GBP",
+        "description": {
+          "html": "The best free Stand Up Comedy in London, every Sunday at 6pm at Brewhouse &amp; Kitchen in Islington.",
+          "text": "The best free Stand Up Comedy in London, every Sunday at 6pm at Brewhouse & Kitchen in Islington."
+        },
+        "end": {
+          "local": "2026-08-02T19:30:00",
+          "timezone": "Europe/London",
+          "utc": "2026-08-02T18:30:00Z"
+        },
+        "facebook_event_id": null,
+        "format_id": "6",
+        "hide_end_date": false,
+        "hide_start_date": false,
+        "id": "1993262352353",
+        "inventory_type": "limited",
+        "invite_only": false,
+        "is_externally_ticketed": false,
+        "is_free": true,
+        "is_locked": false,
+        "is_reserved_seating": false,
+        "is_series": true,
+        "is_series_parent": false,
+        "listed": true,
+        "locale": "en_GB",
+        "logo": {
+          "aspect_ratio": "2",
+          "crop_mask": {
+            "height": 1080,
+            "top_left": {
+              "x": 0,
+              "y": 0
+            },
+            "width": 2160
+          },
+          "edge_color": "#cb6be6",
+          "edge_color_set": true,
+          "id": "1173215566",
+          "original": {
+            "height": 1080,
+            "url": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1173215566%2F543747696447%2F1%2Foriginal.20251218-172640?auto=format%2Ccompress&q=75&sharp=10&s=2e8147b3d66dbc25cd453a4108261126",
+            "width": 2160
+          },
+          "url": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1173215566%2F543747696447%2F1%2Foriginal.20251218-172640?h=200&w=450&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C0%2C2160%2C1080&s=c619897ae16423e35d885c3570d6e1d5"
+        },
+        "logo_id": "1173215566",
+        "name": {
+          "html": "Free Comedy Every Sunday at 6pm in Islington",
+          "text": "Free Comedy Every Sunday at 6pm in Islington"
+        },
+        "online_event": false,
+        "organization_id": "1234539271983",
+        "organizer_id": "55764637993",
+        "privacy_setting": "unlocked",
+        "published": "2025-12-02T00:59:18Z",
+        "resource_uri": "https://www.eventbriteapi.com/v3/events/1993262352353/",
+        "series_id": "1976522523073",
+        "shareable": true,
+        "show_colors_in_seatmap_thumbnail": false,
+        "show_pick_a_seat": false,
+        "show_remaining": false,
+        "show_seatmap_thumbnail": false,
+        "source": "coyote",
+        "start": {
+          "local": "2026-08-02T18:00:00",
+          "timezone": "Europe/London",
+          "utc": "2026-08-02T17:00:00Z"
+        },
+        "status": "live",
+        "subcategory_id": "5010",
+        "summary": "The best free Stand Up Comedy in London, every Sunday at 6pm at Brewhouse & Kitchen in Islington.",
+        "ticket_availability": {
+          "has_available_tickets": true,
+          "is_sold_out": false,
+          "maximum_ticket_price": {
+            "currency": "GBP",
+            "display": "0.00 GBP",
+            "major_value": "0.00",
+            "value": 0
+          },
+          "minimum_ticket_price": {
+            "currency": "GBP",
+            "display": "0.00 GBP",
+            "major_value": "0.00",
+            "value": 0
+          },
+          "start_sales_date": null,
+          "waitlist_available": false
+        },
+        "tx_time_limit": 1200,
+        "url": "https://www.eventbrite.co.uk/e/free-comedy-every-sunday-at-6pm-in-islington-tickets-1993262352353",
+        "venue": {
+          "address": {
+            "address_1": "2A Corsica Street",
+            "address_2": "",
+            "city": "London",
+            "country": "GB",
+            "latitude": "51.5463543",
+            "localized_address_display": "2A Corsica Street, London, N5 1JJ",
+            "localized_area_display": "London",
+            "localized_multi_line_address_display": [
+              "2A Corsica Street",
+              "London",
+              "N5 1JJ"
+            ],
+            "longitude": "-0.1017174",
+            "postal_code": "N5 1JJ",
+            "region": "England"
+          },
+          "age_restriction": null,
+          "capacity": null,
+          "id": "295458905",
+          "latitude": "51.5463543",
+          "longitude": "-0.1017174",
+          "name": "Brewhouse & Kitchen - Highbury",
+          "resource_uri": "https://www.eventbriteapi.com/v3/venues/295458905/"
+        },
+        "venue_id": "295458905",
+        "version": null
+      },
+      "last_seen": "2026-07-05",
+      "path": "/events/islington-sunday-comedy-6pm-2026-08-02-1800-1993262352353/",
+      "status": "live"
+    },
+    "1993262353356": {
+      "event": {
+        "capacity": 80,
+        "capacity_is_custom": false,
+        "category_id": "105",
+        "changed": "2026-07-05T13:46:20Z",
+        "created": "2026-07-05T13:46:20Z",
+        "currency": "GBP",
+        "description": {
+          "html": "The best free Stand Up Comedy in London, every Sunday at 6pm at Brewhouse &amp; Kitchen in Islington.",
+          "text": "The best free Stand Up Comedy in London, every Sunday at 6pm at Brewhouse & Kitchen in Islington."
+        },
+        "end": {
+          "local": "2026-08-09T19:30:00",
+          "timezone": "Europe/London",
+          "utc": "2026-08-09T18:30:00Z"
+        },
+        "facebook_event_id": null,
+        "format_id": "6",
+        "hide_end_date": false,
+        "hide_start_date": false,
+        "id": "1993262353356",
+        "inventory_type": "limited",
+        "invite_only": false,
+        "is_externally_ticketed": false,
+        "is_free": true,
+        "is_locked": false,
+        "is_reserved_seating": false,
+        "is_series": true,
+        "is_series_parent": false,
+        "listed": true,
+        "locale": "en_GB",
+        "logo": {
+          "aspect_ratio": "2",
+          "crop_mask": {
+            "height": 1080,
+            "top_left": {
+              "x": 0,
+              "y": 0
+            },
+            "width": 2160
+          },
+          "edge_color": "#cb6be6",
+          "edge_color_set": true,
+          "id": "1173215566",
+          "original": {
+            "height": 1080,
+            "url": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1173215566%2F543747696447%2F1%2Foriginal.20251218-172640?auto=format%2Ccompress&q=75&sharp=10&s=2e8147b3d66dbc25cd453a4108261126",
+            "width": 2160
+          },
+          "url": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1173215566%2F543747696447%2F1%2Foriginal.20251218-172640?h=200&w=450&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C0%2C2160%2C1080&s=c619897ae16423e35d885c3570d6e1d5"
+        },
+        "logo_id": "1173215566",
+        "name": {
+          "html": "Free Comedy Every Sunday at 6pm in Islington",
+          "text": "Free Comedy Every Sunday at 6pm in Islington"
+        },
+        "online_event": false,
+        "organization_id": "1234539271983",
+        "organizer_id": "55764637993",
+        "privacy_setting": "unlocked",
+        "published": "2025-12-02T00:59:18Z",
+        "resource_uri": "https://www.eventbriteapi.com/v3/events/1993262353356/",
+        "series_id": "1976522523073",
+        "shareable": true,
+        "show_colors_in_seatmap_thumbnail": false,
+        "show_pick_a_seat": false,
+        "show_remaining": false,
+        "show_seatmap_thumbnail": false,
+        "source": "coyote",
+        "start": {
+          "local": "2026-08-09T18:00:00",
+          "timezone": "Europe/London",
+          "utc": "2026-08-09T17:00:00Z"
+        },
+        "status": "live",
+        "subcategory_id": "5010",
+        "summary": "The best free Stand Up Comedy in London, every Sunday at 6pm at Brewhouse & Kitchen in Islington.",
+        "ticket_availability": {
+          "has_available_tickets": true,
+          "is_sold_out": false,
+          "maximum_ticket_price": {
+            "currency": "GBP",
+            "display": "0.00 GBP",
+            "major_value": "0.00",
+            "value": 0
+          },
+          "minimum_ticket_price": {
+            "currency": "GBP",
+            "display": "0.00 GBP",
+            "major_value": "0.00",
+            "value": 0
+          },
+          "start_sales_date": null,
+          "waitlist_available": false
+        },
+        "tx_time_limit": 1200,
+        "url": "https://www.eventbrite.co.uk/e/free-comedy-every-sunday-at-6pm-in-islington-tickets-1993262353356",
+        "venue": {
+          "address": {
+            "address_1": "2A Corsica Street",
+            "address_2": "",
+            "city": "London",
+            "country": "GB",
+            "latitude": "51.5463543",
+            "localized_address_display": "2A Corsica Street, London, N5 1JJ",
+            "localized_area_display": "London",
+            "localized_multi_line_address_display": [
+              "2A Corsica Street",
+              "London",
+              "N5 1JJ"
+            ],
+            "longitude": "-0.1017174",
+            "postal_code": "N5 1JJ",
+            "region": "England"
+          },
+          "age_restriction": null,
+          "capacity": null,
+          "id": "295458905",
+          "latitude": "51.5463543",
+          "longitude": "-0.1017174",
+          "name": "Brewhouse & Kitchen - Highbury",
+          "resource_uri": "https://www.eventbriteapi.com/v3/venues/295458905/"
+        },
+        "venue_id": "295458905",
+        "version": null
+      },
+      "last_seen": "2026-07-05",
+      "path": "/events/islington-sunday-comedy-6pm-2026-08-09-1800-1993262353356/",
+      "status": "live"
+    },
+    "1993262354359": {
+      "event": {
+        "capacity": 80,
+        "capacity_is_custom": false,
+        "category_id": "105",
+        "changed": "2026-07-05T13:46:20Z",
+        "created": "2026-07-05T13:46:20Z",
+        "currency": "GBP",
+        "description": {
+          "html": "The best free Stand Up Comedy in London, every Sunday at 6pm at Brewhouse &amp; Kitchen in Islington.",
+          "text": "The best free Stand Up Comedy in London, every Sunday at 6pm at Brewhouse & Kitchen in Islington."
+        },
+        "end": {
+          "local": "2026-08-16T19:30:00",
+          "timezone": "Europe/London",
+          "utc": "2026-08-16T18:30:00Z"
+        },
+        "facebook_event_id": null,
+        "format_id": "6",
+        "hide_end_date": false,
+        "hide_start_date": false,
+        "id": "1993262354359",
+        "inventory_type": "limited",
+        "invite_only": false,
+        "is_externally_ticketed": false,
+        "is_free": true,
+        "is_locked": false,
+        "is_reserved_seating": false,
+        "is_series": true,
+        "is_series_parent": false,
+        "listed": true,
+        "locale": "en_GB",
+        "logo": {
+          "aspect_ratio": "2",
+          "crop_mask": {
+            "height": 1080,
+            "top_left": {
+              "x": 0,
+              "y": 0
+            },
+            "width": 2160
+          },
+          "edge_color": "#cb6be6",
+          "edge_color_set": true,
+          "id": "1173215566",
+          "original": {
+            "height": 1080,
+            "url": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1173215566%2F543747696447%2F1%2Foriginal.20251218-172640?auto=format%2Ccompress&q=75&sharp=10&s=2e8147b3d66dbc25cd453a4108261126",
+            "width": 2160
+          },
+          "url": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1173215566%2F543747696447%2F1%2Foriginal.20251218-172640?h=200&w=450&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C0%2C2160%2C1080&s=c619897ae16423e35d885c3570d6e1d5"
+        },
+        "logo_id": "1173215566",
+        "name": {
+          "html": "Free Comedy Every Sunday at 6pm in Islington",
+          "text": "Free Comedy Every Sunday at 6pm in Islington"
+        },
+        "online_event": false,
+        "organization_id": "1234539271983",
+        "organizer_id": "55764637993",
+        "privacy_setting": "unlocked",
+        "published": "2025-12-02T00:59:18Z",
+        "resource_uri": "https://www.eventbriteapi.com/v3/events/1993262354359/",
+        "series_id": "1976522523073",
+        "shareable": true,
+        "show_colors_in_seatmap_thumbnail": false,
+        "show_pick_a_seat": false,
+        "show_remaining": false,
+        "show_seatmap_thumbnail": false,
+        "source": "coyote",
+        "start": {
+          "local": "2026-08-16T18:00:00",
+          "timezone": "Europe/London",
+          "utc": "2026-08-16T17:00:00Z"
+        },
+        "status": "live",
+        "subcategory_id": "5010",
+        "summary": "The best free Stand Up Comedy in London, every Sunday at 6pm at Brewhouse & Kitchen in Islington.",
+        "ticket_availability": {
+          "has_available_tickets": true,
+          "is_sold_out": false,
+          "maximum_ticket_price": {
+            "currency": "GBP",
+            "display": "0.00 GBP",
+            "major_value": "0.00",
+            "value": 0
+          },
+          "minimum_ticket_price": {
+            "currency": "GBP",
+            "display": "0.00 GBP",
+            "major_value": "0.00",
+            "value": 0
+          },
+          "start_sales_date": null,
+          "waitlist_available": false
+        },
+        "tx_time_limit": 1200,
+        "url": "https://www.eventbrite.co.uk/e/free-comedy-every-sunday-at-6pm-in-islington-tickets-1993262354359",
+        "venue": {
+          "address": {
+            "address_1": "2A Corsica Street",
+            "address_2": "",
+            "city": "London",
+            "country": "GB",
+            "latitude": "51.5463543",
+            "localized_address_display": "2A Corsica Street, London, N5 1JJ",
+            "localized_area_display": "London",
+            "localized_multi_line_address_display": [
+              "2A Corsica Street",
+              "London",
+              "N5 1JJ"
+            ],
+            "longitude": "-0.1017174",
+            "postal_code": "N5 1JJ",
+            "region": "England"
+          },
+          "age_restriction": null,
+          "capacity": null,
+          "id": "295458905",
+          "latitude": "51.5463543",
+          "longitude": "-0.1017174",
+          "name": "Brewhouse & Kitchen - Highbury",
+          "resource_uri": "https://www.eventbriteapi.com/v3/venues/295458905/"
+        },
+        "venue_id": "295458905",
+        "version": null
+      },
+      "last_seen": "2026-07-05",
+      "path": "/events/islington-sunday-comedy-6pm-2026-08-16-1800-1993262354359/",
+      "status": "live"
+    },
+    "1993262355362": {
+      "event": {
+        "capacity": 80,
+        "capacity_is_custom": false,
+        "category_id": "105",
+        "changed": "2026-07-05T13:46:20Z",
+        "created": "2026-07-05T13:46:20Z",
+        "currency": "GBP",
+        "description": {
+          "html": "The best free Stand Up Comedy in London, every Sunday at 6pm at Brewhouse &amp; Kitchen in Islington.",
+          "text": "The best free Stand Up Comedy in London, every Sunday at 6pm at Brewhouse & Kitchen in Islington."
+        },
+        "end": {
+          "local": "2026-08-23T19:30:00",
+          "timezone": "Europe/London",
+          "utc": "2026-08-23T18:30:00Z"
+        },
+        "facebook_event_id": null,
+        "format_id": "6",
+        "hide_end_date": false,
+        "hide_start_date": false,
+        "id": "1993262355362",
+        "inventory_type": "limited",
+        "invite_only": false,
+        "is_externally_ticketed": false,
+        "is_free": true,
+        "is_locked": false,
+        "is_reserved_seating": false,
+        "is_series": true,
+        "is_series_parent": false,
+        "listed": true,
+        "locale": "en_GB",
+        "logo": {
+          "aspect_ratio": "2",
+          "crop_mask": {
+            "height": 1080,
+            "top_left": {
+              "x": 0,
+              "y": 0
+            },
+            "width": 2160
+          },
+          "edge_color": "#cb6be6",
+          "edge_color_set": true,
+          "id": "1173215566",
+          "original": {
+            "height": 1080,
+            "url": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1173215566%2F543747696447%2F1%2Foriginal.20251218-172640?auto=format%2Ccompress&q=75&sharp=10&s=2e8147b3d66dbc25cd453a4108261126",
+            "width": 2160
+          },
+          "url": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1173215566%2F543747696447%2F1%2Foriginal.20251218-172640?h=200&w=450&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C0%2C2160%2C1080&s=c619897ae16423e35d885c3570d6e1d5"
+        },
+        "logo_id": "1173215566",
+        "name": {
+          "html": "Free Comedy Every Sunday at 6pm in Islington",
+          "text": "Free Comedy Every Sunday at 6pm in Islington"
+        },
+        "online_event": false,
+        "organization_id": "1234539271983",
+        "organizer_id": "55764637993",
+        "privacy_setting": "unlocked",
+        "published": "2025-12-02T00:59:18Z",
+        "resource_uri": "https://www.eventbriteapi.com/v3/events/1993262355362/",
+        "series_id": "1976522523073",
+        "shareable": true,
+        "show_colors_in_seatmap_thumbnail": false,
+        "show_pick_a_seat": false,
+        "show_remaining": false,
+        "show_seatmap_thumbnail": false,
+        "source": "coyote",
+        "start": {
+          "local": "2026-08-23T18:00:00",
+          "timezone": "Europe/London",
+          "utc": "2026-08-23T17:00:00Z"
+        },
+        "status": "live",
+        "subcategory_id": "5010",
+        "summary": "The best free Stand Up Comedy in London, every Sunday at 6pm at Brewhouse & Kitchen in Islington.",
+        "ticket_availability": {
+          "has_available_tickets": true,
+          "is_sold_out": false,
+          "maximum_ticket_price": {
+            "currency": "GBP",
+            "display": "0.00 GBP",
+            "major_value": "0.00",
+            "value": 0
+          },
+          "minimum_ticket_price": {
+            "currency": "GBP",
+            "display": "0.00 GBP",
+            "major_value": "0.00",
+            "value": 0
+          },
+          "start_sales_date": null,
+          "waitlist_available": false
+        },
+        "tx_time_limit": 1200,
+        "url": "https://www.eventbrite.co.uk/e/free-comedy-every-sunday-at-6pm-in-islington-tickets-1993262355362",
+        "venue": {
+          "address": {
+            "address_1": "2A Corsica Street",
+            "address_2": "",
+            "city": "London",
+            "country": "GB",
+            "latitude": "51.5463543",
+            "localized_address_display": "2A Corsica Street, London, N5 1JJ",
+            "localized_area_display": "London",
+            "localized_multi_line_address_display": [
+              "2A Corsica Street",
+              "London",
+              "N5 1JJ"
+            ],
+            "longitude": "-0.1017174",
+            "postal_code": "N5 1JJ",
+            "region": "England"
+          },
+          "age_restriction": null,
+          "capacity": null,
+          "id": "295458905",
+          "latitude": "51.5463543",
+          "longitude": "-0.1017174",
+          "name": "Brewhouse & Kitchen - Highbury",
+          "resource_uri": "https://www.eventbriteapi.com/v3/venues/295458905/"
+        },
+        "venue_id": "295458905",
+        "version": null
+      },
+      "last_seen": "2026-07-05",
+      "path": "/events/islington-sunday-comedy-6pm-2026-08-23-1800-1993262355362/",
+      "status": "live"
+    },
+    "1993262356365": {
+      "event": {
+        "capacity": 80,
+        "capacity_is_custom": false,
+        "category_id": "105",
+        "changed": "2026-07-05T13:46:20Z",
+        "created": "2026-07-05T13:46:20Z",
+        "currency": "GBP",
+        "description": {
+          "html": "The best free Stand Up Comedy in London, every Sunday at 6pm at Brewhouse &amp; Kitchen in Islington.",
+          "text": "The best free Stand Up Comedy in London, every Sunday at 6pm at Brewhouse & Kitchen in Islington."
+        },
+        "end": {
+          "local": "2026-08-30T19:30:00",
+          "timezone": "Europe/London",
+          "utc": "2026-08-30T18:30:00Z"
+        },
+        "facebook_event_id": null,
+        "format_id": "6",
+        "hide_end_date": false,
+        "hide_start_date": false,
+        "id": "1993262356365",
+        "inventory_type": "limited",
+        "invite_only": false,
+        "is_externally_ticketed": false,
+        "is_free": true,
+        "is_locked": false,
+        "is_reserved_seating": false,
+        "is_series": true,
+        "is_series_parent": false,
+        "listed": true,
+        "locale": "en_GB",
+        "logo": {
+          "aspect_ratio": "2",
+          "crop_mask": {
+            "height": 1080,
+            "top_left": {
+              "x": 0,
+              "y": 0
+            },
+            "width": 2160
+          },
+          "edge_color": "#cb6be6",
+          "edge_color_set": true,
+          "id": "1173215566",
+          "original": {
+            "height": 1080,
+            "url": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1173215566%2F543747696447%2F1%2Foriginal.20251218-172640?auto=format%2Ccompress&q=75&sharp=10&s=2e8147b3d66dbc25cd453a4108261126",
+            "width": 2160
+          },
+          "url": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1173215566%2F543747696447%2F1%2Foriginal.20251218-172640?h=200&w=450&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C0%2C2160%2C1080&s=c619897ae16423e35d885c3570d6e1d5"
+        },
+        "logo_id": "1173215566",
+        "name": {
+          "html": "Free Comedy Every Sunday at 6pm in Islington",
+          "text": "Free Comedy Every Sunday at 6pm in Islington"
+        },
+        "online_event": false,
+        "organization_id": "1234539271983",
+        "organizer_id": "55764637993",
+        "privacy_setting": "unlocked",
+        "published": "2025-12-02T00:59:18Z",
+        "resource_uri": "https://www.eventbriteapi.com/v3/events/1993262356365/",
+        "series_id": "1976522523073",
+        "shareable": true,
+        "show_colors_in_seatmap_thumbnail": false,
+        "show_pick_a_seat": false,
+        "show_remaining": false,
+        "show_seatmap_thumbnail": false,
+        "source": "coyote",
+        "start": {
+          "local": "2026-08-30T18:00:00",
+          "timezone": "Europe/London",
+          "utc": "2026-08-30T17:00:00Z"
+        },
+        "status": "live",
+        "subcategory_id": "5010",
+        "summary": "The best free Stand Up Comedy in London, every Sunday at 6pm at Brewhouse & Kitchen in Islington.",
+        "ticket_availability": {
+          "has_available_tickets": true,
+          "is_sold_out": false,
+          "maximum_ticket_price": {
+            "currency": "GBP",
+            "display": "0.00 GBP",
+            "major_value": "0.00",
+            "value": 0
+          },
+          "minimum_ticket_price": {
+            "currency": "GBP",
+            "display": "0.00 GBP",
+            "major_value": "0.00",
+            "value": 0
+          },
+          "start_sales_date": null,
+          "waitlist_available": false
+        },
+        "tx_time_limit": 1200,
+        "url": "https://www.eventbrite.co.uk/e/free-comedy-every-sunday-at-6pm-in-islington-tickets-1993262356365",
+        "venue": {
+          "address": {
+            "address_1": "2A Corsica Street",
+            "address_2": "",
+            "city": "London",
+            "country": "GB",
+            "latitude": "51.5463543",
+            "localized_address_display": "2A Corsica Street, London, N5 1JJ",
+            "localized_area_display": "London",
+            "localized_multi_line_address_display": [
+              "2A Corsica Street",
+              "London",
+              "N5 1JJ"
+            ],
+            "longitude": "-0.1017174",
+            "postal_code": "N5 1JJ",
+            "region": "England"
+          },
+          "age_restriction": null,
+          "capacity": null,
+          "id": "295458905",
+          "latitude": "51.5463543",
+          "longitude": "-0.1017174",
+          "name": "Brewhouse & Kitchen - Highbury",
+          "resource_uri": "https://www.eventbriteapi.com/v3/venues/295458905/"
+        },
+        "venue_id": "295458905",
+        "version": null
+      },
+      "last_seen": "2026-07-05",
+      "path": "/events/islington-sunday-comedy-6pm-2026-08-30-1800-1993262356365/",
+      "status": "live"
+    },
+    "1993262357368": {
+      "event": {
+        "capacity": 80,
+        "capacity_is_custom": false,
+        "category_id": "105",
+        "changed": "2026-07-05T13:46:20Z",
+        "created": "2026-07-05T13:46:20Z",
+        "currency": "GBP",
+        "description": {
+          "html": "The best free Stand Up Comedy in London, every Sunday at 6pm at Brewhouse &amp; Kitchen in Islington.",
+          "text": "The best free Stand Up Comedy in London, every Sunday at 6pm at Brewhouse & Kitchen in Islington."
+        },
+        "end": {
+          "local": "2026-09-06T19:30:00",
+          "timezone": "Europe/London",
+          "utc": "2026-09-06T18:30:00Z"
+        },
+        "facebook_event_id": null,
+        "format_id": "6",
+        "hide_end_date": false,
+        "hide_start_date": false,
+        "id": "1993262357368",
+        "inventory_type": "limited",
+        "invite_only": false,
+        "is_externally_ticketed": false,
+        "is_free": true,
+        "is_locked": false,
+        "is_reserved_seating": false,
+        "is_series": true,
+        "is_series_parent": false,
+        "listed": true,
+        "locale": "en_GB",
+        "logo": {
+          "aspect_ratio": "2",
+          "crop_mask": {
+            "height": 1080,
+            "top_left": {
+              "x": 0,
+              "y": 0
+            },
+            "width": 2160
+          },
+          "edge_color": "#cb6be6",
+          "edge_color_set": true,
+          "id": "1173215566",
+          "original": {
+            "height": 1080,
+            "url": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1173215566%2F543747696447%2F1%2Foriginal.20251218-172640?auto=format%2Ccompress&q=75&sharp=10&s=2e8147b3d66dbc25cd453a4108261126",
+            "width": 2160
+          },
+          "url": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1173215566%2F543747696447%2F1%2Foriginal.20251218-172640?h=200&w=450&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C0%2C2160%2C1080&s=c619897ae16423e35d885c3570d6e1d5"
+        },
+        "logo_id": "1173215566",
+        "name": {
+          "html": "Free Comedy Every Sunday at 6pm in Islington",
+          "text": "Free Comedy Every Sunday at 6pm in Islington"
+        },
+        "online_event": false,
+        "organization_id": "1234539271983",
+        "organizer_id": "55764637993",
+        "privacy_setting": "unlocked",
+        "published": "2025-12-02T00:59:18Z",
+        "resource_uri": "https://www.eventbriteapi.com/v3/events/1993262357368/",
+        "series_id": "1976522523073",
+        "shareable": true,
+        "show_colors_in_seatmap_thumbnail": false,
+        "show_pick_a_seat": false,
+        "show_remaining": false,
+        "show_seatmap_thumbnail": false,
+        "source": "coyote",
+        "start": {
+          "local": "2026-09-06T18:00:00",
+          "timezone": "Europe/London",
+          "utc": "2026-09-06T17:00:00Z"
+        },
+        "status": "live",
+        "subcategory_id": "5010",
+        "summary": "The best free Stand Up Comedy in London, every Sunday at 6pm at Brewhouse & Kitchen in Islington.",
+        "ticket_availability": {
+          "has_available_tickets": true,
+          "is_sold_out": false,
+          "maximum_ticket_price": {
+            "currency": "GBP",
+            "display": "0.00 GBP",
+            "major_value": "0.00",
+            "value": 0
+          },
+          "minimum_ticket_price": {
+            "currency": "GBP",
+            "display": "0.00 GBP",
+            "major_value": "0.00",
+            "value": 0
+          },
+          "start_sales_date": null,
+          "waitlist_available": false
+        },
+        "tx_time_limit": 1200,
+        "url": "https://www.eventbrite.co.uk/e/free-comedy-every-sunday-at-6pm-in-islington-tickets-1993262357368",
+        "venue": {
+          "address": {
+            "address_1": "2A Corsica Street",
+            "address_2": "",
+            "city": "London",
+            "country": "GB",
+            "latitude": "51.5463543",
+            "localized_address_display": "2A Corsica Street, London, N5 1JJ",
+            "localized_area_display": "London",
+            "localized_multi_line_address_display": [
+              "2A Corsica Street",
+              "London",
+              "N5 1JJ"
+            ],
+            "longitude": "-0.1017174",
+            "postal_code": "N5 1JJ",
+            "region": "England"
+          },
+          "age_restriction": null,
+          "capacity": null,
+          "id": "295458905",
+          "latitude": "51.5463543",
+          "longitude": "-0.1017174",
+          "name": "Brewhouse & Kitchen - Highbury",
+          "resource_uri": "https://www.eventbriteapi.com/v3/venues/295458905/"
+        },
+        "venue_id": "295458905",
+        "version": null
+      },
+      "last_seen": "2026-07-05",
+      "path": "/events/islington-sunday-comedy-6pm-2026-09-06-1800-1993262357368/",
+      "status": "live"
+    },
+    "1993262476725": {
+      "event": {
+        "capacity": 80,
+        "capacity_is_custom": false,
+        "category_id": "105",
+        "changed": "2026-07-05T13:48:02Z",
+        "created": "2026-07-05T13:48:02Z",
+        "currency": "GBP",
+        "description": {
+          "html": "The best free Stand Up Comedy in London, every Sunday at 6pm at Brewhouse &amp; Kitchen in North London.",
+          "text": "The best free Stand Up Comedy in London, every Sunday at 6pm at Brewhouse & Kitchen in North London."
+        },
+        "end": {
+          "local": "2026-07-12T19:30:00",
+          "timezone": "Europe/London",
+          "utc": "2026-07-12T18:30:00Z"
+        },
+        "facebook_event_id": null,
+        "format_id": "6",
+        "hide_end_date": false,
+        "hide_start_date": false,
+        "id": "1993262476725",
+        "inventory_type": "limited",
+        "invite_only": false,
+        "is_externally_ticketed": false,
+        "is_free": true,
+        "is_locked": false,
+        "is_reserved_seating": false,
+        "is_series": true,
+        "is_series_parent": false,
+        "listed": true,
+        "locale": "en_GB",
+        "logo": {
+          "aspect_ratio": "2",
+          "crop_mask": {
+            "height": 1080,
+            "top_left": {
+              "x": 0,
+              "y": 0
+            },
+            "width": 2160
+          },
+          "edge_color": "#d32f23",
+          "edge_color_set": true,
+          "id": "1173216047",
+          "original": {
+            "height": 1080,
+            "url": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1173216047%2F543747696447%2F1%2Foriginal.20251218-173229?auto=format%2Ccompress&q=75&sharp=10&s=6cf6c102ff0d264fbe9faed8c07aac2b",
+            "width": 2160
+          },
+          "url": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1173216047%2F543747696447%2F1%2Foriginal.20251218-173229?h=200&w=450&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C0%2C2160%2C1080&s=7fcaef8dbf5495eb05d3d7f96ad8bc82"
+        },
+        "logo_id": "1173216047",
+        "name": {
+          "html": "Free Comedy Every Sunday at 6pm in North London",
+          "text": "Free Comedy Every Sunday at 6pm in North London"
+        },
+        "online_event": false,
+        "organization_id": "1234539271983",
+        "organizer_id": "55764637993",
+        "privacy_setting": "unlocked",
+        "published": "2025-12-18T17:35:59Z",
+        "resource_uri": "https://www.eventbriteapi.com/v3/events/1993262476725/",
+        "series_id": "1978430404598",
+        "shareable": true,
+        "show_colors_in_seatmap_thumbnail": false,
+        "show_pick_a_seat": false,
+        "show_remaining": false,
+        "show_seatmap_thumbnail": false,
+        "source": "coyote",
+        "start": {
+          "local": "2026-07-12T18:00:00",
+          "timezone": "Europe/London",
+          "utc": "2026-07-12T17:00:00Z"
+        },
+        "status": "live",
+        "subcategory_id": "5010",
+        "summary": "The best free Stand Up Comedy in London, every Sunday at 6pm at Brewhouse & Kitchen in North London.",
+        "ticket_availability": {
+          "has_available_tickets": true,
+          "is_sold_out": false,
+          "maximum_ticket_price": {
+            "currency": "GBP",
+            "display": "0.00 GBP",
+            "major_value": "0.00",
+            "value": 0
+          },
+          "minimum_ticket_price": {
+            "currency": "GBP",
+            "display": "0.00 GBP",
+            "major_value": "0.00",
+            "value": 0
+          },
+          "start_sales_date": null,
+          "waitlist_available": false
+        },
+        "tx_time_limit": 1200,
+        "url": "https://www.eventbrite.co.uk/e/free-comedy-every-sunday-at-6pm-in-north-london-tickets-1993262476725",
+        "venue": {
+          "address": {
+            "address_1": "2A Corsica Street",
+            "address_2": "",
+            "city": "London",
+            "country": "GB",
+            "latitude": "51.5463543",
+            "localized_address_display": "2A Corsica Street, London, N5 1JJ",
+            "localized_area_display": "London",
+            "localized_multi_line_address_display": [
+              "2A Corsica Street",
+              "London",
+              "N5 1JJ"
+            ],
+            "longitude": "-0.1017174",
+            "postal_code": "N5 1JJ",
+            "region": "England"
+          },
+          "age_restriction": null,
+          "capacity": null,
+          "id": "295674687",
+          "latitude": "51.5463543",
+          "longitude": "-0.1017174",
+          "name": "Brewhouse & Kitchen - Highbury",
+          "resource_uri": "https://www.eventbriteapi.com/v3/venues/295674687/"
+        },
+        "venue_id": "295674687",
+        "version": null
+      },
+      "last_seen": "2026-07-05",
+      "path": "/events/free-comedy-every-sunday-at-6pm-in-north-london-2026-07-12-1800-1993262476725/",
+      "status": "live"
+    },
+    "1993262477728": {
+      "event": {
+        "capacity": 80,
+        "capacity_is_custom": false,
+        "category_id": "105",
+        "changed": "2026-07-05T13:48:02Z",
+        "created": "2026-07-05T13:48:02Z",
+        "currency": "GBP",
+        "description": {
+          "html": "The best free Stand Up Comedy in London, every Sunday at 6pm at Brewhouse &amp; Kitchen in North London.",
+          "text": "The best free Stand Up Comedy in London, every Sunday at 6pm at Brewhouse & Kitchen in North London."
+        },
+        "end": {
+          "local": "2026-07-19T19:30:00",
+          "timezone": "Europe/London",
+          "utc": "2026-07-19T18:30:00Z"
+        },
+        "facebook_event_id": null,
+        "format_id": "6",
+        "hide_end_date": false,
+        "hide_start_date": false,
+        "id": "1993262477728",
+        "inventory_type": "limited",
+        "invite_only": false,
+        "is_externally_ticketed": false,
+        "is_free": true,
+        "is_locked": false,
+        "is_reserved_seating": false,
+        "is_series": true,
+        "is_series_parent": false,
+        "listed": true,
+        "locale": "en_GB",
+        "logo": {
+          "aspect_ratio": "2",
+          "crop_mask": {
+            "height": 1080,
+            "top_left": {
+              "x": 0,
+              "y": 0
+            },
+            "width": 2160
+          },
+          "edge_color": "#d32f23",
+          "edge_color_set": true,
+          "id": "1173216047",
+          "original": {
+            "height": 1080,
+            "url": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1173216047%2F543747696447%2F1%2Foriginal.20251218-173229?auto=format%2Ccompress&q=75&sharp=10&s=6cf6c102ff0d264fbe9faed8c07aac2b",
+            "width": 2160
+          },
+          "url": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1173216047%2F543747696447%2F1%2Foriginal.20251218-173229?h=200&w=450&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C0%2C2160%2C1080&s=7fcaef8dbf5495eb05d3d7f96ad8bc82"
+        },
+        "logo_id": "1173216047",
+        "name": {
+          "html": "Free Comedy Every Sunday at 6pm in North London",
+          "text": "Free Comedy Every Sunday at 6pm in North London"
+        },
+        "online_event": false,
+        "organization_id": "1234539271983",
+        "organizer_id": "55764637993",
+        "privacy_setting": "unlocked",
+        "published": "2025-12-18T17:35:59Z",
+        "resource_uri": "https://www.eventbriteapi.com/v3/events/1993262477728/",
+        "series_id": "1978430404598",
+        "shareable": true,
+        "show_colors_in_seatmap_thumbnail": false,
+        "show_pick_a_seat": false,
+        "show_remaining": false,
+        "show_seatmap_thumbnail": false,
+        "source": "coyote",
+        "start": {
+          "local": "2026-07-19T18:00:00",
+          "timezone": "Europe/London",
+          "utc": "2026-07-19T17:00:00Z"
+        },
+        "status": "live",
+        "subcategory_id": "5010",
+        "summary": "The best free Stand Up Comedy in London, every Sunday at 6pm at Brewhouse & Kitchen in North London.",
+        "ticket_availability": {
+          "has_available_tickets": true,
+          "is_sold_out": false,
+          "maximum_ticket_price": {
+            "currency": "GBP",
+            "display": "0.00 GBP",
+            "major_value": "0.00",
+            "value": 0
+          },
+          "minimum_ticket_price": {
+            "currency": "GBP",
+            "display": "0.00 GBP",
+            "major_value": "0.00",
+            "value": 0
+          },
+          "start_sales_date": null,
+          "waitlist_available": false
+        },
+        "tx_time_limit": 1200,
+        "url": "https://www.eventbrite.co.uk/e/free-comedy-every-sunday-at-6pm-in-north-london-tickets-1993262477728",
+        "venue": {
+          "address": {
+            "address_1": "2A Corsica Street",
+            "address_2": "",
+            "city": "London",
+            "country": "GB",
+            "latitude": "51.5463543",
+            "localized_address_display": "2A Corsica Street, London, N5 1JJ",
+            "localized_area_display": "London",
+            "localized_multi_line_address_display": [
+              "2A Corsica Street",
+              "London",
+              "N5 1JJ"
+            ],
+            "longitude": "-0.1017174",
+            "postal_code": "N5 1JJ",
+            "region": "England"
+          },
+          "age_restriction": null,
+          "capacity": null,
+          "id": "295674687",
+          "latitude": "51.5463543",
+          "longitude": "-0.1017174",
+          "name": "Brewhouse & Kitchen - Highbury",
+          "resource_uri": "https://www.eventbriteapi.com/v3/venues/295674687/"
+        },
+        "venue_id": "295674687",
+        "version": null
+      },
+      "last_seen": "2026-07-05",
+      "path": "/events/free-comedy-every-sunday-at-6pm-in-north-london-2026-07-19-1800-1993262477728/",
+      "status": "live"
+    },
+    "1993262478731": {
+      "event": {
+        "capacity": 80,
+        "capacity_is_custom": false,
+        "category_id": "105",
+        "changed": "2026-07-05T13:48:02Z",
+        "created": "2026-07-05T13:48:02Z",
+        "currency": "GBP",
+        "description": {
+          "html": "The best free Stand Up Comedy in London, every Sunday at 6pm at Brewhouse &amp; Kitchen in North London.",
+          "text": "The best free Stand Up Comedy in London, every Sunday at 6pm at Brewhouse & Kitchen in North London."
+        },
+        "end": {
+          "local": "2026-07-26T19:30:00",
+          "timezone": "Europe/London",
+          "utc": "2026-07-26T18:30:00Z"
+        },
+        "facebook_event_id": null,
+        "format_id": "6",
+        "hide_end_date": false,
+        "hide_start_date": false,
+        "id": "1993262478731",
+        "inventory_type": "limited",
+        "invite_only": false,
+        "is_externally_ticketed": false,
+        "is_free": true,
+        "is_locked": false,
+        "is_reserved_seating": false,
+        "is_series": true,
+        "is_series_parent": false,
+        "listed": true,
+        "locale": "en_GB",
+        "logo": {
+          "aspect_ratio": "2",
+          "crop_mask": {
+            "height": 1080,
+            "top_left": {
+              "x": 0,
+              "y": 0
+            },
+            "width": 2160
+          },
+          "edge_color": "#d32f23",
+          "edge_color_set": true,
+          "id": "1173216047",
+          "original": {
+            "height": 1080,
+            "url": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1173216047%2F543747696447%2F1%2Foriginal.20251218-173229?auto=format%2Ccompress&q=75&sharp=10&s=6cf6c102ff0d264fbe9faed8c07aac2b",
+            "width": 2160
+          },
+          "url": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1173216047%2F543747696447%2F1%2Foriginal.20251218-173229?h=200&w=450&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C0%2C2160%2C1080&s=7fcaef8dbf5495eb05d3d7f96ad8bc82"
+        },
+        "logo_id": "1173216047",
+        "name": {
+          "html": "Free Comedy Every Sunday at 6pm in North London",
+          "text": "Free Comedy Every Sunday at 6pm in North London"
+        },
+        "online_event": false,
+        "organization_id": "1234539271983",
+        "organizer_id": "55764637993",
+        "privacy_setting": "unlocked",
+        "published": "2025-12-18T17:35:59Z",
+        "resource_uri": "https://www.eventbriteapi.com/v3/events/1993262478731/",
+        "series_id": "1978430404598",
+        "shareable": true,
+        "show_colors_in_seatmap_thumbnail": false,
+        "show_pick_a_seat": false,
+        "show_remaining": false,
+        "show_seatmap_thumbnail": false,
+        "source": "coyote",
+        "start": {
+          "local": "2026-07-26T18:00:00",
+          "timezone": "Europe/London",
+          "utc": "2026-07-26T17:00:00Z"
+        },
+        "status": "live",
+        "subcategory_id": "5010",
+        "summary": "The best free Stand Up Comedy in London, every Sunday at 6pm at Brewhouse & Kitchen in North London.",
+        "ticket_availability": {
+          "has_available_tickets": true,
+          "is_sold_out": false,
+          "maximum_ticket_price": {
+            "currency": "GBP",
+            "display": "0.00 GBP",
+            "major_value": "0.00",
+            "value": 0
+          },
+          "minimum_ticket_price": {
+            "currency": "GBP",
+            "display": "0.00 GBP",
+            "major_value": "0.00",
+            "value": 0
+          },
+          "start_sales_date": null,
+          "waitlist_available": false
+        },
+        "tx_time_limit": 1200,
+        "url": "https://www.eventbrite.co.uk/e/free-comedy-every-sunday-at-6pm-in-north-london-tickets-1993262478731",
+        "venue": {
+          "address": {
+            "address_1": "2A Corsica Street",
+            "address_2": "",
+            "city": "London",
+            "country": "GB",
+            "latitude": "51.5463543",
+            "localized_address_display": "2A Corsica Street, London, N5 1JJ",
+            "localized_area_display": "London",
+            "localized_multi_line_address_display": [
+              "2A Corsica Street",
+              "London",
+              "N5 1JJ"
+            ],
+            "longitude": "-0.1017174",
+            "postal_code": "N5 1JJ",
+            "region": "England"
+          },
+          "age_restriction": null,
+          "capacity": null,
+          "id": "295674687",
+          "latitude": "51.5463543",
+          "longitude": "-0.1017174",
+          "name": "Brewhouse & Kitchen - Highbury",
+          "resource_uri": "https://www.eventbriteapi.com/v3/venues/295674687/"
+        },
+        "venue_id": "295674687",
+        "version": null
+      },
+      "last_seen": "2026-07-05",
+      "path": "/events/free-comedy-every-sunday-at-6pm-in-north-london-2026-07-26-1800-1993262478731/",
+      "status": "live"
+    },
+    "1993262479734": {
+      "event": {
+        "capacity": 80,
+        "capacity_is_custom": false,
+        "category_id": "105",
+        "changed": "2026-07-05T13:48:02Z",
+        "created": "2026-07-05T13:48:02Z",
+        "currency": "GBP",
+        "description": {
+          "html": "The best free Stand Up Comedy in London, every Sunday at 6pm at Brewhouse &amp; Kitchen in North London.",
+          "text": "The best free Stand Up Comedy in London, every Sunday at 6pm at Brewhouse & Kitchen in North London."
+        },
+        "end": {
+          "local": "2026-08-02T19:30:00",
+          "timezone": "Europe/London",
+          "utc": "2026-08-02T18:30:00Z"
+        },
+        "facebook_event_id": null,
+        "format_id": "6",
+        "hide_end_date": false,
+        "hide_start_date": false,
+        "id": "1993262479734",
+        "inventory_type": "limited",
+        "invite_only": false,
+        "is_externally_ticketed": false,
+        "is_free": true,
+        "is_locked": false,
+        "is_reserved_seating": false,
+        "is_series": true,
+        "is_series_parent": false,
+        "listed": true,
+        "locale": "en_GB",
+        "logo": {
+          "aspect_ratio": "2",
+          "crop_mask": {
+            "height": 1080,
+            "top_left": {
+              "x": 0,
+              "y": 0
+            },
+            "width": 2160
+          },
+          "edge_color": "#d32f23",
+          "edge_color_set": true,
+          "id": "1173216047",
+          "original": {
+            "height": 1080,
+            "url": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1173216047%2F543747696447%2F1%2Foriginal.20251218-173229?auto=format%2Ccompress&q=75&sharp=10&s=6cf6c102ff0d264fbe9faed8c07aac2b",
+            "width": 2160
+          },
+          "url": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1173216047%2F543747696447%2F1%2Foriginal.20251218-173229?h=200&w=450&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C0%2C2160%2C1080&s=7fcaef8dbf5495eb05d3d7f96ad8bc82"
+        },
+        "logo_id": "1173216047",
+        "name": {
+          "html": "Free Comedy Every Sunday at 6pm in North London",
+          "text": "Free Comedy Every Sunday at 6pm in North London"
+        },
+        "online_event": false,
+        "organization_id": "1234539271983",
+        "organizer_id": "55764637993",
+        "privacy_setting": "unlocked",
+        "published": "2025-12-18T17:35:59Z",
+        "resource_uri": "https://www.eventbriteapi.com/v3/events/1993262479734/",
+        "series_id": "1978430404598",
+        "shareable": true,
+        "show_colors_in_seatmap_thumbnail": false,
+        "show_pick_a_seat": false,
+        "show_remaining": false,
+        "show_seatmap_thumbnail": false,
+        "source": "coyote",
+        "start": {
+          "local": "2026-08-02T18:00:00",
+          "timezone": "Europe/London",
+          "utc": "2026-08-02T17:00:00Z"
+        },
+        "status": "live",
+        "subcategory_id": "5010",
+        "summary": "The best free Stand Up Comedy in London, every Sunday at 6pm at Brewhouse & Kitchen in North London.",
+        "ticket_availability": {
+          "has_available_tickets": true,
+          "is_sold_out": false,
+          "maximum_ticket_price": {
+            "currency": "GBP",
+            "display": "0.00 GBP",
+            "major_value": "0.00",
+            "value": 0
+          },
+          "minimum_ticket_price": {
+            "currency": "GBP",
+            "display": "0.00 GBP",
+            "major_value": "0.00",
+            "value": 0
+          },
+          "start_sales_date": null,
+          "waitlist_available": false
+        },
+        "tx_time_limit": 1200,
+        "url": "https://www.eventbrite.co.uk/e/free-comedy-every-sunday-at-6pm-in-north-london-tickets-1993262479734",
+        "venue": {
+          "address": {
+            "address_1": "2A Corsica Street",
+            "address_2": "",
+            "city": "London",
+            "country": "GB",
+            "latitude": "51.5463543",
+            "localized_address_display": "2A Corsica Street, London, N5 1JJ",
+            "localized_area_display": "London",
+            "localized_multi_line_address_display": [
+              "2A Corsica Street",
+              "London",
+              "N5 1JJ"
+            ],
+            "longitude": "-0.1017174",
+            "postal_code": "N5 1JJ",
+            "region": "England"
+          },
+          "age_restriction": null,
+          "capacity": null,
+          "id": "295674687",
+          "latitude": "51.5463543",
+          "longitude": "-0.1017174",
+          "name": "Brewhouse & Kitchen - Highbury",
+          "resource_uri": "https://www.eventbriteapi.com/v3/venues/295674687/"
+        },
+        "venue_id": "295674687",
+        "version": null
+      },
+      "last_seen": "2026-07-05",
+      "path": "/events/free-comedy-every-sunday-at-6pm-in-north-london-2026-08-02-1800-1993262479734/",
+      "status": "live"
+    },
+    "1993262480737": {
+      "event": {
+        "capacity": 80,
+        "capacity_is_custom": false,
+        "category_id": "105",
+        "changed": "2026-07-05T13:48:02Z",
+        "created": "2026-07-05T13:48:02Z",
+        "currency": "GBP",
+        "description": {
+          "html": "The best free Stand Up Comedy in London, every Sunday at 6pm at Brewhouse &amp; Kitchen in North London.",
+          "text": "The best free Stand Up Comedy in London, every Sunday at 6pm at Brewhouse & Kitchen in North London."
+        },
+        "end": {
+          "local": "2026-08-09T19:30:00",
+          "timezone": "Europe/London",
+          "utc": "2026-08-09T18:30:00Z"
+        },
+        "facebook_event_id": null,
+        "format_id": "6",
+        "hide_end_date": false,
+        "hide_start_date": false,
+        "id": "1993262480737",
+        "inventory_type": "limited",
+        "invite_only": false,
+        "is_externally_ticketed": false,
+        "is_free": true,
+        "is_locked": false,
+        "is_reserved_seating": false,
+        "is_series": true,
+        "is_series_parent": false,
+        "listed": true,
+        "locale": "en_GB",
+        "logo": {
+          "aspect_ratio": "2",
+          "crop_mask": {
+            "height": 1080,
+            "top_left": {
+              "x": 0,
+              "y": 0
+            },
+            "width": 2160
+          },
+          "edge_color": "#d32f23",
+          "edge_color_set": true,
+          "id": "1173216047",
+          "original": {
+            "height": 1080,
+            "url": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1173216047%2F543747696447%2F1%2Foriginal.20251218-173229?auto=format%2Ccompress&q=75&sharp=10&s=6cf6c102ff0d264fbe9faed8c07aac2b",
+            "width": 2160
+          },
+          "url": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1173216047%2F543747696447%2F1%2Foriginal.20251218-173229?h=200&w=450&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C0%2C2160%2C1080&s=7fcaef8dbf5495eb05d3d7f96ad8bc82"
+        },
+        "logo_id": "1173216047",
+        "name": {
+          "html": "Free Comedy Every Sunday at 6pm in North London",
+          "text": "Free Comedy Every Sunday at 6pm in North London"
+        },
+        "online_event": false,
+        "organization_id": "1234539271983",
+        "organizer_id": "55764637993",
+        "privacy_setting": "unlocked",
+        "published": "2025-12-18T17:35:59Z",
+        "resource_uri": "https://www.eventbriteapi.com/v3/events/1993262480737/",
+        "series_id": "1978430404598",
+        "shareable": true,
+        "show_colors_in_seatmap_thumbnail": false,
+        "show_pick_a_seat": false,
+        "show_remaining": false,
+        "show_seatmap_thumbnail": false,
+        "source": "coyote",
+        "start": {
+          "local": "2026-08-09T18:00:00",
+          "timezone": "Europe/London",
+          "utc": "2026-08-09T17:00:00Z"
+        },
+        "status": "live",
+        "subcategory_id": "5010",
+        "summary": "The best free Stand Up Comedy in London, every Sunday at 6pm at Brewhouse & Kitchen in North London.",
+        "ticket_availability": {
+          "has_available_tickets": true,
+          "is_sold_out": false,
+          "maximum_ticket_price": {
+            "currency": "GBP",
+            "display": "0.00 GBP",
+            "major_value": "0.00",
+            "value": 0
+          },
+          "minimum_ticket_price": {
+            "currency": "GBP",
+            "display": "0.00 GBP",
+            "major_value": "0.00",
+            "value": 0
+          },
+          "start_sales_date": null,
+          "waitlist_available": false
+        },
+        "tx_time_limit": 1200,
+        "url": "https://www.eventbrite.co.uk/e/free-comedy-every-sunday-at-6pm-in-north-london-tickets-1993262480737",
+        "venue": {
+          "address": {
+            "address_1": "2A Corsica Street",
+            "address_2": "",
+            "city": "London",
+            "country": "GB",
+            "latitude": "51.5463543",
+            "localized_address_display": "2A Corsica Street, London, N5 1JJ",
+            "localized_area_display": "London",
+            "localized_multi_line_address_display": [
+              "2A Corsica Street",
+              "London",
+              "N5 1JJ"
+            ],
+            "longitude": "-0.1017174",
+            "postal_code": "N5 1JJ",
+            "region": "England"
+          },
+          "age_restriction": null,
+          "capacity": null,
+          "id": "295674687",
+          "latitude": "51.5463543",
+          "longitude": "-0.1017174",
+          "name": "Brewhouse & Kitchen - Highbury",
+          "resource_uri": "https://www.eventbriteapi.com/v3/venues/295674687/"
+        },
+        "venue_id": "295674687",
+        "version": null
+      },
+      "last_seen": "2026-07-05",
+      "path": "/events/free-comedy-every-sunday-at-6pm-in-north-london-2026-08-09-1800-1993262480737/",
+      "status": "live"
+    },
+    "1993262481740": {
+      "event": {
+        "capacity": 80,
+        "capacity_is_custom": false,
+        "category_id": "105",
+        "changed": "2026-07-05T13:48:02Z",
+        "created": "2026-07-05T13:48:02Z",
+        "currency": "GBP",
+        "description": {
+          "html": "The best free Stand Up Comedy in London, every Sunday at 6pm at Brewhouse &amp; Kitchen in North London.",
+          "text": "The best free Stand Up Comedy in London, every Sunday at 6pm at Brewhouse & Kitchen in North London."
+        },
+        "end": {
+          "local": "2026-08-16T19:30:00",
+          "timezone": "Europe/London",
+          "utc": "2026-08-16T18:30:00Z"
+        },
+        "facebook_event_id": null,
+        "format_id": "6",
+        "hide_end_date": false,
+        "hide_start_date": false,
+        "id": "1993262481740",
+        "inventory_type": "limited",
+        "invite_only": false,
+        "is_externally_ticketed": false,
+        "is_free": true,
+        "is_locked": false,
+        "is_reserved_seating": false,
+        "is_series": true,
+        "is_series_parent": false,
+        "listed": true,
+        "locale": "en_GB",
+        "logo": {
+          "aspect_ratio": "2",
+          "crop_mask": {
+            "height": 1080,
+            "top_left": {
+              "x": 0,
+              "y": 0
+            },
+            "width": 2160
+          },
+          "edge_color": "#d32f23",
+          "edge_color_set": true,
+          "id": "1173216047",
+          "original": {
+            "height": 1080,
+            "url": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1173216047%2F543747696447%2F1%2Foriginal.20251218-173229?auto=format%2Ccompress&q=75&sharp=10&s=6cf6c102ff0d264fbe9faed8c07aac2b",
+            "width": 2160
+          },
+          "url": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1173216047%2F543747696447%2F1%2Foriginal.20251218-173229?h=200&w=450&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C0%2C2160%2C1080&s=7fcaef8dbf5495eb05d3d7f96ad8bc82"
+        },
+        "logo_id": "1173216047",
+        "name": {
+          "html": "Free Comedy Every Sunday at 6pm in North London",
+          "text": "Free Comedy Every Sunday at 6pm in North London"
+        },
+        "online_event": false,
+        "organization_id": "1234539271983",
+        "organizer_id": "55764637993",
+        "privacy_setting": "unlocked",
+        "published": "2025-12-18T17:35:59Z",
+        "resource_uri": "https://www.eventbriteapi.com/v3/events/1993262481740/",
+        "series_id": "1978430404598",
+        "shareable": true,
+        "show_colors_in_seatmap_thumbnail": false,
+        "show_pick_a_seat": false,
+        "show_remaining": false,
+        "show_seatmap_thumbnail": false,
+        "source": "coyote",
+        "start": {
+          "local": "2026-08-16T18:00:00",
+          "timezone": "Europe/London",
+          "utc": "2026-08-16T17:00:00Z"
+        },
+        "status": "live",
+        "subcategory_id": "5010",
+        "summary": "The best free Stand Up Comedy in London, every Sunday at 6pm at Brewhouse & Kitchen in North London.",
+        "ticket_availability": {
+          "has_available_tickets": true,
+          "is_sold_out": false,
+          "maximum_ticket_price": {
+            "currency": "GBP",
+            "display": "0.00 GBP",
+            "major_value": "0.00",
+            "value": 0
+          },
+          "minimum_ticket_price": {
+            "currency": "GBP",
+            "display": "0.00 GBP",
+            "major_value": "0.00",
+            "value": 0
+          },
+          "start_sales_date": null,
+          "waitlist_available": false
+        },
+        "tx_time_limit": 1200,
+        "url": "https://www.eventbrite.co.uk/e/free-comedy-every-sunday-at-6pm-in-north-london-tickets-1993262481740",
+        "venue": {
+          "address": {
+            "address_1": "2A Corsica Street",
+            "address_2": "",
+            "city": "London",
+            "country": "GB",
+            "latitude": "51.5463543",
+            "localized_address_display": "2A Corsica Street, London, N5 1JJ",
+            "localized_area_display": "London",
+            "localized_multi_line_address_display": [
+              "2A Corsica Street",
+              "London",
+              "N5 1JJ"
+            ],
+            "longitude": "-0.1017174",
+            "postal_code": "N5 1JJ",
+            "region": "England"
+          },
+          "age_restriction": null,
+          "capacity": null,
+          "id": "295674687",
+          "latitude": "51.5463543",
+          "longitude": "-0.1017174",
+          "name": "Brewhouse & Kitchen - Highbury",
+          "resource_uri": "https://www.eventbriteapi.com/v3/venues/295674687/"
+        },
+        "venue_id": "295674687",
+        "version": null
+      },
+      "last_seen": "2026-07-05",
+      "path": "/events/free-comedy-every-sunday-at-6pm-in-north-london-2026-08-16-1800-1993262481740/",
+      "status": "live"
+    },
+    "1993262482743": {
+      "event": {
+        "capacity": 80,
+        "capacity_is_custom": false,
+        "category_id": "105",
+        "changed": "2026-07-05T13:48:02Z",
+        "created": "2026-07-05T13:48:02Z",
+        "currency": "GBP",
+        "description": {
+          "html": "The best free Stand Up Comedy in London, every Sunday at 6pm at Brewhouse &amp; Kitchen in North London.",
+          "text": "The best free Stand Up Comedy in London, every Sunday at 6pm at Brewhouse & Kitchen in North London."
+        },
+        "end": {
+          "local": "2026-08-23T19:30:00",
+          "timezone": "Europe/London",
+          "utc": "2026-08-23T18:30:00Z"
+        },
+        "facebook_event_id": null,
+        "format_id": "6",
+        "hide_end_date": false,
+        "hide_start_date": false,
+        "id": "1993262482743",
+        "inventory_type": "limited",
+        "invite_only": false,
+        "is_externally_ticketed": false,
+        "is_free": true,
+        "is_locked": false,
+        "is_reserved_seating": false,
+        "is_series": true,
+        "is_series_parent": false,
+        "listed": true,
+        "locale": "en_GB",
+        "logo": {
+          "aspect_ratio": "2",
+          "crop_mask": {
+            "height": 1080,
+            "top_left": {
+              "x": 0,
+              "y": 0
+            },
+            "width": 2160
+          },
+          "edge_color": "#d32f23",
+          "edge_color_set": true,
+          "id": "1173216047",
+          "original": {
+            "height": 1080,
+            "url": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1173216047%2F543747696447%2F1%2Foriginal.20251218-173229?auto=format%2Ccompress&q=75&sharp=10&s=6cf6c102ff0d264fbe9faed8c07aac2b",
+            "width": 2160
+          },
+          "url": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1173216047%2F543747696447%2F1%2Foriginal.20251218-173229?h=200&w=450&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C0%2C2160%2C1080&s=7fcaef8dbf5495eb05d3d7f96ad8bc82"
+        },
+        "logo_id": "1173216047",
+        "name": {
+          "html": "Free Comedy Every Sunday at 6pm in North London",
+          "text": "Free Comedy Every Sunday at 6pm in North London"
+        },
+        "online_event": false,
+        "organization_id": "1234539271983",
+        "organizer_id": "55764637993",
+        "privacy_setting": "unlocked",
+        "published": "2025-12-18T17:35:59Z",
+        "resource_uri": "https://www.eventbriteapi.com/v3/events/1993262482743/",
+        "series_id": "1978430404598",
+        "shareable": true,
+        "show_colors_in_seatmap_thumbnail": false,
+        "show_pick_a_seat": false,
+        "show_remaining": false,
+        "show_seatmap_thumbnail": false,
+        "source": "coyote",
+        "start": {
+          "local": "2026-08-23T18:00:00",
+          "timezone": "Europe/London",
+          "utc": "2026-08-23T17:00:00Z"
+        },
+        "status": "live",
+        "subcategory_id": "5010",
+        "summary": "The best free Stand Up Comedy in London, every Sunday at 6pm at Brewhouse & Kitchen in North London.",
+        "ticket_availability": {
+          "has_available_tickets": true,
+          "is_sold_out": false,
+          "maximum_ticket_price": {
+            "currency": "GBP",
+            "display": "0.00 GBP",
+            "major_value": "0.00",
+            "value": 0
+          },
+          "minimum_ticket_price": {
+            "currency": "GBP",
+            "display": "0.00 GBP",
+            "major_value": "0.00",
+            "value": 0
+          },
+          "start_sales_date": null,
+          "waitlist_available": false
+        },
+        "tx_time_limit": 1200,
+        "url": "https://www.eventbrite.co.uk/e/free-comedy-every-sunday-at-6pm-in-north-london-tickets-1993262482743",
+        "venue": {
+          "address": {
+            "address_1": "2A Corsica Street",
+            "address_2": "",
+            "city": "London",
+            "country": "GB",
+            "latitude": "51.5463543",
+            "localized_address_display": "2A Corsica Street, London, N5 1JJ",
+            "localized_area_display": "London",
+            "localized_multi_line_address_display": [
+              "2A Corsica Street",
+              "London",
+              "N5 1JJ"
+            ],
+            "longitude": "-0.1017174",
+            "postal_code": "N5 1JJ",
+            "region": "England"
+          },
+          "age_restriction": null,
+          "capacity": null,
+          "id": "295674687",
+          "latitude": "51.5463543",
+          "longitude": "-0.1017174",
+          "name": "Brewhouse & Kitchen - Highbury",
+          "resource_uri": "https://www.eventbriteapi.com/v3/venues/295674687/"
+        },
+        "venue_id": "295674687",
+        "version": null
+      },
+      "last_seen": "2026-07-05",
+      "path": "/events/free-comedy-every-sunday-at-6pm-in-north-london-2026-08-23-1800-1993262482743/",
+      "status": "live"
+    },
+    "1993262483746": {
+      "event": {
+        "capacity": 80,
+        "capacity_is_custom": false,
+        "category_id": "105",
+        "changed": "2026-07-05T13:48:02Z",
+        "created": "2026-07-05T13:48:02Z",
+        "currency": "GBP",
+        "description": {
+          "html": "The best free Stand Up Comedy in London, every Sunday at 6pm at Brewhouse &amp; Kitchen in North London.",
+          "text": "The best free Stand Up Comedy in London, every Sunday at 6pm at Brewhouse & Kitchen in North London."
+        },
+        "end": {
+          "local": "2026-08-30T19:30:00",
+          "timezone": "Europe/London",
+          "utc": "2026-08-30T18:30:00Z"
+        },
+        "facebook_event_id": null,
+        "format_id": "6",
+        "hide_end_date": false,
+        "hide_start_date": false,
+        "id": "1993262483746",
+        "inventory_type": "limited",
+        "invite_only": false,
+        "is_externally_ticketed": false,
+        "is_free": true,
+        "is_locked": false,
+        "is_reserved_seating": false,
+        "is_series": true,
+        "is_series_parent": false,
+        "listed": true,
+        "locale": "en_GB",
+        "logo": {
+          "aspect_ratio": "2",
+          "crop_mask": {
+            "height": 1080,
+            "top_left": {
+              "x": 0,
+              "y": 0
+            },
+            "width": 2160
+          },
+          "edge_color": "#d32f23",
+          "edge_color_set": true,
+          "id": "1173216047",
+          "original": {
+            "height": 1080,
+            "url": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1173216047%2F543747696447%2F1%2Foriginal.20251218-173229?auto=format%2Ccompress&q=75&sharp=10&s=6cf6c102ff0d264fbe9faed8c07aac2b",
+            "width": 2160
+          },
+          "url": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1173216047%2F543747696447%2F1%2Foriginal.20251218-173229?h=200&w=450&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C0%2C2160%2C1080&s=7fcaef8dbf5495eb05d3d7f96ad8bc82"
+        },
+        "logo_id": "1173216047",
+        "name": {
+          "html": "Free Comedy Every Sunday at 6pm in North London",
+          "text": "Free Comedy Every Sunday at 6pm in North London"
+        },
+        "online_event": false,
+        "organization_id": "1234539271983",
+        "organizer_id": "55764637993",
+        "privacy_setting": "unlocked",
+        "published": "2025-12-18T17:35:59Z",
+        "resource_uri": "https://www.eventbriteapi.com/v3/events/1993262483746/",
+        "series_id": "1978430404598",
+        "shareable": true,
+        "show_colors_in_seatmap_thumbnail": false,
+        "show_pick_a_seat": false,
+        "show_remaining": false,
+        "show_seatmap_thumbnail": false,
+        "source": "coyote",
+        "start": {
+          "local": "2026-08-30T18:00:00",
+          "timezone": "Europe/London",
+          "utc": "2026-08-30T17:00:00Z"
+        },
+        "status": "live",
+        "subcategory_id": "5010",
+        "summary": "The best free Stand Up Comedy in London, every Sunday at 6pm at Brewhouse & Kitchen in North London.",
+        "ticket_availability": {
+          "has_available_tickets": true,
+          "is_sold_out": false,
+          "maximum_ticket_price": {
+            "currency": "GBP",
+            "display": "0.00 GBP",
+            "major_value": "0.00",
+            "value": 0
+          },
+          "minimum_ticket_price": {
+            "currency": "GBP",
+            "display": "0.00 GBP",
+            "major_value": "0.00",
+            "value": 0
+          },
+          "start_sales_date": null,
+          "waitlist_available": false
+        },
+        "tx_time_limit": 1200,
+        "url": "https://www.eventbrite.co.uk/e/free-comedy-every-sunday-at-6pm-in-north-london-tickets-1993262483746",
+        "venue": {
+          "address": {
+            "address_1": "2A Corsica Street",
+            "address_2": "",
+            "city": "London",
+            "country": "GB",
+            "latitude": "51.5463543",
+            "localized_address_display": "2A Corsica Street, London, N5 1JJ",
+            "localized_area_display": "London",
+            "localized_multi_line_address_display": [
+              "2A Corsica Street",
+              "London",
+              "N5 1JJ"
+            ],
+            "longitude": "-0.1017174",
+            "postal_code": "N5 1JJ",
+            "region": "England"
+          },
+          "age_restriction": null,
+          "capacity": null,
+          "id": "295674687",
+          "latitude": "51.5463543",
+          "longitude": "-0.1017174",
+          "name": "Brewhouse & Kitchen - Highbury",
+          "resource_uri": "https://www.eventbriteapi.com/v3/venues/295674687/"
+        },
+        "venue_id": "295674687",
+        "version": null
+      },
+      "last_seen": "2026-07-05",
+      "path": "/events/free-comedy-every-sunday-at-6pm-in-north-london-2026-08-30-1800-1993262483746/",
+      "status": "live"
+    },
+    "1993262484749": {
+      "event": {
+        "capacity": 80,
+        "capacity_is_custom": false,
+        "category_id": "105",
+        "changed": "2026-07-05T13:48:02Z",
+        "created": "2026-07-05T13:48:02Z",
+        "currency": "GBP",
+        "description": {
+          "html": "The best free Stand Up Comedy in London, every Sunday at 6pm at Brewhouse &amp; Kitchen in North London.",
+          "text": "The best free Stand Up Comedy in London, every Sunday at 6pm at Brewhouse & Kitchen in North London."
+        },
+        "end": {
+          "local": "2026-09-06T19:30:00",
+          "timezone": "Europe/London",
+          "utc": "2026-09-06T18:30:00Z"
+        },
+        "facebook_event_id": null,
+        "format_id": "6",
+        "hide_end_date": false,
+        "hide_start_date": false,
+        "id": "1993262484749",
+        "inventory_type": "limited",
+        "invite_only": false,
+        "is_externally_ticketed": false,
+        "is_free": true,
+        "is_locked": false,
+        "is_reserved_seating": false,
+        "is_series": true,
+        "is_series_parent": false,
+        "listed": true,
+        "locale": "en_GB",
+        "logo": {
+          "aspect_ratio": "2",
+          "crop_mask": {
+            "height": 1080,
+            "top_left": {
+              "x": 0,
+              "y": 0
+            },
+            "width": 2160
+          },
+          "edge_color": "#d32f23",
+          "edge_color_set": true,
+          "id": "1173216047",
+          "original": {
+            "height": 1080,
+            "url": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1173216047%2F543747696447%2F1%2Foriginal.20251218-173229?auto=format%2Ccompress&q=75&sharp=10&s=6cf6c102ff0d264fbe9faed8c07aac2b",
+            "width": 2160
+          },
+          "url": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1173216047%2F543747696447%2F1%2Foriginal.20251218-173229?h=200&w=450&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C0%2C2160%2C1080&s=7fcaef8dbf5495eb05d3d7f96ad8bc82"
+        },
+        "logo_id": "1173216047",
+        "name": {
+          "html": "Free Comedy Every Sunday at 6pm in North London",
+          "text": "Free Comedy Every Sunday at 6pm in North London"
+        },
+        "online_event": false,
+        "organization_id": "1234539271983",
+        "organizer_id": "55764637993",
+        "privacy_setting": "unlocked",
+        "published": "2025-12-18T17:35:59Z",
+        "resource_uri": "https://www.eventbriteapi.com/v3/events/1993262484749/",
+        "series_id": "1978430404598",
+        "shareable": true,
+        "show_colors_in_seatmap_thumbnail": false,
+        "show_pick_a_seat": false,
+        "show_remaining": false,
+        "show_seatmap_thumbnail": false,
+        "source": "coyote",
+        "start": {
+          "local": "2026-09-06T18:00:00",
+          "timezone": "Europe/London",
+          "utc": "2026-09-06T17:00:00Z"
+        },
+        "status": "live",
+        "subcategory_id": "5010",
+        "summary": "The best free Stand Up Comedy in London, every Sunday at 6pm at Brewhouse & Kitchen in North London.",
+        "ticket_availability": {
+          "has_available_tickets": true,
+          "is_sold_out": false,
+          "maximum_ticket_price": {
+            "currency": "GBP",
+            "display": "0.00 GBP",
+            "major_value": "0.00",
+            "value": 0
+          },
+          "minimum_ticket_price": {
+            "currency": "GBP",
+            "display": "0.00 GBP",
+            "major_value": "0.00",
+            "value": 0
+          },
+          "start_sales_date": null,
+          "waitlist_available": false
+        },
+        "tx_time_limit": 1200,
+        "url": "https://www.eventbrite.co.uk/e/free-comedy-every-sunday-at-6pm-in-north-london-tickets-1993262484749",
+        "venue": {
+          "address": {
+            "address_1": "2A Corsica Street",
+            "address_2": "",
+            "city": "London",
+            "country": "GB",
+            "latitude": "51.5463543",
+            "localized_address_display": "2A Corsica Street, London, N5 1JJ",
+            "localized_area_display": "London",
+            "localized_multi_line_address_display": [
+              "2A Corsica Street",
+              "London",
+              "N5 1JJ"
+            ],
+            "longitude": "-0.1017174",
+            "postal_code": "N5 1JJ",
+            "region": "England"
+          },
+          "age_restriction": null,
+          "capacity": null,
+          "id": "295674687",
+          "latitude": "51.5463543",
+          "longitude": "-0.1017174",
+          "name": "Brewhouse & Kitchen - Highbury",
+          "resource_uri": "https://www.eventbriteapi.com/v3/venues/295674687/"
+        },
+        "venue_id": "295674687",
+        "version": null
+      },
+      "last_seen": "2026-07-05",
+      "path": "/events/free-comedy-every-sunday-at-6pm-in-north-london-2026-09-06-1800-1993262484749/",
+      "status": "live"
+    },
+    "1993262500797": {
+      "event": {
+        "capacity": 80,
+        "capacity_is_custom": false,
+        "category_id": "105",
+        "changed": "2026-07-05T13:50:33Z",
+        "created": "2026-07-05T13:50:33Z",
+        "currency": "GBP",
+        "description": {
+          "html": "The best free Stand Up Comedy in London, every Sunday at 8pm at Brewhouse &amp; Kitchen in Islington.",
+          "text": "The best free Stand Up Comedy in London, every Sunday at 8pm at Brewhouse & Kitchen in Islington."
+        },
+        "end": {
+          "local": "2026-07-12T21:30:00",
+          "timezone": "Europe/London",
+          "utc": "2026-07-12T20:30:00Z"
+        },
+        "facebook_event_id": null,
+        "format_id": "6",
+        "hide_end_date": false,
+        "hide_start_date": false,
+        "id": "1993262500797",
+        "inventory_type": "limited",
+        "invite_only": false,
+        "is_externally_ticketed": false,
+        "is_free": true,
+        "is_locked": false,
+        "is_reserved_seating": false,
+        "is_series": true,
+        "is_series_parent": false,
+        "listed": true,
+        "locale": "en_GB",
+        "logo": {
+          "aspect_ratio": "2",
+          "crop_mask": {
+            "height": 1080,
+            "top_left": {
+              "x": 0,
+              "y": 0
+            },
+            "width": 2160
+          },
+          "edge_color": null,
+          "edge_color_set": true,
+          "id": "1176403518",
+          "original": {
+            "height": 1080,
+            "url": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1176403518%2F543747696447%2F1%2Foriginal.20260201-230633?auto=format%2Ccompress&q=75&sharp=10&s=606020b6ba85db1cbee1a7a6759bd052",
+            "width": 2160
+          },
+          "url": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1176403518%2F543747696447%2F1%2Foriginal.20260201-230633?h=200&w=450&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C0%2C2160%2C1080&s=3f033b2603a50787a5af55f8855cb493"
+        },
+        "logo_id": "1176403518",
+        "name": {
+          "html": "Free Comedy Every Sunday at 8pm in Islington",
+          "text": "Free Comedy Every Sunday at 8pm in Islington"
+        },
+        "online_event": false,
+        "organization_id": "1234539271983",
+        "organizer_id": "55764637993",
+        "privacy_setting": "unlocked",
+        "published": "2026-02-01T23:07:03Z",
+        "resource_uri": "https://www.eventbriteapi.com/v3/events/1993262500797/",
+        "series_id": "1982140155563",
+        "shareable": true,
+        "show_colors_in_seatmap_thumbnail": false,
+        "show_pick_a_seat": false,
+        "show_remaining": false,
+        "show_seatmap_thumbnail": false,
+        "source": "coyote",
+        "start": {
+          "local": "2026-07-12T20:00:00",
+          "timezone": "Europe/London",
+          "utc": "2026-07-12T19:00:00Z"
+        },
+        "status": "live",
+        "subcategory_id": "5010",
+        "summary": "The best free Stand Up Comedy in London, every Sunday at 8pm at Brewhouse & Kitchen in Islington.",
+        "ticket_availability": {
+          "has_available_tickets": true,
+          "is_sold_out": false,
+          "maximum_ticket_price": {
+            "currency": "GBP",
+            "display": "0.00 GBP",
+            "major_value": "0.00",
+            "value": 0
+          },
+          "minimum_ticket_price": {
+            "currency": "GBP",
+            "display": "0.00 GBP",
+            "major_value": "0.00",
+            "value": 0
+          },
+          "start_sales_date": null,
+          "waitlist_available": false
+        },
+        "tx_time_limit": 1200,
+        "url": "https://www.eventbrite.co.uk/e/free-comedy-every-sunday-at-8pm-in-islington-tickets-1993262500797",
+        "venue": {
+          "address": {
+            "address_1": "2A Corsica Street",
+            "address_2": "",
+            "city": "London",
+            "country": "GB",
+            "latitude": "51.5463543",
+            "localized_address_display": "2A Corsica Street, London, N5 1JJ",
+            "localized_area_display": "London",
+            "localized_multi_line_address_display": [
+              "2A Corsica Street",
+              "London",
+              "N5 1JJ"
+            ],
+            "longitude": "-0.1017174",
+            "postal_code": "N5 1JJ",
+            "region": "England"
+          },
+          "age_restriction": null,
+          "capacity": null,
+          "id": "296236287",
+          "latitude": "51.5463543",
+          "longitude": "-0.1017174",
+          "name": "Brewhouse & Kitchen - Highbury",
+          "resource_uri": "https://www.eventbriteapi.com/v3/venues/296236287/"
+        },
+        "venue_id": "296236287",
+        "version": null
+      },
+      "last_seen": "2026-07-05",
+      "path": "/events/islington-sunday-comedy-8pm-2026-07-12-2000-1993262500797/",
+      "status": "live"
+    },
+    "1993262501800": {
+      "event": {
+        "capacity": 80,
+        "capacity_is_custom": false,
+        "category_id": "105",
+        "changed": "2026-07-05T13:50:33Z",
+        "created": "2026-07-05T13:50:33Z",
+        "currency": "GBP",
+        "description": {
+          "html": "The best free Stand Up Comedy in London, every Sunday at 8pm at Brewhouse &amp; Kitchen in Islington.",
+          "text": "The best free Stand Up Comedy in London, every Sunday at 8pm at Brewhouse & Kitchen in Islington."
+        },
+        "end": {
+          "local": "2026-07-19T21:30:00",
+          "timezone": "Europe/London",
+          "utc": "2026-07-19T20:30:00Z"
+        },
+        "facebook_event_id": null,
+        "format_id": "6",
+        "hide_end_date": false,
+        "hide_start_date": false,
+        "id": "1993262501800",
+        "inventory_type": "limited",
+        "invite_only": false,
+        "is_externally_ticketed": false,
+        "is_free": true,
+        "is_locked": false,
+        "is_reserved_seating": false,
+        "is_series": true,
+        "is_series_parent": false,
+        "listed": true,
+        "locale": "en_GB",
+        "logo": {
+          "aspect_ratio": "2",
+          "crop_mask": {
+            "height": 1080,
+            "top_left": {
+              "x": 0,
+              "y": 0
+            },
+            "width": 2160
+          },
+          "edge_color": null,
+          "edge_color_set": true,
+          "id": "1176403518",
+          "original": {
+            "height": 1080,
+            "url": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1176403518%2F543747696447%2F1%2Foriginal.20260201-230633?auto=format%2Ccompress&q=75&sharp=10&s=606020b6ba85db1cbee1a7a6759bd052",
+            "width": 2160
+          },
+          "url": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1176403518%2F543747696447%2F1%2Foriginal.20260201-230633?h=200&w=450&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C0%2C2160%2C1080&s=3f033b2603a50787a5af55f8855cb493"
+        },
+        "logo_id": "1176403518",
+        "name": {
+          "html": "Free Comedy Every Sunday at 8pm in Islington",
+          "text": "Free Comedy Every Sunday at 8pm in Islington"
+        },
+        "online_event": false,
+        "organization_id": "1234539271983",
+        "organizer_id": "55764637993",
+        "privacy_setting": "unlocked",
+        "published": "2026-02-01T23:07:03Z",
+        "resource_uri": "https://www.eventbriteapi.com/v3/events/1993262501800/",
+        "series_id": "1982140155563",
+        "shareable": true,
+        "show_colors_in_seatmap_thumbnail": false,
+        "show_pick_a_seat": false,
+        "show_remaining": false,
+        "show_seatmap_thumbnail": false,
+        "source": "coyote",
+        "start": {
+          "local": "2026-07-19T20:00:00",
+          "timezone": "Europe/London",
+          "utc": "2026-07-19T19:00:00Z"
+        },
+        "status": "live",
+        "subcategory_id": "5010",
+        "summary": "The best free Stand Up Comedy in London, every Sunday at 8pm at Brewhouse & Kitchen in Islington.",
+        "ticket_availability": {
+          "has_available_tickets": true,
+          "is_sold_out": false,
+          "maximum_ticket_price": {
+            "currency": "GBP",
+            "display": "0.00 GBP",
+            "major_value": "0.00",
+            "value": 0
+          },
+          "minimum_ticket_price": {
+            "currency": "GBP",
+            "display": "0.00 GBP",
+            "major_value": "0.00",
+            "value": 0
+          },
+          "start_sales_date": null,
+          "waitlist_available": false
+        },
+        "tx_time_limit": 1200,
+        "url": "https://www.eventbrite.co.uk/e/free-comedy-every-sunday-at-8pm-in-islington-tickets-1993262501800",
+        "venue": {
+          "address": {
+            "address_1": "2A Corsica Street",
+            "address_2": "",
+            "city": "London",
+            "country": "GB",
+            "latitude": "51.5463543",
+            "localized_address_display": "2A Corsica Street, London, N5 1JJ",
+            "localized_area_display": "London",
+            "localized_multi_line_address_display": [
+              "2A Corsica Street",
+              "London",
+              "N5 1JJ"
+            ],
+            "longitude": "-0.1017174",
+            "postal_code": "N5 1JJ",
+            "region": "England"
+          },
+          "age_restriction": null,
+          "capacity": null,
+          "id": "296236287",
+          "latitude": "51.5463543",
+          "longitude": "-0.1017174",
+          "name": "Brewhouse & Kitchen - Highbury",
+          "resource_uri": "https://www.eventbriteapi.com/v3/venues/296236287/"
+        },
+        "venue_id": "296236287",
+        "version": null
+      },
+      "last_seen": "2026-07-05",
+      "path": "/events/islington-sunday-comedy-8pm-2026-07-19-2000-1993262501800/",
+      "status": "live"
+    },
+    "1993262502803": {
+      "event": {
+        "capacity": 80,
+        "capacity_is_custom": false,
+        "category_id": "105",
+        "changed": "2026-07-05T13:50:33Z",
+        "created": "2026-07-05T13:50:33Z",
+        "currency": "GBP",
+        "description": {
+          "html": "The best free Stand Up Comedy in London, every Sunday at 8pm at Brewhouse &amp; Kitchen in Islington.",
+          "text": "The best free Stand Up Comedy in London, every Sunday at 8pm at Brewhouse & Kitchen in Islington."
+        },
+        "end": {
+          "local": "2026-07-26T21:30:00",
+          "timezone": "Europe/London",
+          "utc": "2026-07-26T20:30:00Z"
+        },
+        "facebook_event_id": null,
+        "format_id": "6",
+        "hide_end_date": false,
+        "hide_start_date": false,
+        "id": "1993262502803",
+        "inventory_type": "limited",
+        "invite_only": false,
+        "is_externally_ticketed": false,
+        "is_free": true,
+        "is_locked": false,
+        "is_reserved_seating": false,
+        "is_series": true,
+        "is_series_parent": false,
+        "listed": true,
+        "locale": "en_GB",
+        "logo": {
+          "aspect_ratio": "2",
+          "crop_mask": {
+            "height": 1080,
+            "top_left": {
+              "x": 0,
+              "y": 0
+            },
+            "width": 2160
+          },
+          "edge_color": null,
+          "edge_color_set": true,
+          "id": "1176403518",
+          "original": {
+            "height": 1080,
+            "url": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1176403518%2F543747696447%2F1%2Foriginal.20260201-230633?auto=format%2Ccompress&q=75&sharp=10&s=606020b6ba85db1cbee1a7a6759bd052",
+            "width": 2160
+          },
+          "url": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1176403518%2F543747696447%2F1%2Foriginal.20260201-230633?h=200&w=450&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C0%2C2160%2C1080&s=3f033b2603a50787a5af55f8855cb493"
+        },
+        "logo_id": "1176403518",
+        "name": {
+          "html": "Free Comedy Every Sunday at 8pm in Islington",
+          "text": "Free Comedy Every Sunday at 8pm in Islington"
+        },
+        "online_event": false,
+        "organization_id": "1234539271983",
+        "organizer_id": "55764637993",
+        "privacy_setting": "unlocked",
+        "published": "2026-02-01T23:07:03Z",
+        "resource_uri": "https://www.eventbriteapi.com/v3/events/1993262502803/",
+        "series_id": "1982140155563",
+        "shareable": true,
+        "show_colors_in_seatmap_thumbnail": false,
+        "show_pick_a_seat": false,
+        "show_remaining": false,
+        "show_seatmap_thumbnail": false,
+        "source": "coyote",
+        "start": {
+          "local": "2026-07-26T20:00:00",
+          "timezone": "Europe/London",
+          "utc": "2026-07-26T19:00:00Z"
+        },
+        "status": "live",
+        "subcategory_id": "5010",
+        "summary": "The best free Stand Up Comedy in London, every Sunday at 8pm at Brewhouse & Kitchen in Islington.",
+        "ticket_availability": {
+          "has_available_tickets": true,
+          "is_sold_out": false,
+          "maximum_ticket_price": {
+            "currency": "GBP",
+            "display": "0.00 GBP",
+            "major_value": "0.00",
+            "value": 0
+          },
+          "minimum_ticket_price": {
+            "currency": "GBP",
+            "display": "0.00 GBP",
+            "major_value": "0.00",
+            "value": 0
+          },
+          "start_sales_date": null,
+          "waitlist_available": false
+        },
+        "tx_time_limit": 1200,
+        "url": "https://www.eventbrite.co.uk/e/free-comedy-every-sunday-at-8pm-in-islington-tickets-1993262502803",
+        "venue": {
+          "address": {
+            "address_1": "2A Corsica Street",
+            "address_2": "",
+            "city": "London",
+            "country": "GB",
+            "latitude": "51.5463543",
+            "localized_address_display": "2A Corsica Street, London, N5 1JJ",
+            "localized_area_display": "London",
+            "localized_multi_line_address_display": [
+              "2A Corsica Street",
+              "London",
+              "N5 1JJ"
+            ],
+            "longitude": "-0.1017174",
+            "postal_code": "N5 1JJ",
+            "region": "England"
+          },
+          "age_restriction": null,
+          "capacity": null,
+          "id": "296236287",
+          "latitude": "51.5463543",
+          "longitude": "-0.1017174",
+          "name": "Brewhouse & Kitchen - Highbury",
+          "resource_uri": "https://www.eventbriteapi.com/v3/venues/296236287/"
+        },
+        "venue_id": "296236287",
+        "version": null
+      },
+      "last_seen": "2026-07-05",
+      "path": "/events/islington-sunday-comedy-8pm-2026-07-26-2000-1993262502803/",
+      "status": "live"
+    },
+    "1993262503806": {
+      "event": {
+        "capacity": 80,
+        "capacity_is_custom": false,
+        "category_id": "105",
+        "changed": "2026-07-05T13:50:33Z",
+        "created": "2026-07-05T13:50:33Z",
+        "currency": "GBP",
+        "description": {
+          "html": "The best free Stand Up Comedy in London, every Sunday at 8pm at Brewhouse &amp; Kitchen in Islington.",
+          "text": "The best free Stand Up Comedy in London, every Sunday at 8pm at Brewhouse & Kitchen in Islington."
+        },
+        "end": {
+          "local": "2026-08-02T21:30:00",
+          "timezone": "Europe/London",
+          "utc": "2026-08-02T20:30:00Z"
+        },
+        "facebook_event_id": null,
+        "format_id": "6",
+        "hide_end_date": false,
+        "hide_start_date": false,
+        "id": "1993262503806",
+        "inventory_type": "limited",
+        "invite_only": false,
+        "is_externally_ticketed": false,
+        "is_free": true,
+        "is_locked": false,
+        "is_reserved_seating": false,
+        "is_series": true,
+        "is_series_parent": false,
+        "listed": true,
+        "locale": "en_GB",
+        "logo": {
+          "aspect_ratio": "2",
+          "crop_mask": {
+            "height": 1080,
+            "top_left": {
+              "x": 0,
+              "y": 0
+            },
+            "width": 2160
+          },
+          "edge_color": null,
+          "edge_color_set": true,
+          "id": "1176403518",
+          "original": {
+            "height": 1080,
+            "url": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1176403518%2F543747696447%2F1%2Foriginal.20260201-230633?auto=format%2Ccompress&q=75&sharp=10&s=606020b6ba85db1cbee1a7a6759bd052",
+            "width": 2160
+          },
+          "url": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1176403518%2F543747696447%2F1%2Foriginal.20260201-230633?h=200&w=450&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C0%2C2160%2C1080&s=3f033b2603a50787a5af55f8855cb493"
+        },
+        "logo_id": "1176403518",
+        "name": {
+          "html": "Free Comedy Every Sunday at 8pm in Islington",
+          "text": "Free Comedy Every Sunday at 8pm in Islington"
+        },
+        "online_event": false,
+        "organization_id": "1234539271983",
+        "organizer_id": "55764637993",
+        "privacy_setting": "unlocked",
+        "published": "2026-02-01T23:07:03Z",
+        "resource_uri": "https://www.eventbriteapi.com/v3/events/1993262503806/",
+        "series_id": "1982140155563",
+        "shareable": true,
+        "show_colors_in_seatmap_thumbnail": false,
+        "show_pick_a_seat": false,
+        "show_remaining": false,
+        "show_seatmap_thumbnail": false,
+        "source": "coyote",
+        "start": {
+          "local": "2026-08-02T20:00:00",
+          "timezone": "Europe/London",
+          "utc": "2026-08-02T19:00:00Z"
+        },
+        "status": "live",
+        "subcategory_id": "5010",
+        "summary": "The best free Stand Up Comedy in London, every Sunday at 8pm at Brewhouse & Kitchen in Islington.",
+        "ticket_availability": {
+          "has_available_tickets": true,
+          "is_sold_out": false,
+          "maximum_ticket_price": {
+            "currency": "GBP",
+            "display": "0.00 GBP",
+            "major_value": "0.00",
+            "value": 0
+          },
+          "minimum_ticket_price": {
+            "currency": "GBP",
+            "display": "0.00 GBP",
+            "major_value": "0.00",
+            "value": 0
+          },
+          "start_sales_date": null,
+          "waitlist_available": false
+        },
+        "tx_time_limit": 1200,
+        "url": "https://www.eventbrite.co.uk/e/free-comedy-every-sunday-at-8pm-in-islington-tickets-1993262503806",
+        "venue": {
+          "address": {
+            "address_1": "2A Corsica Street",
+            "address_2": "",
+            "city": "London",
+            "country": "GB",
+            "latitude": "51.5463543",
+            "localized_address_display": "2A Corsica Street, London, N5 1JJ",
+            "localized_area_display": "London",
+            "localized_multi_line_address_display": [
+              "2A Corsica Street",
+              "London",
+              "N5 1JJ"
+            ],
+            "longitude": "-0.1017174",
+            "postal_code": "N5 1JJ",
+            "region": "England"
+          },
+          "age_restriction": null,
+          "capacity": null,
+          "id": "296236287",
+          "latitude": "51.5463543",
+          "longitude": "-0.1017174",
+          "name": "Brewhouse & Kitchen - Highbury",
+          "resource_uri": "https://www.eventbriteapi.com/v3/venues/296236287/"
+        },
+        "venue_id": "296236287",
+        "version": null
+      },
+      "last_seen": "2026-07-05",
+      "path": "/events/islington-sunday-comedy-8pm-2026-08-02-2000-1993262503806/",
+      "status": "live"
+    },
+    "1993262504809": {
+      "event": {
+        "capacity": 80,
+        "capacity_is_custom": false,
+        "category_id": "105",
+        "changed": "2026-07-05T13:50:33Z",
+        "created": "2026-07-05T13:50:33Z",
+        "currency": "GBP",
+        "description": {
+          "html": "The best free Stand Up Comedy in London, every Sunday at 8pm at Brewhouse &amp; Kitchen in Islington.",
+          "text": "The best free Stand Up Comedy in London, every Sunday at 8pm at Brewhouse & Kitchen in Islington."
+        },
+        "end": {
+          "local": "2026-08-09T21:30:00",
+          "timezone": "Europe/London",
+          "utc": "2026-08-09T20:30:00Z"
+        },
+        "facebook_event_id": null,
+        "format_id": "6",
+        "hide_end_date": false,
+        "hide_start_date": false,
+        "id": "1993262504809",
+        "inventory_type": "limited",
+        "invite_only": false,
+        "is_externally_ticketed": false,
+        "is_free": true,
+        "is_locked": false,
+        "is_reserved_seating": false,
+        "is_series": true,
+        "is_series_parent": false,
+        "listed": true,
+        "locale": "en_GB",
+        "logo": {
+          "aspect_ratio": "2",
+          "crop_mask": {
+            "height": 1080,
+            "top_left": {
+              "x": 0,
+              "y": 0
+            },
+            "width": 2160
+          },
+          "edge_color": null,
+          "edge_color_set": true,
+          "id": "1176403518",
+          "original": {
+            "height": 1080,
+            "url": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1176403518%2F543747696447%2F1%2Foriginal.20260201-230633?auto=format%2Ccompress&q=75&sharp=10&s=606020b6ba85db1cbee1a7a6759bd052",
+            "width": 2160
+          },
+          "url": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1176403518%2F543747696447%2F1%2Foriginal.20260201-230633?h=200&w=450&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C0%2C2160%2C1080&s=3f033b2603a50787a5af55f8855cb493"
+        },
+        "logo_id": "1176403518",
+        "name": {
+          "html": "Free Comedy Every Sunday at 8pm in Islington",
+          "text": "Free Comedy Every Sunday at 8pm in Islington"
+        },
+        "online_event": false,
+        "organization_id": "1234539271983",
+        "organizer_id": "55764637993",
+        "privacy_setting": "unlocked",
+        "published": "2026-02-01T23:07:03Z",
+        "resource_uri": "https://www.eventbriteapi.com/v3/events/1993262504809/",
+        "series_id": "1982140155563",
+        "shareable": true,
+        "show_colors_in_seatmap_thumbnail": false,
+        "show_pick_a_seat": false,
+        "show_remaining": false,
+        "show_seatmap_thumbnail": false,
+        "source": "coyote",
+        "start": {
+          "local": "2026-08-09T20:00:00",
+          "timezone": "Europe/London",
+          "utc": "2026-08-09T19:00:00Z"
+        },
+        "status": "live",
+        "subcategory_id": "5010",
+        "summary": "The best free Stand Up Comedy in London, every Sunday at 8pm at Brewhouse & Kitchen in Islington.",
+        "ticket_availability": {
+          "has_available_tickets": true,
+          "is_sold_out": false,
+          "maximum_ticket_price": {
+            "currency": "GBP",
+            "display": "0.00 GBP",
+            "major_value": "0.00",
+            "value": 0
+          },
+          "minimum_ticket_price": {
+            "currency": "GBP",
+            "display": "0.00 GBP",
+            "major_value": "0.00",
+            "value": 0
+          },
+          "start_sales_date": null,
+          "waitlist_available": false
+        },
+        "tx_time_limit": 1200,
+        "url": "https://www.eventbrite.co.uk/e/free-comedy-every-sunday-at-8pm-in-islington-tickets-1993262504809",
+        "venue": {
+          "address": {
+            "address_1": "2A Corsica Street",
+            "address_2": "",
+            "city": "London",
+            "country": "GB",
+            "latitude": "51.5463543",
+            "localized_address_display": "2A Corsica Street, London, N5 1JJ",
+            "localized_area_display": "London",
+            "localized_multi_line_address_display": [
+              "2A Corsica Street",
+              "London",
+              "N5 1JJ"
+            ],
+            "longitude": "-0.1017174",
+            "postal_code": "N5 1JJ",
+            "region": "England"
+          },
+          "age_restriction": null,
+          "capacity": null,
+          "id": "296236287",
+          "latitude": "51.5463543",
+          "longitude": "-0.1017174",
+          "name": "Brewhouse & Kitchen - Highbury",
+          "resource_uri": "https://www.eventbriteapi.com/v3/venues/296236287/"
+        },
+        "venue_id": "296236287",
+        "version": null
+      },
+      "last_seen": "2026-07-05",
+      "path": "/events/islington-sunday-comedy-8pm-2026-08-09-2000-1993262504809/",
+      "status": "live"
+    },
+    "1993262505812": {
+      "event": {
+        "capacity": 80,
+        "capacity_is_custom": false,
+        "category_id": "105",
+        "changed": "2026-07-05T13:50:33Z",
+        "created": "2026-07-05T13:50:33Z",
+        "currency": "GBP",
+        "description": {
+          "html": "The best free Stand Up Comedy in London, every Sunday at 8pm at Brewhouse &amp; Kitchen in Islington.",
+          "text": "The best free Stand Up Comedy in London, every Sunday at 8pm at Brewhouse & Kitchen in Islington."
+        },
+        "end": {
+          "local": "2026-08-16T21:30:00",
+          "timezone": "Europe/London",
+          "utc": "2026-08-16T20:30:00Z"
+        },
+        "facebook_event_id": null,
+        "format_id": "6",
+        "hide_end_date": false,
+        "hide_start_date": false,
+        "id": "1993262505812",
+        "inventory_type": "limited",
+        "invite_only": false,
+        "is_externally_ticketed": false,
+        "is_free": true,
+        "is_locked": false,
+        "is_reserved_seating": false,
+        "is_series": true,
+        "is_series_parent": false,
+        "listed": true,
+        "locale": "en_GB",
+        "logo": {
+          "aspect_ratio": "2",
+          "crop_mask": {
+            "height": 1080,
+            "top_left": {
+              "x": 0,
+              "y": 0
+            },
+            "width": 2160
+          },
+          "edge_color": null,
+          "edge_color_set": true,
+          "id": "1176403518",
+          "original": {
+            "height": 1080,
+            "url": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1176403518%2F543747696447%2F1%2Foriginal.20260201-230633?auto=format%2Ccompress&q=75&sharp=10&s=606020b6ba85db1cbee1a7a6759bd052",
+            "width": 2160
+          },
+          "url": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1176403518%2F543747696447%2F1%2Foriginal.20260201-230633?h=200&w=450&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C0%2C2160%2C1080&s=3f033b2603a50787a5af55f8855cb493"
+        },
+        "logo_id": "1176403518",
+        "name": {
+          "html": "Free Comedy Every Sunday at 8pm in Islington",
+          "text": "Free Comedy Every Sunday at 8pm in Islington"
+        },
+        "online_event": false,
+        "organization_id": "1234539271983",
+        "organizer_id": "55764637993",
+        "privacy_setting": "unlocked",
+        "published": "2026-02-01T23:07:03Z",
+        "resource_uri": "https://www.eventbriteapi.com/v3/events/1993262505812/",
+        "series_id": "1982140155563",
+        "shareable": true,
+        "show_colors_in_seatmap_thumbnail": false,
+        "show_pick_a_seat": false,
+        "show_remaining": false,
+        "show_seatmap_thumbnail": false,
+        "source": "coyote",
+        "start": {
+          "local": "2026-08-16T20:00:00",
+          "timezone": "Europe/London",
+          "utc": "2026-08-16T19:00:00Z"
+        },
+        "status": "live",
+        "subcategory_id": "5010",
+        "summary": "The best free Stand Up Comedy in London, every Sunday at 8pm at Brewhouse & Kitchen in Islington.",
+        "ticket_availability": {
+          "has_available_tickets": true,
+          "is_sold_out": false,
+          "maximum_ticket_price": {
+            "currency": "GBP",
+            "display": "0.00 GBP",
+            "major_value": "0.00",
+            "value": 0
+          },
+          "minimum_ticket_price": {
+            "currency": "GBP",
+            "display": "0.00 GBP",
+            "major_value": "0.00",
+            "value": 0
+          },
+          "start_sales_date": null,
+          "waitlist_available": false
+        },
+        "tx_time_limit": 1200,
+        "url": "https://www.eventbrite.co.uk/e/free-comedy-every-sunday-at-8pm-in-islington-tickets-1993262505812",
+        "venue": {
+          "address": {
+            "address_1": "2A Corsica Street",
+            "address_2": "",
+            "city": "London",
+            "country": "GB",
+            "latitude": "51.5463543",
+            "localized_address_display": "2A Corsica Street, London, N5 1JJ",
+            "localized_area_display": "London",
+            "localized_multi_line_address_display": [
+              "2A Corsica Street",
+              "London",
+              "N5 1JJ"
+            ],
+            "longitude": "-0.1017174",
+            "postal_code": "N5 1JJ",
+            "region": "England"
+          },
+          "age_restriction": null,
+          "capacity": null,
+          "id": "296236287",
+          "latitude": "51.5463543",
+          "longitude": "-0.1017174",
+          "name": "Brewhouse & Kitchen - Highbury",
+          "resource_uri": "https://www.eventbriteapi.com/v3/venues/296236287/"
+        },
+        "venue_id": "296236287",
+        "version": null
+      },
+      "last_seen": "2026-07-05",
+      "path": "/events/islington-sunday-comedy-8pm-2026-08-16-2000-1993262505812/",
+      "status": "live"
+    },
+    "1993262506815": {
+      "event": {
+        "capacity": 80,
+        "capacity_is_custom": false,
+        "category_id": "105",
+        "changed": "2026-07-05T13:50:33Z",
+        "created": "2026-07-05T13:50:33Z",
+        "currency": "GBP",
+        "description": {
+          "html": "The best free Stand Up Comedy in London, every Sunday at 8pm at Brewhouse &amp; Kitchen in Islington.",
+          "text": "The best free Stand Up Comedy in London, every Sunday at 8pm at Brewhouse & Kitchen in Islington."
+        },
+        "end": {
+          "local": "2026-08-23T21:30:00",
+          "timezone": "Europe/London",
+          "utc": "2026-08-23T20:30:00Z"
+        },
+        "facebook_event_id": null,
+        "format_id": "6",
+        "hide_end_date": false,
+        "hide_start_date": false,
+        "id": "1993262506815",
+        "inventory_type": "limited",
+        "invite_only": false,
+        "is_externally_ticketed": false,
+        "is_free": true,
+        "is_locked": false,
+        "is_reserved_seating": false,
+        "is_series": true,
+        "is_series_parent": false,
+        "listed": true,
+        "locale": "en_GB",
+        "logo": {
+          "aspect_ratio": "2",
+          "crop_mask": {
+            "height": 1080,
+            "top_left": {
+              "x": 0,
+              "y": 0
+            },
+            "width": 2160
+          },
+          "edge_color": null,
+          "edge_color_set": true,
+          "id": "1176403518",
+          "original": {
+            "height": 1080,
+            "url": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1176403518%2F543747696447%2F1%2Foriginal.20260201-230633?auto=format%2Ccompress&q=75&sharp=10&s=606020b6ba85db1cbee1a7a6759bd052",
+            "width": 2160
+          },
+          "url": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1176403518%2F543747696447%2F1%2Foriginal.20260201-230633?h=200&w=450&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C0%2C2160%2C1080&s=3f033b2603a50787a5af55f8855cb493"
+        },
+        "logo_id": "1176403518",
+        "name": {
+          "html": "Free Comedy Every Sunday at 8pm in Islington",
+          "text": "Free Comedy Every Sunday at 8pm in Islington"
+        },
+        "online_event": false,
+        "organization_id": "1234539271983",
+        "organizer_id": "55764637993",
+        "privacy_setting": "unlocked",
+        "published": "2026-02-01T23:07:03Z",
+        "resource_uri": "https://www.eventbriteapi.com/v3/events/1993262506815/",
+        "series_id": "1982140155563",
+        "shareable": true,
+        "show_colors_in_seatmap_thumbnail": false,
+        "show_pick_a_seat": false,
+        "show_remaining": false,
+        "show_seatmap_thumbnail": false,
+        "source": "coyote",
+        "start": {
+          "local": "2026-08-23T20:00:00",
+          "timezone": "Europe/London",
+          "utc": "2026-08-23T19:00:00Z"
+        },
+        "status": "live",
+        "subcategory_id": "5010",
+        "summary": "The best free Stand Up Comedy in London, every Sunday at 8pm at Brewhouse & Kitchen in Islington.",
+        "ticket_availability": {
+          "has_available_tickets": true,
+          "is_sold_out": false,
+          "maximum_ticket_price": {
+            "currency": "GBP",
+            "display": "0.00 GBP",
+            "major_value": "0.00",
+            "value": 0
+          },
+          "minimum_ticket_price": {
+            "currency": "GBP",
+            "display": "0.00 GBP",
+            "major_value": "0.00",
+            "value": 0
+          },
+          "start_sales_date": null,
+          "waitlist_available": false
+        },
+        "tx_time_limit": 1200,
+        "url": "https://www.eventbrite.co.uk/e/free-comedy-every-sunday-at-8pm-in-islington-tickets-1993262506815",
+        "venue": {
+          "address": {
+            "address_1": "2A Corsica Street",
+            "address_2": "",
+            "city": "London",
+            "country": "GB",
+            "latitude": "51.5463543",
+            "localized_address_display": "2A Corsica Street, London, N5 1JJ",
+            "localized_area_display": "London",
+            "localized_multi_line_address_display": [
+              "2A Corsica Street",
+              "London",
+              "N5 1JJ"
+            ],
+            "longitude": "-0.1017174",
+            "postal_code": "N5 1JJ",
+            "region": "England"
+          },
+          "age_restriction": null,
+          "capacity": null,
+          "id": "296236287",
+          "latitude": "51.5463543",
+          "longitude": "-0.1017174",
+          "name": "Brewhouse & Kitchen - Highbury",
+          "resource_uri": "https://www.eventbriteapi.com/v3/venues/296236287/"
+        },
+        "venue_id": "296236287",
+        "version": null
+      },
+      "last_seen": "2026-07-05",
+      "path": "/events/islington-sunday-comedy-8pm-2026-08-23-2000-1993262506815/",
+      "status": "live"
+    },
+    "1993262507818": {
+      "event": {
+        "capacity": 80,
+        "capacity_is_custom": false,
+        "category_id": "105",
+        "changed": "2026-07-05T13:50:33Z",
+        "created": "2026-07-05T13:50:33Z",
+        "currency": "GBP",
+        "description": {
+          "html": "The best free Stand Up Comedy in London, every Sunday at 8pm at Brewhouse &amp; Kitchen in Islington.",
+          "text": "The best free Stand Up Comedy in London, every Sunday at 8pm at Brewhouse & Kitchen in Islington."
+        },
+        "end": {
+          "local": "2026-08-30T21:30:00",
+          "timezone": "Europe/London",
+          "utc": "2026-08-30T20:30:00Z"
+        },
+        "facebook_event_id": null,
+        "format_id": "6",
+        "hide_end_date": false,
+        "hide_start_date": false,
+        "id": "1993262507818",
+        "inventory_type": "limited",
+        "invite_only": false,
+        "is_externally_ticketed": false,
+        "is_free": true,
+        "is_locked": false,
+        "is_reserved_seating": false,
+        "is_series": true,
+        "is_series_parent": false,
+        "listed": true,
+        "locale": "en_GB",
+        "logo": {
+          "aspect_ratio": "2",
+          "crop_mask": {
+            "height": 1080,
+            "top_left": {
+              "x": 0,
+              "y": 0
+            },
+            "width": 2160
+          },
+          "edge_color": null,
+          "edge_color_set": true,
+          "id": "1176403518",
+          "original": {
+            "height": 1080,
+            "url": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1176403518%2F543747696447%2F1%2Foriginal.20260201-230633?auto=format%2Ccompress&q=75&sharp=10&s=606020b6ba85db1cbee1a7a6759bd052",
+            "width": 2160
+          },
+          "url": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1176403518%2F543747696447%2F1%2Foriginal.20260201-230633?h=200&w=450&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C0%2C2160%2C1080&s=3f033b2603a50787a5af55f8855cb493"
+        },
+        "logo_id": "1176403518",
+        "name": {
+          "html": "Free Comedy Every Sunday at 8pm in Islington",
+          "text": "Free Comedy Every Sunday at 8pm in Islington"
+        },
+        "online_event": false,
+        "organization_id": "1234539271983",
+        "organizer_id": "55764637993",
+        "privacy_setting": "unlocked",
+        "published": "2026-02-01T23:07:03Z",
+        "resource_uri": "https://www.eventbriteapi.com/v3/events/1993262507818/",
+        "series_id": "1982140155563",
+        "shareable": true,
+        "show_colors_in_seatmap_thumbnail": false,
+        "show_pick_a_seat": false,
+        "show_remaining": false,
+        "show_seatmap_thumbnail": false,
+        "source": "coyote",
+        "start": {
+          "local": "2026-08-30T20:00:00",
+          "timezone": "Europe/London",
+          "utc": "2026-08-30T19:00:00Z"
+        },
+        "status": "live",
+        "subcategory_id": "5010",
+        "summary": "The best free Stand Up Comedy in London, every Sunday at 8pm at Brewhouse & Kitchen in Islington.",
+        "ticket_availability": {
+          "has_available_tickets": true,
+          "is_sold_out": false,
+          "maximum_ticket_price": {
+            "currency": "GBP",
+            "display": "0.00 GBP",
+            "major_value": "0.00",
+            "value": 0
+          },
+          "minimum_ticket_price": {
+            "currency": "GBP",
+            "display": "0.00 GBP",
+            "major_value": "0.00",
+            "value": 0
+          },
+          "start_sales_date": null,
+          "waitlist_available": false
+        },
+        "tx_time_limit": 1200,
+        "url": "https://www.eventbrite.co.uk/e/free-comedy-every-sunday-at-8pm-in-islington-tickets-1993262507818",
+        "venue": {
+          "address": {
+            "address_1": "2A Corsica Street",
+            "address_2": "",
+            "city": "London",
+            "country": "GB",
+            "latitude": "51.5463543",
+            "localized_address_display": "2A Corsica Street, London, N5 1JJ",
+            "localized_area_display": "London",
+            "localized_multi_line_address_display": [
+              "2A Corsica Street",
+              "London",
+              "N5 1JJ"
+            ],
+            "longitude": "-0.1017174",
+            "postal_code": "N5 1JJ",
+            "region": "England"
+          },
+          "age_restriction": null,
+          "capacity": null,
+          "id": "296236287",
+          "latitude": "51.5463543",
+          "longitude": "-0.1017174",
+          "name": "Brewhouse & Kitchen - Highbury",
+          "resource_uri": "https://www.eventbriteapi.com/v3/venues/296236287/"
+        },
+        "venue_id": "296236287",
+        "version": null
+      },
+      "last_seen": "2026-07-05",
+      "path": "/events/islington-sunday-comedy-8pm-2026-08-30-2000-1993262507818/",
+      "status": "live"
+    },
+    "1993262508821": {
+      "event": {
+        "capacity": 80,
+        "capacity_is_custom": false,
+        "category_id": "105",
+        "changed": "2026-07-05T13:50:33Z",
+        "created": "2026-07-05T13:50:33Z",
+        "currency": "GBP",
+        "description": {
+          "html": "The best free Stand Up Comedy in London, every Sunday at 8pm at Brewhouse &amp; Kitchen in Islington.",
+          "text": "The best free Stand Up Comedy in London, every Sunday at 8pm at Brewhouse & Kitchen in Islington."
+        },
+        "end": {
+          "local": "2026-09-06T21:30:00",
+          "timezone": "Europe/London",
+          "utc": "2026-09-06T20:30:00Z"
+        },
+        "facebook_event_id": null,
+        "format_id": "6",
+        "hide_end_date": false,
+        "hide_start_date": false,
+        "id": "1993262508821",
+        "inventory_type": "limited",
+        "invite_only": false,
+        "is_externally_ticketed": false,
+        "is_free": true,
+        "is_locked": false,
+        "is_reserved_seating": false,
+        "is_series": true,
+        "is_series_parent": false,
+        "listed": true,
+        "locale": "en_GB",
+        "logo": {
+          "aspect_ratio": "2",
+          "crop_mask": {
+            "height": 1080,
+            "top_left": {
+              "x": 0,
+              "y": 0
+            },
+            "width": 2160
+          },
+          "edge_color": null,
+          "edge_color_set": true,
+          "id": "1176403518",
+          "original": {
+            "height": 1080,
+            "url": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1176403518%2F543747696447%2F1%2Foriginal.20260201-230633?auto=format%2Ccompress&q=75&sharp=10&s=606020b6ba85db1cbee1a7a6759bd052",
+            "width": 2160
+          },
+          "url": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1176403518%2F543747696447%2F1%2Foriginal.20260201-230633?h=200&w=450&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C0%2C2160%2C1080&s=3f033b2603a50787a5af55f8855cb493"
+        },
+        "logo_id": "1176403518",
+        "name": {
+          "html": "Free Comedy Every Sunday at 8pm in Islington",
+          "text": "Free Comedy Every Sunday at 8pm in Islington"
+        },
+        "online_event": false,
+        "organization_id": "1234539271983",
+        "organizer_id": "55764637993",
+        "privacy_setting": "unlocked",
+        "published": "2026-02-01T23:07:03Z",
+        "resource_uri": "https://www.eventbriteapi.com/v3/events/1993262508821/",
+        "series_id": "1982140155563",
+        "shareable": true,
+        "show_colors_in_seatmap_thumbnail": false,
+        "show_pick_a_seat": false,
+        "show_remaining": false,
+        "show_seatmap_thumbnail": false,
+        "source": "coyote",
+        "start": {
+          "local": "2026-09-06T20:00:00",
+          "timezone": "Europe/London",
+          "utc": "2026-09-06T19:00:00Z"
+        },
+        "status": "live",
+        "subcategory_id": "5010",
+        "summary": "The best free Stand Up Comedy in London, every Sunday at 8pm at Brewhouse & Kitchen in Islington.",
+        "ticket_availability": {
+          "has_available_tickets": true,
+          "is_sold_out": false,
+          "maximum_ticket_price": {
+            "currency": "GBP",
+            "display": "0.00 GBP",
+            "major_value": "0.00",
+            "value": 0
+          },
+          "minimum_ticket_price": {
+            "currency": "GBP",
+            "display": "0.00 GBP",
+            "major_value": "0.00",
+            "value": 0
+          },
+          "start_sales_date": null,
+          "waitlist_available": false
+        },
+        "tx_time_limit": 1200,
+        "url": "https://www.eventbrite.co.uk/e/free-comedy-every-sunday-at-8pm-in-islington-tickets-1993262508821",
+        "venue": {
+          "address": {
+            "address_1": "2A Corsica Street",
+            "address_2": "",
+            "city": "London",
+            "country": "GB",
+            "latitude": "51.5463543",
+            "localized_address_display": "2A Corsica Street, London, N5 1JJ",
+            "localized_area_display": "London",
+            "localized_multi_line_address_display": [
+              "2A Corsica Street",
+              "London",
+              "N5 1JJ"
+            ],
+            "longitude": "-0.1017174",
+            "postal_code": "N5 1JJ",
+            "region": "England"
+          },
+          "age_restriction": null,
+          "capacity": null,
+          "id": "296236287",
+          "latitude": "51.5463543",
+          "longitude": "-0.1017174",
+          "name": "Brewhouse & Kitchen - Highbury",
+          "resource_uri": "https://www.eventbriteapi.com/v3/venues/296236287/"
+        },
+        "venue_id": "296236287",
+        "version": null
+      },
+      "last_seen": "2026-07-05",
+      "path": "/events/islington-sunday-comedy-8pm-2026-09-06-2000-1993262508821/",
       "status": "live"
     }
   },
