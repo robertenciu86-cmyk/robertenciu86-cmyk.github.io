@@ -1,6 +1,6 @@
 {
   "lastmod": {
-    "/": "2026-07-05",
+    "/": "2026-07-06",
     "/events/byob-comedy-peckham-2026-07-09-2000-1993027894082/": "2026-07-02",
     "/events/byob-comedy-peckham-2026-07-16-2000-1993027895085/": "2026-07-02",
     "/events/byob-comedy-peckham-2026-07-23-2000-1993027896088/": "2026-07-02",
@@ -30,7 +30,6 @@
     "/events/comedy-club-shoreditch-fondue-2026-08-05-1930-1991775781981/": "2026-06-15",
     "/events/comedy-club-shoreditch-fondue-2026-08-12-1930-1991775782984/": "2026-06-15",
     "/events/comedy-club-shoreditch-fondue-2026-08-19-1930-1991775783987/": "2026-06-15",
-    "/events/comedy-club-shoreditch-free-new-material-mondays-2026-07-06-1930-1990806510865/": "2026-06-20",
     "/events/comedy-club-shoreditch-free-new-material-mondays-2026-07-13-1930-1990806511868/": "2026-06-20",
     "/events/comedy-club-shoreditch-free-new-material-mondays-2026-07-20-1930-1990806512871/": "2026-06-20",
     "/events/comedy-club-shoreditch-free-new-material-mondays-2026-07-27-1930-1990806513874/": "2026-06-20",
@@ -71,7 +70,7 @@
     "/events/islington-sunday-comedy-8pm-2026-08-30-2000-1993262507818/": "2026-07-05",
     "/events/islington-sunday-comedy-8pm-2026-09-06-2000-1993262508821/": "2026-07-05",
     "/hire-comedians-london/": "2026-06-15",
-    "/shows/": "2026-07-05",
+    "/shows/": "2026-07-06",
     "/shows/byob-comedy-peckham/": "2026-07-06",
     "/shows/candlemaker-comedy-battersea/": "2026-07-06",
     "/shows/comedy-club-shoreditch-early/": "2026-07-06",
@@ -8404,7 +8403,7 @@
       },
       "last_seen": "2026-07-06",
       "path": "/events/comedy-club-shoreditch-free-new-material-mondays-2026-07-06-1930-1990806510865/",
-      "status": "live"
+      "status": "expired"
     },
     "1990806511868": {
       "event": {
