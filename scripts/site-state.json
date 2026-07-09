@@ -12764,7 +12764,7 @@
         "capacity": 40,
         "capacity_is_custom": false,
         "category_id": "110",
-        "changed": "2026-07-02T17:43:37Z",
+        "changed": "2026-07-09T19:36:41Z",
         "created": "2026-07-02T17:42:52Z",
         "currency": "GBP",
         "description": {
@@ -12834,7 +12834,7 @@
           "timezone": "Europe/London",
           "utc": "2026-07-09T19:00:00Z"
         },
-        "status": "live",
+        "status": "started",
         "subcategory_id": "10003",
         "summary": "The best stand-up comedy in Peckham, free every Thursday at 8pm at Eagle Eats Bakery. Bring your own beer!",
         "ticket_availability": {
