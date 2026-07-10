@@ -19,7 +19,6 @@
     "/events/candlemaker-comedy-battersea-2026-09-13-1900-1991188789270/": "2026-06-15",
     "/events/candlemaker-comedy-battersea-2026-09-20-1900-1991188790273/": "2026-06-15",
     "/events/candlemaker-comedy-battersea-2026-09-27-1900-1991188791276/": "2026-06-15",
-    "/events/comedy-club-shoreditch-early-2026-07-10-1800-1990193931624/": "2026-06-15",
     "/events/comedy-club-shoreditch-early-2026-07-17-1800-1990193932627/": "2026-06-15",
     "/events/comedy-club-shoreditch-early-2026-07-24-1800-1990193933630/": "2026-06-15",
     "/events/comedy-club-shoreditch-fondue-2026-07-15-1930-1991775778972/": "2026-06-15",
@@ -7518,7 +7517,7 @@
       },
       "last_seen": "2026-07-10",
       "path": "/events/comedy-club-shoreditch-early-2026-07-10-1800-1990193931624/",
-      "status": "live"
+      "status": "expired"
     },
     "1990193932627": {
       "event": {
