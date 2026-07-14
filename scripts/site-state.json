@@ -38,7 +38,7 @@
     "/events/free-comedy-every-sunday-at-6pm-in-north-london-2026-08-23-1800-1993262482743/": "2026-07-05",
     "/events/free-comedy-every-sunday-at-6pm-in-north-london-2026-08-30-1800-1993262483746/": "2026-07-05",
     "/events/free-comedy-every-sunday-at-6pm-in-north-london-2026-09-06-1800-1993262484749/": "2026-07-05",
-    "/events/is-it-lington-tuesday-comedy-2026-07-14-1930-1992392251859/": "2026-06-23",
+    "/events/is-it-lington-tuesday-comedy-2026-07-14-1930-1992392251859/": "2026-07-14",
     "/events/is-it-lington-tuesday-comedy-2026-07-21-1930-1992392252862/": "2026-06-23",
     "/events/is-it-lington-tuesday-comedy-2026-07-28-1930-1992392253865/": "2026-06-23",
     "/events/is-it-lington-tuesday-comedy-2026-08-04-1930-1992392254868/": "2026-06-23",
@@ -11890,7 +11890,7 @@
         "capacity": 80,
         "capacity_is_custom": false,
         "category_id": "105",
-        "changed": "2026-06-22T22:50:11Z",
+        "changed": "2026-07-14T19:44:16Z",
         "created": "2026-06-22T22:50:11Z",
         "currency": "GBP",
         "description": {
@@ -11953,12 +11953,12 @@
           "timezone": "Europe/London",
           "utc": "2026-07-14T18:30:00Z"
         },
-        "status": "live",
+        "status": "started",
         "subcategory_id": "5010",
         "summary": "The best free Stand Up Comedy in London, every Tuesday at 7:30pm at Hoxley & Porter in Highbury & Islington / Angel.",
         "ticket_availability": {
-          "has_available_tickets": true,
-          "is_sold_out": false,
+          "has_available_tickets": false,
+          "is_sold_out": true,
           "maximum_ticket_price": {
             "currency": "GBP",
             "display": "0.00 GBP",
