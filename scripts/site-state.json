@@ -8519,7 +8519,7 @@
         "capacity": 80,
         "capacity_is_custom": false,
         "category_id": "105",
-        "changed": "2026-06-01T19:20:24Z",
+        "changed": "2026-07-20T19:47:34Z",
         "created": "2026-06-01T18:11:33Z",
         "currency": "GBP",
         "description": {
@@ -8582,7 +8582,7 @@
           "timezone": "Europe/London",
           "utc": "2026-07-20T18:30:00Z"
         },
-        "status": "live",
+        "status": "started",
         "subcategory_id": "5010",
         "summary": "Our Favourite Stand Up Comedy in London, every Monday at 7:30pm at Aura X in Shoreditch",
         "ticket_availability": {
