@@ -17,7 +17,6 @@
     "/events/candlemaker-comedy-battersea-2026-09-13-1900-1991188789270/": "2026-06-15",
     "/events/candlemaker-comedy-battersea-2026-09-20-1900-1991188790273/": "2026-06-15",
     "/events/candlemaker-comedy-battersea-2026-09-27-1900-1991188791276/": "2026-06-15",
-    "/events/comedy-club-shoreditch-early-2026-07-24-1800-1990193933630/": "2026-06-15",
     "/events/comedy-club-shoreditch-fondue-2026-07-29-1930-1991775780978/": "2026-06-15",
     "/events/comedy-club-shoreditch-fondue-2026-08-05-1930-1991775781981/": "2026-06-15",
     "/events/comedy-club-shoreditch-fondue-2026-08-12-1930-1991775782984/": "2026-06-15",
@@ -54,7 +53,6 @@
     "/shows/": "2026-07-24",
     "/shows/byob-comedy-peckham/": "2026-07-24",
     "/shows/candlemaker-comedy-battersea/": "2026-07-24",
-    "/shows/comedy-club-shoreditch-early/": "2026-07-24",
     "/shows/comedy-club-shoreditch-fondue/": "2026-07-24",
     "/shows/comedy-club-shoreditch-free-new-material-mondays/": "2026-07-24",
     "/shows/free-comedy-every-sunday-at-6pm-in-north-london/": "2026-07-24",
@@ -7764,7 +7762,7 @@
       },
       "last_seen": "2026-07-24",
       "path": "/events/comedy-club-shoreditch-early-2026-07-24-1800-1990193933630/",
-      "status": "live"
+      "status": "expired"
     },
     "1990806506853": {
       "event": {
