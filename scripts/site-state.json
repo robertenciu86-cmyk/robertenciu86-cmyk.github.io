@@ -1,6 +1,6 @@
 {
   "lastmod": {
-    "/": "2026-07-28",
+    "/": "2026-07-29",
     "/events/byob-comedy-peckham-2026-07-30-2000-1993027897091/": "2026-07-02",
     "/events/byob-comedy-peckham-2026-08-06-2000-1993027898094/": "2026-07-02",
     "/events/byob-comedy-peckham-2026-08-13-2000-1993027899097/": "2026-07-02",
@@ -16,7 +16,7 @@
     "/events/candlemaker-comedy-battersea-2026-09-13-1900-1991188789270/": "2026-06-15",
     "/events/candlemaker-comedy-battersea-2026-09-20-1900-1991188790273/": "2026-06-15",
     "/events/candlemaker-comedy-battersea-2026-09-27-1900-1991188791276/": "2026-06-15",
-    "/events/comedy-club-shoreditch-fondue-2026-07-29-1930-1991775780978/": "2026-06-15",
+    "/events/comedy-club-shoreditch-fondue-2026-07-29-1930-1991775780978/": "2026-07-29",
     "/events/comedy-club-shoreditch-fondue-2026-08-05-1930-1991775781981/": "2026-06-15",
     "/events/comedy-club-shoreditch-fondue-2026-08-12-1930-1991775782984/": "2026-06-15",
     "/events/comedy-club-shoreditch-fondue-2026-08-19-1930-1991775783987/": "2026-06-15",
@@ -44,7 +44,7 @@
     "/events/islington-sunday-comedy-8pm-2026-08-30-2000-1993262507818/": "2026-07-05",
     "/events/islington-sunday-comedy-8pm-2026-09-06-2000-1993262508821/": "2026-07-05",
     "/hire-comedians-london/": "2026-06-15",
-    "/shows/": "2026-07-28",
+    "/shows/": "2026-07-29",
     "/shows/byob-comedy-peckham/": "2026-07-29",
     "/shows/candlemaker-comedy-battersea/": "2026-07-29",
     "/shows/comedy-club-shoreditch-fondue/": "2026-07-29",
@@ -10975,7 +10975,7 @@
         "capacity": 60,
         "capacity_is_custom": false,
         "category_id": "105",
-        "changed": "2026-06-15T15:43:42Z",
+        "changed": "2026-07-29T19:46:37Z",
         "created": "2026-06-12T13:32:19Z",
         "currency": "GBP",
         "description": {
@@ -11045,12 +11045,12 @@
           "timezone": "Europe/London",
           "utc": "2026-07-29T18:30:00Z"
         },
-        "status": "live",
+        "status": "started",
         "subcategory_id": "5010",
         "summary": "The best stand-up comedy every Wednesday at 7:30pm at Bistrot Walluc in Shoreditch. Laughter guaranteed! 1 drink minimum! Get tickets now!",
         "ticket_availability": {
-          "has_available_tickets": true,
-          "is_sold_out": false,
+          "has_available_tickets": false,
+          "is_sold_out": true,
           "maximum_ticket_price": {
             "currency": "GBP",
             "display": "0.00 GBP",
