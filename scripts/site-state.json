@@ -1,11 +1,11 @@
 {
   "lastmod": {
-    "/": "2026-08-07",
+    "/": "2026-08-09",
     "/events/byob-comedy-peckham-2026-08-13-2000-1993027899097/": "2026-07-02",
     "/events/byob-comedy-peckham-2026-08-20-2000-1993027900100/": "2026-07-02",
     "/events/byob-comedy-peckham-2026-08-27-2000-1993027901103/": "2026-07-02",
     "/events/byob-comedy-peckham-2026-09-03-2000-1993027902106/": "2026-07-02",
-    "/events/candlemaker-comedy-battersea-2026-08-09-1900-1991188784255/": "2026-06-15",
+    "/events/candlemaker-comedy-battersea-2026-08-09-1900-1991188784255/": "2026-08-09",
     "/events/candlemaker-comedy-battersea-2026-08-16-1900-1991188785258/": "2026-06-15",
     "/events/candlemaker-comedy-battersea-2026-08-23-1900-1991188786261/": "2026-06-15",
     "/events/candlemaker-comedy-battersea-2026-08-30-1900-1991188787264/": "2026-06-15",
@@ -15,7 +15,6 @@
     "/events/candlemaker-comedy-battersea-2026-09-27-1900-1991188791276/": "2026-06-15",
     "/events/comedy-club-shoreditch-fondue-2026-08-12-1930-1991775782984/": "2026-06-15",
     "/events/comedy-club-shoreditch-fondue-2026-08-19-1930-1991775783987/": "2026-06-15",
-    "/events/free-comedy-every-sunday-at-6pm-in-north-london-2026-08-09-1800-1993262480737/": "2026-07-05",
     "/events/free-comedy-every-sunday-at-6pm-in-north-london-2026-08-16-1800-1993262481740/": "2026-07-05",
     "/events/free-comedy-every-sunday-at-6pm-in-north-london-2026-08-23-1800-1993262482743/": "2026-07-05",
     "/events/free-comedy-every-sunday-at-6pm-in-north-london-2026-08-30-1800-1993262483746/": "2026-07-05",
@@ -23,7 +22,6 @@
     "/events/is-it-lington-tuesday-comedy-2026-08-11-1930-1992392255871/": "2026-06-23",
     "/events/is-it-lington-tuesday-comedy-2026-08-18-1930-1992392256874/": "2026-06-23",
     "/events/is-it-lington-tuesday-comedy-2026-08-25-1930-1992392257877/": "2026-06-23",
-    "/events/islington-sunday-comedy-6pm-2026-08-09-1800-1993262353356/": "2026-07-05",
     "/events/islington-sunday-comedy-6pm-2026-08-16-1800-1993262354359/": "2026-07-05",
     "/events/islington-sunday-comedy-6pm-2026-08-23-1800-1993262355362/": "2026-07-05",
     "/events/islington-sunday-comedy-6pm-2026-08-30-1800-1993262356365/": "2026-07-05",
@@ -34,14 +32,14 @@
     "/events/islington-sunday-comedy-8pm-2026-08-30-2000-1993262507818/": "2026-07-05",
     "/events/islington-sunday-comedy-8pm-2026-09-06-2000-1993262508821/": "2026-07-05",
     "/hire-comedians-london/": "2026-06-15",
-    "/shows/": "2026-08-07",
-    "/shows/byob-comedy-peckham/": "2026-08-07",
-    "/shows/candlemaker-comedy-battersea/": "2026-08-07",
-    "/shows/comedy-club-shoreditch-fondue/": "2026-08-07",
-    "/shows/free-comedy-every-sunday-at-6pm-in-north-london/": "2026-08-07",
-    "/shows/is-it-lington-tuesday-comedy/": "2026-08-07",
-    "/shows/islington-sunday-comedy-6pm/": "2026-08-07",
-    "/shows/islington-sunday-comedy-8pm/": "2026-08-07",
+    "/shows/": "2026-08-09",
+    "/shows/byob-comedy-peckham/": "2026-08-09",
+    "/shows/candlemaker-comedy-battersea/": "2026-08-09",
+    "/shows/comedy-club-shoreditch-fondue/": "2026-08-09",
+    "/shows/free-comedy-every-sunday-at-6pm-in-north-london/": "2026-08-09",
+    "/shows/is-it-lington-tuesday-comedy/": "2026-08-09",
+    "/shows/islington-sunday-comedy-6pm/": "2026-08-09",
+    "/shows/islington-sunday-comedy-8pm/": "2026-08-09",
     "/stay-in-touch/": "2026-06-15"
   },
   "occurrences": {
@@ -9204,8 +9202,8 @@
         "subcategory_id": "5010",
         "summary": "At the lovely Candlemaker on Battersea High Street, we run a free stand up comedy show every Sunday! Good priced food and drinks to go with!",
         "ticket_availability": {
-          "has_available_tickets": true,
-          "is_sold_out": false,
+          "has_available_tickets": false,
+          "is_sold_out": true,
           "maximum_ticket_price": {
             "currency": "GBP",
             "display": "0.00 GBP",
@@ -14555,7 +14553,7 @@
       },
       "last_seen": "2026-08-09",
       "path": "/events/islington-sunday-comedy-6pm-2026-08-09-1800-1993262353356/",
-      "status": "live"
+      "status": "expired"
     },
     "1993262354359": {
       "event": {
@@ -15734,7 +15732,7 @@
       },
       "last_seen": "2026-08-09",
       "path": "/events/free-comedy-every-sunday-at-6pm-in-north-london-2026-08-09-1800-1993262480737/",
-      "status": "live"
+      "status": "expired"
     },
     "1993262481740": {
       "event": {
