@@ -1,8 +1,7 @@
 {
   "lastmod": {
-    "/": "2026-08-26",
-    "/events/byob-comedy-peckham-2026-08-27-2000-1993027901103/": "2026-07-02",
-    "/events/byob-comedy-peckham-2026-09-03-2000-1993027902106/": "2026-07-02",
+    "/": "2026-08-27",
+    "/events/byob-comedy-peckham-2026-09-03-2000-1993027902106/": "2026-08-27",
     "/events/candlemaker-comedy-battersea-2026-08-30-1900-1991188787264/": "2026-06-15",
     "/events/candlemaker-comedy-battersea-2026-09-06-1900-1991188788267/": "2026-06-15",
     "/events/candlemaker-comedy-battersea-2026-09-13-1900-1991188789270/": "2026-06-15",
@@ -15,12 +14,12 @@
     "/events/islington-sunday-comedy-8pm-2026-08-30-2000-1993262507818/": "2026-07-05",
     "/events/islington-sunday-comedy-8pm-2026-09-06-2000-1993262508821/": "2026-07-05",
     "/hire-comedians-london/": "2026-06-15",
-    "/shows/": "2026-08-26",
-    "/shows/byob-comedy-peckham/": "2026-08-26",
-    "/shows/candlemaker-comedy-battersea/": "2026-08-26",
-    "/shows/free-comedy-every-sunday-at-6pm-in-north-london/": "2026-08-26",
-    "/shows/islington-sunday-comedy-6pm/": "2026-08-26",
-    "/shows/islington-sunday-comedy-8pm/": "2026-08-26",
+    "/shows/": "2026-08-27",
+    "/shows/byob-comedy-peckham/": "2026-08-27",
+    "/shows/candlemaker-comedy-battersea/": "2026-08-27",
+    "/shows/free-comedy-every-sunday-at-6pm-in-north-london/": "2026-08-27",
+    "/shows/islington-sunday-comedy-6pm/": "2026-08-27",
+    "/shows/islington-sunday-comedy-8pm/": "2026-08-27",
     "/stay-in-touch/": "2026-06-15"
   },
   "occurrences": {
@@ -13748,7 +13747,7 @@
       },
       "last_seen": "2026-08-27",
       "path": "/events/byob-comedy-peckham-2026-08-27-2000-1993027901103/",
-      "status": "live"
+      "status": "expired"
     },
     "1993027902106": {
       "event": {
@@ -13829,8 +13828,8 @@
         "subcategory_id": "10003",
         "summary": "The best stand-up comedy in Peckham, free every Thursday at 8pm at Eagle Eats Bakery. Bring your own beer!",
         "ticket_availability": {
-          "has_available_tickets": true,
-          "is_sold_out": false,
+          "has_available_tickets": false,
+          "is_sold_out": true,
           "maximum_ticket_price": {
             "currency": "GBP",
             "display": "0.00 GBP",
