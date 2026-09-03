@@ -1,7 +1,6 @@
 {
   "lastmod": {
     "/": "2026-09-01",
-    "/events/byob-comedy-peckham-2026-09-03-2000-1993027902106/": "2026-08-27",
     "/events/byob-comedy-peckham-2026-09-10-2000-1999384396552/": "2026-09-01",
     "/events/byob-comedy-peckham-2026-09-17-2000-1999384397555/": "2026-09-01",
     "/events/byob-comedy-peckham-2026-09-24-2000-1999384398558/": "2026-09-01",
@@ -55,146 +54,15 @@
     "/events/islington-sunday-comedy-8pm-2026-09-06-2000-1993262508821/": "2026-07-05",
     "/hire-comedians-london/": "2026-06-15",
     "/shows/": "2026-09-01",
-    "/shows/byob-comedy-peckham/": "2026-09-01",
-    "/shows/candlemaker-comedy-battersea/": "2026-09-01",
-    "/shows/free-comedy-every-sunday-at-6pm-in-north-london/": "2026-09-01",
-    "/shows/is-it-lington-tuesday-comedy/": "2026-09-01",
-    "/shows/islington-sunday-comedy-6pm/": "2026-09-01",
-    "/shows/islington-sunday-comedy-8pm/": "2026-09-01",
+    "/shows/byob-comedy-peckham/": "2026-09-03",
+    "/shows/candlemaker-comedy-battersea/": "2026-09-03",
+    "/shows/free-comedy-every-sunday-at-6pm-in-north-london/": "2026-09-03",
+    "/shows/is-it-lington-tuesday-comedy/": "2026-09-03",
+    "/shows/islington-sunday-comedy-6pm/": "2026-09-03",
+    "/shows/islington-sunday-comedy-8pm/": "2026-09-03",
     "/stay-in-touch/": "2026-06-15"
   },
   "occurrences": {
-    "1987144229884": {
-      "event": {
-        "capacity": 60,
-        "capacity_is_custom": false,
-        "category_id": "105",
-        "changed": "2026-04-10T17:02:55Z",
-        "created": "2026-04-10T17:02:55Z",
-        "currency": "GBP",
-        "description": {
-          "html": "The best stand-up comedy every Friday at 6pm at Bistrot Walluc in Shoreditch. Early shows added due to high demand! Get tickets now!",
-          "text": "The best stand-up comedy every Friday at 6pm at Bistrot Walluc in Shoreditch. Early shows added due to high demand! Get tickets now!"
-        },
-        "end": {
-          "local": "2026-06-05T19:30:00",
-          "timezone": "Europe/London",
-          "utc": "2026-06-05T18:30:00Z"
-        },
-        "facebook_event_id": null,
-        "format_id": "6",
-        "hide_end_date": false,
-        "hide_start_date": false,
-        "id": "1987144229884",
-        "inventory_type": "limited",
-        "invite_only": false,
-        "is_externally_ticketed": false,
-        "is_free": true,
-        "is_locked": false,
-        "is_reserved_seating": false,
-        "is_series": true,
-        "is_series_parent": false,
-        "listed": true,
-        "locale": "en_US",
-        "logo": {
-          "aspect_ratio": "2",
-          "crop_mask": {
-            "height": 1080,
-            "top_left": {
-              "x": 0,
-              "y": 0
-            },
-            "width": 2160
-          },
-          "edge_color": "#ffffff",
-          "edge_color_set": true,
-          "id": "929389673",
-          "original": {
-            "height": 1080,
-            "url": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F929389673%2F543747696447%2F1%2Foriginal.20250107-095700?auto=format%2Ccompress&q=75&sharp=10&s=65ed1abbfd9d41ec5447a7305e0772cb",
-            "width": 2160
-          },
-          "url": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F929389673%2F543747696447%2F1%2Foriginal.20250107-095700?h=200&w=450&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C0%2C2160%2C1080&s=50c7fe5f8854cf4af82adc31fe2e6140"
-        },
-        "logo_id": "929389673",
-        "name": {
-          "html": "Comedy Club Shoreditch - Free Comedy Every Friday in East London - EARLY!",
-          "text": "Comedy Club Shoreditch - Free Comedy Every Friday in East London - EARLY!"
-        },
-        "online_event": false,
-        "organization_id": "1234539271983",
-        "organizer_id": "55764637993",
-        "privacy_setting": "unlocked",
-        "published": "2025-09-16T03:12:37Z",
-        "resource_uri": "https://www.eventbriteapi.com/v3/events/1987144229884/",
-        "series_id": "1704625774579",
-        "shareable": true,
-        "show_colors_in_seatmap_thumbnail": false,
-        "show_pick_a_seat": false,
-        "show_remaining": false,
-        "show_seatmap_thumbnail": false,
-        "source": "coyote",
-        "start": {
-          "local": "2026-06-05T18:00:00",
-          "timezone": "Europe/London",
-          "utc": "2026-06-05T17:00:00Z"
-        },
-        "status": "live",
-        "subcategory_id": "5010",
-        "summary": "The best stand-up comedy every Friday at 6pm at Bistrot Walluc in Shoreditch. Early shows added due to high demand! Get tickets now!",
-        "ticket_availability": {
-          "has_available_tickets": false,
-          "is_sold_out": true,
-          "maximum_ticket_price": {
-            "currency": "GBP",
-            "display": "0.00 GBP",
-            "major_value": "0.00",
-            "value": 0
-          },
-          "minimum_ticket_price": {
-            "currency": "GBP",
-            "display": "0.00 GBP",
-            "major_value": "0.00",
-            "value": 0
-          },
-          "start_sales_date": null,
-          "waitlist_available": false
-        },
-        "tx_time_limit": 1200,
-        "url": "https://www.eventbrite.co.uk/e/comedy-club-shoreditch-free-comedy-every-friday-in-east-london-early-tickets-1987144229884",
-        "venue": {
-          "address": {
-            "address_1": "40 Redchurch Street",
-            "address_2": "",
-            "city": "London",
-            "country": "GB",
-            "latitude": "51.52429069999999",
-            "localized_address_display": "40 Redchurch Street, London, E2 7DP",
-            "localized_area_display": "London",
-            "localized_multi_line_address_display": [
-              "40 Redchurch Street",
-              "London",
-              "E2 7DP"
-            ],
-            "longitude": "-0.0751647",
-            "postal_code": "E2 7DP",
-            "region": "England"
-          },
-          "age_restriction": null,
-          "capacity": null,
-          "id": "287334223",
-          "latitude": "51.52429069999999",
-          "longitude": "-0.0751647",
-          "name": "Bistrot Walluc",
-          "resource_uri": "https://www.eventbriteapi.com/v3/venues/287334223/"
-        },
-        "venue_id": "287334223",
-        "version": null
-      },
-      "last_seen": "2026-06-05",
-      "path": "/events/comedy-club-shoreditch-early-2026-06-05-1800-1987144229884/",
-      "status": "expired"
-    },
     "1987144230887": {
       "event": {
         "capacity": 60,
@@ -4984,137 +4852,6 @@
       },
       "last_seen": "2026-07-04",
       "path": "/events/saturday-comedy-soho-2026-07-04-1730-1988717213721/",
-      "status": "expired"
-    },
-    "1990193444166": {
-      "event": {
-        "capacity": 60,
-        "capacity_is_custom": false,
-        "category_id": "105",
-        "changed": "2026-06-05T19:38:09Z",
-        "created": "2026-05-22T18:32:29Z",
-        "currency": "GBP",
-        "description": {
-          "html": "The best stand-up comedy every Friday at 8pm at Bistrot Walluc in Shoreditch. Laughter guaranteed! Fondue optional! Get tickets now!",
-          "text": "The best stand-up comedy every Friday at 8pm at Bistrot Walluc in Shoreditch. Laughter guaranteed! Fondue optional! Get tickets now!"
-        },
-        "end": {
-          "local": "2026-06-05T21:30:00",
-          "timezone": "Europe/London",
-          "utc": "2026-06-05T20:30:00Z"
-        },
-        "facebook_event_id": null,
-        "format_id": "6",
-        "hide_end_date": false,
-        "hide_start_date": false,
-        "id": "1990193444166",
-        "inventory_type": "limited",
-        "invite_only": false,
-        "is_externally_ticketed": false,
-        "is_free": true,
-        "is_locked": false,
-        "is_reserved_seating": false,
-        "is_series": true,
-        "is_series_parent": false,
-        "listed": true,
-        "locale": "en_US",
-        "logo": {
-          "aspect_ratio": "2",
-          "crop_mask": {
-            "height": 1080,
-            "top_left": {
-              "x": 0,
-              "y": 0
-            },
-            "width": 2160
-          },
-          "edge_color": "#ffffff",
-          "edge_color_set": true,
-          "id": "929389673",
-          "original": {
-            "height": 1080,
-            "url": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F929389673%2F543747696447%2F1%2Foriginal.20250107-095700?auto=format%2Ccompress&q=75&sharp=10&s=65ed1abbfd9d41ec5447a7305e0772cb",
-            "width": 2160
-          },
-          "url": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F929389673%2F543747696447%2F1%2Foriginal.20250107-095700?h=200&w=450&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C0%2C2160%2C1080&s=50c7fe5f8854cf4af82adc31fe2e6140"
-        },
-        "logo_id": "929389673",
-        "name": {
-          "html": "Comedy Club Shoreditch - Free Comedy Every Friday in East London + FONDUE",
-          "text": "Comedy Club Shoreditch - Free Comedy Every Friday in East London + FONDUE"
-        },
-        "online_event": false,
-        "organization_id": "1234539271983",
-        "organizer_id": "55764637993",
-        "privacy_setting": "unlocked",
-        "published": "2025-01-07T10:04:45Z",
-        "resource_uri": "https://www.eventbriteapi.com/v3/events/1990193444166/",
-        "series_id": "1139692814889",
-        "shareable": true,
-        "show_colors_in_seatmap_thumbnail": false,
-        "show_pick_a_seat": false,
-        "show_remaining": false,
-        "show_seatmap_thumbnail": false,
-        "source": "coyote",
-        "start": {
-          "local": "2026-06-05T20:00:00",
-          "timezone": "Europe/London",
-          "utc": "2026-06-05T19:00:00Z"
-        },
-        "status": "started",
-        "subcategory_id": "5010",
-        "summary": "The best stand-up comedy every Friday at 8pm at Bistrot Walluc in Shoreditch. Laughter guaranteed! Fondue optional! Get tickets now!",
-        "ticket_availability": {
-          "has_available_tickets": false,
-          "is_sold_out": true,
-          "maximum_ticket_price": {
-            "currency": "GBP",
-            "display": "0.00 GBP",
-            "major_value": "0.00",
-            "value": 0
-          },
-          "minimum_ticket_price": {
-            "currency": "GBP",
-            "display": "0.00 GBP",
-            "major_value": "0.00",
-            "value": 0
-          },
-          "start_sales_date": null,
-          "waitlist_available": false
-        },
-        "tx_time_limit": 1200,
-        "url": "https://www.eventbrite.co.uk/e/comedy-club-shoreditch-free-comedy-every-friday-in-east-london-fondue-tickets-1990193444166",
-        "venue": {
-          "address": {
-            "address_1": "40 Redchurch Street",
-            "address_2": "",
-            "city": "London",
-            "country": "GB",
-            "latitude": "51.52429069999999",
-            "localized_address_display": "40 Redchurch Street, London, E2 7DP",
-            "localized_area_display": "London",
-            "localized_multi_line_address_display": [
-              "40 Redchurch Street",
-              "London",
-              "E2 7DP"
-            ],
-            "longitude": "-0.0751647",
-            "postal_code": "E2 7DP",
-            "region": "England"
-          },
-          "age_restriction": null,
-          "capacity": null,
-          "id": "249024753",
-          "latitude": "51.52429069999999",
-          "longitude": "-0.0751647",
-          "name": "Bistrot Walluc",
-          "resource_uri": "https://www.eventbriteapi.com/v3/venues/249024753/"
-        },
-        "venue_id": "249024753",
-        "version": null
-      },
-      "last_seen": "2026-06-05",
-      "path": "/events/comedy-club-shoreditch-fondue-2026-06-05-2000-1990193444166/",
       "status": "expired"
     },
     "1990193445169": {
@@ -12973,7 +12710,7 @@
       },
       "last_seen": "2026-09-03",
       "path": "/events/byob-comedy-peckham-2026-09-03-2000-1993027902106/",
-      "status": "live"
+      "status": "expired"
     },
     "1993262349344": {
       "event": {
