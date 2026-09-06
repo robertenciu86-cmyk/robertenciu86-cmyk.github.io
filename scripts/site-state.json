@@ -2138,137 +2138,6 @@
       "path": "/events/islington-sunday-comedy-8pm-2026-07-02-2000-1988716843614/",
       "status": "expired"
     },
-    "1988716924857": {
-      "event": {
-        "capacity": 80,
-        "capacity_is_custom": false,
-        "category_id": "105",
-        "changed": "2026-06-07T19:44:46Z",
-        "created": "2026-05-03T18:23:52Z",
-        "currency": "GBP",
-        "description": {
-          "html": "The best free Stand Up Comedy in London, every Sunday at 8pm at Brewhouse &amp; Kitchen in Islington.",
-          "text": "The best free Stand Up Comedy in London, every Sunday at 8pm at Brewhouse & Kitchen in Islington."
-        },
-        "end": {
-          "local": "2026-06-07T21:30:00",
-          "timezone": "Europe/London",
-          "utc": "2026-06-07T20:30:00Z"
-        },
-        "facebook_event_id": null,
-        "format_id": "6",
-        "hide_end_date": false,
-        "hide_start_date": false,
-        "id": "1988716924857",
-        "inventory_type": "limited",
-        "invite_only": false,
-        "is_externally_ticketed": false,
-        "is_free": true,
-        "is_locked": false,
-        "is_reserved_seating": false,
-        "is_series": true,
-        "is_series_parent": false,
-        "listed": true,
-        "locale": "en_GB",
-        "logo": {
-          "aspect_ratio": "2",
-          "crop_mask": {
-            "height": 1080,
-            "top_left": {
-              "x": 0,
-              "y": 0
-            },
-            "width": 2160
-          },
-          "edge_color": null,
-          "edge_color_set": true,
-          "id": "1176403518",
-          "original": {
-            "height": 1080,
-            "url": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1176403518%2F543747696447%2F1%2Foriginal.20260201-230633?auto=format%2Ccompress&q=75&sharp=10&s=606020b6ba85db1cbee1a7a6759bd052",
-            "width": 2160
-          },
-          "url": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1176403518%2F543747696447%2F1%2Foriginal.20260201-230633?h=200&w=450&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C0%2C2160%2C1080&s=3f033b2603a50787a5af55f8855cb493"
-        },
-        "logo_id": "1176403518",
-        "name": {
-          "html": "Free Comedy Every Sunday at 8pm in Islington",
-          "text": "Free Comedy Every Sunday at 8pm in Islington"
-        },
-        "online_event": false,
-        "organization_id": "1234539271983",
-        "organizer_id": "55764637993",
-        "privacy_setting": "unlocked",
-        "published": "2026-02-01T23:07:03Z",
-        "resource_uri": "https://www.eventbriteapi.com/v3/events/1988716924857/",
-        "series_id": "1982140155563",
-        "shareable": true,
-        "show_colors_in_seatmap_thumbnail": false,
-        "show_pick_a_seat": false,
-        "show_remaining": false,
-        "show_seatmap_thumbnail": false,
-        "source": "coyote",
-        "start": {
-          "local": "2026-06-07T20:00:00",
-          "timezone": "Europe/London",
-          "utc": "2026-06-07T19:00:00Z"
-        },
-        "status": "started",
-        "subcategory_id": "5010",
-        "summary": "The best free Stand Up Comedy in London, every Sunday at 8pm at Brewhouse & Kitchen in Islington.",
-        "ticket_availability": {
-          "has_available_tickets": false,
-          "is_sold_out": true,
-          "maximum_ticket_price": {
-            "currency": "GBP",
-            "display": "0.00 GBP",
-            "major_value": "0.00",
-            "value": 0
-          },
-          "minimum_ticket_price": {
-            "currency": "GBP",
-            "display": "0.00 GBP",
-            "major_value": "0.00",
-            "value": 0
-          },
-          "start_sales_date": null,
-          "waitlist_available": false
-        },
-        "tx_time_limit": 1200,
-        "url": "https://www.eventbrite.co.uk/e/free-comedy-every-sunday-at-8pm-in-islington-tickets-1988716924857",
-        "venue": {
-          "address": {
-            "address_1": "2A Corsica Street",
-            "address_2": "",
-            "city": "London",
-            "country": "GB",
-            "latitude": "51.5463543",
-            "localized_address_display": "2A Corsica Street, London, N5 1JJ",
-            "localized_area_display": "London",
-            "localized_multi_line_address_display": [
-              "2A Corsica Street",
-              "London",
-              "N5 1JJ"
-            ],
-            "longitude": "-0.1017174",
-            "postal_code": "N5 1JJ",
-            "region": "England"
-          },
-          "age_restriction": null,
-          "capacity": null,
-          "id": "296236287",
-          "latitude": "51.5463543",
-          "longitude": "-0.1017174",
-          "name": "Brewhouse & Kitchen - Highbury",
-          "resource_uri": "https://www.eventbriteapi.com/v3/venues/296236287/"
-        },
-        "venue_id": "296236287",
-        "version": null
-      },
-      "last_seen": "2026-06-07",
-      "path": "/events/islington-sunday-comedy-8pm-2026-06-07-2000-1988716924857/",
-      "status": "expired"
-    },
     "1988716925860": {
       "event": {
         "capacity": 80,
@@ -8069,7 +7938,7 @@
         "venue_id": "296705621",
         "version": null
       },
-      "last_seen": "2026-09-05",
+      "last_seen": "2026-09-06",
       "path": "/events/candlemaker-comedy-battersea-2026-09-06-1900-1991188788267/",
       "status": "live"
     },
@@ -8200,7 +8069,7 @@
         "venue_id": "296705621",
         "version": null
       },
-      "last_seen": "2026-09-05",
+      "last_seen": "2026-09-06",
       "path": "/events/candlemaker-comedy-battersea-2026-09-13-1900-1991188789270/",
       "status": "live"
     },
@@ -8331,7 +8200,7 @@
         "venue_id": "296705621",
         "version": null
       },
-      "last_seen": "2026-09-05",
+      "last_seen": "2026-09-06",
       "path": "/events/candlemaker-comedy-battersea-2026-09-20-1900-1991188790273/",
       "status": "live"
     },
@@ -8462,7 +8331,7 @@
         "venue_id": "296705621",
         "version": null
       },
-      "last_seen": "2026-09-05",
+      "last_seen": "2026-09-06",
       "path": "/events/candlemaker-comedy-battersea-2026-09-27-1900-1991188791276/",
       "status": "live"
     },
@@ -13370,7 +13239,7 @@
         "venue_id": "295458905",
         "version": null
       },
-      "last_seen": "2026-09-05",
+      "last_seen": "2026-09-06",
       "path": "/events/islington-sunday-comedy-6pm-2026-09-06-1800-1993262357368/",
       "status": "live"
     },
@@ -14549,7 +14418,7 @@
         "venue_id": "295674687",
         "version": null
       },
-      "last_seen": "2026-09-05",
+      "last_seen": "2026-09-06",
       "path": "/events/free-comedy-every-sunday-at-6pm-in-north-london-2026-09-06-1800-1993262484749/",
       "status": "live"
     },
@@ -15728,7 +15597,7 @@
         "venue_id": "296236287",
         "version": null
       },
-      "last_seen": "2026-09-05",
+      "last_seen": "2026-09-06",
       "path": "/events/islington-sunday-comedy-8pm-2026-09-06-2000-1993262508821/",
       "status": "live"
     },
@@ -15859,7 +15728,7 @@
         "venue_id": "296067022",
         "version": null
       },
-      "last_seen": "2026-09-05",
+      "last_seen": "2026-09-06",
       "path": "/events/byob-comedy-peckham-2026-09-10-2000-1999384396552/",
       "status": "live"
     },
@@ -15990,7 +15859,7 @@
         "venue_id": "296067022",
         "version": null
       },
-      "last_seen": "2026-09-05",
+      "last_seen": "2026-09-06",
       "path": "/events/byob-comedy-peckham-2026-09-17-2000-1999384397555/",
       "status": "live"
     },
@@ -16121,7 +15990,7 @@
         "venue_id": "296067022",
         "version": null
       },
-      "last_seen": "2026-09-05",
+      "last_seen": "2026-09-06",
       "path": "/events/byob-comedy-peckham-2026-09-24-2000-1999384398558/",
       "status": "live"
     },
@@ -16252,7 +16121,7 @@
         "venue_id": "296067022",
         "version": null
       },
-      "last_seen": "2026-09-05",
+      "last_seen": "2026-09-06",
       "path": "/events/byob-comedy-peckham-2026-10-01-2000-1999384399561/",
       "status": "live"
     },
@@ -16383,7 +16252,7 @@
         "venue_id": "296067022",
         "version": null
       },
-      "last_seen": "2026-09-05",
+      "last_seen": "2026-09-06",
       "path": "/events/byob-comedy-peckham-2026-10-08-2000-1999384400564/",
       "status": "live"
     },
@@ -16514,7 +16383,7 @@
         "venue_id": "296067022",
         "version": null
       },
-      "last_seen": "2026-09-05",
+      "last_seen": "2026-09-06",
       "path": "/events/byob-comedy-peckham-2026-10-15-2000-1999384401567/",
       "status": "live"
     },
@@ -16645,7 +16514,7 @@
         "venue_id": "296067022",
         "version": null
       },
-      "last_seen": "2026-09-05",
+      "last_seen": "2026-09-06",
       "path": "/events/byob-comedy-peckham-2026-10-22-2000-1999384402570/",
       "status": "live"
     },
@@ -16776,7 +16645,7 @@
         "venue_id": "296067022",
         "version": null
       },
-      "last_seen": "2026-09-05",
+      "last_seen": "2026-09-06",
       "path": "/events/byob-comedy-peckham-2026-10-29-2000-1999384403573/",
       "status": "live"
     },
@@ -16907,7 +16776,7 @@
         "venue_id": "295458905",
         "version": null
       },
-      "last_seen": "2026-09-05",
+      "last_seen": "2026-09-06",
       "path": "/events/islington-sunday-comedy-6pm-2026-09-13-1800-1999385154820/",
       "status": "live"
     },
@@ -17038,7 +16907,7 @@
         "venue_id": "295458905",
         "version": null
       },
-      "last_seen": "2026-09-05",
+      "last_seen": "2026-09-06",
       "path": "/events/islington-sunday-comedy-6pm-2026-09-20-1800-1999385155823/",
       "status": "live"
     },
@@ -17169,7 +17038,7 @@
         "venue_id": "295458905",
         "version": null
       },
-      "last_seen": "2026-09-05",
+      "last_seen": "2026-09-06",
       "path": "/events/islington-sunday-comedy-6pm-2026-09-27-1800-1999385156826/",
       "status": "live"
     },
@@ -17300,7 +17169,7 @@
         "venue_id": "295458905",
         "version": null
       },
-      "last_seen": "2026-09-05",
+      "last_seen": "2026-09-06",
       "path": "/events/islington-sunday-comedy-6pm-2026-10-04-1800-1999385157829/",
       "status": "live"
     },
@@ -17431,7 +17300,7 @@
         "venue_id": "295458905",
         "version": null
       },
-      "last_seen": "2026-09-05",
+      "last_seen": "2026-09-06",
       "path": "/events/islington-sunday-comedy-6pm-2026-10-11-1800-1999385158832/",
       "status": "live"
     },
@@ -17562,7 +17431,7 @@
         "venue_id": "295458905",
         "version": null
       },
-      "last_seen": "2026-09-05",
+      "last_seen": "2026-09-06",
       "path": "/events/islington-sunday-comedy-6pm-2026-10-18-1800-1999385159835/",
       "status": "live"
     },
@@ -17693,7 +17562,7 @@
         "venue_id": "295458905",
         "version": null
       },
-      "last_seen": "2026-09-05",
+      "last_seen": "2026-09-06",
       "path": "/events/islington-sunday-comedy-6pm-2026-10-25-1800-1999385160838/",
       "status": "live"
     },
@@ -17824,7 +17693,7 @@
         "venue_id": "295458905",
         "version": null
       },
-      "last_seen": "2026-09-05",
+      "last_seen": "2026-09-06",
       "path": "/events/islington-sunday-comedy-6pm-2026-11-01-1800-1999385161841/",
       "status": "live"
     },
@@ -17955,7 +17824,7 @@
         "venue_id": "295458905",
         "version": null
       },
-      "last_seen": "2026-09-05",
+      "last_seen": "2026-09-06",
       "path": "/events/islington-sunday-comedy-6pm-2026-11-08-1800-1999385162844/",
       "status": "live"
     },
@@ -18086,7 +17955,7 @@
         "venue_id": "295458905",
         "version": null
       },
-      "last_seen": "2026-09-05",
+      "last_seen": "2026-09-06",
       "path": "/events/islington-sunday-comedy-6pm-2026-11-15-1800-1999385163847/",
       "status": "live"
     },
@@ -18217,7 +18086,7 @@
         "venue_id": "295674687",
         "version": null
       },
-      "last_seen": "2026-09-05",
+      "last_seen": "2026-09-06",
       "path": "/events/free-comedy-every-sunday-at-6pm-in-north-london-2026-09-13-2000-1999385200958/",
       "status": "live"
     },
@@ -18348,7 +18217,7 @@
         "venue_id": "295674687",
         "version": null
       },
-      "last_seen": "2026-09-05",
+      "last_seen": "2026-09-06",
       "path": "/events/free-comedy-every-sunday-at-6pm-in-north-london-2026-09-20-2000-1999385201961/",
       "status": "live"
     },
@@ -18479,7 +18348,7 @@
         "venue_id": "295674687",
         "version": null
       },
-      "last_seen": "2026-09-05",
+      "last_seen": "2026-09-06",
       "path": "/events/free-comedy-every-sunday-at-6pm-in-north-london-2026-09-27-2000-1999385202964/",
       "status": "live"
     },
@@ -18610,7 +18479,7 @@
         "venue_id": "295674687",
         "version": null
       },
-      "last_seen": "2026-09-05",
+      "last_seen": "2026-09-06",
       "path": "/events/free-comedy-every-sunday-at-6pm-in-north-london-2026-10-04-2000-1999385203967/",
       "status": "live"
     },
@@ -18741,7 +18610,7 @@
         "venue_id": "295674687",
         "version": null
       },
-      "last_seen": "2026-09-05",
+      "last_seen": "2026-09-06",
       "path": "/events/free-comedy-every-sunday-at-6pm-in-north-london-2026-10-11-2000-1999385204970/",
       "status": "live"
     },
@@ -18872,7 +18741,7 @@
         "venue_id": "295674687",
         "version": null
       },
-      "last_seen": "2026-09-05",
+      "last_seen": "2026-09-06",
       "path": "/events/free-comedy-every-sunday-at-6pm-in-north-london-2026-10-18-2000-1999385205973/",
       "status": "live"
     },
@@ -19003,7 +18872,7 @@
         "venue_id": "295674687",
         "version": null
       },
-      "last_seen": "2026-09-05",
+      "last_seen": "2026-09-06",
       "path": "/events/free-comedy-every-sunday-at-6pm-in-north-london-2026-10-25-2000-1999385206976/",
       "status": "live"
     },
@@ -19134,7 +19003,7 @@
         "venue_id": "295674687",
         "version": null
       },
-      "last_seen": "2026-09-05",
+      "last_seen": "2026-09-06",
       "path": "/events/free-comedy-every-sunday-at-6pm-in-north-london-2026-11-01-2000-1999385207979/",
       "status": "live"
     },
@@ -19265,7 +19134,7 @@
         "venue_id": "295674687",
         "version": null
       },
-      "last_seen": "2026-09-05",
+      "last_seen": "2026-09-06",
       "path": "/events/free-comedy-every-sunday-at-6pm-in-north-london-2026-11-08-2000-1999385208982/",
       "status": "live"
     },
@@ -19396,7 +19265,7 @@
         "venue_id": "295674687",
         "version": null
       },
-      "last_seen": "2026-09-05",
+      "last_seen": "2026-09-06",
       "path": "/events/free-comedy-every-sunday-at-6pm-in-north-london-2026-11-15-2000-1999385209985/",
       "status": "live"
     },
@@ -19527,7 +19396,7 @@
         "venue_id": "296705621",
         "version": null
       },
-      "last_seen": "2026-09-05",
+      "last_seen": "2026-09-06",
       "path": "/events/candlemaker-comedy-battersea-2026-10-04-1930-1999385301258/",
       "status": "live"
     },
@@ -19658,7 +19527,7 @@
         "venue_id": "296705621",
         "version": null
       },
-      "last_seen": "2026-09-05",
+      "last_seen": "2026-09-06",
       "path": "/events/candlemaker-comedy-battersea-2026-10-11-1930-1999385302261/",
       "status": "live"
     },
@@ -19789,7 +19658,7 @@
         "venue_id": "296705621",
         "version": null
       },
-      "last_seen": "2026-09-05",
+      "last_seen": "2026-09-06",
       "path": "/events/candlemaker-comedy-battersea-2026-10-18-1930-1999385303264/",
       "status": "live"
     },
@@ -19920,7 +19789,7 @@
         "venue_id": "296705621",
         "version": null
       },
-      "last_seen": "2026-09-05",
+      "last_seen": "2026-09-06",
       "path": "/events/candlemaker-comedy-battersea-2026-10-25-1930-1999385304267/",
       "status": "live"
     },
@@ -20051,7 +19920,7 @@
         "venue_id": "296705621",
         "version": null
       },
-      "last_seen": "2026-09-05",
+      "last_seen": "2026-09-06",
       "path": "/events/candlemaker-comedy-battersea-2026-11-01-1930-1999385305270/",
       "status": "live"
     },
@@ -20182,7 +20051,7 @@
         "venue_id": "296705621",
         "version": null
       },
-      "last_seen": "2026-09-05",
+      "last_seen": "2026-09-06",
       "path": "/events/candlemaker-comedy-battersea-2026-11-08-1930-1999385306273/",
       "status": "live"
     },
@@ -20313,7 +20182,7 @@
         "venue_id": "296705621",
         "version": null
       },
-      "last_seen": "2026-09-05",
+      "last_seen": "2026-09-06",
       "path": "/events/candlemaker-comedy-battersea-2026-11-15-1930-1999385307276/",
       "status": "live"
     },
@@ -20561,7 +20430,7 @@
         "venue_id": "296067959",
         "version": null
       },
-      "last_seen": "2026-09-05",
+      "last_seen": "2026-09-06",
       "path": "/events/is-it-lington-tuesday-comedy-2026-09-08-1930-1999385346393/",
       "status": "live"
     },
@@ -20685,7 +20554,7 @@
         "venue_id": "296067959",
         "version": null
       },
-      "last_seen": "2026-09-05",
+      "last_seen": "2026-09-06",
       "path": "/events/is-it-lington-tuesday-comedy-2026-09-15-1930-1999385347396/",
       "status": "live"
     },
@@ -20809,7 +20678,7 @@
         "venue_id": "296067959",
         "version": null
       },
-      "last_seen": "2026-09-05",
+      "last_seen": "2026-09-06",
       "path": "/events/is-it-lington-tuesday-comedy-2026-09-22-1930-1999385348399/",
       "status": "live"
     },
@@ -20933,7 +20802,7 @@
         "venue_id": "296067959",
         "version": null
       },
-      "last_seen": "2026-09-05",
+      "last_seen": "2026-09-06",
       "path": "/events/is-it-lington-tuesday-comedy-2026-09-29-1930-1999385349402/",
       "status": "live"
     },
@@ -21057,7 +20926,7 @@
         "venue_id": "296067959",
         "version": null
       },
-      "last_seen": "2026-09-05",
+      "last_seen": "2026-09-06",
       "path": "/events/is-it-lington-tuesday-comedy-2026-10-06-1930-1999385350405/",
       "status": "live"
     },
@@ -21181,7 +21050,7 @@
         "venue_id": "296067959",
         "version": null
       },
-      "last_seen": "2026-09-05",
+      "last_seen": "2026-09-06",
       "path": "/events/is-it-lington-tuesday-comedy-2026-10-13-1930-1999385351408/",
       "status": "live"
     },
@@ -21305,7 +21174,7 @@
         "venue_id": "296067959",
         "version": null
       },
-      "last_seen": "2026-09-05",
+      "last_seen": "2026-09-06",
       "path": "/events/is-it-lington-tuesday-comedy-2026-10-20-1930-1999385352411/",
       "status": "live"
     },
@@ -21429,7 +21298,7 @@
         "venue_id": "296067959",
         "version": null
       },
-      "last_seen": "2026-09-05",
+      "last_seen": "2026-09-06",
       "path": "/events/is-it-lington-tuesday-comedy-2026-10-27-1930-1999385353414/",
       "status": "live"
     },
@@ -21553,7 +21422,7 @@
         "venue_id": "296067959",
         "version": null
       },
-      "last_seen": "2026-09-05",
+      "last_seen": "2026-09-06",
       "path": "/events/is-it-lington-tuesday-comedy-2026-11-03-1930-1999385354417/",
       "status": "live"
     }
@@ -21630,7 +21499,7 @@
         "region": "England"
       },
       "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1173215566%2F543747696447%2F1%2Foriginal.20251218-172640?auto=format%2Ccompress&q=75&sharp=10&s=2e8147b3d66dbc25cd453a4108261126",
-      "last_seen": "2026-09-05",
+      "last_seen": "2026-09-06",
       "slug": "islington-sunday-comedy-6pm",
       "source_title": "Free Comedy Every Sunday at 6pm in Islington",
       "summary": "The best free Stand Up Comedy in London, every Sunday at 6pm at Brewhouse & Kitchen in Islington.",
@@ -21656,7 +21525,7 @@
         "region": "England"
       },
       "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1181543832%2F543747696447%2F1%2Foriginal.20260406-213743?auto=format%2Ccompress&q=75&sharp=10&s=c493f415ef81d17621fe104a48188f24",
-      "last_seen": "2026-09-05",
+      "last_seen": "2026-09-06",
       "slug": "is-it-lington-tuesday-comedy",
       "source_title": "Is-It-Lington? Free Comedy Every Tuesday at 7:30 pm in Highbury & Islington",
       "summary": "The best free Stand Up Comedy in London, every Tuesday at 7:30pm at Hoxley & Porter in Highbury & Islington / Angel.",
@@ -21682,7 +21551,7 @@
         "region": "England"
       },
       "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1173216047%2F543747696447%2F1%2Foriginal.20251218-173229?auto=format%2Ccompress&q=75&sharp=10&s=6cf6c102ff0d264fbe9faed8c07aac2b",
-      "last_seen": "2026-09-05",
+      "last_seen": "2026-09-06",
       "slug": "free-comedy-every-sunday-at-6pm-in-north-london",
       "source_title": "Free Comedy Every Sunday at 6pm in North London",
       "summary": "The best free Stand Up Comedy in London, every Sunday at 6pm at Brewhouse & Kitchen in North London.",
@@ -21708,7 +21577,7 @@
         "region": "England"
       },
       "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1179214042%2F543747696447%2F1%2Foriginal.20260306-162753?auto=format%2Ccompress&q=75&sharp=10&s=e4014ea77e71c224ce95563687ed09c1",
-      "last_seen": "2026-09-05",
+      "last_seen": "2026-09-06",
       "slug": "byob-comedy-peckham",
       "source_title": "BYOB - Free Comedy Every Thursday in Peckham",
       "summary": "The best stand-up comedy in Peckham, free every Thursday at 8pm at Eagle Eats Bakery. Bring your own beer!",
@@ -21734,7 +21603,7 @@
         "region": "England"
       },
       "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1176403518%2F543747696447%2F1%2Foriginal.20260201-230633?auto=format%2Ccompress&q=75&sharp=10&s=606020b6ba85db1cbee1a7a6759bd052",
-      "last_seen": "2026-09-05",
+      "last_seen": "2026-09-06",
       "slug": "islington-sunday-comedy-8pm",
       "source_title": "Free Comedy Every Sunday at 8pm in Islington",
       "summary": "The best free Stand Up Comedy in London, every Sunday at 8pm at Brewhouse & Kitchen in Islington.",
@@ -21760,7 +21629,7 @@
         "region": "England"
       },
       "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1179000636%2F543747696447%2F1%2Foriginal.20260304-130103?auto=format%2Ccompress&q=75&sharp=10&s=1d7bbd509c54b602b4b708af828d58a7",
-      "last_seen": "2026-09-05",
+      "last_seen": "2026-09-06",
       "slug": "candlemaker-comedy-battersea",
       "source_title": "Candlemaker Comedy - Free Comedy at Battersea's Favourite!",
       "summary": "At the lovely Candlemaker on Battersea High Street, we run a free stand up comedy show every Sunday! Good priced food and drinks to go with!",
