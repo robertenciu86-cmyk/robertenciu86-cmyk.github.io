@@ -79,9 +79,8 @@ h3 { font-size: 1.25rem; line-height: 1.18; }
 .event-card,.area-card,.info-card,.booking-panel,.feature-list div,.empty-state { background: var(--surface); border: 1px solid var(--line); border-radius: 18px; overflow: hidden; box-shadow: var(--shadow); }
 .event-card { display: flex; flex-direction: column; transition: transform .24s ease, border-color .24s ease, box-shadow .24s ease; }
 .event-card:hover { transform: translateY(-5px); border-color: var(--pink); box-shadow: 0 30px 64px rgba(0,0,0,.42), 0 0 0 1px rgba(255,61,141,.28); }
-.card-image-link { background: var(--surface-2); overflow: hidden; }
-.card-image { width: 100%; aspect-ratio: 16/9; object-fit: cover; transition: transform .45s cubic-bezier(.2,.7,.2,1); }
-.event-card:hover .card-image { transform: scale(1.06); }
+.card-image-link { position: relative; display: block; aspect-ratio: 2/1; background: var(--surface-2); overflow: hidden; }
+.card-image { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain; }
 .price { font-weight: 800; }
 .price-free { color: #052a31; background: var(--blue); padding: 1px 9px; border-radius: 999px; font-size: .82em; letter-spacing: .01em; }
 .card-body { display: flex; flex-direction: column; flex: 1; padding: 18px; }
