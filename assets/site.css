@@ -81,6 +81,8 @@ h3 { font-size: 1.25rem; line-height: 1.18; }
 .event-card:hover { transform: translateY(-5px); border-color: var(--pink); box-shadow: 0 30px 64px rgba(0,0,0,.42), 0 0 0 1px rgba(255,61,141,.28); }
 .card-image-link { position: relative; display: block; aspect-ratio: 2/1; background: var(--surface-2); overflow: hidden; }
 .card-image { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain; }
+.card-image-link-portrait { aspect-ratio: 11/10; }
+.card-image-link-portrait .card-image { object-fit: cover; }
 .price { font-weight: 800; }
 .price-free { color: #052a31; background: var(--blue); padding: 1px 9px; border-radius: 999px; font-size: .82em; letter-spacing: .01em; }
 .card-body { display: flex; flex-direction: column; flex: 1; padding: 18px; }

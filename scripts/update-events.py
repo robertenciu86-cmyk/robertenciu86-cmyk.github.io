@@ -686,9 +686,10 @@ def event_card(event: dict, slug: str, placement: str) -> str:
     start = event_start(event)
     price, _, sold_out = ticket_data(event)
     status = '<span class="pill pill-muted">Sold out</span>' if sold_out else ""
+    image_class = " card-image-link-portrait" if event.get("_card_image_layout") == "portrait" else ""
     return f"""
         <article class="event-card">
-            <a class="card-image-link" href="{esc(event_path(event, slug))}">
+            <a class="card-image-link{image_class}" href="{esc(event_path(event, slug))}">
                 <img class="card-image" src="{esc(best_image(event))}" width="640" height="360"
                      loading="lazy" alt="{esc(public_title(event))}">
             </a>
@@ -1222,6 +1223,8 @@ def main() -> int:
         for field in ("summary", "url"):
             if override.get(field):
                 event[field] = override[field]
+        if override.get("card_image_layout") == "portrait":
+            event["_card_image_layout"] = "portrait"
     slugs = update_state(live, state, today)
     occurrences = update_occurrences(live, cancelled, state, slugs, now)
     active = group_by_series(live)
