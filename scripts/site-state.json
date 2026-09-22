@@ -1,6 +1,6 @@
 {
   "lastmod": {
-    "/": "2026-09-20",
+    "/": "2026-09-22",
     "/events/byob-comedy-peckham-2026-09-24-2000-1999384398558/": "2026-09-01",
     "/events/byob-comedy-peckham-2026-10-01-2000-1999384399561/": "2026-09-01",
     "/events/byob-comedy-peckham-2026-10-08-2000-1999384400564/": "2026-09-01",
@@ -23,7 +23,6 @@
     "/events/free-comedy-every-sunday-at-6pm-in-north-london-2026-11-01-2000-1999385207979/": "2026-09-06",
     "/events/free-comedy-every-sunday-at-6pm-in-north-london-2026-11-08-2000-1999385208982/": "2026-09-06",
     "/events/free-comedy-every-sunday-at-6pm-in-north-london-2026-11-15-2000-1999385209985/": "2026-09-06",
-    "/events/is-it-lington-tuesday-comedy-2026-09-22-1930-1999385348399/": "2026-09-01",
     "/events/is-it-lington-tuesday-comedy-2026-09-29-1930-1999385349402/": "2026-09-01",
     "/events/is-it-lington-tuesday-comedy-2026-10-06-1930-1999385350405/": "2026-09-01",
     "/events/is-it-lington-tuesday-comedy-2026-10-13-1930-1999385351408/": "2026-09-01",
@@ -47,140 +46,16 @@
     "/events/islington-sunday-comedy-8pm-2026-11-08-2000-1999934017483/": "2026-09-06",
     "/events/islington-sunday-comedy-8pm-2026-11-15-2000-1999934018486/": "2026-09-06",
     "/hire-comedians-london/": "2026-06-15",
-    "/shows/": "2026-09-20",
-    "/shows/byob-comedy-peckham/": "2026-09-20",
-    "/shows/candlemaker-comedy-battersea/": "2026-09-20",
-    "/shows/free-comedy-every-sunday-at-6pm-in-north-london/": "2026-09-20",
-    "/shows/is-it-lington-tuesday-comedy/": "2026-09-20",
-    "/shows/islington-sunday-comedy-6pm/": "2026-09-20",
-    "/shows/islington-sunday-comedy-8pm/": "2026-09-20",
+    "/shows/": "2026-09-22",
+    "/shows/byob-comedy-peckham/": "2026-09-22",
+    "/shows/candlemaker-comedy-battersea/": "2026-09-22",
+    "/shows/free-comedy-every-sunday-at-6pm-in-north-london/": "2026-09-22",
+    "/shows/is-it-lington-tuesday-comedy/": "2026-09-22",
+    "/shows/islington-sunday-comedy-6pm/": "2026-09-22",
+    "/shows/islington-sunday-comedy-8pm/": "2026-09-22",
     "/stay-in-touch/": "2026-06-15"
   },
   "occurrences": {
-    "1987915970180": {
-      "event": {
-        "capacity": 80,
-        "capacity_is_custom": false,
-        "category_id": "105",
-        "changed": "2026-04-21T12:40:54Z",
-        "created": "2026-04-21T12:40:54Z",
-        "currency": "GBP",
-        "description": {
-          "html": "The best free Stand Up Comedy in London, every Tuesday at 7:30pm at Hoxley &amp; Porter in Highbury &amp; Islington / Angel.",
-          "text": "The best free Stand Up Comedy in London, every Tuesday at 7:30pm at Hoxley & Porter in Highbury & Islington / Angel."
-        },
-        "end": {
-          "local": "2026-06-24T21:30:00",
-          "timezone": "Europe/London",
-          "utc": "2026-06-24T20:30:00Z"
-        },
-        "facebook_event_id": null,
-        "format_id": "6",
-        "hide_end_date": false,
-        "hide_start_date": false,
-        "id": "1987915970180",
-        "inventory_type": "limited",
-        "invite_only": false,
-        "is_externally_ticketed": false,
-        "is_free": true,
-        "is_locked": false,
-        "is_reserved_seating": false,
-        "is_series": true,
-        "is_series_parent": false,
-        "listed": true,
-        "locale": "en_GB",
-        "logo": {
-          "aspect_ratio": "0.45",
-          "crop_mask": null,
-          "edge_color": "#000000",
-          "edge_color_set": true,
-          "id": "1181543832",
-          "original": {
-            "height": 2048,
-            "url": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1181543832%2F543747696447%2F1%2Foriginal.20260406-213743?auto=format%2Ccompress&q=75&sharp=10&s=c493f415ef81d17621fe104a48188f24",
-            "width": 921
-          },
-          "url": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1181543832%2F543747696447%2F1%2Foriginal.20260406-213743?crop=focalpoint&fit=crop&h=200&w=450&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.404&fp-y=0.453&s=bcad9bdc263445b4e17a9c44e6bebc0a"
-        },
-        "logo_id": "1181543832",
-        "name": {
-          "html": "Is-It-Lington? Free Comedy Every Tuesday at 7:30 pm in Highbury &amp; Islington",
-          "text": "Is-It-Lington? Free Comedy Every Tuesday at 7:30 pm in Highbury & Islington"
-        },
-        "online_event": false,
-        "organization_id": "1234539271983",
-        "organizer_id": "55764637993",
-        "privacy_setting": "unlocked",
-        "published": "2025-12-18T17:31:17Z",
-        "resource_uri": "https://www.eventbriteapi.com/v3/events/1987915970180/",
-        "series_id": "1978430173908",
-        "shareable": true,
-        "show_colors_in_seatmap_thumbnail": false,
-        "show_pick_a_seat": false,
-        "show_remaining": false,
-        "show_seatmap_thumbnail": false,
-        "source": "coyote",
-        "start": {
-          "local": "2026-06-24T19:30:00",
-          "timezone": "Europe/London",
-          "utc": "2026-06-24T18:30:00Z"
-        },
-        "status": "live",
-        "subcategory_id": "5010",
-        "summary": "The best free Stand Up Comedy in London, every Tuesday at 7:30pm at Hoxley & Porter in Highbury & Islington / Angel.",
-        "ticket_availability": {
-          "has_available_tickets": true,
-          "is_sold_out": false,
-          "maximum_ticket_price": {
-            "currency": "GBP",
-            "display": "0.00 GBP",
-            "major_value": "0.00",
-            "value": 0
-          },
-          "minimum_ticket_price": {
-            "currency": "GBP",
-            "display": "0.00 GBP",
-            "major_value": "0.00",
-            "value": 0
-          },
-          "start_sales_date": null,
-          "waitlist_available": false
-        },
-        "tx_time_limit": 1200,
-        "url": "https://www.eventbrite.co.uk/e/is-it-lington-free-comedy-every-tuesday-at-730-pm-in-highbury-islington-tickets-1987915970180",
-        "venue": {
-          "address": {
-            "address_1": "153 Upper Street",
-            "address_2": "",
-            "city": "London",
-            "country": "GB",
-            "latitude": "51.5402883",
-            "localized_address_display": "153 Upper Street, London, N1 1RA",
-            "localized_area_display": "London",
-            "localized_multi_line_address_display": [
-              "153 Upper Street",
-              "London",
-              "N1 1RA"
-            ],
-            "longitude": "-0.1028829",
-            "postal_code": "N1 1RA",
-            "region": "England"
-          },
-          "age_restriction": null,
-          "capacity": null,
-          "id": "296067959",
-          "latitude": "51.5402883",
-          "longitude": "-0.1028829",
-          "name": "Hoxley & Porter",
-          "resource_uri": "https://www.eventbriteapi.com/v3/venues/296067959/"
-        },
-        "venue_id": "296067959",
-        "version": null
-      },
-      "last_seen": "2026-06-22",
-      "path": "/events/is-it-lington-tuesday-comedy-2026-06-24-1930-1987915970180/",
-      "status": "expired"
-    },
     "1988716793464": {
       "event": {
         "capacity": 80,
@@ -5364,137 +5239,6 @@
       "last_seen": "2026-09-22",
       "path": "/events/candlemaker-comedy-battersea-2026-09-27-1900-1991188791276/",
       "status": "live"
-    },
-    "1991775775963": {
-      "event": {
-        "capacity": 60,
-        "capacity_is_custom": false,
-        "category_id": "105",
-        "changed": "2026-06-15T15:43:42Z",
-        "created": "2026-06-12T13:32:19Z",
-        "currency": "GBP",
-        "description": {
-          "html": "The best stand-up comedy every Wednesday at 7:30pm at Bistrot Walluc in Shoreditch. Laughter guaranteed! 1 drink minimum! Get tickets now!",
-          "text": "The best stand-up comedy every Wednesday at 7:30pm at Bistrot Walluc in Shoreditch. Laughter guaranteed! 1 drink minimum! Get tickets now!"
-        },
-        "end": {
-          "local": "2026-06-24T21:00:00",
-          "timezone": "Europe/London",
-          "utc": "2026-06-24T20:00:00Z"
-        },
-        "facebook_event_id": null,
-        "format_id": "6",
-        "hide_end_date": false,
-        "hide_start_date": false,
-        "id": "1991775775963",
-        "inventory_type": "limited",
-        "invite_only": false,
-        "is_externally_ticketed": false,
-        "is_free": true,
-        "is_locked": false,
-        "is_reserved_seating": false,
-        "is_series": true,
-        "is_series_parent": false,
-        "listed": true,
-        "locale": "en_US",
-        "logo": {
-          "aspect_ratio": "2",
-          "crop_mask": {
-            "height": 1080,
-            "top_left": {
-              "x": 0,
-              "y": 0
-            },
-            "width": 2160
-          },
-          "edge_color": "#ffffff",
-          "edge_color_set": true,
-          "id": "929389673",
-          "original": {
-            "height": 1080,
-            "url": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F929389673%2F543747696447%2F1%2Foriginal.20250107-095700?auto=format%2Ccompress&q=75&sharp=10&s=65ed1abbfd9d41ec5447a7305e0772cb",
-            "width": 2160
-          },
-          "url": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F929389673%2F543747696447%2F1%2Foriginal.20250107-095700?h=200&w=450&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C0%2C2160%2C1080&s=50c7fe5f8854cf4af82adc31fe2e6140"
-        },
-        "logo_id": "929389673",
-        "name": {
-          "html": "Comedy Club Shoreditch - Free Comedy Every Wednesday in East London",
-          "text": "Comedy Club Shoreditch - Free Comedy Every Wednesday in East London"
-        },
-        "online_event": false,
-        "organization_id": "1234539271983",
-        "organizer_id": "55764637993",
-        "privacy_setting": "unlocked",
-        "published": "2025-01-07T10:04:45Z",
-        "resource_uri": "https://www.eventbriteapi.com/v3/events/1991775775963/",
-        "series_id": "1139692814889",
-        "shareable": true,
-        "show_colors_in_seatmap_thumbnail": false,
-        "show_pick_a_seat": false,
-        "show_remaining": false,
-        "show_seatmap_thumbnail": false,
-        "source": "coyote",
-        "start": {
-          "local": "2026-06-24T19:30:00",
-          "timezone": "Europe/London",
-          "utc": "2026-06-24T18:30:00Z"
-        },
-        "status": "live",
-        "subcategory_id": "5010",
-        "summary": "The best stand-up comedy every Wednesday at 7:30pm at Bistrot Walluc in Shoreditch. Laughter guaranteed! 1 drink minimum! Get tickets now!",
-        "ticket_availability": {
-          "has_available_tickets": true,
-          "is_sold_out": false,
-          "maximum_ticket_price": {
-            "currency": "GBP",
-            "display": "0.00 GBP",
-            "major_value": "0.00",
-            "value": 0
-          },
-          "minimum_ticket_price": {
-            "currency": "GBP",
-            "display": "0.00 GBP",
-            "major_value": "0.00",
-            "value": 0
-          },
-          "start_sales_date": null,
-          "waitlist_available": false
-        },
-        "tx_time_limit": 1200,
-        "url": "https://www.eventbrite.co.uk/e/comedy-club-shoreditch-free-comedy-every-wednesday-in-east-london-tickets-1991775775963",
-        "venue": {
-          "address": {
-            "address_1": "40 Redchurch Street",
-            "address_2": "",
-            "city": "London",
-            "country": "GB",
-            "latitude": "51.52429069999999",
-            "localized_address_display": "40 Redchurch Street, London, E2 7DP",
-            "localized_area_display": "London",
-            "localized_multi_line_address_display": [
-              "40 Redchurch Street",
-              "London",
-              "E2 7DP"
-            ],
-            "longitude": "-0.0751647",
-            "postal_code": "E2 7DP",
-            "region": "England"
-          },
-          "age_restriction": null,
-          "capacity": null,
-          "id": "249024753",
-          "latitude": "51.52429069999999",
-          "longitude": "-0.0751647",
-          "name": "Bistrot Walluc",
-          "resource_uri": "https://www.eventbriteapi.com/v3/venues/249024753/"
-        },
-        "venue_id": "249024753",
-        "version": null
-      },
-      "last_seen": "2026-06-24",
-      "path": "/events/comedy-club-shoreditch-fondue-2026-06-24-1930-1991775775963/",
-      "status": "expired"
     },
     "1991775776966": {
       "event": {
@@ -17455,7 +17199,7 @@
       },
       "last_seen": "2026-09-22",
       "path": "/events/is-it-lington-tuesday-comedy-2026-09-22-1930-1999385348399/",
-      "status": "live"
+      "status": "expired"
     },
     "1999385349402": {
       "event": {
