@@ -53,6 +53,7 @@ ORG_EVENTBRITE = "https://www.eventbrite.co.uk/o/london-comedy-group-55764637993
 INSTAGRAM = "https://www.instagram.com/londoncomedygroup/"
 TIKTOK = "https://www.tiktok.com/@londoncomedygroup1"
 FACEBOOK = "https://www.facebook.com/profile.php?id=100089919127479"
+CONTACT_EMAIL = "londoncomedygroup@gmail.com"
 BEEHIIV = "https://lcg-fans-broadcast.beehiiv.com/"
 HIRE_FORM = "https://docs.google.com/forms/d/e/1FAIpQLSeAX08fLT3mb6UhwyncyRLHd-kmJPoai-x0kPE5TZ6V9kVJ6A/viewform?usp=header"
 PERFORM_FORM = "https://docs.google.com/forms/d/e/1FAIpQLSe0maLGAuPg4ZUZVVOgpWob1n4oLKiT5mTJgfPZZ_o62k_tdg/viewform?usp=sharing&ouid=115747252269731556423"
@@ -1163,7 +1164,7 @@ def render_static_pages(now: dt.datetime) -> dict[str, str]:
         <h2>Tickets and the mailing list</h2>
         <p>Tickets are booked on Eventbrite and the mailing list runs on beehiiv. When you use them, their own privacy policies apply.</p>
         <h2>Contact</h2>
-        <p>For questions about your data, message London Comedy Group on <a class="text-link" href="{esc(INSTAGRAM)}" rel="noopener noreferrer" target="_blank">Instagram</a> or <a class="text-link" href="{esc(FACEBOOK)}" rel="noopener noreferrer" target="_blank">Facebook</a>. You can also complain to the <a class="text-link" href="https://ico.org.uk/make-a-complaint/" rel="noopener noreferrer" target="_blank">Information Commissioner's Office</a>.</p>
+        <p>For questions about your data, email <a class="text-link" href="mailto:{esc(CONTACT_EMAIL)}">{esc(CONTACT_EMAIL)}</a> or message London Comedy Group on <a class="text-link" href="{esc(INSTAGRAM)}" rel="noopener noreferrer" target="_blank">Instagram</a> or <a class="text-link" href="{esc(FACEBOOK)}" rel="noopener noreferrer" target="_blank">Facebook</a>. You can also complain to the <a class="text-link" href="https://ico.org.uk/make-a-complaint/" rel="noopener noreferrer" target="_blank">Information Commissioner's Office</a>.</p>
     </div>"""
     redirect = layout(title="Mailing List | London Comedy Group", description="Join the London Comedy Group mailing list.", canonical="/stay-in-touch/", body=redirect_body, now=now, robots="noindex,follow")
     redirect = redirect.replace("</head>", '    <meta http-equiv="refresh" content="0; url=/stay-in-touch/">\n</head>')
