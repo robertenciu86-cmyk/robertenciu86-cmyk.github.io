@@ -145,6 +145,11 @@ h3 { font-size: 1.25rem; line-height: 1.18; }
 .consent-banner[hidden] { display: none; }
 .consent-text { margin: 0; flex: 1 1 240px; color: var(--muted); font-size: .92rem; }
 .consent-actions { display: flex; gap: 10px; flex-wrap: wrap; }
+.footer-button { padding: 0; border: 0; background: none; font: inherit; color: var(--blue); font-weight: 800; cursor: pointer; }
+.footer-button:hover { text-decoration: underline; }
+.prose h2 { margin: 36px 0 10px; font-size: 1.5rem; }
+.prose h2:first-child { margin-top: 0; }
+.prose p { color: var(--muted); }
 .consent-actions .button { min-height: 40px; padding: 9px 16px; }
 @media (max-width:760px) {
     .nav-toggle { display: block; }

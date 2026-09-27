@@ -126,15 +126,15 @@ def asset_version() -> str:
 
 
 def analytics_snippet() -> str:
-    """Google Analytics 4 with Consent Mode v2.
+    """Google Analytics 4 with Consent Mode v2, opt-out.
 
-    Every storage type defaults to "denied", so gtag.js never writes a cookie
-    until the visitor opts in. Returning visitors who already accepted have their
-    choice replayed from localStorage *before* gtag init, so the very first
-    page_view of the session is measured with cookies. Everyone else stays in
-    cookieless (aggregated) mode until they accept via the banner (see site.js).
-    Declining or ignoring the banner leaves analytics_storage denied, which under
-    UK PECR / ePrivacy needs no consent because nothing is stored.
+    Analytics cookies are on by default under the UK PECR statistical-purposes
+    exemption (Data (Use and Access) Act 2025). That exemption only holds if the
+    data is used purely to improve this site, so ad storage stays denied and
+    Google Signals / ad personalisation are switched off here. Visitors who opt
+    out via the notice or the footer "Cookie settings" link have that choice
+    replayed from localStorage *before* gtag init, so no cookie is ever written
+    for them (see site.js). Keep "Data sharing settings" off in the GA4 admin too.
 
     Returns an empty string until GA_MEASUREMENT_ID is filled in, so the site
     ships clean with no analytics until you opt in."""
@@ -145,39 +145,49 @@ def analytics_snippet() -> str:
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){{dataLayer.push(arguments);}}
+      var lcgOptedOut = false;
+      try {{
+        lcgOptedOut = localStorage.getItem('lcg-analytics-consent') === 'denied';
+      }} catch (e) {{}}
       gtag('consent', 'default', {{
         'ad_storage': 'denied',
         'ad_user_data': 'denied',
         'ad_personalization': 'denied',
-        'analytics_storage': 'denied'
+        'analytics_storage': lcgOptedOut ? 'denied' : 'granted'
       }});
-      try {{
-        if (localStorage.getItem('lcg-analytics-consent') === 'granted') {{
-          gtag('consent', 'update', {{ 'analytics_storage': 'granted' }});
-        }}
-      }} catch (e) {{}}
       gtag('js', new Date());
-      gtag('config', '{esc(GA_MEASUREMENT_ID)}');
+      gtag('config', '{esc(GA_MEASUREMENT_ID)}', {{
+        'allow_google_signals': false,
+        'allow_ad_personalization_signals': false
+      }});
     </script>"""
 
 
 def consent_banner() -> str:
-    """Cookie-consent banner for the analytics opt-in.
+    """Analytics notice with an opt-out.
 
-    Ships hidden (the `hidden` attribute); site.js reveals it only when the
-    visitor has not yet made a choice, so returning visitors never see it again.
-    Accepting flips analytics_storage to granted and remembers the choice; see
-    site.js. Returns empty when analytics is off, so there is nothing to consent
-    to and no banner."""
+    Ships hidden (the `hidden` attribute); site.js shows it once to new visitors
+    and again whenever the footer "Cookie settings" link is used. Opting out
+    denies analytics_storage, deletes the GA cookies and remembers the choice;
+    see site.js. Returns empty when analytics is off, so there is nothing to
+    tell visitors about and no notice."""
     if not GA_MEASUREMENT_ID:
         return ""
-    return """<div class="consent-banner" id="consent-banner" role="dialog" aria-live="polite" aria-label="Cookie consent" hidden>
-        <p class="consent-text">We use cookies to measure how the site is used. You can accept analytics cookies or keep browsing without them.</p>
+    return """<div class="consent-banner" id="consent-banner" role="region" aria-label="Analytics cookies" hidden>
+        <p class="consent-text">We use analytics cookies to see how people use this site so we can improve it. They are never used for advertising. <a class="text-link" href="/privacy/">Privacy and cookies</a></p>
         <div class="consent-actions">
-            <button class="button button-ghost" type="button" data-consent="denied">Decline</button>
-            <button class="button button-primary" type="button" data-consent="granted">Accept analytics</button>
+            <button class="button button-ghost" type="button" data-consent="denied">Opt out</button>
+            <button class="button button-primary" type="button" data-consent="granted">OK</button>
         </div>
     </div>"""
+
+
+def cookie_settings_link() -> str:
+    """Footer button that reopens the analytics notice, so opting out (or back
+    in) is always one click away. Absent when analytics is off."""
+    if not GA_MEASUREMENT_ID:
+        return ""
+    return '\n                <button class="footer-button" type="button" data-cookie-settings>Cookie settings</button>'
 
 
 def load_json(path: Path, default):
@@ -523,6 +533,7 @@ def layout(
                 <a href="{esc(INSTAGRAM)}" rel="noopener noreferrer" target="_blank">Instagram</a>
                 <a href="{esc(TIKTOK)}" rel="noopener noreferrer" target="_blank">TikTok</a>
                 <a href="{esc(FACEBOOK)}" rel="noopener noreferrer" target="_blank">Facebook</a>
+                <a href="/privacy/">Privacy</a>{cookie_settings_link()}
             </div>
         </div>
         <div class="wrap footer-bottom">© {now.year} London Comedy Group</div>
@@ -1138,12 +1149,29 @@ def render_static_pages(now: dt.datetime) -> dict[str, str]:
         <p>The London Comedy Group mailing list now has a simpler home.</p><a class="button button-primary" href="/stay-in-touch/">Go to the mailing list</a></div></section>"""
     not_found_body = """<section class="page-hero"><div class="wrap narrow center"><p class="eyebrow">404</p><h1>That page is not on the bill</h1>
         <p>Find a live London comedy show instead.</p><a class="button button-primary" href="/shows/">See upcoming shows</a></div></section>"""
+    privacy_body = f"""
+    <section class="page-hero"><div class="wrap narrow"><p class="eyebrow">Privacy</p>
+        <h1>Privacy and cookies</h1><p>What this website collects about you, and how to turn it off.</p></div></section>
+    <div class="section wrap narrow prose">
+        <h2>Analytics</h2>
+        <p>We use Google Analytics to count visits and see which pages and shows people look at, so we can improve the site. It records things like the pages you view, the site that sent you here, your device and browser type, your rough location (city or country), and clicks on ticket links. It does not give us your name or contact details.</p>
+        <p>We have switched off Google's advertising features, so this data is not used for ads or to build an advertising profile of you.</p>
+        <h2>Cookies</h2>
+        <p>Google Analytics sets two cookies: <code>_ga</code> and <code>_ga_{esc(GA_MEASUREMENT_ID.removeprefix("G-"))}</code>. They let it tell new visits from returning ones and last up to two years. UK law allows analytics cookies used only to improve a website without asking first, as long as you can easily opt out.</p>
+        <h2>Opting out</h2>
+        <p>Use <button class="footer-button" type="button" data-cookie-settings>Cookie settings</button> (also in the footer of every page) and choose Opt out. We delete the analytics cookies and stop measuring your visits on this browser. We remember that choice in your browser's local storage, so clearing your browsing data resets it.</p>
+        <h2>Tickets and the mailing list</h2>
+        <p>Tickets are booked on Eventbrite and the mailing list runs on beehiiv. When you use them, their own privacy policies apply.</p>
+        <h2>Contact</h2>
+        <p>For questions about your data, message London Comedy Group on <a class="text-link" href="{esc(INSTAGRAM)}" rel="noopener noreferrer" target="_blank">Instagram</a> or <a class="text-link" href="{esc(FACEBOOK)}" rel="noopener noreferrer" target="_blank">Facebook</a>. You can also complain to the <a class="text-link" href="https://ico.org.uk/make-a-complaint/" rel="noopener noreferrer" target="_blank">Information Commissioner's Office</a>.</p>
+    </div>"""
     redirect = layout(title="Mailing List | London Comedy Group", description="Join the London Comedy Group mailing list.", canonical="/stay-in-touch/", body=redirect_body, now=now, robots="noindex,follow")
     redirect = redirect.replace("</head>", '    <meta http-equiv="refresh" content="0; url=/stay-in-touch/">\n</head>')
     return {
         "hire-comedians-london/index.html": layout(title="Hire Comedians in London | London Comedy Group", description="Hire London comedians for venue nights, corporate events, private parties, charity events, and comedy workshops.", canonical="/hire-comedians-london/", body=hire_body, now=now, json_ld=[breadcrumb([("Home", "/"), ("Hire comedians", "/hire-comedians-london/")])]),
         "perform-with-us/index.html": layout(title="Perform With Us | London Comedy Group", description="Apply to perform at London Comedy Group stand-up nights across London.", canonical="/perform-with-us/", body=perform_body, now=now, robots="noindex,follow"),
         "stay-in-touch/index.html": layout(title="London Comedy Shows Mailing List | London Comedy Group", description="Join the London Comedy Group mailing list for new venues, special comedy shows, and ticket releases.", canonical="/stay-in-touch/", body=newsletter_body, now=now),
+        "privacy/index.html": layout(title="Privacy and Cookies | London Comedy Group", description="How the London Comedy Group website uses analytics cookies and how to opt out.", canonical="/privacy/", body=privacy_body, now=now, robots="noindex,follow"),
         "let-us-talk-to-you.html": redirect,
         "404.html": layout(title="Page Not Found | London Comedy Group", description="Find upcoming London Comedy Group stand-up shows.", canonical="/404.html", body=not_found_body, now=now, robots="noindex,follow"),
     }

@@ -29,14 +29,14 @@ jobs:
 
       - name: Commit changes
         run: |
-          if [ -z "$(git status --porcelain -- index.html shows events robots.txt sitemap.xml 404.html hire-comedians-london perform-with-us stay-in-touch let-us-talk-to-you.html scripts/site-state.json scripts/generated-files.json scripts/refresh-heartbeat.txt)" ]; then
+          if [ -z "$(git status --porcelain -- index.html shows events robots.txt sitemap.xml 404.html hire-comedians-london perform-with-us stay-in-touch privacy let-us-talk-to-you.html scripts/site-state.json scripts/generated-files.json scripts/refresh-heartbeat.txt)" ]; then
             echo "Website is already up to date."
             exit 0
           fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add -A -- index.html shows events robots.txt sitemap.xml 404.html \
-            hire-comedians-london perform-with-us stay-in-touch let-us-talk-to-you.html \
+            hire-comedians-london perform-with-us stay-in-touch privacy let-us-talk-to-you.html \
             scripts/site-state.json scripts/generated-files.json scripts/refresh-heartbeat.txt
           git commit -m "Update website from Eventbrite"
           git push

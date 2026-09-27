@@ -8,30 +8,73 @@ if (toggle && nav) {
   });
 }
 
-// Cookie consent. The inline GA snippet defaults analytics_storage to "denied"
-// and replays a stored "granted" choice before init, so here we only handle the
-// banner: show it when no choice exists, then record the visitor's decision.
+// Analytics notice (opt-out). The inline GA snippet grants analytics_storage
+// by default and replays a stored "denied" before init, so here we only handle
+// the notice: show it once to new visitors, reopen it from any
+// [data-cookie-settings] button, and record the visitor's choice.
 const CONSENT_KEY = "lcg-analytics-consent";
+const NOTICE_KEY = "lcg-analytics-notice";
 const banner = document.getElementById("consent-banner");
 
-if (banner) {
-  let stored = null;
+const readStore = (key) => {
   try {
-    stored = localStorage.getItem(CONSENT_KEY);
+    return localStorage.getItem(key);
+  } catch (e) {
+    return null;
+  }
+};
+const writeStore = (key, value) => {
+  try {
+    localStorage.setItem(key, value);
   } catch (e) {}
+};
 
-  if (stored !== "granted" && stored !== "denied") {
+// gtag stops writing cookies once consent is denied, but the ones it already
+// set stay behind, so remove _ga and _ga_<id> on every domain they could use.
+const deleteAnalyticsCookies = () => {
+  const host = location.hostname;
+  const domains = ["", host, "." + host, "." + host.split(".").slice(-2).join(".")];
+  document.cookie.split(";").forEach((part) => {
+    const name = part.split("=")[0].trim();
+    if (name !== "_ga" && !name.startsWith("_ga_")) return;
+    domains.forEach((domain) => {
+      document.cookie = `${name}=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/${domain ? `; domain=${domain}` : ""}`;
+    });
+  });
+};
+
+if (banner) {
+  const optOut = banner.querySelector('[data-consent="denied"]');
+  const accept = banner.querySelector('[data-consent="granted"]');
+
+  const showNotice = () => {
+    const optedOut = readStore(CONSENT_KEY) === "denied";
+    optOut.textContent = optedOut ? "Keep it off" : "Opt out";
+    accept.textContent = optedOut ? "Turn analytics on" : "OK";
     banner.hidden = false;
+  };
+
+  if (!readStore(NOTICE_KEY)) {
+    showNotice();
   }
 
-  banner.querySelectorAll("[data-consent]").forEach((btn) => {
+  document.querySelectorAll("[data-cookie-settings]").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      showNotice();
+      accept.focus();
+    });
+  });
+
+  [optOut, accept].forEach((btn) => {
     btn.addEventListener("click", () => {
       const choice = btn.dataset.consent;
-      try {
-        localStorage.setItem(CONSENT_KEY, choice);
-      } catch (e) {}
-      if (choice === "granted" && typeof window.gtag === "function") {
-        window.gtag("consent", "update", { analytics_storage: "granted" });
+      writeStore(CONSENT_KEY, choice);
+      writeStore(NOTICE_KEY, "seen");
+      if (typeof window.gtag === "function") {
+        window.gtag("consent", "update", { analytics_storage: choice });
+      }
+      if (choice === "denied") {
+        deleteAnalyticsCookies();
       }
       banner.hidden = true;
     });
