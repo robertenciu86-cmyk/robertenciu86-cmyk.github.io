@@ -1,6 +1,12 @@
 {
   "lastmod": {
-    "/": "2026-09-29",
+    "/": "2026-09-30",
+    "/events/bear-hug-comedy-free-live-stand-up-comedy-night-central-london-2026-10-14-2000-2002640628028/": "2026-09-30",
+    "/events/bear-hug-comedy-free-live-stand-up-comedy-night-central-london-2026-11-04-2000-2002640631037/": "2026-09-30",
+    "/events/bear-hug-comedy-free-live-stand-up-comedy-night-central-london-2026-11-11-2000-2002640632040/": "2026-09-30",
+    "/events/bear-hug-comedy-free-live-stand-up-comedy-night-central-london-2026-11-25-2000-2002640634046/": "2026-09-30",
+    "/events/bear-hug-comedy-free-live-stand-up-comedy-night-central-london-2026-12-09-2000-2002640636052/": "2026-09-30",
+    "/events/bear-hug-comedy-free-live-stand-up-comedy-night-central-london-2026-12-23-2000-2002640715289/": "2026-09-30",
     "/events/byob-comedy-peckham-2026-10-01-2000-1999384399561/": "2026-09-01",
     "/events/byob-comedy-peckham-2026-10-08-2000-1999384400564/": "2026-09-01",
     "/events/byob-comedy-peckham-2026-10-15-2000-1999384401567/": "2026-09-01",
@@ -40,13 +46,14 @@
     "/events/islington-sunday-comedy-8pm-2026-11-08-2000-1999934017483/": "2026-09-06",
     "/events/islington-sunday-comedy-8pm-2026-11-15-2000-1999934018486/": "2026-09-06",
     "/hire-comedians-london/": "2026-06-15",
-    "/shows/": "2026-09-29",
-    "/shows/byob-comedy-peckham/": "2026-09-29",
-    "/shows/candlemaker-comedy-battersea/": "2026-09-29",
-    "/shows/free-comedy-every-sunday-at-6pm-in-north-london/": "2026-09-29",
-    "/shows/is-it-lington-tuesday-comedy/": "2026-09-29",
-    "/shows/islington-sunday-comedy-6pm/": "2026-09-29",
-    "/shows/islington-sunday-comedy-8pm/": "2026-09-29",
+    "/shows/": "2026-09-30",
+    "/shows/bear-hug-comedy-free-live-stand-up-comedy-night-central-london/": "2026-09-30",
+    "/shows/byob-comedy-peckham/": "2026-09-30",
+    "/shows/candlemaker-comedy-battersea/": "2026-09-30",
+    "/shows/free-comedy-every-sunday-at-6pm-in-north-london/": "2026-09-30",
+    "/shows/is-it-lington-tuesday-comedy/": "2026-09-30",
+    "/shows/islington-sunday-comedy-6pm/": "2026-09-30",
+    "/shows/islington-sunday-comedy-8pm/": "2026-09-30",
     "/stay-in-touch/": "2026-06-15"
   },
   "occurrences": {
@@ -179,268 +186,6 @@
       },
       "last_seen": "2026-07-05",
       "path": "/events/islington-sunday-comedy-6pm-2026-07-05-1800-1988716794467/",
-      "status": "expired"
-    },
-    "1988716826563": {
-      "event": {
-        "capacity": 40,
-        "capacity_is_custom": false,
-        "category_id": "110",
-        "changed": "2026-07-02T19:47:36Z",
-        "created": "2026-05-03T18:21:43Z",
-        "currency": "GBP",
-        "description": {
-          "html": "The best stand-up comedy in Peckham, free every Thursday at 8pm at Eagle Eats Bakery. Bring your own beer!",
-          "text": "The best stand-up comedy in Peckham, free every Thursday at 8pm at Eagle Eats Bakery. Bring your own beer!"
-        },
-        "end": {
-          "local": "2026-07-02T21:30:00",
-          "timezone": "Europe/London",
-          "utc": "2026-07-02T20:30:00Z"
-        },
-        "facebook_event_id": null,
-        "format_id": "11",
-        "hide_end_date": false,
-        "hide_start_date": false,
-        "id": "1988716826563",
-        "inventory_type": "limited",
-        "invite_only": false,
-        "is_externally_ticketed": false,
-        "is_free": true,
-        "is_locked": false,
-        "is_reserved_seating": false,
-        "is_series": true,
-        "is_series_parent": false,
-        "listed": true,
-        "locale": "en_US",
-        "logo": {
-          "aspect_ratio": "2",
-          "crop_mask": {
-            "height": 1080,
-            "top_left": {
-              "x": 0,
-              "y": 0
-            },
-            "width": 2160
-          },
-          "edge_color": "#f5e2a7",
-          "edge_color_set": true,
-          "id": "1179214042",
-          "original": {
-            "height": 1080,
-            "url": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1179214042%2F543747696447%2F1%2Foriginal.20260306-162753?auto=format%2Ccompress&q=75&sharp=10&s=e4014ea77e71c224ce95563687ed09c1",
-            "width": 2160
-          },
-          "url": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1179214042%2F543747696447%2F1%2Foriginal.20260306-162753?h=200&w=450&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C0%2C2160%2C1080&s=2049ef6e056f7fa642baa7c1b214d09a"
-        },
-        "logo_id": "1179214042",
-        "name": {
-          "html": "BYOB - Free Comedy Every Thursday in Peckham",
-          "text": "BYOB - Free Comedy Every Thursday in Peckham"
-        },
-        "online_event": false,
-        "organization_id": "1234539271983",
-        "organizer_id": "55764637993",
-        "privacy_setting": "unlocked",
-        "published": "2026-01-21T11:06:36Z",
-        "resource_uri": "https://www.eventbriteapi.com/v3/events/1988716826563/",
-        "series_id": "1981104014437",
-        "shareable": true,
-        "show_colors_in_seatmap_thumbnail": false,
-        "show_pick_a_seat": false,
-        "show_remaining": false,
-        "show_seatmap_thumbnail": false,
-        "source": "coyote",
-        "start": {
-          "local": "2026-07-02T20:00:00",
-          "timezone": "Europe/London",
-          "utc": "2026-07-02T19:00:00Z"
-        },
-        "status": "started",
-        "subcategory_id": "10003",
-        "summary": "The best stand-up comedy in Peckham, free every Thursday at 8pm at Eagle Eats Bakery. Bring your own beer!",
-        "ticket_availability": {
-          "has_available_tickets": false,
-          "is_sold_out": true,
-          "maximum_ticket_price": {
-            "currency": "GBP",
-            "display": "0.00 GBP",
-            "major_value": "0.00",
-            "value": 0
-          },
-          "minimum_ticket_price": {
-            "currency": "GBP",
-            "display": "0.00 GBP",
-            "major_value": "0.00",
-            "value": 0
-          },
-          "start_sales_date": null,
-          "waitlist_available": false
-        },
-        "tx_time_limit": 1200,
-        "url": "https://www.eventbrite.co.uk/e/byob-free-comedy-every-thursday-in-peckham-tickets-1988716826563",
-        "venue": {
-          "address": {
-            "address_1": "Station approach",
-            "address_2": "",
-            "city": "London",
-            "country": "GB",
-            "latitude": "51.47380090000001",
-            "localized_address_display": "Station approach, London, SE15 2JR",
-            "localized_area_display": "London",
-            "localized_multi_line_address_display": [
-              "Station approach",
-              "London",
-              "SE15 2JR"
-            ],
-            "longitude": "-0.0573",
-            "postal_code": "SE15 2JR",
-            "region": "England"
-          },
-          "age_restriction": null,
-          "capacity": null,
-          "id": "296067022",
-          "latitude": "51.47380090000001",
-          "longitude": "-0.0573",
-          "name": "Eagle Eats Bakery",
-          "resource_uri": "https://www.eventbriteapi.com/v3/venues/296067022/"
-        },
-        "venue_id": "296067022",
-        "version": null
-      },
-      "last_seen": "2026-07-02",
-      "path": "/events/byob-comedy-peckham-2026-07-02-2000-1988716826563/",
-      "status": "expired"
-    },
-    "1988716843614": {
-      "event": {
-        "capacity": 80,
-        "capacity_is_custom": false,
-        "category_id": "105",
-        "changed": "2026-07-02T19:47:36Z",
-        "created": "2026-05-03T18:22:54Z",
-        "currency": "GBP",
-        "description": {
-          "html": "The best free Stand Up Comedy in London, every Sunday at 8pm at Brewhouse &amp; Kitchen in Islington.",
-          "text": "The best free Stand Up Comedy in London, every Sunday at 8pm at Brewhouse & Kitchen in Islington."
-        },
-        "end": {
-          "local": "2026-07-02T21:30:00",
-          "timezone": "Europe/London",
-          "utc": "2026-07-02T20:30:00Z"
-        },
-        "facebook_event_id": null,
-        "format_id": "6",
-        "hide_end_date": false,
-        "hide_start_date": false,
-        "id": "1988716843614",
-        "inventory_type": "limited",
-        "invite_only": false,
-        "is_externally_ticketed": false,
-        "is_free": true,
-        "is_locked": false,
-        "is_reserved_seating": false,
-        "is_series": true,
-        "is_series_parent": false,
-        "listed": true,
-        "locale": "en_GB",
-        "logo": {
-          "aspect_ratio": "2",
-          "crop_mask": {
-            "height": 1080,
-            "top_left": {
-              "x": 0,
-              "y": 0
-            },
-            "width": 2160
-          },
-          "edge_color": null,
-          "edge_color_set": true,
-          "id": "1176403518",
-          "original": {
-            "height": 1080,
-            "url": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1176403518%2F543747696447%2F1%2Foriginal.20260201-230633?auto=format%2Ccompress&q=75&sharp=10&s=606020b6ba85db1cbee1a7a6759bd052",
-            "width": 2160
-          },
-          "url": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1176403518%2F543747696447%2F1%2Foriginal.20260201-230633?h=200&w=450&auto=format%2Ccompress&q=75&sharp=10&rect=0%2C0%2C2160%2C1080&s=3f033b2603a50787a5af55f8855cb493"
-        },
-        "logo_id": "1176403518",
-        "name": {
-          "html": "Free Comedy Every Sunday at 8pm in Islington",
-          "text": "Free Comedy Every Sunday at 8pm in Islington"
-        },
-        "online_event": false,
-        "organization_id": "1234539271983",
-        "organizer_id": "55764637993",
-        "privacy_setting": "unlocked",
-        "published": "2026-02-01T23:07:03Z",
-        "resource_uri": "https://www.eventbriteapi.com/v3/events/1988716843614/",
-        "series_id": "1982140155563",
-        "shareable": true,
-        "show_colors_in_seatmap_thumbnail": false,
-        "show_pick_a_seat": false,
-        "show_remaining": false,
-        "show_seatmap_thumbnail": false,
-        "source": "coyote",
-        "start": {
-          "local": "2026-07-02T20:00:00",
-          "timezone": "Europe/London",
-          "utc": "2026-07-02T19:00:00Z"
-        },
-        "status": "started",
-        "subcategory_id": "5010",
-        "summary": "The best free Stand Up Comedy in London, every Sunday at 8pm at Brewhouse & Kitchen in Islington.",
-        "ticket_availability": {
-          "has_available_tickets": false,
-          "is_sold_out": true,
-          "maximum_ticket_price": {
-            "currency": "GBP",
-            "display": "0.00 GBP",
-            "major_value": "0.00",
-            "value": 0
-          },
-          "minimum_ticket_price": {
-            "currency": "GBP",
-            "display": "0.00 GBP",
-            "major_value": "0.00",
-            "value": 0
-          },
-          "start_sales_date": null,
-          "waitlist_available": false
-        },
-        "tx_time_limit": 1200,
-        "url": "https://www.eventbrite.co.uk/e/free-comedy-every-sunday-at-8pm-in-islington-tickets-1988716843614",
-        "venue": {
-          "address": {
-            "address_1": "2A Corsica Street",
-            "address_2": "",
-            "city": "London",
-            "country": "GB",
-            "latitude": "51.5463543",
-            "localized_address_display": "2A Corsica Street, London, N5 1JJ",
-            "localized_area_display": "London",
-            "localized_multi_line_address_display": [
-              "2A Corsica Street",
-              "London",
-              "N5 1JJ"
-            ],
-            "longitude": "-0.1017174",
-            "postal_code": "N5 1JJ",
-            "region": "England"
-          },
-          "age_restriction": null,
-          "capacity": null,
-          "id": "296236287",
-          "latitude": "51.5463543",
-          "longitude": "-0.1017174",
-          "name": "Brewhouse & Kitchen - Highbury",
-          "resource_uri": "https://www.eventbriteapi.com/v3/venues/296236287/"
-        },
-        "venue_id": "296236287",
-        "version": null
-      },
-      "last_seen": "2026-07-02",
-      "path": "/events/islington-sunday-comedy-8pm-2026-07-02-2000-1988716843614/",
       "status": "expired"
     },
     "1988716928869": {
@@ -17697,6 +17442,750 @@
       "last_seen": "2026-09-30",
       "path": "/events/islington-sunday-comedy-8pm-2026-11-15-2000-1999934018486/",
       "status": "live"
+    },
+    "2002640628028": {
+      "event": {
+        "capacity": 40,
+        "capacity_is_custom": false,
+        "category_id": "105",
+        "changed": "2026-09-30T17:11:26Z",
+        "created": "2026-09-30T17:05:10Z",
+        "currency": "GBP",
+        "description": {
+          "html": "Looking for a hilarious mid-week night out in Central London? Join us for Bear Hug Comedy—a fast-paced, high-energy stand-up show.",
+          "text": "Looking for a hilarious mid-week night out in Central London? Join us for Bear Hug Comedy—a fast-paced, high-energy stand-up show."
+        },
+        "end": {
+          "local": "2026-10-14T22:00:00",
+          "timezone": "Europe/London",
+          "utc": "2026-10-14T21:00:00Z"
+        },
+        "facebook_event_id": null,
+        "format_id": "6",
+        "hide_end_date": false,
+        "hide_start_date": false,
+        "id": "2002640628028",
+        "inventory_type": "limited",
+        "invite_only": false,
+        "is_externally_ticketed": false,
+        "is_free": true,
+        "is_locked": false,
+        "is_reserved_seating": false,
+        "is_series": true,
+        "is_series_parent": false,
+        "listed": true,
+        "locale": "en_US",
+        "logo": {
+          "aspect_ratio": "1.415",
+          "crop_mask": null,
+          "edge_color": "#f38747",
+          "edge_color_set": true,
+          "id": "1194741695",
+          "original": {
+            "height": 1448,
+            "url": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1194741695%2F543747696447%2F1%2Foriginal.20260930-170210?auto=format%2Ccompress&q=75&sharp=10&s=0a6df5b69ea2eb4658a17fc15b5030b6",
+            "width": 2048
+          },
+          "url": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1194741695%2F543747696447%2F1%2Foriginal.20260930-170210?crop=focalpoint&fit=crop&h=200&w=450&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.5&fp-y=0.5&s=2a1f7f05bf13be66efd9485abc0baedd"
+        },
+        "logo_id": "1194741695",
+        "name": {
+          "html": "Bear Hug Comedy: Free Live Stand-Up Comedy Night (Central London)",
+          "text": "Bear Hug Comedy: Free Live Stand-Up Comedy Night (Central London)"
+        },
+        "online_event": false,
+        "organization_id": "1234539271983",
+        "organizer_id": "55764637993",
+        "privacy_setting": "unlocked",
+        "published": "2026-09-30T17:11:27Z",
+        "resource_uri": "https://www.eventbriteapi.com/v3/events/2002640628028/",
+        "series_id": "2002639799550",
+        "shareable": true,
+        "show_colors_in_seatmap_thumbnail": false,
+        "show_pick_a_seat": false,
+        "show_remaining": false,
+        "show_seatmap_thumbnail": false,
+        "source": "coyote",
+        "start": {
+          "local": "2026-10-14T20:00:00",
+          "timezone": "Europe/London",
+          "utc": "2026-10-14T19:00:00Z"
+        },
+        "status": "live",
+        "subcategory_id": "5010",
+        "summary": "Looking for a hilarious mid-week night out in Central London? Join us for Bear Hug Comedy—a fast-paced, high-energy stand-up show.",
+        "ticket_availability": {
+          "has_available_tickets": true,
+          "is_sold_out": false,
+          "maximum_ticket_price": {
+            "currency": "GBP",
+            "display": "0.00 GBP",
+            "major_value": "0.00",
+            "value": 0
+          },
+          "minimum_ticket_price": {
+            "currency": "GBP",
+            "display": "0.00 GBP",
+            "major_value": "0.00",
+            "value": 0
+          },
+          "start_sales_date": null,
+          "waitlist_available": false
+        },
+        "tx_time_limit": 1200,
+        "url": "https://www.eventbrite.co.uk/e/bear-hug-comedy-free-live-stand-up-comedy-night-central-london-tickets-2002640628028",
+        "venue": {
+          "address": {
+            "address_1": "33 New Oxford Street",
+            "address_2": "",
+            "city": "London",
+            "country": "GB",
+            "latitude": "51.5170517",
+            "localized_address_display": "33 New Oxford Street, London, WC1A 1BH",
+            "localized_area_display": "London",
+            "localized_multi_line_address_display": [
+              "33 New Oxford Street",
+              "London",
+              "WC1A 1BH"
+            ],
+            "longitude": "-0.1250194",
+            "postal_code": "WC1A 1BH",
+            "region": "England"
+          },
+          "age_restriction": null,
+          "capacity": null,
+          "id": "299652369",
+          "latitude": "51.5170517",
+          "longitude": "-0.1250194",
+          "name": "The Old Crown Public House",
+          "resource_uri": "https://www.eventbriteapi.com/v3/venues/299652369/"
+        },
+        "venue_id": "299652369",
+        "version": null
+      },
+      "last_seen": "2026-09-30",
+      "path": "/events/bear-hug-comedy-free-live-stand-up-comedy-night-central-london-2026-10-14-2000-2002640628028/",
+      "status": "live"
+    },
+    "2002640631037": {
+      "event": {
+        "capacity": 40,
+        "capacity_is_custom": false,
+        "category_id": "105",
+        "changed": "2026-09-30T17:11:26Z",
+        "created": "2026-09-30T17:05:10Z",
+        "currency": "GBP",
+        "description": {
+          "html": "Looking for a hilarious mid-week night out in Central London? Join us for Bear Hug Comedy—a fast-paced, high-energy stand-up show.",
+          "text": "Looking for a hilarious mid-week night out in Central London? Join us for Bear Hug Comedy—a fast-paced, high-energy stand-up show."
+        },
+        "end": {
+          "local": "2026-11-04T22:00:00",
+          "timezone": "Europe/London",
+          "utc": "2026-11-04T22:00:00Z"
+        },
+        "facebook_event_id": null,
+        "format_id": "6",
+        "hide_end_date": false,
+        "hide_start_date": false,
+        "id": "2002640631037",
+        "inventory_type": "limited",
+        "invite_only": false,
+        "is_externally_ticketed": false,
+        "is_free": true,
+        "is_locked": false,
+        "is_reserved_seating": false,
+        "is_series": true,
+        "is_series_parent": false,
+        "listed": true,
+        "locale": "en_US",
+        "logo": {
+          "aspect_ratio": "1.415",
+          "crop_mask": null,
+          "edge_color": "#f38747",
+          "edge_color_set": true,
+          "id": "1194741695",
+          "original": {
+            "height": 1448,
+            "url": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1194741695%2F543747696447%2F1%2Foriginal.20260930-170210?auto=format%2Ccompress&q=75&sharp=10&s=0a6df5b69ea2eb4658a17fc15b5030b6",
+            "width": 2048
+          },
+          "url": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1194741695%2F543747696447%2F1%2Foriginal.20260930-170210?crop=focalpoint&fit=crop&h=200&w=450&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.5&fp-y=0.5&s=2a1f7f05bf13be66efd9485abc0baedd"
+        },
+        "logo_id": "1194741695",
+        "name": {
+          "html": "Bear Hug Comedy: Free Live Stand-Up Comedy Night (Central London)",
+          "text": "Bear Hug Comedy: Free Live Stand-Up Comedy Night (Central London)"
+        },
+        "online_event": false,
+        "organization_id": "1234539271983",
+        "organizer_id": "55764637993",
+        "privacy_setting": "unlocked",
+        "published": "2026-09-30T17:11:27Z",
+        "resource_uri": "https://www.eventbriteapi.com/v3/events/2002640631037/",
+        "series_id": "2002639799550",
+        "shareable": true,
+        "show_colors_in_seatmap_thumbnail": false,
+        "show_pick_a_seat": false,
+        "show_remaining": false,
+        "show_seatmap_thumbnail": false,
+        "source": "coyote",
+        "start": {
+          "local": "2026-11-04T20:00:00",
+          "timezone": "Europe/London",
+          "utc": "2026-11-04T20:00:00Z"
+        },
+        "status": "live",
+        "subcategory_id": "5010",
+        "summary": "Looking for a hilarious mid-week night out in Central London? Join us for Bear Hug Comedy—a fast-paced, high-energy stand-up show.",
+        "ticket_availability": {
+          "has_available_tickets": true,
+          "is_sold_out": false,
+          "maximum_ticket_price": {
+            "currency": "GBP",
+            "display": "0.00 GBP",
+            "major_value": "0.00",
+            "value": 0
+          },
+          "minimum_ticket_price": {
+            "currency": "GBP",
+            "display": "0.00 GBP",
+            "major_value": "0.00",
+            "value": 0
+          },
+          "start_sales_date": null,
+          "waitlist_available": false
+        },
+        "tx_time_limit": 1200,
+        "url": "https://www.eventbrite.co.uk/e/bear-hug-comedy-free-live-stand-up-comedy-night-central-london-tickets-2002640631037",
+        "venue": {
+          "address": {
+            "address_1": "33 New Oxford Street",
+            "address_2": "",
+            "city": "London",
+            "country": "GB",
+            "latitude": "51.5170517",
+            "localized_address_display": "33 New Oxford Street, London, WC1A 1BH",
+            "localized_area_display": "London",
+            "localized_multi_line_address_display": [
+              "33 New Oxford Street",
+              "London",
+              "WC1A 1BH"
+            ],
+            "longitude": "-0.1250194",
+            "postal_code": "WC1A 1BH",
+            "region": "England"
+          },
+          "age_restriction": null,
+          "capacity": null,
+          "id": "299652369",
+          "latitude": "51.5170517",
+          "longitude": "-0.1250194",
+          "name": "The Old Crown Public House",
+          "resource_uri": "https://www.eventbriteapi.com/v3/venues/299652369/"
+        },
+        "venue_id": "299652369",
+        "version": null
+      },
+      "last_seen": "2026-09-30",
+      "path": "/events/bear-hug-comedy-free-live-stand-up-comedy-night-central-london-2026-11-04-2000-2002640631037/",
+      "status": "live"
+    },
+    "2002640632040": {
+      "event": {
+        "capacity": 40,
+        "capacity_is_custom": false,
+        "category_id": "105",
+        "changed": "2026-09-30T17:11:26Z",
+        "created": "2026-09-30T17:05:10Z",
+        "currency": "GBP",
+        "description": {
+          "html": "Looking for a hilarious mid-week night out in Central London? Join us for Bear Hug Comedy—a fast-paced, high-energy stand-up show.",
+          "text": "Looking for a hilarious mid-week night out in Central London? Join us for Bear Hug Comedy—a fast-paced, high-energy stand-up show."
+        },
+        "end": {
+          "local": "2026-11-11T22:00:00",
+          "timezone": "Europe/London",
+          "utc": "2026-11-11T22:00:00Z"
+        },
+        "facebook_event_id": null,
+        "format_id": "6",
+        "hide_end_date": false,
+        "hide_start_date": false,
+        "id": "2002640632040",
+        "inventory_type": "limited",
+        "invite_only": false,
+        "is_externally_ticketed": false,
+        "is_free": true,
+        "is_locked": false,
+        "is_reserved_seating": false,
+        "is_series": true,
+        "is_series_parent": false,
+        "listed": true,
+        "locale": "en_US",
+        "logo": {
+          "aspect_ratio": "1.415",
+          "crop_mask": null,
+          "edge_color": "#f38747",
+          "edge_color_set": true,
+          "id": "1194741695",
+          "original": {
+            "height": 1448,
+            "url": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1194741695%2F543747696447%2F1%2Foriginal.20260930-170210?auto=format%2Ccompress&q=75&sharp=10&s=0a6df5b69ea2eb4658a17fc15b5030b6",
+            "width": 2048
+          },
+          "url": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1194741695%2F543747696447%2F1%2Foriginal.20260930-170210?crop=focalpoint&fit=crop&h=200&w=450&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.5&fp-y=0.5&s=2a1f7f05bf13be66efd9485abc0baedd"
+        },
+        "logo_id": "1194741695",
+        "name": {
+          "html": "Bear Hug Comedy: Free Live Stand-Up Comedy Night (Central London)",
+          "text": "Bear Hug Comedy: Free Live Stand-Up Comedy Night (Central London)"
+        },
+        "online_event": false,
+        "organization_id": "1234539271983",
+        "organizer_id": "55764637993",
+        "privacy_setting": "unlocked",
+        "published": "2026-09-30T17:11:27Z",
+        "resource_uri": "https://www.eventbriteapi.com/v3/events/2002640632040/",
+        "series_id": "2002639799550",
+        "shareable": true,
+        "show_colors_in_seatmap_thumbnail": false,
+        "show_pick_a_seat": false,
+        "show_remaining": false,
+        "show_seatmap_thumbnail": false,
+        "source": "coyote",
+        "start": {
+          "local": "2026-11-11T20:00:00",
+          "timezone": "Europe/London",
+          "utc": "2026-11-11T20:00:00Z"
+        },
+        "status": "live",
+        "subcategory_id": "5010",
+        "summary": "Looking for a hilarious mid-week night out in Central London? Join us for Bear Hug Comedy—a fast-paced, high-energy stand-up show.",
+        "ticket_availability": {
+          "has_available_tickets": true,
+          "is_sold_out": false,
+          "maximum_ticket_price": {
+            "currency": "GBP",
+            "display": "0.00 GBP",
+            "major_value": "0.00",
+            "value": 0
+          },
+          "minimum_ticket_price": {
+            "currency": "GBP",
+            "display": "0.00 GBP",
+            "major_value": "0.00",
+            "value": 0
+          },
+          "start_sales_date": null,
+          "waitlist_available": false
+        },
+        "tx_time_limit": 1200,
+        "url": "https://www.eventbrite.co.uk/e/bear-hug-comedy-free-live-stand-up-comedy-night-central-london-tickets-2002640632040",
+        "venue": {
+          "address": {
+            "address_1": "33 New Oxford Street",
+            "address_2": "",
+            "city": "London",
+            "country": "GB",
+            "latitude": "51.5170517",
+            "localized_address_display": "33 New Oxford Street, London, WC1A 1BH",
+            "localized_area_display": "London",
+            "localized_multi_line_address_display": [
+              "33 New Oxford Street",
+              "London",
+              "WC1A 1BH"
+            ],
+            "longitude": "-0.1250194",
+            "postal_code": "WC1A 1BH",
+            "region": "England"
+          },
+          "age_restriction": null,
+          "capacity": null,
+          "id": "299652369",
+          "latitude": "51.5170517",
+          "longitude": "-0.1250194",
+          "name": "The Old Crown Public House",
+          "resource_uri": "https://www.eventbriteapi.com/v3/venues/299652369/"
+        },
+        "venue_id": "299652369",
+        "version": null
+      },
+      "last_seen": "2026-09-30",
+      "path": "/events/bear-hug-comedy-free-live-stand-up-comedy-night-central-london-2026-11-11-2000-2002640632040/",
+      "status": "live"
+    },
+    "2002640634046": {
+      "event": {
+        "capacity": 40,
+        "capacity_is_custom": false,
+        "category_id": "105",
+        "changed": "2026-09-30T17:11:26Z",
+        "created": "2026-09-30T17:05:10Z",
+        "currency": "GBP",
+        "description": {
+          "html": "Looking for a hilarious mid-week night out in Central London? Join us for Bear Hug Comedy—a fast-paced, high-energy stand-up show.",
+          "text": "Looking for a hilarious mid-week night out in Central London? Join us for Bear Hug Comedy—a fast-paced, high-energy stand-up show."
+        },
+        "end": {
+          "local": "2026-11-25T22:00:00",
+          "timezone": "Europe/London",
+          "utc": "2026-11-25T22:00:00Z"
+        },
+        "facebook_event_id": null,
+        "format_id": "6",
+        "hide_end_date": false,
+        "hide_start_date": false,
+        "id": "2002640634046",
+        "inventory_type": "limited",
+        "invite_only": false,
+        "is_externally_ticketed": false,
+        "is_free": true,
+        "is_locked": false,
+        "is_reserved_seating": false,
+        "is_series": true,
+        "is_series_parent": false,
+        "listed": true,
+        "locale": "en_US",
+        "logo": {
+          "aspect_ratio": "1.415",
+          "crop_mask": null,
+          "edge_color": "#f38747",
+          "edge_color_set": true,
+          "id": "1194741695",
+          "original": {
+            "height": 1448,
+            "url": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1194741695%2F543747696447%2F1%2Foriginal.20260930-170210?auto=format%2Ccompress&q=75&sharp=10&s=0a6df5b69ea2eb4658a17fc15b5030b6",
+            "width": 2048
+          },
+          "url": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1194741695%2F543747696447%2F1%2Foriginal.20260930-170210?crop=focalpoint&fit=crop&h=200&w=450&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.5&fp-y=0.5&s=2a1f7f05bf13be66efd9485abc0baedd"
+        },
+        "logo_id": "1194741695",
+        "name": {
+          "html": "Bear Hug Comedy: Free Live Stand-Up Comedy Night (Central London)",
+          "text": "Bear Hug Comedy: Free Live Stand-Up Comedy Night (Central London)"
+        },
+        "online_event": false,
+        "organization_id": "1234539271983",
+        "organizer_id": "55764637993",
+        "privacy_setting": "unlocked",
+        "published": "2026-09-30T17:11:27Z",
+        "resource_uri": "https://www.eventbriteapi.com/v3/events/2002640634046/",
+        "series_id": "2002639799550",
+        "shareable": true,
+        "show_colors_in_seatmap_thumbnail": false,
+        "show_pick_a_seat": false,
+        "show_remaining": false,
+        "show_seatmap_thumbnail": false,
+        "source": "coyote",
+        "start": {
+          "local": "2026-11-25T20:00:00",
+          "timezone": "Europe/London",
+          "utc": "2026-11-25T20:00:00Z"
+        },
+        "status": "live",
+        "subcategory_id": "5010",
+        "summary": "Looking for a hilarious mid-week night out in Central London? Join us for Bear Hug Comedy—a fast-paced, high-energy stand-up show.",
+        "ticket_availability": {
+          "has_available_tickets": true,
+          "is_sold_out": false,
+          "maximum_ticket_price": {
+            "currency": "GBP",
+            "display": "0.00 GBP",
+            "major_value": "0.00",
+            "value": 0
+          },
+          "minimum_ticket_price": {
+            "currency": "GBP",
+            "display": "0.00 GBP",
+            "major_value": "0.00",
+            "value": 0
+          },
+          "start_sales_date": null,
+          "waitlist_available": false
+        },
+        "tx_time_limit": 1200,
+        "url": "https://www.eventbrite.co.uk/e/bear-hug-comedy-free-live-stand-up-comedy-night-central-london-tickets-2002640634046",
+        "venue": {
+          "address": {
+            "address_1": "33 New Oxford Street",
+            "address_2": "",
+            "city": "London",
+            "country": "GB",
+            "latitude": "51.5170517",
+            "localized_address_display": "33 New Oxford Street, London, WC1A 1BH",
+            "localized_area_display": "London",
+            "localized_multi_line_address_display": [
+              "33 New Oxford Street",
+              "London",
+              "WC1A 1BH"
+            ],
+            "longitude": "-0.1250194",
+            "postal_code": "WC1A 1BH",
+            "region": "England"
+          },
+          "age_restriction": null,
+          "capacity": null,
+          "id": "299652369",
+          "latitude": "51.5170517",
+          "longitude": "-0.1250194",
+          "name": "The Old Crown Public House",
+          "resource_uri": "https://www.eventbriteapi.com/v3/venues/299652369/"
+        },
+        "venue_id": "299652369",
+        "version": null
+      },
+      "last_seen": "2026-09-30",
+      "path": "/events/bear-hug-comedy-free-live-stand-up-comedy-night-central-london-2026-11-25-2000-2002640634046/",
+      "status": "live"
+    },
+    "2002640636052": {
+      "event": {
+        "capacity": 40,
+        "capacity_is_custom": false,
+        "category_id": "105",
+        "changed": "2026-09-30T17:11:26Z",
+        "created": "2026-09-30T17:05:10Z",
+        "currency": "GBP",
+        "description": {
+          "html": "Looking for a hilarious mid-week night out in Central London? Join us for Bear Hug Comedy—a fast-paced, high-energy stand-up show.",
+          "text": "Looking for a hilarious mid-week night out in Central London? Join us for Bear Hug Comedy—a fast-paced, high-energy stand-up show."
+        },
+        "end": {
+          "local": "2026-12-09T22:00:00",
+          "timezone": "Europe/London",
+          "utc": "2026-12-09T22:00:00Z"
+        },
+        "facebook_event_id": null,
+        "format_id": "6",
+        "hide_end_date": false,
+        "hide_start_date": false,
+        "id": "2002640636052",
+        "inventory_type": "limited",
+        "invite_only": false,
+        "is_externally_ticketed": false,
+        "is_free": true,
+        "is_locked": false,
+        "is_reserved_seating": false,
+        "is_series": true,
+        "is_series_parent": false,
+        "listed": true,
+        "locale": "en_US",
+        "logo": {
+          "aspect_ratio": "1.415",
+          "crop_mask": null,
+          "edge_color": "#f38747",
+          "edge_color_set": true,
+          "id": "1194741695",
+          "original": {
+            "height": 1448,
+            "url": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1194741695%2F543747696447%2F1%2Foriginal.20260930-170210?auto=format%2Ccompress&q=75&sharp=10&s=0a6df5b69ea2eb4658a17fc15b5030b6",
+            "width": 2048
+          },
+          "url": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1194741695%2F543747696447%2F1%2Foriginal.20260930-170210?crop=focalpoint&fit=crop&h=200&w=450&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.5&fp-y=0.5&s=2a1f7f05bf13be66efd9485abc0baedd"
+        },
+        "logo_id": "1194741695",
+        "name": {
+          "html": "Bear Hug Comedy: Free Live Stand-Up Comedy Night (Central London)",
+          "text": "Bear Hug Comedy: Free Live Stand-Up Comedy Night (Central London)"
+        },
+        "online_event": false,
+        "organization_id": "1234539271983",
+        "organizer_id": "55764637993",
+        "privacy_setting": "unlocked",
+        "published": "2026-09-30T17:11:27Z",
+        "resource_uri": "https://www.eventbriteapi.com/v3/events/2002640636052/",
+        "series_id": "2002639799550",
+        "shareable": true,
+        "show_colors_in_seatmap_thumbnail": false,
+        "show_pick_a_seat": false,
+        "show_remaining": false,
+        "show_seatmap_thumbnail": false,
+        "source": "coyote",
+        "start": {
+          "local": "2026-12-09T20:00:00",
+          "timezone": "Europe/London",
+          "utc": "2026-12-09T20:00:00Z"
+        },
+        "status": "live",
+        "subcategory_id": "5010",
+        "summary": "Looking for a hilarious mid-week night out in Central London? Join us for Bear Hug Comedy—a fast-paced, high-energy stand-up show.",
+        "ticket_availability": {
+          "has_available_tickets": true,
+          "is_sold_out": false,
+          "maximum_ticket_price": {
+            "currency": "GBP",
+            "display": "0.00 GBP",
+            "major_value": "0.00",
+            "value": 0
+          },
+          "minimum_ticket_price": {
+            "currency": "GBP",
+            "display": "0.00 GBP",
+            "major_value": "0.00",
+            "value": 0
+          },
+          "start_sales_date": null,
+          "waitlist_available": false
+        },
+        "tx_time_limit": 1200,
+        "url": "https://www.eventbrite.co.uk/e/bear-hug-comedy-free-live-stand-up-comedy-night-central-london-tickets-2002640636052",
+        "venue": {
+          "address": {
+            "address_1": "33 New Oxford Street",
+            "address_2": "",
+            "city": "London",
+            "country": "GB",
+            "latitude": "51.5170517",
+            "localized_address_display": "33 New Oxford Street, London, WC1A 1BH",
+            "localized_area_display": "London",
+            "localized_multi_line_address_display": [
+              "33 New Oxford Street",
+              "London",
+              "WC1A 1BH"
+            ],
+            "longitude": "-0.1250194",
+            "postal_code": "WC1A 1BH",
+            "region": "England"
+          },
+          "age_restriction": null,
+          "capacity": null,
+          "id": "299652369",
+          "latitude": "51.5170517",
+          "longitude": "-0.1250194",
+          "name": "The Old Crown Public House",
+          "resource_uri": "https://www.eventbriteapi.com/v3/venues/299652369/"
+        },
+        "venue_id": "299652369",
+        "version": null
+      },
+      "last_seen": "2026-09-30",
+      "path": "/events/bear-hug-comedy-free-live-stand-up-comedy-night-central-london-2026-12-09-2000-2002640636052/",
+      "status": "live"
+    },
+    "2002640715289": {
+      "event": {
+        "capacity": 40,
+        "capacity_is_custom": false,
+        "category_id": "105",
+        "changed": "2026-09-30T17:11:26Z",
+        "created": "2026-09-30T17:07:01Z",
+        "currency": "GBP",
+        "description": {
+          "html": "Looking for a hilarious mid-week night out in Central London? Join us for Bear Hug Comedy—a fast-paced, high-energy stand-up show.",
+          "text": "Looking for a hilarious mid-week night out in Central London? Join us for Bear Hug Comedy—a fast-paced, high-energy stand-up show."
+        },
+        "end": {
+          "local": "2026-12-23T22:00:00",
+          "timezone": "Europe/London",
+          "utc": "2026-12-23T22:00:00Z"
+        },
+        "facebook_event_id": null,
+        "format_id": "6",
+        "hide_end_date": false,
+        "hide_start_date": false,
+        "id": "2002640715289",
+        "inventory_type": "limited",
+        "invite_only": false,
+        "is_externally_ticketed": false,
+        "is_free": true,
+        "is_locked": false,
+        "is_reserved_seating": false,
+        "is_series": true,
+        "is_series_parent": false,
+        "listed": true,
+        "locale": "en_US",
+        "logo": {
+          "aspect_ratio": "1.415",
+          "crop_mask": null,
+          "edge_color": "#f38747",
+          "edge_color_set": true,
+          "id": "1194741695",
+          "original": {
+            "height": 1448,
+            "url": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1194741695%2F543747696447%2F1%2Foriginal.20260930-170210?auto=format%2Ccompress&q=75&sharp=10&s=0a6df5b69ea2eb4658a17fc15b5030b6",
+            "width": 2048
+          },
+          "url": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1194741695%2F543747696447%2F1%2Foriginal.20260930-170210?crop=focalpoint&fit=crop&h=200&w=450&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.5&fp-y=0.5&s=2a1f7f05bf13be66efd9485abc0baedd"
+        },
+        "logo_id": "1194741695",
+        "name": {
+          "html": "Bear Hug Comedy: Free Live Stand-Up Comedy Night (Central London)",
+          "text": "Bear Hug Comedy: Free Live Stand-Up Comedy Night (Central London)"
+        },
+        "online_event": false,
+        "organization_id": "1234539271983",
+        "organizer_id": "55764637993",
+        "privacy_setting": "unlocked",
+        "published": "2026-09-30T17:11:27Z",
+        "resource_uri": "https://www.eventbriteapi.com/v3/events/2002640715289/",
+        "series_id": "2002639799550",
+        "shareable": true,
+        "show_colors_in_seatmap_thumbnail": false,
+        "show_pick_a_seat": false,
+        "show_remaining": false,
+        "show_seatmap_thumbnail": false,
+        "source": "coyote",
+        "start": {
+          "local": "2026-12-23T20:00:00",
+          "timezone": "Europe/London",
+          "utc": "2026-12-23T20:00:00Z"
+        },
+        "status": "live",
+        "subcategory_id": "5010",
+        "summary": "Looking for a hilarious mid-week night out in Central London? Join us for Bear Hug Comedy—a fast-paced, high-energy stand-up show.",
+        "ticket_availability": {
+          "has_available_tickets": true,
+          "is_sold_out": false,
+          "maximum_ticket_price": {
+            "currency": "GBP",
+            "display": "0.00 GBP",
+            "major_value": "0.00",
+            "value": 0
+          },
+          "minimum_ticket_price": {
+            "currency": "GBP",
+            "display": "0.00 GBP",
+            "major_value": "0.00",
+            "value": 0
+          },
+          "start_sales_date": null,
+          "waitlist_available": false
+        },
+        "tx_time_limit": 1200,
+        "url": "https://www.eventbrite.co.uk/e/bear-hug-comedy-free-live-stand-up-comedy-night-central-london-tickets-2002640715289",
+        "venue": {
+          "address": {
+            "address_1": "33 New Oxford Street",
+            "address_2": "",
+            "city": "London",
+            "country": "GB",
+            "latitude": "51.5170517",
+            "localized_address_display": "33 New Oxford Street, London, WC1A 1BH",
+            "localized_area_display": "London",
+            "localized_multi_line_address_display": [
+              "33 New Oxford Street",
+              "London",
+              "WC1A 1BH"
+            ],
+            "longitude": "-0.1250194",
+            "postal_code": "WC1A 1BH",
+            "region": "England"
+          },
+          "age_restriction": null,
+          "capacity": null,
+          "id": "299652369",
+          "latitude": "51.5170517",
+          "longitude": "-0.1250194",
+          "name": "The Old Crown Public House",
+          "resource_uri": "https://www.eventbriteapi.com/v3/venues/299652369/"
+        },
+        "venue_id": "299652369",
+        "version": null
+      },
+      "last_seen": "2026-09-30",
+      "path": "/events/bear-hug-comedy-free-live-stand-up-comedy-night-central-london-2026-12-23-2000-2002640715289/",
+      "status": "live"
     }
   },
   "series": {
@@ -17959,6 +18448,32 @@
       "summary": "Our Favourite Stand Up Comedy in London, every Monday at 7:30pm at Aura X in Shoreditch",
       "title": "Comedy Club Shoreditch - Free New Material Mondays",
       "venue_name": "Aura x"
+    },
+    "2002639799550": {
+      "address": {
+        "address_1": "33 New Oxford Street",
+        "address_2": "",
+        "city": "London",
+        "country": "GB",
+        "latitude": "51.5170517",
+        "localized_address_display": "33 New Oxford Street, London, WC1A 1BH",
+        "localized_area_display": "London",
+        "localized_multi_line_address_display": [
+          "33 New Oxford Street",
+          "London",
+          "WC1A 1BH"
+        ],
+        "longitude": "-0.1250194",
+        "postal_code": "WC1A 1BH",
+        "region": "England"
+      },
+      "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1194741695%2F543747696447%2F1%2Foriginal.20260930-170210?auto=format%2Ccompress&q=75&sharp=10&s=0a6df5b69ea2eb4658a17fc15b5030b6",
+      "last_seen": "2026-09-30",
+      "slug": "bear-hug-comedy-free-live-stand-up-comedy-night-central-london",
+      "source_title": "Bear Hug Comedy: Free Live Stand-Up Comedy Night (Central London)",
+      "summary": "Looking for a hilarious mid-week night out in Central London? Join us for Bear Hug Comedy—a fast-paced, high-energy stand-up show.",
+      "title": "Bear Hug Comedy: Free Live Stand-Up Comedy Night (Central London)",
+      "venue_name": "The Old Crown Public House"
     }
   }
 }
