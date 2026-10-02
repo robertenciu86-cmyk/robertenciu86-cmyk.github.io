@@ -21,6 +21,7 @@
             --pink: #ff3d8d;
             --blue: #7ce8ff;
             --red: #ff5a6e;
+            --gold: #ffd34d;
             --line: rgba(255,255,255,.14);
         }
         * { box-sizing: border-box; }
@@ -82,8 +83,13 @@
             object-fit: cover; border: 3px solid var(--blue);
             animation: float 3s ease-in-out infinite;
         }
+        .sage-face { flex: none; padding: 0; background: none; border: 0; border-radius: 50%; cursor: pointer; touch-action: manipulation; }
+        .sage-face.think img { animation: think .45s ease-in-out; }
+        .bubble.new { animation: pop .3s cubic-bezier(.2,1.5,.4,1); }
+        .hint { margin: 8px 0 0; color: var(--muted); font-size: .85rem; }
+        @keyframes think { 30% { transform: rotate(-14deg) scale(1.08); } 65% { transform: rotate(10deg) scale(1.08); } }
         .bubble {
-            position: relative; margin: 0;
+            position: relative; margin: 0; cursor: pointer;
             background: var(--text); color: var(--bg);
             border-radius: 18px; padding: 12px 16px;
             font-weight: 700; font-size: 1.05rem; line-height: 1.3;
@@ -125,7 +131,7 @@
             container-type: size;
         }
         .side.p2 { --c: var(--blue); background: rgba(124,232,255,.05); }
-        .side.elite { --c: var(--red); background: rgba(255,40,60,.09); }
+        .side.elite { --c: var(--gold); background: radial-gradient(circle at 50% 40%, rgba(255,211,77,.14), rgba(255,40,60,.08) 70%); }
         .side.flip { transform: rotate(180deg); }
         .hud { flex: none; display: flex; align-items: center; gap: 10px; font-weight: 800; white-space: nowrap; }
         .hud .name { color: var(--c); }
@@ -141,22 +147,34 @@
         .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }
         .hole {
             position: relative; aspect-ratio: 1; min-width: 0;
+            container-type: inline-size;
             padding: 0; overflow: hidden; cursor: pointer;
             background: var(--surface); border: 2px solid var(--line); border-radius: 50%;
             touch-action: manipulation;
         }
-        .hole img {
-            position: absolute; inset: 0; width: 100%; height: 100%;
-            object-fit: cover; pointer-events: none;
+        .pop {
+            position: absolute; inset: 0; pointer-events: none;
             transform: translateY(105%); transition: transform .14s ease-out;
         }
-        .hole.up img { transform: translateY(0); }
+        .hole.up .pop { transform: translateY(0); }
+        .pop img { width: 100%; height: 100%; object-fit: cover; display: block; }
+        .pop i { display: none; position: absolute; left: 50%; font-style: normal; line-height: 1; }
         .hole.hit { border-color: var(--c); }
         .hole.hit img { filter: saturate(0) brightness(1.4); }
         .hole.miss { animation: shake .25s; }
-        .elite .hole { pointer-events: none; border-color: rgba(255,90,110,.35); }
-        .elite .hole img { filter: hue-rotate(-40deg) saturate(1.8) contrast(1.15); }
-        .elite .hole.hit { border-color: var(--red); }
+        .elite .hole {
+            pointer-events: none;
+            border: 3px solid var(--gold);
+            background: radial-gradient(circle, #3a2a08, var(--surface));
+            box-shadow: 0 0 14px rgba(255,211,77,.35);
+        }
+        .elite .hole.up { box-shadow: 0 0 22px rgba(255,211,77,.8); }
+        .elite .pop img { filter: saturate(1.3) contrast(1.1) sepia(.25); }
+        .elite .pop i { display: block; }
+        .elite .crown { top: -2%; font-size: 40cqw; transform: translateX(-50%) rotate(-12deg); filter: drop-shadow(0 2px 3px rgba(0,0,0,.6)); }
+        .elite .shades { top: 34%; font-size: 46cqw; transform: translateX(-46%); }
+        .elite .hole.hit { border-color: var(--red); box-shadow: 0 0 22px rgba(255,90,110,.8); }
+        .elite .hud { color: var(--gold); text-shadow: 0 0 12px rgba(255,211,77,.5); }
 
         .flash {
             position: absolute; inset: -4px;
@@ -196,7 +214,7 @@
         @keyframes shake { 25% { transform: translateX(-4px); } 75% { transform: translateX(4px); } }
         @keyframes float { 50% { transform: translateY(-5px) rotate(-3deg); } }
         @media (prefers-reduced-motion: reduce) {
-            .card, .sage img, .hole.miss { animation: none; }
+            .card, .sage img, .hole.miss, .bubble.new, .sage-face.think img { animation: none; }
             .confetti { display: none; }
         }
     </style>
@@ -222,9 +240,10 @@
         <p class="sub" data-sub></p>
         <img class="poster" src="/bcg/brendan-comedy-group.jpg" width="1920" height="1080" alt="Brendan Comedy Group: Brendan Morris in a patchwork top and denim shorts, arms raised, next to the words Brendan Comedy Group">
         <figure class="sage">
-            <img src="/ridwan-hussain.jpg" width="88" height="88" alt="Ridwan Hussain">
-            <blockquote class="bubble">“Brendan Comedy Group is about community.”<small>– Ridwan Hussain, wise man</small></blockquote>
+            <button class="sage-face" type="button" data-sage aria-label="Ask Ridwan for more wisdom"><img src="/ridwan-hussain.jpg" width="88" height="88" alt="Ridwan Hussain"></button>
+            <blockquote class="bubble"><span data-wisdom aria-live="polite">“Brendan Comedy Group is about community.”</span><small>– Ridwan Hussain, wise man</small></blockquote>
         </figure>
+        <p class="hint">Tap Ridwan for more wisdom</p>
         <div class="actions">
             <button class="btn" type="button" data-again>Play again</button>
             <button class="btn ghost" type="button" data-menu>Menu</button>
@@ -271,7 +290,7 @@
             this.holes = [];
             var grid = this.el.querySelector('.grid');
             for (var i = 0; i < 9; i++) {
-                var h = el('button', 'hole', '<img src="/brendan-morris.jpg" alt="" draggable="false">');
+                var h = el('button', 'hole', '<span class="pop"><img src="/brendan-morris.jpg" alt="" draggable="false"><i class="crown" aria-hidden="true">👑</i><i class="shades" aria-hidden="true">🕶️</i></span>');
                 h.type = 'button';
                 h.setAttribute('aria-label', 'Empty');
                 if (this.cpu) h.tabIndex = -1;
@@ -546,10 +565,11 @@
                 sub = 'Teamwork. Welcome to the secret Brendan Comedy Group.';
             } else if (mode === 'boss') {
                 title = '<span>' + champion.name + '</span> beat the Elite Brendan!';
-                sub = 'Champion of the Brendan Comedy Group. ' + champion.beat + ', you’re still part of the community.';
+                sub = 'Champion of the Brendan Comedy Group. 🤝 ' + champion.beat + ', shake their hand. It’s still a community.';
             }
             prize.querySelector('[data-title]').innerHTML = title;
             prize.querySelector('[data-sub]').textContent = sub;
+            prize.querySelector('[data-wisdom]').textContent = '“Brendan Comedy Group is about community.”';
             teardown();
             show(prize);
             confetti();
@@ -575,6 +595,46 @@
             enter(mode === 'boss' ? 'versus' : mode);
         });
         prize.querySelector('[data-menu]').addEventListener('click', toMenu);
+
+        var WISDOM = [
+            'Brendan Comedy Group is about community.',
+            'London is about community.',
+            'Comedy is about community.',
+            'Brendan is about community.',
+            'Community is about Brendan.',
+            'London Comedy Group is about Brendan.',
+            'Brendan is not a man. Brendan is a community.',
+            'A joke told alone is a thought. A joke told in London is a community.',
+            'Every Brendan was once just a London.',
+            'Laugh, and London laughs with you. Heckle, and you heckle alone.',
+            'The open mic is long. The community is longer.',
+            'Two Brendans walk into a bar. That is a community.',
+            'Comedy is just community with a punchline.',
+            'Even the Elite Brendan is about community.',
+            'Before there was comedy, there was Brendan.',
+            'In London, we are all a little bit Brendan.',
+            'The tube is late. The community is never late.',
+            'Group is just Brendan spelled differently.'
+        ];
+        var wisdomEl = prize.querySelector('[data-wisdom]');
+        var sage = prize.querySelector('[data-sage]');
+        var bubble = prize.querySelector('.bubble');
+        var wise = 0;
+        function retrigger(node, cls) {
+            node.classList.remove(cls);
+            void node.offsetWidth;
+            node.classList.add(cls);
+        }
+        function nextWisdom() {
+            var n;
+            do { n = Math.floor(Math.random() * WISDOM.length); } while (n === wise);
+            wise = n;
+            wisdomEl.textContent = '“' + WISDOM[n] + '”';
+            retrigger(sage, 'think');
+            retrigger(bubble, 'new');
+        }
+        sage.addEventListener('click', nextWisdom);
+        bubble.addEventListener('click', nextWisdom);
     })();
     </script>
 </body>
