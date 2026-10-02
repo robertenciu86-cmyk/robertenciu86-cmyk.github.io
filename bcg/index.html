@@ -2,7 +2,7 @@
 <html lang="en-GB">
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <meta name="theme-color" content="#090811">
     <title>Catch Brendan | London Comedy Group</title>
     <meta name="robots" content="noindex,nofollow">
@@ -23,6 +23,7 @@
         }
         * { box-sizing: border-box; }
         html, body { margin: 0; }
+        [hidden] { display: none !important; }
         body {
             min-height: 100vh;
             background: radial-gradient(circle at 50% 0%, #241a3a 0%, var(--bg) 60%);
@@ -39,14 +40,16 @@
         .back:hover { color: var(--text); }
         h1 { font-size: clamp(2rem, 8vw, 3.4rem); line-height: 1; margin: 24px 0 8px; text-align: center; }
         h1 span { color: var(--pink); }
-        .lede { color: var(--muted); text-align: center; margin: 0 0 20px; max-width: 34ch; }
-        .hud { display: flex; gap: 24px; font-weight: 700; font-size: 1.1rem; margin-bottom: 14px; }
+        .lede { color: var(--muted); text-align: center; margin: 0 auto 20px; max-width: 34ch; }
+        .center { text-align: center; }
+        .hud { display: flex; justify-content: center; gap: 24px; font-weight: 700; font-size: 1.1rem; margin-bottom: 14px; }
         .hud b { color: var(--pink); font-variant-numeric: tabular-nums; }
         .grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             gap: 10px;
             width: min(100%, 360px);
+            margin: 0 auto;
         }
         .hole {
             aspect-ratio: 1;
@@ -71,20 +74,52 @@
         .hole.hit { border-color: var(--pink); }
         .hole.hit img { filter: saturate(0) brightness(1.4); }
         .btn {
-            margin-top: 22px;
             font: inherit; font-weight: 800; font-size: 1.1rem;
             background: var(--pink); color: #fff;
             border: 0; border-radius: 999px;
             padding: 14px 30px; cursor: pointer;
+            touch-action: manipulation;
         }
         .btn:hover { filter: brightness(1.1); }
+        .btn-ghost { background: transparent; border: 2px solid var(--line); color: var(--text); }
+        .modes { display: flex; flex-direction: column; gap: 12px; width: min(100%, 320px); margin: 8px auto 0; }
         .msg { min-height: 1.5em; margin-top: 14px; font-weight: 700; text-align: center; }
+        .quote { margin: 28px auto 0; max-width: 30ch; text-align: center; color: var(--muted); font-size: 1rem; }
+        .quote q { color: var(--text); font-weight: 700; font-size: 1.15rem; display: block; margin-bottom: 4px; }
+        .solo .btn { margin-top: 22px; }
+
+        /* Two players, one phone: top half is flipped for the person opposite */
+        .duo {
+            position: fixed; inset: 0; z-index: 10;
+            background: var(--bg);
+            display: flex; flex-direction: column;
+            height: 100vh; height: 100dvh;
+        }
+        .side {
+            flex: 1; min-height: 0;
+            display: flex; flex-direction: column; align-items: center; justify-content: center;
+            gap: 8px; padding: 10px 16px;
+        }
+        .side.p2 { transform: rotate(180deg); background: rgba(124,232,255,.04); }
+        .side .grid { width: min(100%, 40vh, 340px); width: min(100%, 40dvh, 340px); gap: 8px; }
+        .side .hud { margin: 0; font-size: 1rem; }
+        .side .msg { margin: 0; min-height: 1.3em; }
+        .p1 .hud b { color: var(--pink); }
+        .p2 .hud b { color: var(--blue); }
+        .p2 .hole.hit { border-color: var(--blue); }
+        .divider {
+            display: flex; align-items: center; justify-content: center; gap: 10px;
+            padding: 8px 16px; border-block: 1px solid var(--line);
+        }
+        .divider .btn { padding: 10px 22px; font-size: 1rem; }
+
         .prize { display: none; flex-direction: column; align-items: center; width: 100%; max-width: 960px; }
         .prize.show { display: flex; animation: pop .5s cubic-bezier(.2,1.6,.4,1); }
         .prize img { width: 100%; height: auto; border-radius: 14px; box-shadow: 0 20px 55px rgba(0,0,0,.4); }
         .prize p { color: var(--muted); text-align: center; }
+        .prize .btn { margin-top: 22px; }
         @keyframes pop { from { transform: scale(.6); opacity: 0; } to { transform: scale(1); opacity: 1; } }
-        .confetti { position: fixed; top: -12px; width: 10px; height: 14px; pointer-events: none; animation: fall linear forwards; }
+        .confetti { position: fixed; top: -12px; z-index: 20; width: 10px; height: 14px; pointer-events: none; animation: fall linear forwards; }
         @keyframes fall { to { transform: translateY(110vh) rotate(720deg); } }
         @media (prefers-reduced-motion: reduce) {
             .prize.show { animation: none; }
@@ -95,116 +130,223 @@
 <body>
     <a class="back" href="/">← Back to London Comedy Group</a>
 
-    <section id="game">
+    <section id="menu">
         <h1>Catch <span>Brendan</span></h1>
         <p class="lede">He's popping up everywhere. Tap him 7 times in 20 seconds to unlock something.</p>
-        <div class="hud" style="justify-content:center">
-            <div>Caught <b id="score">0</b>/7</div>
-            <div>Time <b id="time">20</b>s</div>
+        <div class="modes">
+            <button class="btn" type="button" data-mode="1">1 player</button>
+            <button class="btn btn-ghost" type="button" data-mode="2">2 players, one phone</button>
         </div>
-        <div class="grid" id="grid"></div>
-        <div style="text-align:center">
-            <button class="btn" id="start" type="button">Start</button>
-            <p class="msg" id="msg" aria-live="polite"></p>
+        <p class="quote"><q>London Comedy Group is about community</q>– Ridwan Hussain</p>
+    </section>
+
+    <section class="solo" id="solo" hidden>
+        <h1>Catch <span>Brendan</span></h1>
+        <div class="hud">
+            <div>Caught <b data-score>0</b>/7</div>
+            <div>Time <b data-time>20</b>s</div>
+        </div>
+        <div class="grid" data-grid></div>
+        <div class="center">
+            <button class="btn" type="button" data-go>Start</button>
+            <p class="msg" data-msg aria-live="polite"></p>
+        </div>
+    </section>
+
+    <section class="duo" id="duo" hidden>
+        <div class="side p2">
+            <div class="hud"><div>Player 2 <b data-score>0</b>/7</div><div>Time <b data-time>20</b>s</div></div>
+            <div class="grid" data-grid></div>
+            <p class="msg" data-msg aria-live="polite">Both of you need 7. Help each other out.</p>
+        </div>
+        <div class="divider">
+            <button class="btn btn-ghost" type="button" data-exit>✕</button>
+            <button class="btn" type="button" data-go>Start</button>
+        </div>
+        <div class="side p1">
+            <div class="hud"><div>Player 1 <b data-score>0</b>/7</div><div>Time <b data-time>20</b>s</div></div>
+            <div class="grid" data-grid></div>
+            <p class="msg" data-msg aria-live="polite">Both of you need 7. Help each other out.</p>
         </div>
     </section>
 
     <section class="prize" id="prize" aria-live="polite">
-        <h1>You caught <span>him</span>!</h1>
-        <p>Welcome to the secret Brendan Comedy Group.</p>
+        <h1 data-title>You caught <span>him</span>!</h1>
+        <p data-sub>Welcome to the secret Brendan Comedy Group.</p>
         <img src="/bcg/brendan-comedy-group.jpg" width="1920" height="1080" alt="Brendan Comedy Group: Brendan Morris in a patchwork top and denim shorts, arms raised, next to the words Brendan Comedy Group">
-        <button class="btn" id="again" type="button">Play again</button>
+        <p class="quote" data-quote hidden><q>London Comedy Group is about community</q>– Ridwan Hussain</p>
+        <button class="btn" type="button" data-again>Play again</button>
+        <button class="btn btn-ghost" type="button" data-menu style="margin-top:12px">Change mode</button>
     </section>
 
     <script>
     (function () {
         var TARGET = 7, SECONDS = 20;
-        var grid = document.getElementById('grid');
-        var scoreEl = document.getElementById('score');
-        var timeEl = document.getElementById('time');
-        var startBtn = document.getElementById('start');
-        var msg = document.getElementById('msg');
-        var game = document.getElementById('game');
+        var menu = document.getElementById('menu');
+        var solo = document.getElementById('solo');
+        var duo = document.getElementById('duo');
         var prize = document.getElementById('prize');
-        var holes = [], score = 0, timeLeft = SECONDS, active = -1, running = false, popTimer, clock;
+        var back = document.querySelector('.back');
+        var mode = 1, boards = [], timeLeft = SECONDS, clock = null;
 
-        for (var i = 0; i < 9; i++) {
-            var b = document.createElement('button');
-            b.type = 'button';
-            b.className = 'hole';
-            b.setAttribute('aria-label', 'Hole ' + (i + 1));
-            b.innerHTML = '<img src="/brendan-morris.jpg" alt="" draggable="false">';
-            b.addEventListener('pointerdown', whack.bind(null, i));
-            grid.appendChild(b);
-            holes.push(b);
+        // One grid with its own Brendan, score and timer for popping up
+        function Board(side) {
+            var self = this;
+            this.side = side;
+            this.grid = side.querySelector('[data-grid]');
+            this.scoreEl = side.querySelector('[data-score]');
+            this.timeEl = side.querySelector('[data-time]');
+            this.msg = side.querySelector('[data-msg]');
+            this.holes = [];
+            for (var i = 0; i < 9; i++) {
+                var b = document.createElement('button');
+                b.type = 'button';
+                b.className = 'hole';
+                b.setAttribute('aria-label', 'Hole ' + (i + 1));
+                b.innerHTML = '<img src="/brendan-morris.jpg" alt="" draggable="false">';
+                b.addEventListener('pointerdown', (function (n) {
+                    return function (e) { e.preventDefault(); self.whack(n); };
+                })(i));
+                this.grid.appendChild(b);
+                this.holes.push(b);
+            }
+            this.reset();
         }
-
-        function popDelay() {
+        Board.prototype.reset = function () {
+            this.stop();
+            this.score = 0;
+            this.active = -1;
+            this.done = false;
+            this.scoreEl.textContent = 0;
+        };
+        Board.prototype.start = function () {
+            this.running = true;
+            this.pop();
+        };
+        Board.prototype.stop = function () {
+            this.running = false;
+            clearTimeout(this.popTimer);
+            this.holes.forEach(function (h) { h.classList.remove('up', 'hit'); });
+        };
+        Board.prototype.pop = function () {
+            if (!this.running) return;
+            var self = this, next;
+            if (this.active >= 0) {
+                this.holes[this.active].classList.remove('up', 'hit');
+                this.holes[this.active].setAttribute('aria-label', 'Hole ' + (this.active + 1));
+            }
+            do { next = Math.floor(Math.random() * 9); } while (next === this.active);
+            this.active = next;
+            this.holes[next].classList.add('up');
+            this.holes[next].setAttribute('aria-label', 'Brendan! Tap him');
             // Speeds up as you catch him
-            return Math.max(520, 950 - score * 60);
-        }
-
-        function pop() {
-            if (!running) return;
-            if (active >= 0) holes[active].classList.remove('up', 'hit');
-            var next;
-            do { next = Math.floor(Math.random() * 9); } while (next === active);
-            active = next;
-            holes[active].classList.add('up');
-            holes[active].setAttribute('aria-label', 'Brendan! Tap him');
-            popTimer = setTimeout(function () {
-                holes[active].setAttribute('aria-label', 'Hole ' + (active + 1));
-                pop();
-            }, popDelay());
-        }
-
-        function whack(i, e) {
-            e.preventDefault();
-            if (!running || i !== active || holes[i].classList.contains('hit')) return;
-            holes[i].classList.add('hit');
-            score++;
-            scoreEl.textContent = score;
+            this.popTimer = setTimeout(function () { self.pop(); }, Math.max(520, 950 - this.score * 60));
+        };
+        Board.prototype.whack = function (i) {
+            if (!this.running || i !== this.active || this.holes[i].classList.contains('hit')) return;
+            var self = this;
+            this.holes[i].classList.add('hit');
+            this.score++;
+            this.scoreEl.textContent = this.score;
             if (navigator.vibrate) navigator.vibrate(30);
-            if (score >= TARGET) return win();
-            clearTimeout(popTimer);
-            popTimer = setTimeout(pop, 180);
+            if (this.score >= TARGET) {
+                this.done = true;
+                this.stop();
+                caught(this);
+                return;
+            }
+            clearTimeout(this.popTimer);
+            this.popTimer = setTimeout(function () { self.pop(); }, 180);
+        };
+
+        var soloBoard = new Board(solo);
+        var duoBoards = [new Board(duo.querySelector('.p1')), new Board(duo.querySelector('.p2'))];
+
+        function show(view) {
+            [menu, solo, duo].forEach(function (v) { v.hidden = v !== view; });
+            prize.classList.toggle('show', view === prize);
+            back.hidden = view === duo;
+            window.scrollTo(0, 0);
+        }
+
+        function setTime(t) {
+            boards.forEach(function (b) { b.timeEl.textContent = t; });
+        }
+
+        function setMsgs(text) {
+            boards.forEach(function (b) { b.msg.textContent = text; });
+        }
+
+        function goButton() {
+            return (mode === 1 ? solo : duo).querySelector('[data-go]');
         }
 
         function start() {
-            score = 0; timeLeft = SECONDS; running = true; active = -1;
-            scoreEl.textContent = 0; timeEl.textContent = SECONDS;
-            msg.textContent = '';
-            startBtn.hidden = true;
-            holes.forEach(function (h) { h.classList.remove('up', 'hit'); });
             clearInterval(clock);
+            timeLeft = SECONDS;
+            boards.forEach(function (b) { b.reset(); });
+            setTime(SECONDS);
+            setMsgs(mode === 2 ? 'Go!' : '');
+            goButton().hidden = true;
             clock = setInterval(function () {
                 timeLeft--;
-                timeEl.textContent = timeLeft;
+                setTime(timeLeft);
                 if (timeLeft <= 0) lose();
             }, 1000);
-            pop();
+            boards.forEach(function (b) { b.start(); });
         }
 
-        function stop() {
-            running = false;
-            clearTimeout(popTimer);
+        function stopAll() {
             clearInterval(clock);
-            holes.forEach(function (h) { h.classList.remove('up', 'hit'); });
+            boards.forEach(function (b) { b.stop(); });
+        }
+
+        function caught(board) {
+            if (mode === 2) {
+                var other = boards[0] === board ? boards[1] : boards[0];
+                if (!other.done) {
+                    board.msg.textContent = 'Got 7! Cheer your mate on.';
+                    other.msg.textContent = 'Your mate is done. Your turn!';
+                    return;
+                }
+            }
+            win();
         }
 
         function lose() {
-            stop();
-            msg.textContent = score >= TARGET - 2 ? 'So close. He got away.' : 'Brendan escaped. Try again?';
-            startBtn.textContent = 'Try again';
-            startBtn.hidden = false;
+            stopAll();
+            if (mode === 2) {
+                boards.forEach(function (b) {
+                    b.msg.textContent = b.done ? 'You made it. Your mate didn\'t.' : 'Brendan escaped.';
+                });
+            } else {
+                soloBoard.msg.textContent = soloBoard.score >= TARGET - 2 ? 'So close. He got away.' : 'Brendan escaped. Try again?';
+            }
+            var go = goButton();
+            go.textContent = 'Try again';
+            go.hidden = false;
         }
 
         function win() {
-            stop();
-            game.hidden = true;
-            prize.classList.add('show');
-            window.scrollTo(0, 0);
+            stopAll();
+            prize.querySelector('[data-title]').innerHTML = mode === 2 ? 'You <span>both</span> caught him!' : 'You caught <span>him</span>!';
+            prize.querySelector('[data-sub]').textContent = mode === 2 ? 'Teamwork. Welcome to the secret Brendan Comedy Group.' : 'Welcome to the secret Brendan Comedy Group.';
+            prize.querySelector('[data-quote]').hidden = mode !== 2;
+            show(prize);
             confetti();
+        }
+
+        function enter(m) {
+            stopAll();
+            mode = m;
+            boards = m === 2 ? duoBoards : [soloBoard];
+            boards.forEach(function (b) { b.reset(); });
+            setTime(SECONDS);
+            setMsgs(m === 2 ? 'Both of you need 7. Help each other out.' : '');
+            var go = goButton();
+            go.textContent = 'Start';
+            go.hidden = false;
+            show(m === 2 ? duo : solo);
         }
 
         function confetti() {
@@ -221,12 +363,13 @@
             }
         }
 
-        startBtn.addEventListener('click', start);
-        document.getElementById('again').addEventListener('click', function () {
-            prize.classList.remove('show');
-            game.hidden = false;
-            start();
+        document.querySelectorAll('[data-mode]').forEach(function (b) {
+            b.addEventListener('click', function () { enter(Number(b.dataset.mode)); });
         });
+        document.querySelectorAll('[data-go]').forEach(function (b) { b.addEventListener('click', start); });
+        duo.querySelector('[data-exit]').addEventListener('click', function () { stopAll(); show(menu); });
+        prize.querySelector('[data-again]').addEventListener('click', function () { enter(mode); start(); });
+        prize.querySelector('[data-menu]').addEventListener('click', function () { show(menu); });
     })();
     </script>
 </body>
