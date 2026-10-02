@@ -2,7 +2,7 @@
 <html lang="en-GB">
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
     <meta name="theme-color" content="#090811">
     <title>Catch Brendan | London Comedy Group</title>
     <meta name="robots" content="noindex,nofollow">
@@ -95,31 +95,48 @@
             display: flex; flex-direction: column;
             height: 100vh; height: 100dvh;
         }
+        .duo { padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left); }
         .side {
-            flex: 1; min-height: 0;
+            flex: 1 1 0; min-height: 0;
             display: flex; flex-direction: column; align-items: center; justify-content: center;
-            gap: 8px; padding: 10px 16px;
+            gap: 6px; padding: 8px 16px;
+            overflow: hidden;
+            container-type: size;
         }
+        .side > * { flex: none; }
         .side.p2 { transform: rotate(180deg); background: rgba(124,232,255,.04); }
-        .side .grid { width: min(100%, 40vh, 340px); width: min(100%, 40dvh, 340px); gap: 8px; }
-        .side .hud { margin: 0; font-size: 1rem; }
-        .side .msg { margin: 0; min-height: 1.3em; }
+        /* Grid takes whatever height is left after the hud and message */
+        .side .grid { width: min(100%, 30vh, 340px); width: min(100%, 340px, calc(100cqh - 100px)); gap: 6px; }
+        .elite .grid { width: min(100%, 26vh, 340px); width: min(100%, 340px, calc(100cqh - 128px)); }
+        .side .hud { margin: 0; gap: 14px; font-size: .95rem; white-space: nowrap; }
+        .side .msg {
+            margin: 0; max-width: 32ch;
+            font-size: .95rem; line-height: 1.25;
+            height: 2.6rem; overflow: hidden;
+            display: flex; align-items: center; justify-content: center;
+        }
         .side .hud [data-opp-wrap] b { color: var(--muted); }
-        .side .msg.big { font-size: 1.6rem; }
+        .side .msg.big { font-size: 1.1rem; }
         .p1 .hud b { color: var(--pink); }
         .p2 .hud b { color: var(--blue); }
         .p2 .hole.hit { border-color: var(--blue); }
         .elite { background: rgba(255,40,60,.08); }
-        .elite h2 { margin: 0; font-size: 1.3rem; color: #ff5a6e; }
+        .elite h2 { margin: 0; font-size: 1.1rem; line-height: 1.2; color: #ff5a6e; }
         .elite .hole { pointer-events: none; border-color: rgba(255,90,110,.35); }
         .elite .hole img { filter: hue-rotate(-40deg) saturate(1.8) contrast(1.15); }
         .elite .hole.hit { border-color: #ff5a6e; }
         .elite .hud b { color: #ff5a6e; }
         .divider {
+            flex: none;
             display: flex; align-items: center; justify-content: center; gap: 10px;
             padding: 8px 16px; border-block: 1px solid var(--line);
         }
-        .divider .btn { padding: 10px 22px; font-size: 1rem; }
+        .divider .btn { padding: 8px 22px; font-size: 1rem; }
+        .hole { min-width: 0; }
+        @media (max-width: 360px) {
+            .side .hud { gap: 10px; font-size: .85rem; }
+            .hud { gap: 16px; }
+        }
 
         .prize { display: none; flex-direction: column; align-items: center; width: 100%; max-width: 960px; }
         .prize.show { display: flex; animation: pop .5s cubic-bezier(.2,1.6,.4,1); }
@@ -415,7 +432,7 @@
             champion = { name: winner.name, beat: winner.opponent.name, score: winner.score, theirs: winner.opponent.score };
             enter('boss');
             boss.querySelector('[data-name]').textContent = champion.name;
-            boards[0].msg.textContent = champion.name + ' wins ' + champion.score + '–' + champion.theirs + '! ' + champion.beat + ', shake their hand. Now grab the phone.';
+            boards[0].msg.textContent = champion.name + ' wins ' + champion.score + '–' + champion.theirs + '! Grab the phone. ' + champion.beat + ', shake their hand.';
             boards[1].msg.textContent = 'Champions round. Think you can beat me?';
         }
 
