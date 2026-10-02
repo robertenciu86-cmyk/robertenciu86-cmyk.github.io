@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#090811">
+    <title>Catch Brendan | London Comedy Group</title>
+    <meta name="robots" content="noindex,nofollow">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&display=swap">
+    <style>
+        :root {
+            --bg: #090811;
+            --surface: #151222;
+            --text: #fffafc;
+            --muted: #c9beca;
+            --pink: #ff3d8d;
+            --blue: #7ce8ff;
+            --line: rgba(255,255,255,.14);
+        }
+        * { box-sizing: border-box; }
+        html, body { margin: 0; }
+        body {
+            min-height: 100vh;
+            background: radial-gradient(circle at 50% 0%, #241a3a 0%, var(--bg) 60%);
+            color: var(--text);
+            font-family: "Bricolage Grotesque", system-ui, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 24px 16px 40px;
+            -webkit-tap-highlight-color: transparent;
+        }
+        a { color: var(--blue); }
+        .back { align-self: flex-start; font-size: .9rem; color: var(--muted); text-decoration: none; }
+        .back:hover { color: var(--text); }
+        h1 { font-size: clamp(2rem, 8vw, 3.4rem); line-height: 1; margin: 24px 0 8px; text-align: center; }
+        h1 span { color: var(--pink); }
+        .lede { color: var(--muted); text-align: center; margin: 0 0 20px; max-width: 34ch; }
+        .hud { display: flex; gap: 24px; font-weight: 700; font-size: 1.1rem; margin-bottom: 14px; }
+        .hud b { color: var(--pink); font-variant-numeric: tabular-nums; }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+            width: min(100%, 360px);
+        }
+        .hole {
+            aspect-ratio: 1;
+            border-radius: 50%;
+            background: var(--surface);
+            border: 2px solid var(--line);
+            overflow: hidden;
+            position: relative;
+            cursor: pointer;
+            padding: 0;
+            touch-action: manipulation;
+        }
+        .hole img {
+            position: absolute; inset: 0;
+            width: 100%; height: 100%;
+            object-fit: cover;
+            transform: translateY(105%);
+            transition: transform .14s ease-out;
+            pointer-events: none;
+        }
+        .hole.up img { transform: translateY(0); }
+        .hole.hit { border-color: var(--pink); }
+        .hole.hit img { filter: saturate(0) brightness(1.4); }
+        .btn {
+            margin-top: 22px;
+            font: inherit; font-weight: 800; font-size: 1.1rem;
+            background: var(--pink); color: #fff;
+            border: 0; border-radius: 999px;
+            padding: 14px 30px; cursor: pointer;
+        }
+        .btn:hover { filter: brightness(1.1); }
+        .msg { min-height: 1.5em; margin-top: 14px; font-weight: 700; text-align: center; }
+        .prize { display: none; flex-direction: column; align-items: center; width: 100%; max-width: 960px; }
+        .prize.show { display: flex; animation: pop .5s cubic-bezier(.2,1.6,.4,1); }
+        .prize img { width: 100%; height: auto; border-radius: 14px; box-shadow: 0 20px 55px rgba(0,0,0,.4); }
+        .prize p { color: var(--muted); text-align: center; }
+        @keyframes pop { from { transform: scale(.6); opacity: 0; } to { transform: scale(1); opacity: 1; } }
+        .confetti { position: fixed; top: -12px; width: 10px; height: 14px; pointer-events: none; animation: fall linear forwards; }
+        @keyframes fall { to { transform: translateY(110vh) rotate(720deg); } }
+        @media (prefers-reduced-motion: reduce) {
+            .prize.show { animation: none; }
+            .confetti { display: none; }
+        }
+    </style>
+</head>
+<body>
+    <a class="back" href="/">← Back to London Comedy Group</a>
+
+    <section id="game">
+        <h1>Catch <span>Brendan</span></h1>
+        <p class="lede">He's popping up everywhere. Tap him 7 times in 20 seconds to unlock something.</p>
+        <div class="hud" style="justify-content:center">
+            <div>Caught <b id="score">0</b>/7</div>
+            <div>Time <b id="time">20</b>s</div>
+        </div>
+        <div class="grid" id="grid"></div>
+        <div style="text-align:center">
+            <button class="btn" id="start" type="button">Start</button>
+            <p class="msg" id="msg" aria-live="polite"></p>
+        </div>
+    </section>
+
+    <section class="prize" id="prize" aria-live="polite">
+        <h1>You caught <span>him</span>!</h1>
+        <p>Welcome to the secret Brendan Comedy Group.</p>
+        <img src="/bcg/brendan-comedy-group.jpg" width="1920" height="1080" alt="Brendan Comedy Group: Brendan Morris in a patchwork top and denim shorts, arms raised, next to the words Brendan Comedy Group">
+        <button class="btn" id="again" type="button">Play again</button>
+    </section>
+
+    <script>
+    (function () {
+        var TARGET = 7, SECONDS = 20;
+        var grid = document.getElementById('grid');
+        var scoreEl = document.getElementById('score');
+        var timeEl = document.getElementById('time');
+        var startBtn = document.getElementById('start');
+        var msg = document.getElementById('msg');
+        var game = document.getElementById('game');
+        var prize = document.getElementById('prize');
+        var holes = [], score = 0, timeLeft = SECONDS, active = -1, running = false, popTimer, clock;
+
+        for (var i = 0; i < 9; i++) {
+            var b = document.createElement('button');
+            b.type = 'button';
+            b.className = 'hole';
+            b.setAttribute('aria-label', 'Hole ' + (i + 1));
+            b.innerHTML = '<img src="/brendan-morris.jpg" alt="" draggable="false">';
+            b.addEventListener('pointerdown', whack.bind(null, i));
+            grid.appendChild(b);
+            holes.push(b);
+        }
+
+        function popDelay() {
+            // Speeds up as you catch him
+            return Math.max(520, 950 - score * 60);
+        }
+
+        function pop() {
+            if (!running) return;
+            if (active >= 0) holes[active].classList.remove('up', 'hit');
+            var next;
+            do { next = Math.floor(Math.random() * 9); } while (next === active);
+            active = next;
+            holes[active].classList.add('up');
+            holes[active].setAttribute('aria-label', 'Brendan! Tap him');
+            popTimer = setTimeout(function () {
+                holes[active].setAttribute('aria-label', 'Hole ' + (active + 1));
+                pop();
+            }, popDelay());
+        }
+
+        function whack(i, e) {
+            e.preventDefault();
+            if (!running || i !== active || holes[i].classList.contains('hit')) return;
+            holes[i].classList.add('hit');
+            score++;
+            scoreEl.textContent = score;
+            if (navigator.vibrate) navigator.vibrate(30);
+            if (score >= TARGET) return win();
+            clearTimeout(popTimer);
+            popTimer = setTimeout(pop, 180);
+        }
+
+        function start() {
+            score = 0; timeLeft = SECONDS; running = true; active = -1;
+            scoreEl.textContent = 0; timeEl.textContent = SECONDS;
+            msg.textContent = '';
+            startBtn.hidden = true;
+            holes.forEach(function (h) { h.classList.remove('up', 'hit'); });
+            clearInterval(clock);
+            clock = setInterval(function () {
+                timeLeft--;
+                timeEl.textContent = timeLeft;
+                if (timeLeft <= 0) lose();
+            }, 1000);
+            pop();
+        }
+
+        function stop() {
+            running = false;
+            clearTimeout(popTimer);
+            clearInterval(clock);
+            holes.forEach(function (h) { h.classList.remove('up', 'hit'); });
+        }
+
+        function lose() {
+            stop();
+            msg.textContent = score >= TARGET - 2 ? 'So close. He got away.' : 'Brendan escaped. Try again?';
+            startBtn.textContent = 'Try again';
+            startBtn.hidden = false;
+        }
+
+        function win() {
+            stop();
+            game.hidden = true;
+            prize.classList.add('show');
+            window.scrollTo(0, 0);
+            confetti();
+        }
+
+        function confetti() {
+            var colours = ['#ff3d8d', '#7ce8ff', '#f08a8f', '#ffffff', '#0a8fe0'];
+            for (var i = 0; i < 80; i++) {
+                var c = document.createElement('div');
+                c.className = 'confetti';
+                c.style.left = Math.random() * 100 + 'vw';
+                c.style.background = colours[i % colours.length];
+                c.style.animationDuration = (1.8 + Math.random() * 1.8) + 's';
+                c.style.animationDelay = Math.random() * .6 + 's';
+                document.body.appendChild(c);
+                c.addEventListener('animationend', c.remove.bind(c));
+            }
+        }
+
+        startBtn.addEventListener('click', start);
+        document.getElementById('again').addEventListener('click', function () {
+            prize.classList.remove('show');
+            game.hidden = false;
+            start();
+        });
+    })();
+    </script>
+</body>
+</html>

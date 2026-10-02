@@ -537,7 +537,7 @@ def layout(
                 <a href="/privacy/">Privacy</a>{cookie_settings_link()}
             </div>
         </div>
-        <div class="wrap footer-bottom">© {now.year} London Comedy Group</div>
+        <div class="wrap footer-bottom">© {now.year} London Comedy Group <a href="/bcg/" title="Psst…" aria-label="Secret game" style="text-decoration:none;opacity:.55">🎭</a></div>
     </footer>
     {consent_banner()}
     <script src="/assets/site.js?v={asset_version()}" defer></script>
