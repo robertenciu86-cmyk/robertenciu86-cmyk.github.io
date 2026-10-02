@@ -208,7 +208,7 @@
         <p class="lede">He keeps popping up. Catch him 7 times before the clock runs out to unlock a secret.</p>
         <div class="modes">
             <button class="mode" type="button" data-mode="solo"><strong>1 player</strong><span>Catch Brendan 7 times in 20 seconds.</span></button>
-            <button class="mode" type="button" data-mode="versus"><strong>2 players: head to head</strong><span>One phone, sit opposite each other. First to 7 wins, then takes on Elite Brendan.</span></button>
+            <button class="mode" type="button" data-mode="versus"><strong>2 players: head to head</strong><span>One phone, sit opposite each other. First to 7 wins, then takes on the Elite Brendan.</span></button>
             <button class="mode" type="button" data-mode="team"><strong>2 players: team up</strong><span>One phone, sit opposite each other. You both need 7 to win.</span></button>
         </div>
         <p class="quote"><q>London Comedy Group is about community</q>– Ridwan Hussain</p>
@@ -318,7 +318,7 @@
             var stay = Math.max(520, 950 - this.score * 60);
             this.popTimer = setTimeout(function () { self.pop(); }, stay);
             if (this.cpu) {
-                // Elite Brendan is quick, but slips up once he's sped up
+                // The Elite Brendan is quick, but slips up once he's sped up
                 var reaction = 420 + Math.random() * 480;
                 if (reaction < stay) this.cpuTimer = setTimeout(function () { self.whack(next); }, reaction);
             }
@@ -422,7 +422,7 @@
                 boards = [new Board('You', 'p1', soloDone)];
                 stage.append(bar, boards[0].el);
             } else if (m === 'boss') {
-                boards = [new Board(champion.name, 'p1', bossDone), new Board('👑 Elite Brendan', 'elite', bossDone, true)];
+                boards = [new Board(champion.name, 'p1', bossDone), new Board('👑 The Elite Brendan', 'elite', bossDone, true)];
                 stage.append(boards[1].el, bar, boards[0].el);
             } else {
                 var done = m === 'team' ? teamDone : versusDone;
@@ -438,9 +438,9 @@
             } else if (m === 'team') {
                 card('Team <span>up</span>', 'Put the phone flat between you and sit opposite each other. You each get a grid. You <b>both</b> need 7 before the 20 seconds run out.', [go, MENU]);
             } else if (m === 'versus') {
-                card('Head to <span>head</span>', 'Put the phone flat between you and sit opposite each other. First to 7 wins. The winner faces <b>Elite Brendan</b> in the Champions round.', [go, MENU]);
+                card('Head to <span>head</span>', 'Put the phone flat between you and sit opposite each other. First to 7 wins. The winner faces <b>the Elite Brendan</b> in the Champions round.', [go, MENU]);
             } else {
-                card('Champions <span>round</span>', '<b>' + champion.name + '</b>, take the phone. You play the bottom grid against 👑 Elite Brendan, the computer, at the top.<br><br>First to 7 wins. Ties go to Brendan.', [go, MENU]);
+                card('Champions <span>round</span>', '<b>' + champion.name + '</b>, take the phone. You play the bottom grid against 👑 the Elite Brendan, the computer, at the top.<br><br>First to 7 wins. Ties go to Brendan.', [go, MENU]);
             }
         }
 
@@ -497,8 +497,8 @@
             champion = { name: winner.name, beat: loser.name };
             finish(function () {
                 card('<span>' + winner.name + '</span> wins ' + winner.score + '–' + loser.score,
-                    loser.name + ', shake their hand. ' + winner.name + ', you’ve earned the Champions round: beat Elite Brendan to unlock the secret.',
-                    [['Face Elite Brendan', function () { enter('boss'); }], ['Rematch', startRound], MENU]);
+                    loser.name + ', shake their hand. ' + winner.name + ', you’ve earned the Champions round: beat the Elite Brendan to unlock the secret.',
+                    [['Face the Elite Brendan', function () { enter('boss'); }], ['Rematch', startRound], MENU]);
             });
         }
 
@@ -513,7 +513,7 @@
             you.flash('Brendan wins');
             elite.flash('Too easy 😈');
             finish(function () {
-                card('👑 Elite Brendan <span>wins</span>', elite.score + '–' + you.score + '. ' + you.name + ', want another go?',
+                card('👑 The Elite Brendan <span>wins</span>', elite.score + '–' + you.score + '. ' + you.name + ', want another go?',
                     [['Try again', startRound], MENU]);
             });
         }
@@ -545,7 +545,7 @@
                 title = 'You <span>both</span> caught him!';
                 sub = 'Teamwork. Welcome to the secret Brendan Comedy Group.';
             } else if (mode === 'boss') {
-                title = '<span>' + champion.name + '</span> beat Elite Brendan!';
+                title = '<span>' + champion.name + '</span> beat the Elite Brendan!';
                 sub = 'Champion of the Brendan Comedy Group. ' + champion.beat + ', you’re still part of the community.';
             }
             prize.querySelector('[data-title]').innerHTML = title;
