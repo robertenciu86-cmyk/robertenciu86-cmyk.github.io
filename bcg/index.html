@@ -143,11 +143,29 @@
         .prize img { width: 100%; height: auto; border-radius: 14px; box-shadow: 0 20px 55px rgba(0,0,0,.4); }
         .prize p { color: var(--muted); text-align: center; }
         .prize .btn { margin-top: 22px; }
+        .sage { display: flex; align-items: center; gap: 14px; margin: 26px auto 0; max-width: 460px; }
+        .sage img {
+            flex: none; width: 92px; height: 92px; border-radius: 50%;
+            object-fit: cover; box-shadow: none;
+            border: 3px solid var(--blue);
+            animation: float 3s ease-in-out infinite;
+        }
+        .bubble {
+            position: relative; background: var(--text); color: var(--bg);
+            border-radius: 18px; padding: 12px 16px;
+            font-weight: 700; font-size: 1.05rem; line-height: 1.3;
+        }
+        .bubble::before {
+            content: ""; position: absolute; left: -9px; top: 50%; margin-top: -9px;
+            border: 9px solid transparent; border-left: 0; border-right-color: var(--text);
+        }
+        .bubble small { display: block; margin-top: 4px; font-weight: 600; font-size: .8rem; color: #5b5266; }
+        @keyframes float { 50% { transform: translateY(-5px) rotate(-3deg); } }
         @keyframes pop { from { transform: scale(.6); opacity: 0; } to { transform: scale(1); opacity: 1; } }
         .confetti { position: fixed; top: -12px; z-index: 20; width: 10px; height: 14px; pointer-events: none; animation: fall linear forwards; }
         @keyframes fall { to { transform: translateY(110vh) rotate(720deg); } }
         @media (prefers-reduced-motion: reduce) {
-            .prize.show { animation: none; }
+            .prize.show, .sage img { animation: none; }
             .confetti { display: none; }
         }
     </style>
@@ -218,7 +236,10 @@
         <h1 data-title>You caught <span>him</span>!</h1>
         <p data-sub>Welcome to the secret Brendan Comedy Group.</p>
         <img src="/bcg/brendan-comedy-group.jpg" width="1920" height="1080" alt="Brendan Comedy Group: Brendan Morris in a patchwork top and denim shorts, arms raised, next to the words Brendan Comedy Group">
-        <p class="quote" data-quote hidden><q>London Comedy Group is about community</q>– Ridwan Hussain</p>
+        <figure class="sage">
+            <img src="/ridwan-hussain.jpg" width="92" height="92" alt="Ridwan Hussain">
+            <blockquote class="bubble">“Brendan Comedy Group is about community.”<small>– Ridwan Hussain, wise man</small></blockquote>
+        </figure>
         <button class="btn" type="button" data-again>Play again</button>
         <button class="btn btn-ghost" type="button" data-menu style="margin-top:12px">Change mode</button>
     </section>
@@ -466,7 +487,6 @@
             }
             prize.querySelector('[data-title]').innerHTML = title;
             prize.querySelector('[data-sub]').textContent = sub;
-            prize.querySelector('[data-quote]').hidden = mode === 1;
             prize.querySelector('[data-again]').textContent = mode === 'boss' ? 'Rematch' : 'Play again';
             show(prize);
             confetti();
