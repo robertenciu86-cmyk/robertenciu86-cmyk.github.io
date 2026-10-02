@@ -109,6 +109,12 @@
         .p1 .hud b { color: var(--pink); }
         .p2 .hud b { color: var(--blue); }
         .p2 .hole.hit { border-color: var(--blue); }
+        .elite { background: rgba(255,40,60,.08); }
+        .elite h2 { margin: 0; font-size: 1.3rem; color: #ff5a6e; }
+        .elite .hole { pointer-events: none; border-color: rgba(255,90,110,.35); }
+        .elite .hole img { filter: hue-rotate(-40deg) saturate(1.8) contrast(1.15); }
+        .elite .hole.hit { border-color: #ff5a6e; }
+        .elite .hud b { color: #ff5a6e; }
         .divider {
             display: flex; align-items: center; justify-content: center; gap: 10px;
             padding: 8px 16px; border-block: 1px solid var(--line);
@@ -173,6 +179,24 @@
         </div>
     </section>
 
+    <section class="duo" id="boss" hidden>
+        <div class="side elite">
+            <h2>👑 Elite Brendan 😈</h2>
+            <div class="hud"><div>Elite <b data-score>0</b>/7</div><div>Time <b data-time>20</b>s</div></div>
+            <div class="grid" data-grid></div>
+            <p class="msg" data-msg aria-live="polite"></p>
+        </div>
+        <div class="divider">
+            <button class="btn btn-ghost" type="button" data-exit>✕</button>
+            <button class="btn" type="button" data-go>Start</button>
+        </div>
+        <div class="side p1">
+            <div class="hud"><div><span data-name>Champion</span> <b data-score>0</b>/7</div><div>Elite <b data-opp>0</b></div><div>Time <b data-time>20</b>s</div></div>
+            <div class="grid" data-grid></div>
+            <p class="msg" data-msg aria-live="polite"></p>
+        </div>
+    </section>
+
     <section class="prize" id="prize" aria-live="polite">
         <h1 data-title>You caught <span>him</span>!</h1>
         <p data-sub>Welcome to the secret Brendan Comedy Group.</p>
@@ -188,13 +212,15 @@
         var menu = document.getElementById('menu');
         var solo = document.getElementById('solo');
         var duo = document.getElementById('duo');
+        var boss = document.getElementById('boss');
         var prize = document.getElementById('prize');
         var back = document.querySelector('.back');
-        var mode = 1, boards = [], timeLeft = SECONDS, clock = null;
+        var mode = 1, boards = [], timeLeft = SECONDS, clock = null, champion = null;
 
         // One grid with its own Brendan, score and timer for popping up
-        function Board(side) {
+        function Board(side, cpu) {
             var self = this;
+            this.cpu = !!cpu;
             this.side = side;
             this.grid = side.querySelector('[data-grid]');
             this.scoreEl = side.querySelector('[data-score]');
@@ -208,9 +234,11 @@
                 b.className = 'hole';
                 b.setAttribute('aria-label', 'Hole ' + (i + 1));
                 b.innerHTML = '<img src="/brendan-morris.jpg" alt="" draggable="false">';
-                b.addEventListener('pointerdown', (function (n) {
-                    return function (e) { e.preventDefault(); self.whack(n); };
-                })(i));
+                if (!this.cpu) {
+                    b.addEventListener('pointerdown', (function (n) {
+                        return function (e) { e.preventDefault(); self.whack(n); };
+                    })(i));
+                }
                 this.grid.appendChild(b);
                 this.holes.push(b);
             }
@@ -232,6 +260,7 @@
         Board.prototype.stop = function () {
             this.running = false;
             clearTimeout(this.popTimer);
+            clearTimeout(this.cpuTimer);
             this.holes.forEach(function (h) { h.classList.remove('up', 'hit'); });
         };
         Board.prototype.pop = function () {
@@ -246,7 +275,13 @@
             this.holes[next].classList.add('up');
             this.holes[next].setAttribute('aria-label', 'Brendan! Tap him');
             // Speeds up as you catch him
-            this.popTimer = setTimeout(function () { self.pop(); }, Math.max(520, 950 - this.score * 60));
+            var stay = Math.max(520, 950 - this.score * 60);
+            this.popTimer = setTimeout(function () { self.pop(); }, stay);
+            if (this.cpu) {
+                // Elite Brendan is quick, but slips up once he's sped up
+                var reaction = 420 + Math.random() * 480;
+                if (reaction < stay) this.cpuTimer = setTimeout(function () { self.whack(next); }, reaction);
+            }
         };
         Board.prototype.whack = function (i) {
             if (!this.running || i !== this.active || this.holes[i].classList.contains('hit')) return;
@@ -255,7 +290,7 @@
             this.score++;
             this.scoreEl.textContent = this.score;
             if (this.opponent) this.opponent.oppEl.textContent = this.score;
-            if (navigator.vibrate) navigator.vibrate(30);
+            if (navigator.vibrate && !this.cpu) navigator.vibrate(30);
             if (this.score >= TARGET) {
                 this.done = true;
                 this.stop();
@@ -272,15 +307,19 @@
         duoBoards[1].opponent = duoBoards[0];
         duoBoards[0].name = 'Player 1';
         duoBoards[1].name = 'Player 2';
+        var bossBoards = [new Board(boss.querySelector('.p1')), new Board(boss.querySelector('.elite'), true)];
+        bossBoards[0].opponent = bossBoards[1];
+        bossBoards[1].opponent = bossBoards[0];
+        bossBoards[1].name = 'Elite Brendan';
         var INTRO = {
             team: 'Both of you need 7. Help each other out.',
-            versus: 'First to 7 wins. No mercy.'
+            versus: 'First to 7 wins. Winner faces Elite Brendan.'
         };
 
         function show(view) {
-            [menu, solo, duo].forEach(function (v) { v.hidden = v !== view; });
+            [menu, solo, duo, boss].forEach(function (v) { v.hidden = v !== view; });
             prize.classList.toggle('show', view === prize);
-            back.hidden = view === duo;
+            back.hidden = view === duo || view === boss;
             window.scrollTo(0, 0);
         }
 
@@ -292,8 +331,12 @@
             boards.forEach(function (b) { b.msg.textContent = text; });
         }
 
+        function viewFor(m) {
+            return m === 1 ? solo : m === 'boss' ? boss : duo;
+        }
+
         function goButton() {
-            return (mode === 1 ? solo : duo).querySelector('[data-go]');
+            return viewFor(mode).querySelector('[data-go]');
         }
 
         function start() {
@@ -318,6 +361,7 @@
 
         function caught(board) {
             if (mode === 'versus') return versusOver(board);
+            if (mode === 'boss') return bossOver(board);
             if (mode === 'team') {
                 var other = boards[0] === board ? boards[1] : boards[0];
                 if (!other.done) {
@@ -334,6 +378,10 @@
             if (mode === 'versus') {
                 var a = boards[0], b2 = boards[1];
                 return versusOver(a.score === b2.score ? null : (a.score > b2.score ? a : b2));
+            }
+            if (mode === 'boss') {
+                // Ties go to the house
+                return bossOver(boards[0].score > boards[1].score ? boards[0] : boards[1]);
             }
             if (mode === 'team') {
                 boards.forEach(function (b) {
@@ -359,8 +407,34 @@
                 go.hidden = false;
                 return;
             }
-            // Give both players a beat to see who won before the poster
-            setTimeout(function () { if (!duo.hidden) win(winner); }, 1600);
+            // Give both players a beat to see who won, then on to the champions round
+            setTimeout(function () { if (!duo.hidden) enterBoss(winner); }, 1600);
+        }
+
+        function enterBoss(winner) {
+            champion = { name: winner.name, beat: winner.opponent.name, score: winner.score, theirs: winner.opponent.score };
+            enter('boss');
+            boss.querySelector('[data-name]').textContent = champion.name;
+            boards[0].msg.textContent = champion.name + ' wins ' + champion.score + '–' + champion.theirs + '! ' + champion.beat + ', shake their hand. Now grab the phone.';
+            boards[1].msg.textContent = 'Champions round. Think you can beat me?';
+        }
+
+        function bossOver(winner) {
+            stopAll();
+            var you = boards[0], elite = boards[1];
+            you.msg.classList.add('big');
+            elite.msg.classList.add('big');
+            if (winner === you) {
+                you.msg.textContent = 'You beat Elite Brendan! 🏆';
+                elite.msg.textContent = 'Impossible! 😱';
+                setTimeout(function () { if (!boss.hidden) win(you); }, 1600);
+                return;
+            }
+            you.msg.textContent = 'Elite Brendan wins 😈';
+            elite.msg.textContent = 'Too easy. ' + elite.score + '–' + you.score + '.';
+            var go = goButton();
+            go.textContent = 'Try again';
+            go.hidden = false;
         }
 
         function win(winner) {
@@ -369,15 +443,14 @@
             if (mode === 'team') {
                 title = 'You <span>both</span> caught him!';
                 sub = 'Teamwork. Welcome to the secret Brendan Comedy Group.';
-            } else if (mode === 'versus') {
-                var loser = winner.opponent;
-                title = '<span>' + winner.name + '</span> wins!';
-                sub = winner.score + ' to ' + loser.score + '. ' + loser.name + ', shake their hand. It\'s still a community.';
+            } else if (mode === 'boss') {
+                title = '<span>' + champion.name + '</span> beat Elite Brendan!';
+                sub = winner.score + ' to ' + winner.opponent.score + '. Champion of the Brendan Comedy Group. ' + champion.beat + ', you\'re still part of the community.';
             }
             prize.querySelector('[data-title]').innerHTML = title;
             prize.querySelector('[data-sub]').textContent = sub;
             prize.querySelector('[data-quote]').hidden = mode === 1;
-            prize.querySelector('[data-again]').textContent = mode === 'versus' ? 'Rematch' : 'Play again';
+            prize.querySelector('[data-again]').textContent = mode === 'boss' ? 'Rematch' : 'Play again';
             show(prize);
             confetti();
         }
@@ -385,7 +458,7 @@
         function enter(m) {
             stopAll();
             mode = m;
-            boards = m === 1 ? [soloBoard] : duoBoards;
+            boards = m === 1 ? [soloBoard] : m === 'boss' ? bossBoards : duoBoards;
             boards.forEach(function (b) { b.reset(); });
             setTime(SECONDS);
             setMsgs(INTRO[m] || '');
@@ -393,7 +466,7 @@
             var go = goButton();
             go.textContent = 'Start';
             go.hidden = false;
-            show(m === 1 ? solo : duo);
+            show(viewFor(m));
         }
 
         function confetti() {
@@ -414,8 +487,13 @@
             b.addEventListener('click', function () { enter(b.dataset.mode === '1' ? 1 : b.dataset.mode); });
         });
         document.querySelectorAll('[data-go]').forEach(function (b) { b.addEventListener('click', start); });
-        duo.querySelector('[data-exit]').addEventListener('click', function () { stopAll(); show(menu); });
-        prize.querySelector('[data-again]').addEventListener('click', function () { enter(mode); start(); });
+        [duo, boss].forEach(function (v) {
+            v.querySelector('[data-exit]').addEventListener('click', function () { stopAll(); show(menu); });
+        });
+        prize.querySelector('[data-again]').addEventListener('click', function () {
+            enter(mode === 'boss' ? 'versus' : mode);
+            start();
+        });
         prize.querySelector('[data-menu]').addEventListener('click', function () { show(menu); });
     })();
     </script>
