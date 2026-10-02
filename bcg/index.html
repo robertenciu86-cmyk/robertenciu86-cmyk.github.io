@@ -15,10 +15,12 @@
         :root {
             --bg: #090811;
             --surface: #151222;
+            --surface-2: #1f1931;
             --text: #fffafc;
             --muted: #c9beca;
             --pink: #ff3d8d;
             --blue: #7ce8ff;
+            --red: #ff5a6e;
             --line: rgba(255,255,255,.14);
         }
         * { box-sizing: border-box; }
@@ -26,132 +28,63 @@
         [hidden] { display: none !important; }
         body {
             min-height: 100vh;
-            background: radial-gradient(circle at 50% 0%, #241a3a 0%, var(--bg) 60%);
+            background: var(--bg) radial-gradient(circle at 50% 0%, #241a3a 0%, var(--bg) 60%) no-repeat;
             color: var(--text);
             font-family: "Bricolage Grotesque", system-ui, sans-serif;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            padding: 24px 16px 40px;
             -webkit-tap-highlight-color: transparent;
         }
+        button { font: inherit; color: inherit; }
         a { color: var(--blue); }
-        .back { align-self: flex-start; font-size: .9rem; color: var(--muted); text-decoration: none; }
-        .back:hover { color: var(--text); }
-        h1 { font-size: clamp(2rem, 8vw, 3.4rem); line-height: 1; margin: 24px 0 8px; text-align: center; }
-        h1 span { color: var(--pink); }
-        .lede { color: var(--muted); text-align: center; margin: 0 auto 20px; max-width: 34ch; }
-        .center { text-align: center; }
-        .hud { display: flex; justify-content: center; gap: 24px; font-weight: 700; font-size: 1.1rem; margin-bottom: 14px; }
-        .hud b { color: var(--pink); font-variant-numeric: tabular-nums; }
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 10px;
-            width: min(100%, 360px);
+
+        /* Menu and prize pages */
+        .page {
+            width: min(100%, 560px);
             margin: 0 auto;
+            padding: 16px 16px 48px;
+            display: flex; flex-direction: column; align-items: center;
+            text-align: center;
         }
-        .hole {
-            aspect-ratio: 1;
-            border-radius: 50%;
-            background: var(--surface);
-            border: 2px solid var(--line);
-            overflow: hidden;
-            position: relative;
-            cursor: pointer;
-            padding: 0;
+        .page.wide { width: min(100%, 820px); }
+        .back { align-self: flex-start; padding: 6px 0; font-size: .9rem; color: var(--muted); text-decoration: none; }
+        .back:hover { color: var(--text); }
+        h1 { font-size: clamp(2.2rem, 10vw, 3.6rem); line-height: 1; margin: 20px 0 10px; }
+        h1 span, h2 span { color: var(--pink); }
+        .lede { color: var(--muted); margin: 0 0 24px; max-width: 34ch; line-height: 1.4; }
+        .modes { display: grid; gap: 12px; width: 100%; }
+        .mode {
+            display: flex; flex-direction: column; align-items: flex-start; gap: 3px;
+            width: 100%; padding: 16px 18px;
+            text-align: left; cursor: pointer;
+            background: var(--surface); border: 2px solid var(--line); border-radius: 16px;
             touch-action: manipulation;
         }
-        .hole img {
-            position: absolute; inset: 0;
-            width: 100%; height: 100%;
-            object-fit: cover;
-            transform: translateY(105%);
-            transition: transform .14s ease-out;
-            pointer-events: none;
-        }
-        .hole.up img { transform: translateY(0); }
-        .hole.hit { border-color: var(--pink); }
-        .hole.hit img { filter: saturate(0) brightness(1.4); }
+        .mode strong { font-size: 1.15rem; }
+        .mode span { color: var(--muted); font-size: .92rem; line-height: 1.35; }
+        .mode:hover, .mode:focus-visible { border-color: var(--pink); outline: none; }
+        .quote { margin: 32px auto 0; max-width: 30ch; color: var(--muted); }
+        .quote q { display: block; margin-bottom: 4px; color: var(--text); font-weight: 700; font-size: 1.1rem; }
         .btn {
-            font: inherit; font-weight: 800; font-size: 1.1rem;
+            font-weight: 800; font-size: 1.05rem;
             background: var(--pink); color: #fff;
-            border: 0; border-radius: 999px;
-            padding: 14px 30px; cursor: pointer;
+            border: 2px solid var(--pink); border-radius: 999px;
+            padding: 12px 24px; cursor: pointer;
             touch-action: manipulation;
         }
+        .btn.ghost { background: transparent; border-color: var(--line); }
         .btn:hover { filter: brightness(1.1); }
-        .btn-ghost { background: transparent; border: 2px solid var(--line); color: var(--text); }
-        .modes { display: flex; flex-direction: column; gap: 12px; width: min(100%, 320px); margin: 8px auto 0; }
-        .msg { min-height: 1.5em; margin-top: 14px; font-weight: 700; text-align: center; }
-        .quote { margin: 28px auto 0; max-width: 30ch; text-align: center; color: var(--muted); font-size: 1rem; }
-        .quote q { color: var(--text); font-weight: 700; font-size: 1.15rem; display: block; margin-bottom: 4px; }
-        .solo .btn { margin-top: 22px; }
+        .actions { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; margin-top: 22px; }
 
-        /* Two players, one phone: top half is flipped for the person opposite */
-        .duo {
-            position: fixed; inset: 0; z-index: 10;
-            background: var(--bg);
-            display: flex; flex-direction: column;
-            height: 100vh; height: 100dvh;
-        }
-        .duo { padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left); }
-        .side {
-            flex: 1 1 0; min-height: 0;
-            display: flex; flex-direction: column; align-items: center; justify-content: center;
-            gap: 6px; padding: 8px 16px;
-            overflow: hidden;
-            container-type: size;
-        }
-        .side > * { flex: none; }
-        .side.p2 { transform: rotate(180deg); background: rgba(124,232,255,.04); }
-        /* Grid takes whatever height is left after the hud and message */
-        .side .grid { width: min(100%, 30vh, 340px); width: min(100%, 340px, calc(100cqh - 100px)); gap: 6px; }
-        .elite .grid { width: min(100%, 26vh, 340px); width: min(100%, 340px, calc(100cqh - 128px)); }
-        .side .hud { margin: 0; gap: 14px; font-size: .95rem; white-space: nowrap; }
-        .side .msg {
-            margin: 0; max-width: 32ch;
-            font-size: .95rem; line-height: 1.25;
-            height: 2.6rem; overflow: hidden;
-            display: flex; align-items: center; justify-content: center;
-        }
-        .side .hud [data-opp-wrap] b { color: var(--muted); }
-        .side .msg.big { font-size: 1.1rem; }
-        .p1 .hud b { color: var(--pink); }
-        .p2 .hud b { color: var(--blue); }
-        .p2 .hole.hit { border-color: var(--blue); }
-        .elite { background: rgba(255,40,60,.08); }
-        .elite h2 { margin: 0; font-size: 1.1rem; line-height: 1.2; color: #ff5a6e; }
-        .elite .hole { pointer-events: none; border-color: rgba(255,90,110,.35); }
-        .elite .hole img { filter: hue-rotate(-40deg) saturate(1.8) contrast(1.15); }
-        .elite .hole.hit { border-color: #ff5a6e; }
-        .elite .hud b { color: #ff5a6e; }
-        .divider {
-            flex: none;
-            display: flex; align-items: center; justify-content: center; gap: 10px;
-            padding: 8px 16px; border-block: 1px solid var(--line);
-        }
-        .divider .btn { padding: 8px 22px; font-size: 1rem; }
-        .hole { min-width: 0; }
-        @media (max-width: 360px) {
-            .side .hud { gap: 10px; font-size: .85rem; }
-            .hud { gap: 16px; }
-        }
-
-        .prize { display: none; flex-direction: column; align-items: center; width: 100%; max-width: 960px; }
-        .prize.show { display: flex; animation: pop .5s cubic-bezier(.2,1.6,.4,1); }
-        .prize img { width: 100%; height: auto; border-radius: 14px; box-shadow: 0 20px 55px rgba(0,0,0,.4); }
-        .prize p { color: var(--muted); text-align: center; }
-        .prize .btn { margin-top: 22px; }
-        .sage { display: flex; align-items: center; gap: 14px; margin: 26px auto 0; max-width: 460px; }
+        .prize .sub { color: var(--muted); margin: 0 0 18px; max-width: 40ch; line-height: 1.4; }
+        .poster { width: 100%; height: auto; border-radius: 14px; box-shadow: 0 20px 55px rgba(0,0,0,.4); }
+        .sage { display: flex; align-items: center; gap: 14px; margin: 26px auto 0; max-width: 460px; text-align: left; }
         .sage img {
-            flex: none; width: 92px; height: 92px; border-radius: 50%;
-            object-fit: cover; box-shadow: none;
-            border: 3px solid var(--blue);
+            flex: none; width: 88px; height: 88px; border-radius: 50%;
+            object-fit: cover; border: 3px solid var(--blue);
             animation: float 3s ease-in-out infinite;
         }
         .bubble {
-            position: relative; margin: 0; background: var(--text); color: var(--bg);
+            position: relative; margin: 0;
+            background: var(--text); color: var(--bg);
             border-radius: 18px; padding: 12px 16px;
             font-weight: 700; font-size: 1.05rem; line-height: 1.3;
         }
@@ -160,125 +93,192 @@
             border: 9px solid transparent; border-left: 0; border-right-color: var(--text);
         }
         .bubble small { display: block; margin-top: 4px; font-weight: 600; font-size: .8rem; color: #5b5266; }
-        @keyframes float { 50% { transform: translateY(-5px) rotate(-3deg); } }
-        @keyframes pop { from { transform: scale(.6); opacity: 0; } to { transform: scale(1); opacity: 1; } }
+
+        /* Game stage: full screen, split into one or two player sides */
+        .stage {
+            position: fixed; inset: 0; z-index: 10;
+            display: flex; flex-direction: column;
+            height: 100vh; height: 100dvh;
+            padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
+            background: var(--bg);
+            touch-action: manipulation;
+            user-select: none; -webkit-user-select: none;
+        }
+        .bar {
+            flex: none;
+            display: grid; grid-template-columns: 1fr auto 1fr; align-items: center;
+            padding: 6px 12px;
+            background: var(--surface);
+            border-block: 1px solid var(--line);
+        }
+        .quit { justify-self: start; padding: 8px 4px; background: none; border: 0; color: var(--muted); font-weight: 700; cursor: pointer; }
+        .clock { font-weight: 800; font-size: 1.5rem; font-variant-numeric: tabular-nums; min-width: 2.5ch; text-align: center; }
+        .clock.low { color: var(--pink); }
+        .label { justify-self: end; color: var(--muted); font-size: .85rem; font-weight: 700; }
+
+        .side {
+            --c: var(--pink);
+            flex: 1 1 0; min-height: 0;
+            display: flex; flex-direction: column; align-items: center; justify-content: center;
+            gap: 10px; padding: 10px 16px;
+            overflow: hidden;
+            container-type: size;
+        }
+        .side.p2 { --c: var(--blue); background: rgba(124,232,255,.05); }
+        .side.elite { --c: var(--red); background: rgba(255,40,60,.09); }
+        .side.flip { transform: rotate(180deg); }
+        .hud { flex: none; display: flex; align-items: center; gap: 10px; font-weight: 800; white-space: nowrap; }
+        .hud .name { color: var(--c); }
+        .pips { display: flex; gap: 4px; }
+        .pip { width: 12px; height: 12px; border-radius: 50%; border: 2px solid var(--line); transition: background .15s, border-color .15s; }
+        .pip.on { background: var(--c); border-color: var(--c); }
+
+        .board {
+            position: relative; flex: none;
+            width: min(100%, 360px);
+            width: min(100%, 360px, calc(100cqh - 40px));
+        }
+        .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }
+        .hole {
+            position: relative; aspect-ratio: 1; min-width: 0;
+            padding: 0; overflow: hidden; cursor: pointer;
+            background: var(--surface); border: 2px solid var(--line); border-radius: 50%;
+            touch-action: manipulation;
+        }
+        .hole img {
+            position: absolute; inset: 0; width: 100%; height: 100%;
+            object-fit: cover; pointer-events: none;
+            transform: translateY(105%); transition: transform .14s ease-out;
+        }
+        .hole.up img { transform: translateY(0); }
+        .hole.hit { border-color: var(--c); }
+        .hole.hit img { filter: saturate(0) brightness(1.4); }
+        .hole.miss { animation: shake .25s; }
+        .elite .hole { pointer-events: none; border-color: rgba(255,90,110,.35); }
+        .elite .hole img { filter: hue-rotate(-40deg) saturate(1.8) contrast(1.15); }
+        .elite .hole.hit { border-color: var(--red); }
+
+        .flash {
+            position: absolute; inset: -4px;
+            display: flex; flex-direction: column; align-items: center; justify-content: center;
+            padding: 8px; text-align: center; pointer-events: none;
+            font-weight: 800; line-height: 1.1;
+            font-size: clamp(1.5rem, 11cqh, 3.2rem);
+            background: rgba(9,8,17,.6); border-radius: 18px;
+            text-shadow: 0 3px 18px rgba(0,0,0,.8);
+            opacity: 0; transition: opacity .15s;
+        }
+        .flash.on { opacity: 1; }
+        .flash small { display: block; margin-top: 6px; font-size: .42em; font-weight: 700; color: var(--muted); }
+
+        .overlay {
+            position: absolute; inset: 0; z-index: 2;
+            display: flex; align-items: center; justify-content: center;
+            padding: 16px;
+            background: rgba(9,8,17,.75);
+            -webkit-backdrop-filter: blur(4px); backdrop-filter: blur(4px);
+        }
+        .card {
+            width: min(100%, 400px); max-height: 100%; overflow: auto;
+            padding: 22px 20px;
+            text-align: center;
+            background: var(--surface-2); border: 1px solid var(--line); border-radius: 20px;
+            box-shadow: 0 20px 55px rgba(0,0,0,.5);
+            animation: pop .3s cubic-bezier(.2,1.5,.4,1);
+        }
+        .card h2 { margin: 0 0 8px; font-size: 1.6rem; line-height: 1.1; }
+        .card p { margin: 0; color: var(--muted); line-height: 1.45; }
+        .card .actions { margin-top: 18px; }
+
         .confetti { position: fixed; top: -12px; z-index: 20; width: 10px; height: 14px; pointer-events: none; animation: fall linear forwards; }
         @keyframes fall { to { transform: translateY(110vh) rotate(720deg); } }
+        @keyframes pop { from { transform: scale(.8); opacity: 0; } to { transform: scale(1); opacity: 1; } }
+        @keyframes shake { 25% { transform: translateX(-4px); } 75% { transform: translateX(4px); } }
+        @keyframes float { 50% { transform: translateY(-5px) rotate(-3deg); } }
         @media (prefers-reduced-motion: reduce) {
-            .prize.show, .sage img { animation: none; }
+            .card, .sage img, .hole.miss { animation: none; }
             .confetti { display: none; }
         }
     </style>
 </head>
 <body>
-    <a class="back" href="/">← Back to London Comedy Group</a>
-
-    <section id="menu">
+    <main class="page" id="menu">
+        <a class="back" href="/">← Back to London Comedy Group</a>
         <h1>Catch <span>Brendan</span></h1>
-        <p class="lede">He's popping up everywhere. Tap him 7 times in 20 seconds to unlock something.</p>
+        <p class="lede">He keeps popping up. Catch him 7 times before the clock runs out to unlock a secret.</p>
         <div class="modes">
-            <button class="btn" type="button" data-mode="1">1 player</button>
-            <button class="btn btn-ghost" type="button" data-mode="versus">2 players: head to head</button>
-            <button class="btn btn-ghost" type="button" data-mode="team">2 players: team up</button>
+            <button class="mode" type="button" data-mode="solo"><strong>1 player</strong><span>Catch Brendan 7 times in 20 seconds.</span></button>
+            <button class="mode" type="button" data-mode="versus"><strong>2 players: head to head</strong><span>One phone, sit opposite each other. First to 7 wins, then takes on Elite Brendan.</span></button>
+            <button class="mode" type="button" data-mode="team"><strong>2 players: team up</strong><span>One phone, sit opposite each other. You both need 7 to win.</span></button>
         </div>
         <p class="quote"><q>London Comedy Group is about community</q>– Ridwan Hussain</p>
-    </section>
+    </main>
 
-    <section class="solo" id="solo" hidden>
-        <h1>Catch <span>Brendan</span></h1>
-        <div class="hud">
-            <div>Caught <b data-score>0</b>/7</div>
-            <div>Time <b data-time>20</b>s</div>
-        </div>
-        <div class="grid" data-grid></div>
-        <div class="center">
-            <button class="btn" type="button" data-go>Start</button>
-            <p class="msg" data-msg aria-live="polite"></p>
-        </div>
-    </section>
+    <section class="stage" id="stage" hidden></section>
 
-    <section class="duo" id="duo" hidden>
-        <div class="side p2">
-            <div class="hud"><div>Player 2 <b data-score>0</b>/7</div><div data-opp-wrap>Them <b data-opp>0</b></div><div>Time <b data-time>20</b>s</div></div>
-            <div class="grid" data-grid></div>
-            <p class="msg" data-msg aria-live="polite"></p>
-        </div>
-        <div class="divider">
-            <button class="btn btn-ghost" type="button" data-exit>✕</button>
-            <button class="btn" type="button" data-go>Start</button>
-        </div>
-        <div class="side p1">
-            <div class="hud"><div>Player 1 <b data-score>0</b>/7</div><div data-opp-wrap>Them <b data-opp>0</b></div><div>Time <b data-time>20</b>s</div></div>
-            <div class="grid" data-grid></div>
-            <p class="msg" data-msg aria-live="polite"></p>
-        </div>
-    </section>
-
-    <section class="duo" id="boss" hidden>
-        <div class="side elite">
-            <h2>👑 Elite Brendan 😈</h2>
-            <div class="hud"><div>Elite <b data-score>0</b>/7</div><div>Time <b data-time>20</b>s</div></div>
-            <div class="grid" data-grid></div>
-            <p class="msg" data-msg aria-live="polite"></p>
-        </div>
-        <div class="divider">
-            <button class="btn btn-ghost" type="button" data-exit>✕</button>
-            <button class="btn" type="button" data-go>Start</button>
-        </div>
-        <div class="side p1">
-            <div class="hud"><div><span data-name>Champion</span> <b data-score>0</b>/7</div><div>Elite <b data-opp>0</b></div><div>Time <b data-time>20</b>s</div></div>
-            <div class="grid" data-grid></div>
-            <p class="msg" data-msg aria-live="polite"></p>
-        </div>
-    </section>
-
-    <section class="prize" id="prize" aria-live="polite">
-        <h1 data-title>You caught <span>him</span>!</h1>
-        <p data-sub>Welcome to the secret Brendan Comedy Group.</p>
-        <img src="/bcg/brendan-comedy-group.jpg" width="1920" height="1080" alt="Brendan Comedy Group: Brendan Morris in a patchwork top and denim shorts, arms raised, next to the words Brendan Comedy Group">
+    <main class="page wide prize" id="prize" hidden>
+        <a class="back" href="/">← Back to London Comedy Group</a>
+        <h1 data-title></h1>
+        <p class="sub" data-sub></p>
+        <img class="poster" src="/bcg/brendan-comedy-group.jpg" width="1920" height="1080" alt="Brendan Comedy Group: Brendan Morris in a patchwork top and denim shorts, arms raised, next to the words Brendan Comedy Group">
         <figure class="sage">
-            <img src="/ridwan-hussain.jpg" width="92" height="92" alt="Ridwan Hussain">
+            <img src="/ridwan-hussain.jpg" width="88" height="88" alt="Ridwan Hussain">
             <blockquote class="bubble">“Brendan Comedy Group is about community.”<small>– Ridwan Hussain, wise man</small></blockquote>
         </figure>
-        <button class="btn" type="button" data-again>Play again</button>
-        <button class="btn btn-ghost" type="button" data-menu style="margin-top:12px">Change mode</button>
-    </section>
+        <div class="actions">
+            <button class="btn" type="button" data-again>Play again</button>
+            <button class="btn ghost" type="button" data-menu>Menu</button>
+        </div>
+    </main>
 
     <script>
     (function () {
-        var TARGET = 7, SECONDS = 20;
+        var TARGET = 7, SECONDS = 20, COUNT_STEP = 700, RESULT_PAUSE = 1300;
         var menu = document.getElementById('menu');
-        var solo = document.getElementById('solo');
-        var duo = document.getElementById('duo');
-        var boss = document.getElementById('boss');
+        var stage = document.getElementById('stage');
         var prize = document.getElementById('prize');
-        var back = document.querySelector('.back');
-        var mode = 1, boards = [], timeLeft = SECONDS, clock = null, champion = null;
 
-        // One grid with its own Brendan, score and timer for popping up
-        function Board(side, cpu) {
+        var mode = null, boards = [], champion = null;
+        var round = 0, clock = null, endAt = 0, clockEl = null, overlay = null;
+
+        // Timers tied to the current round, so nothing fires after quitting or restarting
+        function later(fn, ms) {
+            var r = round;
+            return setTimeout(function () { if (r === round) fn(); }, ms);
+        }
+
+        function el(tag, cls, html) {
+            var e = document.createElement(tag);
+            if (cls) e.className = cls;
+            if (html) e.innerHTML = html;
+            return e;
+        }
+
+        // One player's side: name, progress pips and a 3x3 grid
+        function Board(name, cls, onDone, cpu) {
             var self = this;
+            this.name = name;
             this.cpu = !!cpu;
-            this.side = side;
-            this.grid = side.querySelector('[data-grid]');
-            this.scoreEl = side.querySelector('[data-score]');
-            this.timeEl = side.querySelector('[data-time]');
-            this.msg = side.querySelector('[data-msg]');
-            this.oppEl = side.querySelector('[data-opp]');
+            this.onDone = onDone;
+            this.el = el('div', 'side ' + cls,
+                '<div class="hud"><span class="name"></span><span class="pips"></span></div>' +
+                '<div class="board"><div class="grid"></div><div class="flash" aria-live="polite"></div></div>');
+            this.el.querySelector('.name').textContent = name;
+            this.flashEl = this.el.querySelector('.flash');
+            this.pips = [];
+            var pipsEl = this.el.querySelector('.pips');
+            for (var p = 0; p < TARGET; p++) this.pips.push(pipsEl.appendChild(el('span', 'pip')));
             this.holes = [];
+            var grid = this.el.querySelector('.grid');
             for (var i = 0; i < 9; i++) {
-                var b = document.createElement('button');
-                b.type = 'button';
-                b.className = 'hole';
-                b.setAttribute('aria-label', 'Hole ' + (i + 1));
-                b.innerHTML = '<img src="/brendan-morris.jpg" alt="" draggable="false">';
-                if (!this.cpu) {
-                    b.addEventListener('pointerdown', (function (n) {
-                        return function (e) { e.preventDefault(); self.whack(n); };
-                    })(i));
-                }
-                this.grid.appendChild(b);
-                this.holes.push(b);
+                var h = el('button', 'hole', '<img src="/brendan-morris.jpg" alt="" draggable="false">');
+                h.type = 'button';
+                h.setAttribute('aria-label', 'Empty');
+                if (this.cpu) h.tabIndex = -1;
+                else h.addEventListener('pointerdown', (function (n) {
+                    return function (e) { e.preventDefault(); self.whack(n); };
+                })(i));
+                this.holes.push(grid.appendChild(h));
             }
             this.reset();
         }
@@ -287,9 +287,8 @@
             this.score = 0;
             this.active = -1;
             this.done = false;
-            this.scoreEl.textContent = 0;
-            if (this.oppEl) this.oppEl.textContent = 0;
-            this.msg.classList.remove('big');
+            this.pips.forEach(function (p) { p.classList.remove('on'); });
+            this.flash('');
         };
         Board.prototype.start = function () {
             this.running = true;
@@ -299,20 +298,23 @@
             this.running = false;
             clearTimeout(this.popTimer);
             clearTimeout(this.cpuTimer);
-            this.holes.forEach(function (h) { h.classList.remove('up', 'hit'); });
+            this.holes.forEach(function (h) {
+                h.classList.remove('up', 'hit');
+                h.setAttribute('aria-label', 'Empty');
+            });
         };
         Board.prototype.pop = function () {
             if (!this.running) return;
             var self = this, next;
             if (this.active >= 0) {
                 this.holes[this.active].classList.remove('up', 'hit');
-                this.holes[this.active].setAttribute('aria-label', 'Hole ' + (this.active + 1));
+                this.holes[this.active].setAttribute('aria-label', 'Empty');
             }
             do { next = Math.floor(Math.random() * 9); } while (next === this.active);
             this.active = next;
             this.holes[next].classList.add('up');
             this.holes[next].setAttribute('aria-label', 'Brendan! Tap him');
-            // Speeds up as you catch him
+            // He stays up for less time as you catch him
             var stay = Math.max(520, 950 - this.score * 60);
             this.popTimer = setTimeout(function () { self.pop(); }, stay);
             if (this.cpu) {
@@ -322,74 +324,69 @@
             }
         };
         Board.prototype.whack = function (i) {
-            if (!this.running || i !== this.active || this.holes[i].classList.contains('hit')) return;
-            var self = this;
-            this.holes[i].classList.add('hit');
+            if (!this.running) return;
+            var hole = this.holes[i], self = this;
+            if (i !== this.active || hole.classList.contains('hit')) {
+                hole.classList.remove('miss');
+                void hole.offsetWidth;
+                hole.classList.add('miss');
+                return;
+            }
+            hole.classList.add('hit');
+            this.pips[this.score].classList.add('on');
             this.score++;
-            this.scoreEl.textContent = this.score;
-            if (this.opponent) this.opponent.oppEl.textContent = this.score;
             if (navigator.vibrate && !this.cpu) navigator.vibrate(30);
             if (this.score >= TARGET) {
                 this.done = true;
                 this.stop();
-                caught(this);
+                this.onDone(this);
                 return;
             }
             clearTimeout(this.popTimer);
+            clearTimeout(this.cpuTimer);
             this.popTimer = setTimeout(function () { self.pop(); }, 180);
         };
-
-        var soloBoard = new Board(solo);
-        var duoBoards = [new Board(duo.querySelector('.p1')), new Board(duo.querySelector('.p2'))];
-        duoBoards[0].opponent = duoBoards[1];
-        duoBoards[1].opponent = duoBoards[0];
-        duoBoards[0].name = 'Player 1';
-        duoBoards[1].name = 'Player 2';
-        var bossBoards = [new Board(boss.querySelector('.p1')), new Board(boss.querySelector('.elite'), true)];
-        bossBoards[0].opponent = bossBoards[1];
-        bossBoards[1].opponent = bossBoards[0];
-        bossBoards[1].name = 'Elite Brendan';
-        var INTRO = {
-            team: 'Both of you need 7. Help each other out.',
-            versus: 'First to 7 wins. Winner faces Elite Brendan.'
+        Board.prototype.flash = function (html, ms) {
+            this.flashEl.innerHTML = html;
+            this.flashEl.classList.toggle('on', !!html);
+            if (html && ms) {
+                var f = this.flashEl;
+                later(function () { f.classList.remove('on'); }, ms);
+            }
         };
 
         function show(view) {
-            [menu, solo, duo, boss].forEach(function (v) { v.hidden = v !== view; });
-            prize.classList.toggle('show', view === prize);
-            back.hidden = view === duo || view === boss;
+            [menu, stage, prize].forEach(function (v) { v.hidden = v !== view; });
+            document.body.style.overflow = view === stage ? 'hidden' : '';
             window.scrollTo(0, 0);
         }
 
-        function setTime(t) {
-            boards.forEach(function (b) { b.timeEl.textContent = t; });
+        function card(title, body, actions) {
+            closeCard();
+            overlay = el('div', 'overlay',
+                '<div class="card" role="dialog" aria-modal="true"><h2></h2><p></p><div class="actions"></div></div>');
+            overlay.querySelector('h2').innerHTML = title;
+            overlay.querySelector('p').innerHTML = body;
+            var row = overlay.querySelector('.actions');
+            actions.forEach(function (a, n) {
+                var b = el('button', n === 0 ? 'btn' : 'btn ghost');
+                b.type = 'button';
+                b.textContent = a[0];
+                b.addEventListener('click', a[1]);
+                row.appendChild(b);
+            });
+            stage.appendChild(overlay);
+            row.firstChild.focus();
         }
 
-        function setMsgs(text) {
-            boards.forEach(function (b) { b.msg.textContent = text; });
+        function closeCard() {
+            if (overlay) overlay.remove();
+            overlay = null;
         }
 
-        function viewFor(m) {
-            return m === 1 ? solo : m === 'boss' ? boss : duo;
-        }
-
-        function goButton() {
-            return viewFor(mode).querySelector('[data-go]');
-        }
-
-        function start() {
-            clearInterval(clock);
-            timeLeft = SECONDS;
-            boards.forEach(function (b) { b.reset(); });
-            setTime(SECONDS);
-            setMsgs(mode === 1 ? '' : 'Go!');
-            goButton().hidden = true;
-            clock = setInterval(function () {
-                timeLeft--;
-                setTime(timeLeft);
-                if (timeLeft <= 0) lose();
-            }, 1000);
-            boards.forEach(function (b) { b.start(); });
+        function setClock(s) {
+            clockEl.textContent = s;
+            clockEl.classList.toggle('low', s <= 5);
         }
 
         function stopAll() {
@@ -397,120 +394,171 @@
             boards.forEach(function (b) { b.stop(); });
         }
 
-        function caught(board) {
-            if (mode === 'versus') return versusOver(board);
-            if (mode === 'boss') return bossOver(board);
-            if (mode === 'team') {
-                var other = boards[0] === board ? boards[1] : boards[0];
-                if (!other.done) {
-                    board.msg.textContent = 'Got 7! Cheer your mate on.';
-                    other.msg.textContent = 'Your mate is done. Your turn!';
-                    return;
-                }
-            }
-            win();
+        function teardown() {
+            round++;
+            stopAll();
+            closeCard();
+            stage.innerHTML = '';
+            boards = [];
         }
 
-        function lose() {
-            stopAll();
-            if (mode === 'versus') {
-                var a = boards[0], b2 = boards[1];
-                return versusOver(a.score === b2.score ? null : (a.score > b2.score ? a : b2));
-            }
-            if (mode === 'boss') {
-                // Ties go to the house
-                return bossOver(boards[0].score > boards[1].score ? boards[0] : boards[1]);
-            }
-            if (mode === 'team') {
-                boards.forEach(function (b) {
-                    b.msg.textContent = b.done ? 'You made it. Your mate didn\'t.' : 'Brendan escaped.';
-                });
+        function toMenu() {
+            teardown();
+            show(menu);
+        }
+
+        var MENU = ['Menu', toMenu];
+        var LABELS = { solo: '1 player', team: 'Team up', versus: 'Head to head', boss: 'Champions' };
+
+        function enter(m) {
+            teardown();
+            mode = m;
+            var bar = el('div', 'bar', '<button class="quit" type="button">✕ Quit</button><div class="clock">' + SECONDS + '</div><div class="label"></div>');
+            bar.querySelector('.label').textContent = LABELS[m];
+            bar.querySelector('.quit').addEventListener('click', toMenu);
+            clockEl = bar.querySelector('.clock');
+
+            if (m === 'solo') {
+                boards = [new Board('You', 'p1', soloDone)];
+                stage.append(bar, boards[0].el);
+            } else if (m === 'boss') {
+                boards = [new Board(champion.name, 'p1', bossDone), new Board('👑 Elite Brendan', 'elite', bossDone, true)];
+                stage.append(boards[1].el, bar, boards[0].el);
             } else {
-                soloBoard.msg.textContent = soloBoard.score >= TARGET - 2 ? 'So close. He got away.' : 'Brendan escaped. Try again?';
+                var done = m === 'team' ? teamDone : versusDone;
+                boards = [new Board('Player 1', 'p1', done), new Board('Player 2', 'p2 flip', done)];
+                stage.append(boards[1].el, bar, boards[0].el);
             }
-            var go = goButton();
-            go.textContent = 'Try again';
-            go.hidden = false;
+            boards.forEach(function (b, n) { b.opponent = boards[1 - n]; });
+            show(stage);
+
+            var go = ['Start', startRound];
+            if (m === 'solo') {
+                card('Catch <span>Brendan</span>', 'Tap Brendan when he pops up. Catch him 7 times in 20 seconds. He gets faster as you go.', [go, MENU]);
+            } else if (m === 'team') {
+                card('Team <span>up</span>', 'Put the phone flat between you and sit opposite each other. You each get a grid. You <b>both</b> need 7 before the 20 seconds run out.', [go, MENU]);
+            } else if (m === 'versus') {
+                card('Head to <span>head</span>', 'Put the phone flat between you and sit opposite each other. First to 7 wins. The winner faces <b>Elite Brendan</b> in the Champions round.', [go, MENU]);
+            } else {
+                card('Champions <span>round</span>', '<b>' + champion.name + '</b>, take the phone. You play the bottom grid against 👑 Elite Brendan, the computer, at the top.<br><br>First to 7 wins. Ties go to Brendan.', [go, MENU]);
+            }
         }
 
-        function versusOver(winner) {
+        function startRound() {
+            round++;
+            closeCard();
             stopAll();
-            boards.forEach(function (b) {
-                b.msg.classList.add('big');
-                b.msg.textContent = !winner ? 'Draw!' : (b === winner ? 'You win! 🏆' : 'You lose 😭');
+            boards.forEach(function (b) { b.reset(); });
+            setClock(SECONDS);
+            ['3', '2', '1', 'Go!'].forEach(function (t, n) {
+                later(function () {
+                    boards.forEach(function (b) { b.flash(t, n === 3 ? 500 : 0); });
+                }, n * COUNT_STEP);
             });
-            if (!winner) {
-                var go = goButton();
-                go.textContent = 'Rematch';
-                go.hidden = false;
+            later(begin, 3 * COUNT_STEP);
+        }
+
+        function begin() {
+            endAt = Date.now() + SECONDS * 1000;
+            clock = setInterval(tick, 100);
+            boards.forEach(function (b) { b.start(); });
+        }
+
+        function tick() {
+            var left = Math.max(0, Math.ceil((endAt - Date.now()) / 1000));
+            setClock(left);
+            if (left === 0) timeUp();
+        }
+
+        // Show the result on the grids for a moment, then the next step
+        function finish(next) {
+            stopAll();
+            later(next, RESULT_PAUSE);
+        }
+
+        function soloDone(b) {
+            b.flash('Caught! 🎉');
+            finish(showPrize);
+        }
+
+        function teamDone(b) {
+            if (!b.opponent.done) {
+                b.flash('7/7 ✓<small>Now cheer your mate on</small>');
                 return;
             }
-            // Give both players a beat to see who won, then on to the champions round
-            setTimeout(function () { if (!duo.hidden) enterBoss(winner); }, 1600);
+            boards.forEach(function (x) { x.flash('You did it! 🎉'); });
+            finish(showPrize);
         }
 
-        function enterBoss(winner) {
-            champion = { name: winner.name, beat: winner.opponent.name, score: winner.score, theirs: winner.opponent.score };
-            enter('boss');
-            boss.querySelector('[data-name]').textContent = champion.name;
-            boards[0].msg.textContent = champion.name + ' wins ' + champion.score + '–' + champion.theirs + '! Grab the phone. ' + champion.beat + ', shake their hand.';
-            boards[1].msg.textContent = 'Champions round. Think you can beat me?';
+        function versusDone(winner) {
+            var loser = winner.opponent;
+            winner.flash('You win! 🏆');
+            loser.flash('You lose 😭');
+            champion = { name: winner.name, beat: loser.name };
+            finish(function () {
+                card('<span>' + winner.name + '</span> wins ' + winner.score + '–' + loser.score,
+                    loser.name + ', shake their hand. ' + winner.name + ', you’ve earned the Champions round: beat Elite Brendan to unlock the secret.',
+                    [['Face Elite Brendan', function () { enter('boss'); }], ['Rematch', startRound], MENU]);
+            });
         }
 
-        function bossOver(winner) {
-            stopAll();
+        function bossDone(winner) {
             var you = boards[0], elite = boards[1];
-            you.msg.classList.add('big');
-            elite.msg.classList.add('big');
             if (winner === you) {
-                you.msg.textContent = 'You beat Elite Brendan! 🏆';
-                elite.msg.textContent = 'Impossible! 😱';
-                setTimeout(function () { if (!boss.hidden) win(you); }, 1600);
+                you.flash('You win! 🏆');
+                elite.flash('Impossible 😱');
+                finish(showPrize);
                 return;
             }
-            you.msg.textContent = 'Elite Brendan wins 😈';
-            elite.msg.textContent = 'Too easy. ' + elite.score + '–' + you.score + '.';
-            var go = goButton();
-            go.textContent = 'Try again';
-            go.hidden = false;
+            you.flash('Brendan wins');
+            elite.flash('Too easy 😈');
+            finish(function () {
+                card('👑 Elite Brendan <span>wins</span>', elite.score + '–' + you.score + '. ' + you.name + ', want another go?',
+                    [['Try again', startRound], MENU]);
+            });
         }
 
-        function win(winner) {
+        function timeUp() {
             stopAll();
+            var a = boards[0], b = boards[1];
+            if (mode === 'versus') {
+                if (a.score !== b.score) return versusDone(a.score > b.score ? a : b);
+                boards.forEach(function (x) { x.flash('Draw'); });
+                return finish(function () {
+                    card('It’s a <span>draw</span>', a.score + '–' + b.score + '. Go again to find a champion.', [['Rematch', startRound], MENU]);
+                });
+            }
+            if (mode === 'boss') return bossDone(a.score > b.score ? a : b);
+            boards.forEach(function (x) { x.flash(x.done ? '7/7 ✓' : 'Time’s up'); });
+            finish(function () {
+                if (mode === 'team') {
+                    card('Brendan <span>escaped</span>', 'Player 1 got ' + a.score + '/7 and Player 2 got ' + b.score + '/7. You both need 7.', [['Try again', startRound], MENU]);
+                } else {
+                    card('Time’s <span>up</span>', 'You caught Brendan ' + a.score + ' of 7 times.' + (a.score >= 5 ? ' So close.' : ''), [['Try again', startRound], MENU]);
+                }
+            });
+        }
+
+        function showPrize() {
             var title = 'You caught <span>him</span>!', sub = 'Welcome to the secret Brendan Comedy Group.';
             if (mode === 'team') {
                 title = 'You <span>both</span> caught him!';
                 sub = 'Teamwork. Welcome to the secret Brendan Comedy Group.';
             } else if (mode === 'boss') {
                 title = '<span>' + champion.name + '</span> beat Elite Brendan!';
-                sub = winner.score + ' to ' + winner.opponent.score + '. Champion of the Brendan Comedy Group. ' + champion.beat + ', you\'re still part of the community.';
+                sub = 'Champion of the Brendan Comedy Group. ' + champion.beat + ', you’re still part of the community.';
             }
             prize.querySelector('[data-title]').innerHTML = title;
             prize.querySelector('[data-sub]').textContent = sub;
-            prize.querySelector('[data-again]').textContent = mode === 'boss' ? 'Rematch' : 'Play again';
+            teardown();
             show(prize);
             confetti();
-        }
-
-        function enter(m) {
-            stopAll();
-            mode = m;
-            boards = m === 1 ? [soloBoard] : m === 'boss' ? bossBoards : duoBoards;
-            boards.forEach(function (b) { b.reset(); });
-            setTime(SECONDS);
-            setMsgs(INTRO[m] || '');
-            duo.querySelectorAll('[data-opp-wrap]').forEach(function (el) { el.hidden = m !== 'versus'; });
-            var go = goButton();
-            go.textContent = 'Start';
-            go.hidden = false;
-            show(viewFor(m));
         }
 
         function confetti() {
             var colours = ['#ff3d8d', '#7ce8ff', '#f08a8f', '#ffffff', '#0a8fe0'];
             for (var i = 0; i < 80; i++) {
-                var c = document.createElement('div');
-                c.className = 'confetti';
+                var c = el('div', 'confetti');
                 c.style.left = Math.random() * 100 + 'vw';
                 c.style.background = colours[i % colours.length];
                 c.style.animationDuration = (1.8 + Math.random() * 1.8) + 's';
@@ -521,17 +569,12 @@
         }
 
         document.querySelectorAll('[data-mode]').forEach(function (b) {
-            b.addEventListener('click', function () { enter(b.dataset.mode === '1' ? 1 : b.dataset.mode); });
-        });
-        document.querySelectorAll('[data-go]').forEach(function (b) { b.addEventListener('click', start); });
-        [duo, boss].forEach(function (v) {
-            v.querySelector('[data-exit]').addEventListener('click', function () { stopAll(); show(menu); });
+            b.addEventListener('click', function () { enter(b.dataset.mode); });
         });
         prize.querySelector('[data-again]').addEventListener('click', function () {
             enter(mode === 'boss' ? 'versus' : mode);
-            start();
         });
-        prize.querySelector('[data-menu]').addEventListener('click', function () { show(menu); });
+        prize.querySelector('[data-menu]').addEventListener('click', toMenu);
     })();
     </script>
 </body>
