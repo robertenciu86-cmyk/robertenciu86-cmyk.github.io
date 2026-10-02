@@ -104,6 +104,8 @@
         .side .grid { width: min(100%, 40vh, 340px); width: min(100%, 40dvh, 340px); gap: 8px; }
         .side .hud { margin: 0; font-size: 1rem; }
         .side .msg { margin: 0; min-height: 1.3em; }
+        .side .hud [data-opp-wrap] b { color: var(--muted); }
+        .side .msg.big { font-size: 1.6rem; }
         .p1 .hud b { color: var(--pink); }
         .p2 .hud b { color: var(--blue); }
         .p2 .hole.hit { border-color: var(--blue); }
@@ -135,7 +137,8 @@
         <p class="lede">He's popping up everywhere. Tap him 7 times in 20 seconds to unlock something.</p>
         <div class="modes">
             <button class="btn" type="button" data-mode="1">1 player</button>
-            <button class="btn btn-ghost" type="button" data-mode="2">2 players, one phone</button>
+            <button class="btn btn-ghost" type="button" data-mode="versus">2 players: head to head</button>
+            <button class="btn btn-ghost" type="button" data-mode="team">2 players: team up</button>
         </div>
         <p class="quote"><q>London Comedy Group is about community</q>– Ridwan Hussain</p>
     </section>
@@ -155,18 +158,18 @@
 
     <section class="duo" id="duo" hidden>
         <div class="side p2">
-            <div class="hud"><div>Player 2 <b data-score>0</b>/7</div><div>Time <b data-time>20</b>s</div></div>
+            <div class="hud"><div>Player 2 <b data-score>0</b>/7</div><div data-opp-wrap>Them <b data-opp>0</b></div><div>Time <b data-time>20</b>s</div></div>
             <div class="grid" data-grid></div>
-            <p class="msg" data-msg aria-live="polite">Both of you need 7. Help each other out.</p>
+            <p class="msg" data-msg aria-live="polite"></p>
         </div>
         <div class="divider">
             <button class="btn btn-ghost" type="button" data-exit>✕</button>
             <button class="btn" type="button" data-go>Start</button>
         </div>
         <div class="side p1">
-            <div class="hud"><div>Player 1 <b data-score>0</b>/7</div><div>Time <b data-time>20</b>s</div></div>
+            <div class="hud"><div>Player 1 <b data-score>0</b>/7</div><div data-opp-wrap>Them <b data-opp>0</b></div><div>Time <b data-time>20</b>s</div></div>
             <div class="grid" data-grid></div>
-            <p class="msg" data-msg aria-live="polite">Both of you need 7. Help each other out.</p>
+            <p class="msg" data-msg aria-live="polite"></p>
         </div>
     </section>
 
@@ -197,6 +200,7 @@
             this.scoreEl = side.querySelector('[data-score]');
             this.timeEl = side.querySelector('[data-time]');
             this.msg = side.querySelector('[data-msg]');
+            this.oppEl = side.querySelector('[data-opp]');
             this.holes = [];
             for (var i = 0; i < 9; i++) {
                 var b = document.createElement('button');
@@ -218,6 +222,8 @@
             this.active = -1;
             this.done = false;
             this.scoreEl.textContent = 0;
+            if (this.oppEl) this.oppEl.textContent = 0;
+            this.msg.classList.remove('big');
         };
         Board.prototype.start = function () {
             this.running = true;
@@ -248,6 +254,7 @@
             this.holes[i].classList.add('hit');
             this.score++;
             this.scoreEl.textContent = this.score;
+            if (this.opponent) this.opponent.oppEl.textContent = this.score;
             if (navigator.vibrate) navigator.vibrate(30);
             if (this.score >= TARGET) {
                 this.done = true;
@@ -261,6 +268,14 @@
 
         var soloBoard = new Board(solo);
         var duoBoards = [new Board(duo.querySelector('.p1')), new Board(duo.querySelector('.p2'))];
+        duoBoards[0].opponent = duoBoards[1];
+        duoBoards[1].opponent = duoBoards[0];
+        duoBoards[0].name = 'Player 1';
+        duoBoards[1].name = 'Player 2';
+        var INTRO = {
+            team: 'Both of you need 7. Help each other out.',
+            versus: 'First to 7 wins. No mercy.'
+        };
 
         function show(view) {
             [menu, solo, duo].forEach(function (v) { v.hidden = v !== view; });
@@ -286,7 +301,7 @@
             timeLeft = SECONDS;
             boards.forEach(function (b) { b.reset(); });
             setTime(SECONDS);
-            setMsgs(mode === 2 ? 'Go!' : '');
+            setMsgs(mode === 1 ? '' : 'Go!');
             goButton().hidden = true;
             clock = setInterval(function () {
                 timeLeft--;
@@ -302,7 +317,8 @@
         }
 
         function caught(board) {
-            if (mode === 2) {
+            if (mode === 'versus') return versusOver(board);
+            if (mode === 'team') {
                 var other = boards[0] === board ? boards[1] : boards[0];
                 if (!other.done) {
                     board.msg.textContent = 'Got 7! Cheer your mate on.';
@@ -315,7 +331,11 @@
 
         function lose() {
             stopAll();
-            if (mode === 2) {
+            if (mode === 'versus') {
+                var a = boards[0], b2 = boards[1];
+                return versusOver(a.score === b2.score ? null : (a.score > b2.score ? a : b2));
+            }
+            if (mode === 'team') {
                 boards.forEach(function (b) {
                     b.msg.textContent = b.done ? 'You made it. Your mate didn\'t.' : 'Brendan escaped.';
                 });
@@ -327,11 +347,37 @@
             go.hidden = false;
         }
 
-        function win() {
+        function versusOver(winner) {
             stopAll();
-            prize.querySelector('[data-title]').innerHTML = mode === 2 ? 'You <span>both</span> caught him!' : 'You caught <span>him</span>!';
-            prize.querySelector('[data-sub]').textContent = mode === 2 ? 'Teamwork. Welcome to the secret Brendan Comedy Group.' : 'Welcome to the secret Brendan Comedy Group.';
-            prize.querySelector('[data-quote]').hidden = mode !== 2;
+            boards.forEach(function (b) {
+                b.msg.classList.add('big');
+                b.msg.textContent = !winner ? 'Draw!' : (b === winner ? 'You win! 🏆' : 'You lose 😭');
+            });
+            if (!winner) {
+                var go = goButton();
+                go.textContent = 'Rematch';
+                go.hidden = false;
+                return;
+            }
+            // Give both players a beat to see who won before the poster
+            setTimeout(function () { if (!duo.hidden) win(winner); }, 1600);
+        }
+
+        function win(winner) {
+            stopAll();
+            var title = 'You caught <span>him</span>!', sub = 'Welcome to the secret Brendan Comedy Group.';
+            if (mode === 'team') {
+                title = 'You <span>both</span> caught him!';
+                sub = 'Teamwork. Welcome to the secret Brendan Comedy Group.';
+            } else if (mode === 'versus') {
+                var loser = winner.opponent;
+                title = '<span>' + winner.name + '</span> wins!';
+                sub = winner.score + ' to ' + loser.score + '. ' + loser.name + ', shake their hand. It\'s still a community.';
+            }
+            prize.querySelector('[data-title]').innerHTML = title;
+            prize.querySelector('[data-sub]').textContent = sub;
+            prize.querySelector('[data-quote]').hidden = mode === 1;
+            prize.querySelector('[data-again]').textContent = mode === 'versus' ? 'Rematch' : 'Play again';
             show(prize);
             confetti();
         }
@@ -339,14 +385,15 @@
         function enter(m) {
             stopAll();
             mode = m;
-            boards = m === 2 ? duoBoards : [soloBoard];
+            boards = m === 1 ? [soloBoard] : duoBoards;
             boards.forEach(function (b) { b.reset(); });
             setTime(SECONDS);
-            setMsgs(m === 2 ? 'Both of you need 7. Help each other out.' : '');
+            setMsgs(INTRO[m] || '');
+            duo.querySelectorAll('[data-opp-wrap]').forEach(function (el) { el.hidden = m !== 'versus'; });
             var go = goButton();
             go.textContent = 'Start';
             go.hidden = false;
-            show(m === 2 ? duo : solo);
+            show(m === 1 ? solo : duo);
         }
 
         function confetti() {
@@ -364,7 +411,7 @@
         }
 
         document.querySelectorAll('[data-mode]').forEach(function (b) {
-            b.addEventListener('click', function () { enter(Number(b.dataset.mode)); });
+            b.addEventListener('click', function () { enter(b.dataset.mode === '1' ? 1 : b.dataset.mode); });
         });
         document.querySelectorAll('[data-go]').forEach(function (b) { b.addEventListener('click', start); });
         duo.querySelector('[data-exit]').addEventListener('click', function () { stopAll(); show(menu); });
