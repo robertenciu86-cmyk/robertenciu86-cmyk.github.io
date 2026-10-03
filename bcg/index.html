@@ -87,6 +87,20 @@
         .sage-face.think img { animation: think .45s ease-in-out; }
         .bubble.new { animation: pop .3s cubic-bezier(.2,1.5,.4,1); }
         .hint { margin: 8px 0 0; color: var(--muted); font-size: .85rem; }
+        .ticket {
+            display: flex; flex-direction: column; margin: 22px auto 0; max-width: 460px; text-align: left;
+            background: var(--surface); border: 2px dashed var(--gold); border-radius: 16px; overflow: hidden;
+            box-shadow: 0 0 28px rgba(255,211,77,.18);
+            animation: gift .6s .4s cubic-bezier(.2,1.4,.4,1) both;
+        }
+        .ticket-head { margin: 0; padding: 10px 16px; background: var(--gold); color: var(--bg); font-weight: 800; font-size: .95rem; }
+        .ticket img { display: block; width: 100%; aspect-ratio: 16 / 9; object-fit: cover; }
+        .ticket-body { padding: 12px 16px 16px; }
+        .ticket h2 { margin: 0 0 6px; font-size: 1.15rem; line-height: 1.2; }
+        .ticket p { margin: 0 0 4px; color: var(--muted); font-size: .92rem; line-height: 1.35; }
+        .ticket .actions { justify-content: flex-start; margin-top: 12px; }
+        .ticket .btn { background: var(--gold); border-color: var(--gold); color: var(--bg); text-decoration: none; font-weight: 800; }
+        @keyframes gift { from { opacity: 0; transform: translateY(24px) rotate(-3deg) scale(.9); } }
         @keyframes think { 30% { transform: rotate(-14deg) scale(1.08); } 65% { transform: rotate(10deg) scale(1.08); } }
         .bubble {
             position: relative; margin: 0; cursor: pointer;
@@ -214,7 +228,7 @@
         @keyframes shake { 25% { transform: translateX(-4px); } 75% { transform: translateX(4px); } }
         @keyframes float { 50% { transform: translateY(-5px) rotate(-3deg); } }
         @media (prefers-reduced-motion: reduce) {
-            .card, .sage img, .hole.miss, .bubble.new, .sage-face.think img { animation: none; }
+            .card, .ticket, .sage img, .hole.miss, .bubble.new, .sage-face.think img { animation: none; }
             .confetti { display: none; }
         }
     </style>
@@ -244,6 +258,19 @@
             <blockquote class="bubble"><span data-wisdom aria-live="polite">“Brendan Comedy Group is about community.”</span><small>– Ridwan Hussain, wise man</small></blockquote>
         </figure>
         <p class="hint">Tap Ridwan for more wisdom</p>
+        <article class="ticket" data-ticket hidden aria-live="polite">
+            <p class="ticket-head" data-ticket-head></p>
+            <a data-ticket-img-link><img data-ticket-img alt="" width="640" height="360"></a>
+            <div class="ticket-body">
+                <h2 data-ticket-title></h2>
+                <p data-ticket-when></p>
+                <p data-ticket-where></p>
+                <div class="actions">
+                    <a class="btn" data-ticket-link target="_blank" rel="noopener noreferrer">Claim your ticket</a>
+                    <a class="btn ghost" data-ticket-details>Details</a>
+                </div>
+            </div>
+        </article>
         <div class="actions">
             <button class="btn" type="button" data-again>Play again</button>
             <button class="btn ghost" type="button" data-menu>Menu</button>
@@ -573,6 +600,7 @@
             teardown();
             show(prize);
             confetti();
+            giftTicket();
         }
 
         function confetti() {
@@ -635,6 +663,65 @@
         }
         sage.addEventListener('click', nextWisdom);
         bubble.addEventListener('click', nextWisdom);
+
+        // Ridwan's reward: the next show from the homepage listings
+        var ticket = prize.querySelector('[data-ticket]');
+        var nextShow = null;
+        function findNextShow() {
+            if (nextShow) return Promise.resolve(nextShow);
+            return fetch('/', { cache: 'no-cache' }).then(function (r) {
+                if (!r.ok) throw new Error(r.status);
+                return r.text();
+            }).then(function (html) {
+                var doc = new DOMParser().parseFromString(html, 'text/html');
+                var cards = doc.querySelectorAll('.event-card');
+                for (var i = 0; i < cards.length; i++) {
+                    var c = cards[i], link = c.querySelector('h3 a');
+                    if (!link || c.querySelector('.pill-muted')) continue;
+                    var href = link.getAttribute('href');
+                    var m = href.match(/-(\d{4})-(\d{2})-(\d{2})-(\d{2})(\d{2})-\d+\/?$/);
+                    if (m && new Date(+m[1], m[2] - 1, +m[3], +m[4], +m[5]) < Date.now()) continue;
+                    var metas = c.querySelectorAll('.card-meta');
+                    var buy = c.querySelector('[data-ticket-link]');
+                    var pill = c.querySelector('.pill');
+                    var img = c.querySelector('img');
+                    nextShow = {
+                        title: link.textContent.trim(),
+                        details: href,
+                        day: pill ? pill.textContent.trim() : '',
+                        meta: metas[0] ? metas[0].textContent.replace(/\s+/g, ' ').trim() : '',
+                        where: metas[1] ? metas[1].innerHTML.split(/<br\s*\/?>/i).map(function (t) {
+                            var d = document.createElement('div'); d.innerHTML = t; return d.textContent.trim();
+                        }).join(', ') : '',
+                        free: !!c.querySelector('.price-free'),
+                        img: img ? img.getAttribute('src') : '',
+                        buy: buy ? buy.getAttribute('href').replace(/utm_content=[^&]*/, 'utm_content=bcg-prize') : href
+                    };
+                    return nextShow;
+                }
+                throw new Error('no upcoming shows');
+            });
+        }
+        function giftTicket() {
+            ticket.hidden = true;
+            findNextShow().then(function (s) {
+                if (prize.hidden) return;
+                prize.querySelector('[data-ticket-head]').textContent = s.free
+                    ? '🎟️ Ridwan’s gift: a free ticket to the next show'
+                    : '🎟️ Ridwan’s gift: your ticket to the next show';
+                prize.querySelector('[data-ticket-title]').textContent = s.title;
+                prize.querySelector('[data-ticket-when]').textContent = [s.day, s.meta].filter(Boolean).join(' · ');
+                prize.querySelector('[data-ticket-where]').textContent = s.where;
+                var img = prize.querySelector('[data-ticket-img]');
+                img.src = s.img; img.alt = s.title;
+                img.parentNode.hidden = !s.img;
+                img.parentNode.href = s.details;
+                prize.querySelector('[data-ticket-link]').href = s.buy;
+                prize.querySelector('[data-ticket-link]').textContent = s.free ? 'Claim your free ticket' : 'Claim your ticket';
+                prize.querySelector('[data-ticket-details]').href = s.details;
+                ticket.hidden = false;
+            }).catch(function () { ticket.hidden = true; });
+        }
     })();
     </script>
 </body>
