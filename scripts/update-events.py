@@ -802,7 +802,9 @@ def render_comedians() -> str:
     return f"""
     <section id="comedians" class="section wrap">
         <div class="section-heading"><p class="eyebrow">The people behind the nights</p><h2>Meet the show runners</h2>
-            <p>London Comedy Group nights are built and hosted by working comics, with regular guest acts from across the circuit.</p></div>
+            <p>London Comedy Group nights are built and hosted by working comics, with regular guest acts from across the circuit.</p>
+            <p>Brendan Comedy Group began with two comedian friends, Robert Enciu and Ridwan Hussain, who shared a love of comedy and a simple idea: to create the kind of shows they wanted to be part of. What started with the two of them putting on small nights and bringing their friends along slowly grew into something bigger — and today, with fellow comedian Brendan Morris joining the team, that original idea has become a growing community of comedians and audiences across London.</p>
+            <p>At its heart, it’s still the same: good friends, great comedy and the belief that sometimes all you need is a room, a microphone and a reason to laugh.</p></div>
         <div class="comedian-grid">{runner_cards}</div>
         <div class="roster-block"><h2>Some of our acts</h2><div class="act-grid">{regular_cards}</div></div>
     </section>
