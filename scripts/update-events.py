@@ -766,6 +766,7 @@ def render_comedians() -> str:
                 "Actor with a natural, spontaneous performance style",
             ],
             "instagram": "https://www.instagram.com/vagabondbrendan/",
+            "game": "/bcg/",
         },
     ]
     regulars = [
@@ -788,7 +789,7 @@ def render_comedians() -> str:
             <h3>{esc(runner["name"])}</h3>
             <p>{esc(runner["bio"])}</p>
             <ul>{"".join(f"<li>{esc(item)}</li>" for item in runner["highlights"])}</ul>
-            <a class="text-link" href="{esc(runner["instagram"])}" rel="noopener noreferrer" target="_blank">Follow on Instagram</a>
+            <a class="text-link" href="{esc(runner["instagram"])}" rel="noopener noreferrer" target="_blank">Follow on Instagram</a>{f'<br><a class="text-link" href="{esc(runner["game"])}">Play Catch Brendan 🎭</a>' if runner.get("game") else ""}
         </article>"""
         for runner in runners
     )
