@@ -2,7 +2,7 @@
 <html lang="en-GB">
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
     <meta name="theme-color" content="#090811">
     <title>Catch Brendan | London Comedy Group</title>
     <meta name="robots" content="noindex,nofollow">
@@ -231,14 +231,31 @@
             .card, .ticket, .sage img, .hole.miss, .bubble.new, .sage-face.think img { animation: none; }
             .confetti { display: none; }
         }
+        .rules { display: flex; align-items: center; gap: 14px; width: 100%; padding: 16px; margin-bottom: 20px; background: var(--surface); border: 1px solid var(--blue); border-radius: 16px; text-align: left; font-size: .9rem; line-height: 1.5; }
+        .rules img { border-radius: 50%; object-fit: cover; border: 3px solid var(--blue); }
+        .rules strong { color: var(--blue); }
+        .score { color: var(--c); font-variant-numeric: tabular-nums; }
+        .feedback { flex: none; min-height: 2.6em; max-width: 360px; text-align: center; font-size: .85rem; line-height: 1.3; color: var(--muted); }
+        .feedback.good { color: var(--blue); } .feedback.bad { color: var(--red); }
+        .stats { flex: none; font-size: .72rem; color: var(--muted); }
+        .board { width: min(100%, 360px, calc(100cqh - 112px)); }
+        .bar { position: relative; }
+        .bar::after { content: ''; position: absolute; bottom: 0; left: 0; height: 3px; width: var(--time-left, 100%); background: var(--gold); transition: width .2s linear; }
+        .hole.wrong { border-color: var(--red); animation: shake .25s; }
+        .hole.wrong img { filter: grayscale(1) brightness(.5); }
+        .hole.hit::after, .hole.wrong::after { position: absolute; inset: 0; display: grid; place-items: center; font-size: 2rem; font-weight: 800; text-shadow: 0 2px 8px #000; pointer-events: none; }
+        .hole.hit::after { content: '+1'; color: var(--blue); }
+        .hole.wrong::after { content: 'Oops!'; color: var(--red); font-size: 1.2rem; }
+        button:focus-visible { outline: 3px solid var(--blue); outline-offset: 3px; }
+        @media (prefers-reduced-motion: reduce) { .pop, .bar::after { transition: none; } .hole.wrong { animation: none; } }
     </style>
 </head>
 <body>
     <main class="page" id="menu">
         <a class="back" href="/">← Back to London Comedy Group</a>
         <h1>Catch <span>Brendan</span></h1>
-        <p class="lede">He keeps popping up. Catch him 7 times before the clock runs out to unlock a secret.</p>
-        <div class="modes">
+        <p class="lede">Catch Brendan 7 times to unlock a secret. The whole comedy crew is here too — watch who you tap!</p>
+        <div class="rules"><img src="/brendan-morris.jpg" width="64" height="64" alt="Brendan Morris"><div><strong>Brendan: +1 point</strong><br>Everyone else: −1 point.<br>Scores never go below zero. Empty taps cost nothing.</div></div><div class="modes">
             <button class="mode" type="button" data-mode="solo"><strong>1 player</strong><span>Catch Brendan 7 times in 20 seconds.</span></button>
             <button class="mode" type="button" data-mode="versus"><strong>2 players: head to head</strong><span>One phone, sit opposite each other. First to 7 wins, then takes on the Elite Brendan.</span></button>
             <button class="mode" type="button" data-mode="team"><strong>2 players: team up</strong><span>One phone, sit opposite each other. You both need 7 to win.</span></button>
@@ -279,6 +296,8 @@
 
     <script>
     (function () {
+        var CAST = [["Ridwan Hussain", "/ridwan-hussain.jpg"], ["Robert Enciu", "/robert-enciu.jpg"], ["Peter Jones", "/peter_jones.jpg"], ["Mike Rice", "/mike_rice.jpeg"], ["Evaldas Karosas", "/evaldas_karosas.jpg"], ["Shalaka Kurup", "/shalaka_kurup.jpeg"], ["Dominic Fraser", "/dominic_fraser.jpg"], ["Anno Gomes", "/anno_gomes.jpg"], ["Oliver Moore", "/oliver_moore.jpg"], ["John Sharp", "/john_sharp.jpg"], ["Samma", "/samma.jpg"], ["Donatas", "/donatas.jpeg"], ["Ramsey Smith", "/ramsey_smith.jpg"], ["Thomas Noack", "/thomas_noack.jpg"]];
+        CAST.forEach(function (p) { var img = new Image(); img.src = p[1]; });
         var TARGET = 7, SECONDS = 20, COUNT_STEP = 700, RESULT_PAUSE = 1300;
         var menu = document.getElementById('menu');
         var stage = document.getElementById('stage');
@@ -307,9 +326,10 @@
             this.cpu = !!cpu;
             this.onDone = onDone;
             this.el = el('div', 'side ' + cls,
-                '<div class="hud"><span class="name"></span><span class="pips"></span></div>' +
-                '<div class="board"><div class="grid"></div><div class="flash" aria-live="polite"></div></div>');
+                '<div class="hud"><span class="name"></span><span class="pips" aria-hidden="true"></span><span class="score">0/7</span></div>' +
+                '<div class="board"><div class="grid"></div><div class="flash" aria-live="polite"></div></div><div class="feedback" role="status"></div><div class="stats"></div>');
             this.el.querySelector('.name').textContent = name;
+            this.feedbackEl = this.el.querySelector(".feedback");
             this.flashEl = this.el.querySelector('.flash');
             this.pips = [];
             var pipsEl = this.el.querySelector('.pips');
@@ -321,6 +341,7 @@
                 h.type = 'button';
                 h.setAttribute('aria-label', 'Empty');
                 if (this.cpu) h.tabIndex = -1;
+                else h.addEventListener("click", (function (n) { return function (e) { if (e.detail === 0) self.whack(n); }; })(i));
                 else h.addEventListener('pointerdown', (function (n) {
                     return function (e) { e.preventDefault(); self.whack(n); };
                 })(i));
@@ -332,12 +353,15 @@
             this.stop();
             this.score = 0;
             this.active = -1;
+            this.decoy = -1; this.wrong = 0; this.catches = 0; this.escaped = 0; this.streak = 0; this.castCursor = Math.floor(Math.random() * CAST.length);
+            this.feedback("Tap Brendan. Leave the comedy crew alone.", "neutral"); this.update();
             this.done = false;
             this.pips.forEach(function (p) { p.classList.remove('on'); });
             this.flash('');
         };
         Board.prototype.start = function () {
             this.running = true;
+            this.feedback('Go! Catch Brendan. Avoid everyone else.', 'good');
             this.pop();
         };
         Board.prototype.stop = function () {
@@ -345,52 +369,69 @@
             clearTimeout(this.popTimer);
             clearTimeout(this.cpuTimer);
             this.holes.forEach(function (h) {
-                h.classList.remove('up', 'hit');
+                h.classList.remove('up', 'hit', 'wrong', 'miss');
                 h.setAttribute('aria-label', 'Empty');
             });
+        };
+        Board.prototype.feedback = function (message, kind) {
+            this.feedbackEl.textContent = message;
+            this.feedbackEl.className = 'feedback ' + kind;
+        };
+        Board.prototype.update = function () {
+            var self = this;
+            this.pips.forEach(function (p, n) { p.classList.toggle('on', n < self.score); });
+            this.el.querySelector('.score').textContent = this.score + '/' + TARGET;
+            this.el.querySelector('.stats').textContent = this.catches + ' caught · ' + this.wrong + ' wrong · ' + this.escaped + ' escaped';
         };
         Board.prototype.pop = function () {
             if (!this.running) return;
             var self = this, next;
-            if (this.active >= 0) {
-                this.holes[this.active].classList.remove('up', 'hit');
-                this.holes[this.active].setAttribute('aria-label', 'Empty');
+            if (this.active >= 0 && !this.holes[this.active].classList.contains('hit')) {
+                this.escaped++; this.streak = 0; this.update();
+                this.feedback('Brendan escaped! No point lost. Get the next one.', 'neutral');
             }
+            this.holes.forEach(function (h) { h.classList.remove('up', 'hit', 'wrong', 'miss'); h.setAttribute('aria-label', 'Empty hole'); });
             do { next = Math.floor(Math.random() * 9); } while (next === this.active);
             this.active = next;
-            this.holes[next].classList.add('up');
-            this.holes[next].setAttribute('aria-label', 'Brendan! Tap him');
-            // He stays up for less time as you catch him
-            var stay = Math.max(520, 950 - this.score * 60);
+            var target = this.holes[next];
+            target.querySelector('img').src = '/brendan-morris.jpg';
+            target.classList.add('up'); target.setAttribute('aria-label', 'Catch Brendan: +1 point');
+            this.decoy = -1;
+            if (!this.cpu) {
+                do { this.decoy = Math.floor(Math.random() * 9); } while (this.decoy === next);
+                var person = CAST[this.castCursor++ % CAST.length], other = this.holes[this.decoy];
+                this.decoyName = person[0]; other.querySelector('img').src = person[1];
+                other.classList.add('up'); other.setAttribute('aria-label', person[0] + ': avoid, minus 1 point');
+            }
+            var stay = Math.max(620, 1250 - this.score * 75);
             this.popTimer = setTimeout(function () { self.pop(); }, stay);
             if (this.cpu) {
-                // The Elite Brendan is quick, but slips up once he's sped up
-                var reaction = 420 + Math.random() * 480;
+                var reaction = 420 + Math.random() * 700;
                 if (reaction < stay) this.cpuTimer = setTimeout(function () { self.whack(next); }, reaction);
             }
         };
         Board.prototype.whack = function (i) {
             if (!this.running) return;
             var hole = this.holes[i], self = this;
-            if (i !== this.active || hole.classList.contains('hit')) {
-                hole.classList.remove('miss');
-                void hole.offsetWidth;
-                hole.classList.add('miss');
+            if (hole.classList.contains('hit') || hole.classList.contains('wrong')) return;
+            if (i === this.decoy) {
+                var lost = this.score > 0;
+                this.score = Math.max(0, this.score - 1); this.wrong++; this.streak = 0;
+                hole.classList.add('wrong'); this.update();
+                this.feedback('That’s ' + this.decoyName + '! ' + (lost ? '−1 point.' : 'Still 0 points.') + ' Find Brendan.', 'bad');
+                if (navigator.vibrate) navigator.vibrate([40, 40, 40]);
                 return;
             }
-            hole.classList.add('hit');
-            this.pips[this.score].classList.add('on');
-            this.score++;
+            if (i !== this.active) {
+                hole.classList.remove('miss'); void hole.offsetWidth; hole.classList.add('miss');
+                this.feedback('Empty hole! Wait for Brendan.', 'neutral'); return;
+            }
+            hole.classList.add('hit'); this.score++; this.catches++; this.streak++; this.update();
+            this.feedback('+1! ' + (this.score === TARGET - 1 ? 'One more to win!' : this.streak >= 3 ? this.streak + ' in a row! Keep going.' : (TARGET - this.score) + ' more to win.'), 'good');
             if (navigator.vibrate && !this.cpu) navigator.vibrate(30);
-            if (this.score >= TARGET) {
-                this.done = true;
-                this.stop();
-                this.onDone(this);
-                return;
-            }
-            clearTimeout(this.popTimer);
-            clearTimeout(this.cpuTimer);
-            this.popTimer = setTimeout(function () { self.pop(); }, 180);
+            if (this.score >= TARGET) { this.done = true; this.stop(); this.onDone(this); return; }
+            clearTimeout(this.popTimer); clearTimeout(this.cpuTimer);
+            this.popTimer = setTimeout(function () { self.pop(); }, 240);
         };
         Board.prototype.flash = function (html, ms) {
             this.flashEl.innerHTML = html;
@@ -412,7 +453,7 @@
             overlay = el('div', 'overlay',
                 '<div class="card" role="dialog" aria-modal="true"><h2></h2><p></p><div class="actions"></div></div>');
             overlay.querySelector('h2').innerHTML = title;
-            overlay.querySelector('p').innerHTML = body;
+            overlay.querySelector('p').innerHTML = body + '<br><br><strong>Brendan: +1. Other comedians: −1.</strong> Scores never go below zero. Empty taps cost nothing.';
             var row = overlay.querySelector('.actions');
             actions.forEach(function (a, n) {
                 var b = el('button', n === 0 ? 'btn' : 'btn ghost');
@@ -433,6 +474,9 @@
         function setClock(s) {
             clockEl.textContent = s;
             clockEl.classList.toggle('low', s <= 5);
+            clockEl.setAttribute('aria-label', s + ' seconds remaining');
+            stage.style.setProperty('--time-left', (s / SECONDS * 100) + '%');
+            if (s === 5 && !stage.dataset.warned) { stage.dataset.warned = 'yes'; boards.forEach(function (b) { if (b.running) b.feedback('5 seconds left! ' + (TARGET - b.score) + ' more to win.', 'bad'); }); }
         }
 
         function stopAll() {
@@ -495,6 +539,7 @@
             closeCard();
             stopAll();
             boards.forEach(function (b) { b.reset(); });
+            delete stage.dataset.warned;
             setClock(SECONDS);
             ['3', '2', '1', 'Go!'].forEach(function (t, n) {
                 later(function () {
@@ -519,6 +564,7 @@
         // Show the result on the grids for a moment, then the next step
         function finish(next) {
             stopAll();
+            boards.forEach(function (b) { b.feedback(b.catches + ' catches · ' + b.wrong + ' wrong taps · ' + b.escaped + ' escapes', 'neutral'); });
             later(next, RESULT_PAUSE);
         }
 
@@ -595,7 +641,7 @@
                 sub = 'Champion of the Brendan Comedy Group. 🤝 ' + champion.beat + ', shake their hand. It’s still a community.';
             }
             prize.querySelector('[data-title]').innerHTML = title;
-            prize.querySelector('[data-sub]').textContent = sub;
+            prize.querySelector('[data-sub]').textContent = sub + ' ' + boards.filter(function (b) { return !b.cpu; }).map(function (b) { return b.name + ': ' + b.catches + ' catches, ' + b.wrong + ' wrong taps.'; }).join(' ');
             prize.querySelector('[data-wisdom]').textContent = '“Brendan Comedy Group is about community.”';
             teardown();
             show(prize);
