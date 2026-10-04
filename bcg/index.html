@@ -341,9 +341,8 @@
                 h.type = 'button';
                 h.setAttribute('aria-label', 'Empty');
                 if (this.cpu) h.tabIndex = -1;
-                else h.addEventListener("click", (function (n) { return function (e) { if (e.detail === 0) self.whack(n); }; })(i));
-                else h.addEventListener('pointerdown', (function (n) {
-                    return function (e) { e.preventDefault(); self.whack(n); };
+                else h.addEventListener('click', (function (n) {
+                    return function () { self.whack(n); };
                 })(i));
                 this.holes.push(grid.appendChild(h));
             }
