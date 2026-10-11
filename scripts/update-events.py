@@ -1152,7 +1152,8 @@ def render_static_pages(now: dt.datetime) -> dict[str, str]:
     redirect_body = """<section class="page-hero"><div class="wrap narrow center"><h1>Mailing list moved</h1>
         <p>The London Comedy Group mailing list now has a simpler home.</p><a class="button button-primary" href="/stay-in-touch/">Go to the mailing list</a></div></section>"""
     not_found_body = """<section class="page-hero"><div class="wrap narrow center"><p class="eyebrow">404</p><h1>That page is not on the bill</h1>
-        <p>Find a live London comedy show instead.</p><a class="button button-primary" href="/shows/">See upcoming shows</a></div></section>"""
+        <p>Find a live London comedy show instead.</p><a class="button button-primary" href="/shows/">See upcoming shows</a>
+        <img src="/comedy-superheroes.jpg" width="1200" height="600" loading="lazy" style="display:block;width:100%;height:auto;margin-top:28px;border-radius:16px" alt="Comedians dressed as Catwoman, Hulk and Batman with a Romania fan. Even the superheroes got lost."></div></section>"""
     privacy_body = f"""
     <section class="page-hero"><div class="wrap narrow"><p class="eyebrow">Privacy</p>
         <h1>Privacy and cookies</h1><p>What this website collects about you, and how to turn it off.</p></div></section>
