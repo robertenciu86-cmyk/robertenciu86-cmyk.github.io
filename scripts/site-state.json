@@ -1,6 +1,6 @@
 {
   "lastmod": {
-    "/": "2026-10-22",
+    "/": "2026-10-25",
     "/events/bear-hug-comedy-free-live-stand-up-comedy-night-central-london-2026-11-04-2000-2002640631037/": "2026-09-30",
     "/events/bear-hug-comedy-free-live-stand-up-comedy-night-central-london-2026-11-11-2000-2002640632040/": "2026-09-30",
     "/events/bear-hug-comedy-free-live-stand-up-comedy-night-central-london-2026-11-25-2000-2002640634046/": "2026-09-30",
@@ -11,31 +11,29 @@
     "/events/candlemaker-comedy-battersea-2026-11-01-1930-1999385305270/": "2026-10-04",
     "/events/candlemaker-comedy-battersea-2026-11-08-1930-1999385306273/": "2026-10-04",
     "/events/candlemaker-comedy-battersea-2026-11-15-1930-1999385307276/": "2026-10-04",
-    "/events/free-comedy-every-sunday-at-6pm-in-north-london-2026-10-25-2000-1999385206976/": "2026-09-06",
     "/events/free-comedy-every-sunday-at-6pm-in-north-london-2026-11-01-2000-1999385207979/": "2026-09-06",
     "/events/free-comedy-every-sunday-at-6pm-in-north-london-2026-11-08-2000-1999385208982/": "2026-09-06",
     "/events/free-comedy-every-sunday-at-6pm-in-north-london-2026-11-15-2000-1999385209985/": "2026-09-06",
     "/events/is-it-lington-special-friday-show-2026-11-13-1930-2003570604613/": "2026-10-18",
     "/events/is-it-lington-tuesday-comedy-2026-10-27-1930-1999385353414/": "2026-09-01",
     "/events/is-it-lington-tuesday-comedy-2026-11-03-1930-1999385354417/": "2026-09-01",
-    "/events/islington-sunday-comedy-6pm-2026-10-25-1800-1999385160838/": "2026-09-01",
     "/events/islington-sunday-comedy-6pm-2026-11-01-1800-1999385161841/": "2026-09-01",
     "/events/islington-sunday-comedy-6pm-2026-11-08-1800-1999385162844/": "2026-09-01",
     "/events/islington-sunday-comedy-6pm-2026-11-15-1800-1999385163847/": "2026-09-01",
-    "/events/islington-sunday-comedy-8pm-2026-10-25-2000-1999934015477/": "2026-09-06",
+    "/events/islington-sunday-comedy-8pm-2026-10-25-2000-1999934015477/": "2026-10-25",
     "/events/islington-sunday-comedy-8pm-2026-11-01-2000-1999934016480/": "2026-09-06",
     "/events/islington-sunday-comedy-8pm-2026-11-08-2000-1999934017483/": "2026-09-06",
     "/events/islington-sunday-comedy-8pm-2026-11-15-2000-1999934018486/": "2026-09-06",
     "/hire-comedians-london/": "2026-06-15",
-    "/shows/": "2026-10-22",
-    "/shows/bear-hug-comedy-free-live-stand-up-comedy-night-central-london/": "2026-10-22",
-    "/shows/byob-comedy-peckham/": "2026-10-22",
-    "/shows/candlemaker-comedy-battersea/": "2026-10-22",
-    "/shows/free-comedy-every-sunday-at-6pm-in-north-london/": "2026-10-22",
-    "/shows/is-it-lington-special-friday-show/": "2026-10-22",
-    "/shows/is-it-lington-tuesday-comedy/": "2026-10-22",
-    "/shows/islington-sunday-comedy-6pm/": "2026-10-22",
-    "/shows/islington-sunday-comedy-8pm/": "2026-10-22",
+    "/shows/": "2026-10-25",
+    "/shows/bear-hug-comedy-free-live-stand-up-comedy-night-central-london/": "2026-10-25",
+    "/shows/byob-comedy-peckham/": "2026-10-25",
+    "/shows/candlemaker-comedy-battersea/": "2026-10-25",
+    "/shows/free-comedy-every-sunday-at-6pm-in-north-london/": "2026-10-25",
+    "/shows/is-it-lington-special-friday-show/": "2026-10-25",
+    "/shows/is-it-lington-tuesday-comedy/": "2026-10-25",
+    "/shows/islington-sunday-comedy-6pm/": "2026-10-25",
+    "/shows/islington-sunday-comedy-8pm/": "2026-10-25",
     "/stay-in-touch/": "2026-06-15"
   },
   "occurrences": {
@@ -7717,7 +7715,7 @@
       },
       "last_seen": "2026-10-25",
       "path": "/events/islington-sunday-comedy-6pm-2026-10-25-1800-1999385160838/",
-      "status": "live"
+      "status": "expired"
     },
     "1999385161841": {
       "event": {
@@ -9027,7 +9025,7 @@
       },
       "last_seen": "2026-10-25",
       "path": "/events/free-comedy-every-sunday-at-6pm-in-north-london-2026-10-25-2000-1999385206976/",
-      "status": "live"
+      "status": "expired"
     },
     "1999385207979": {
       "event": {
@@ -9820,7 +9818,7 @@
         "capacity": 60,
         "capacity_is_custom": false,
         "category_id": "105",
-        "changed": "2026-09-01T13:27:49Z",
+        "changed": "2026-10-25T19:47:33Z",
         "created": "2026-09-01T13:27:49Z",
         "currency": "GBP",
         "description": {
@@ -9890,7 +9888,7 @@
           "timezone": "Europe/London",
           "utc": "2026-10-25T19:30:00Z"
         },
-        "status": "live",
+        "status": "started",
         "subcategory_id": "5010",
         "summary": "At the lovely Candlemaker on Battersea High Street, we run a free stand up comedy show every Sunday! Good priced food and drinks to go with!",
         "ticket_availability": {
@@ -12444,8 +12442,8 @@
         "subcategory_id": "5010",
         "summary": "The best free Stand Up Comedy in London, every Sunday at 8pm at Brewhouse & Kitchen in Islington.",
         "ticket_availability": {
-          "has_available_tickets": true,
-          "is_sold_out": false,
+          "has_available_tickets": false,
+          "is_sold_out": true,
           "maximum_ticket_price": {
             "currency": "GBP",
             "display": "0.00 GBP",
