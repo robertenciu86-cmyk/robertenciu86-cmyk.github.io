@@ -1,13 +1,12 @@
 {
   "lastmod": {
-    "/": "2026-10-25",
+    "/": "2026-10-26",
     "/events/bear-hug-comedy-free-live-stand-up-comedy-night-central-london-2026-11-04-2000-2002640631037/": "2026-09-30",
     "/events/bear-hug-comedy-free-live-stand-up-comedy-night-central-london-2026-11-11-2000-2002640632040/": "2026-09-30",
     "/events/bear-hug-comedy-free-live-stand-up-comedy-night-central-london-2026-11-25-2000-2002640634046/": "2026-09-30",
     "/events/bear-hug-comedy-free-live-stand-up-comedy-night-central-london-2026-12-09-2000-2002640636052/": "2026-09-30",
     "/events/bear-hug-comedy-free-live-stand-up-comedy-night-central-london-2026-12-23-2000-2002640715289/": "2026-09-30",
     "/events/byob-comedy-peckham-2026-10-29-2000-1999384403573/": "2026-09-01",
-    "/events/candlemaker-comedy-battersea-2026-10-25-1930-1999385304267/": "2026-10-04",
     "/events/candlemaker-comedy-battersea-2026-11-01-1930-1999385305270/": "2026-10-04",
     "/events/candlemaker-comedy-battersea-2026-11-08-1930-1999385306273/": "2026-10-04",
     "/events/candlemaker-comedy-battersea-2026-11-15-1930-1999385307276/": "2026-10-04",
@@ -20,147 +19,22 @@
     "/events/islington-sunday-comedy-6pm-2026-11-01-1800-1999385161841/": "2026-09-01",
     "/events/islington-sunday-comedy-6pm-2026-11-08-1800-1999385162844/": "2026-09-01",
     "/events/islington-sunday-comedy-6pm-2026-11-15-1800-1999385163847/": "2026-09-01",
-    "/events/islington-sunday-comedy-8pm-2026-10-25-2000-1999934015477/": "2026-10-25",
     "/events/islington-sunday-comedy-8pm-2026-11-01-2000-1999934016480/": "2026-09-06",
     "/events/islington-sunday-comedy-8pm-2026-11-08-2000-1999934017483/": "2026-09-06",
     "/events/islington-sunday-comedy-8pm-2026-11-15-2000-1999934018486/": "2026-09-06",
     "/hire-comedians-london/": "2026-06-15",
-    "/shows/": "2026-10-25",
-    "/shows/bear-hug-comedy-free-live-stand-up-comedy-night-central-london/": "2026-10-25",
-    "/shows/byob-comedy-peckham/": "2026-10-25",
-    "/shows/candlemaker-comedy-battersea/": "2026-10-25",
-    "/shows/free-comedy-every-sunday-at-6pm-in-north-london/": "2026-10-25",
-    "/shows/is-it-lington-special-friday-show/": "2026-10-25",
-    "/shows/is-it-lington-tuesday-comedy/": "2026-10-25",
-    "/shows/islington-sunday-comedy-6pm/": "2026-10-25",
-    "/shows/islington-sunday-comedy-8pm/": "2026-10-25",
+    "/shows/": "2026-10-26",
+    "/shows/bear-hug-comedy-free-live-stand-up-comedy-night-central-london/": "2026-10-26",
+    "/shows/byob-comedy-peckham/": "2026-10-26",
+    "/shows/candlemaker-comedy-battersea/": "2026-10-26",
+    "/shows/free-comedy-every-sunday-at-6pm-in-north-london/": "2026-10-26",
+    "/shows/is-it-lington-special-friday-show/": "2026-10-26",
+    "/shows/is-it-lington-tuesday-comedy/": "2026-10-26",
+    "/shows/islington-sunday-comedy-6pm/": "2026-10-26",
+    "/shows/islington-sunday-comedy-8pm/": "2026-10-26",
     "/stay-in-touch/": "2026-06-15"
   },
   "occurrences": {
-    "1990806513874": {
-      "event": {
-        "capacity": 80,
-        "capacity_is_custom": false,
-        "category_id": "105",
-        "changed": "2026-07-27T19:48:57Z",
-        "created": "2026-06-01T18:11:33Z",
-        "currency": "GBP",
-        "description": {
-          "html": "Our Favourite Stand Up Comedy in London, every Monday at 7:30pm at Aura X in Shoreditch",
-          "text": "Our Favourite Stand Up Comedy in London, every Monday at 7:30pm at Aura X in Shoreditch"
-        },
-        "end": {
-          "local": "2026-07-27T21:00:00",
-          "timezone": "Europe/London",
-          "utc": "2026-07-27T20:00:00Z"
-        },
-        "facebook_event_id": null,
-        "format_id": "6",
-        "hide_end_date": false,
-        "hide_start_date": false,
-        "id": "1990806513874",
-        "inventory_type": "limited",
-        "invite_only": false,
-        "is_externally_ticketed": false,
-        "is_free": true,
-        "is_locked": false,
-        "is_reserved_seating": false,
-        "is_series": true,
-        "is_series_parent": false,
-        "listed": true,
-        "locale": "en_GB",
-        "logo": {
-          "aspect_ratio": "2",
-          "crop_mask": null,
-          "edge_color": "#ffffff",
-          "edge_color_set": true,
-          "id": "1185895006",
-          "original": {
-            "height": 1080,
-            "url": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1185895006%2F543747696447%2F1%2Foriginal.20260601-191738?auto=format%2Ccompress&q=75&sharp=10&s=37262c3c10ca2cec67a49cee21a387ca",
-            "width": 2160
-          },
-          "url": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1185895006%2F543747696447%2F1%2Foriginal.20260601-191738?h=200&w=450&auto=format%2Ccompress&q=75&sharp=10&s=99016a83fdb6209730f015b6f438faa5"
-        },
-        "logo_id": "1185895006",
-        "name": {
-          "html": "Comedy Club Shoreditch - Free New Material Mondays",
-          "text": "Comedy Club Shoreditch - Free New Material Mondays"
-        },
-        "online_event": false,
-        "organization_id": "1234539271983",
-        "organizer_id": "55764637993",
-        "privacy_setting": "unlocked",
-        "published": "2026-06-01T19:19:44Z",
-        "resource_uri": "https://www.eventbriteapi.com/v3/events/1990806513874/",
-        "series_id": "1990785991491",
-        "shareable": true,
-        "show_colors_in_seatmap_thumbnail": false,
-        "show_pick_a_seat": false,
-        "show_remaining": false,
-        "show_seatmap_thumbnail": false,
-        "source": "coyote",
-        "start": {
-          "local": "2026-07-27T19:30:00",
-          "timezone": "Europe/London",
-          "utc": "2026-07-27T18:30:00Z"
-        },
-        "status": "started",
-        "subcategory_id": "5010",
-        "summary": "Our Favourite Stand Up Comedy in London, every Monday at 7:30pm at Aura X in Shoreditch",
-        "ticket_availability": {
-          "has_available_tickets": false,
-          "is_sold_out": true,
-          "maximum_ticket_price": {
-            "currency": "GBP",
-            "display": "0.00 GBP",
-            "major_value": "0.00",
-            "value": 0
-          },
-          "minimum_ticket_price": {
-            "currency": "GBP",
-            "display": "0.00 GBP",
-            "major_value": "0.00",
-            "value": 0
-          },
-          "start_sales_date": null,
-          "waitlist_available": false
-        },
-        "tx_time_limit": 1200,
-        "url": "https://www.eventbrite.co.uk/e/comedy-club-shoreditch-free-new-material-mondays-tickets-1990806513874",
-        "venue": {
-          "address": {
-            "address_1": "145 Shoreditch High Street",
-            "address_2": "",
-            "city": "London",
-            "country": "GB",
-            "latitude": "51.52596699999999",
-            "localized_address_display": "145 Shoreditch High Street, London, E1 6JE",
-            "localized_area_display": "London",
-            "localized_multi_line_address_display": [
-              "145 Shoreditch High Street",
-              "London",
-              "E1 6JE"
-            ],
-            "longitude": "-0.0780681",
-            "postal_code": "E1 6JE",
-            "region": "England"
-          },
-          "age_restriction": null,
-          "capacity": null,
-          "id": "297974604",
-          "latitude": "51.52596699999999",
-          "longitude": "-0.0780681",
-          "name": "Aura x",
-          "resource_uri": "https://www.eventbriteapi.com/v3/venues/297974604/"
-        },
-        "venue_id": "297974604",
-        "version": null
-      },
-      "last_seen": "2026-07-27",
-      "path": "/events/comedy-club-shoreditch-free-new-material-mondays-2026-07-27-1930-1990806513874/",
-      "status": "expired"
-    },
     "1990806514877": {
       "event": {
         "capacity": 80,
@@ -6796,7 +6670,7 @@
         "venue_id": "296067022",
         "version": null
       },
-      "last_seen": "2026-10-25",
+      "last_seen": "2026-10-26",
       "path": "/events/byob-comedy-peckham-2026-10-29-2000-1999384403573/",
       "status": "live"
     },
@@ -7844,7 +7718,7 @@
         "venue_id": "295458905",
         "version": null
       },
-      "last_seen": "2026-10-25",
+      "last_seen": "2026-10-26",
       "path": "/events/islington-sunday-comedy-6pm-2026-11-01-1800-1999385161841/",
       "status": "live"
     },
@@ -7975,7 +7849,7 @@
         "venue_id": "295458905",
         "version": null
       },
-      "last_seen": "2026-10-25",
+      "last_seen": "2026-10-26",
       "path": "/events/islington-sunday-comedy-6pm-2026-11-08-1800-1999385162844/",
       "status": "live"
     },
@@ -8106,7 +7980,7 @@
         "venue_id": "295458905",
         "version": null
       },
-      "last_seen": "2026-10-25",
+      "last_seen": "2026-10-26",
       "path": "/events/islington-sunday-comedy-6pm-2026-11-15-1800-1999385163847/",
       "status": "live"
     },
@@ -9154,7 +9028,7 @@
         "venue_id": "295674687",
         "version": null
       },
-      "last_seen": "2026-10-25",
+      "last_seen": "2026-10-26",
       "path": "/events/free-comedy-every-sunday-at-6pm-in-north-london-2026-11-01-2000-1999385207979/",
       "status": "live"
     },
@@ -9285,7 +9159,7 @@
         "venue_id": "295674687",
         "version": null
       },
-      "last_seen": "2026-10-25",
+      "last_seen": "2026-10-26",
       "path": "/events/free-comedy-every-sunday-at-6pm-in-north-london-2026-11-08-2000-1999385208982/",
       "status": "live"
     },
@@ -9416,7 +9290,7 @@
         "venue_id": "295674687",
         "version": null
       },
-      "last_seen": "2026-10-25",
+      "last_seen": "2026-10-26",
       "path": "/events/free-comedy-every-sunday-at-6pm-in-north-london-2026-11-15-2000-1999385209985/",
       "status": "live"
     },
@@ -9942,7 +9816,7 @@
       },
       "last_seen": "2026-10-25",
       "path": "/events/candlemaker-comedy-battersea-2026-10-25-1930-1999385304267/",
-      "status": "live"
+      "status": "expired"
     },
     "1999385305270": {
       "event": {
@@ -10071,7 +9945,7 @@
         "venue_id": "296705621",
         "version": null
       },
-      "last_seen": "2026-10-25",
+      "last_seen": "2026-10-26",
       "path": "/events/candlemaker-comedy-battersea-2026-11-01-1930-1999385305270/",
       "status": "live"
     },
@@ -10202,7 +10076,7 @@
         "venue_id": "296705621",
         "version": null
       },
-      "last_seen": "2026-10-25",
+      "last_seen": "2026-10-26",
       "path": "/events/candlemaker-comedy-battersea-2026-11-08-1930-1999385306273/",
       "status": "live"
     },
@@ -10333,7 +10207,7 @@
         "venue_id": "296705621",
         "version": null
       },
-      "last_seen": "2026-10-25",
+      "last_seen": "2026-10-26",
       "path": "/events/candlemaker-comedy-battersea-2026-11-15-1930-1999385307276/",
       "status": "live"
     },
@@ -11449,7 +11323,7 @@
         "venue_id": "296067959",
         "version": null
       },
-      "last_seen": "2026-10-25",
+      "last_seen": "2026-10-26",
       "path": "/events/is-it-lington-tuesday-comedy-2026-10-27-1930-1999385353414/",
       "status": "live"
     },
@@ -11573,7 +11447,7 @@
         "venue_id": "296067959",
         "version": null
       },
-      "last_seen": "2026-10-25",
+      "last_seen": "2026-10-26",
       "path": "/events/is-it-lington-tuesday-comedy-2026-11-03-1930-1999385354417/",
       "status": "live"
     },
@@ -12492,7 +12366,7 @@
       },
       "last_seen": "2026-10-25",
       "path": "/events/islington-sunday-comedy-8pm-2026-10-25-2000-1999934015477/",
-      "status": "live"
+      "status": "expired"
     },
     "1999934016480": {
       "event": {
@@ -12621,7 +12495,7 @@
         "venue_id": "296236287",
         "version": null
       },
-      "last_seen": "2026-10-25",
+      "last_seen": "2026-10-26",
       "path": "/events/islington-sunday-comedy-8pm-2026-11-01-2000-1999934016480/",
       "status": "live"
     },
@@ -12752,7 +12626,7 @@
         "venue_id": "296236287",
         "version": null
       },
-      "last_seen": "2026-10-25",
+      "last_seen": "2026-10-26",
       "path": "/events/islington-sunday-comedy-8pm-2026-11-08-2000-1999934017483/",
       "status": "live"
     },
@@ -12883,7 +12757,7 @@
         "venue_id": "296236287",
         "version": null
       },
-      "last_seen": "2026-10-25",
+      "last_seen": "2026-10-26",
       "path": "/events/islington-sunday-comedy-8pm-2026-11-15-2000-1999934018486/",
       "status": "live"
     },
@@ -13131,7 +13005,7 @@
         "venue_id": "299652369",
         "version": null
       },
-      "last_seen": "2026-10-25",
+      "last_seen": "2026-10-26",
       "path": "/events/bear-hug-comedy-free-live-stand-up-comedy-night-central-london-2026-11-04-2000-2002640631037/",
       "status": "live"
     },
@@ -13255,7 +13129,7 @@
         "venue_id": "299652369",
         "version": null
       },
-      "last_seen": "2026-10-25",
+      "last_seen": "2026-10-26",
       "path": "/events/bear-hug-comedy-free-live-stand-up-comedy-night-central-london-2026-11-11-2000-2002640632040/",
       "status": "live"
     },
@@ -13379,7 +13253,7 @@
         "venue_id": "299652369",
         "version": null
       },
-      "last_seen": "2026-10-25",
+      "last_seen": "2026-10-26",
       "path": "/events/bear-hug-comedy-free-live-stand-up-comedy-night-central-london-2026-11-25-2000-2002640634046/",
       "status": "live"
     },
@@ -13503,7 +13377,7 @@
         "venue_id": "299652369",
         "version": null
       },
-      "last_seen": "2026-10-25",
+      "last_seen": "2026-10-26",
       "path": "/events/bear-hug-comedy-free-live-stand-up-comedy-night-central-london-2026-12-09-2000-2002640636052/",
       "status": "live"
     },
@@ -13627,7 +13501,7 @@
         "venue_id": "299652369",
         "version": null
       },
-      "last_seen": "2026-10-25",
+      "last_seen": "2026-10-26",
       "path": "/events/bear-hug-comedy-free-live-stand-up-comedy-night-central-london-2026-12-23-2000-2002640715289/",
       "status": "live"
     },
@@ -13875,7 +13749,7 @@
         "venue_id": "299790870",
         "version": null
       },
-      "last_seen": "2026-10-25",
+      "last_seen": "2026-10-26",
       "path": "/events/is-it-lington-special-friday-show-2026-11-13-1930-2003570604613/",
       "status": "live"
     }
@@ -13952,7 +13826,7 @@
         "region": "England"
       },
       "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1173215566%2F543747696447%2F1%2Foriginal.20251218-172640?auto=format%2Ccompress&q=75&sharp=10&s=2e8147b3d66dbc25cd453a4108261126",
-      "last_seen": "2026-10-25",
+      "last_seen": "2026-10-26",
       "slug": "islington-sunday-comedy-6pm",
       "source_title": "Free Comedy Every Sunday at 6pm in Islington",
       "summary": "The best free Stand Up Comedy in London, every Sunday at 6pm at Brewhouse & Kitchen in Islington.",
@@ -13978,7 +13852,7 @@
         "region": "England"
       },
       "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1181543832%2F543747696447%2F1%2Foriginal.20260406-213743?auto=format%2Ccompress&q=75&sharp=10&s=c493f415ef81d17621fe104a48188f24",
-      "last_seen": "2026-10-25",
+      "last_seen": "2026-10-26",
       "slug": "is-it-lington-tuesday-comedy",
       "source_title": "Is-It-Lington? Free Comedy Every Tuesday at 7:30 pm in Highbury & Islington",
       "summary": "The best free Stand Up Comedy in London, every Tuesday at 7:30pm at Hoxley & Porter in Highbury & Islington / Angel.",
@@ -14004,7 +13878,7 @@
         "region": "England"
       },
       "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1173216047%2F543747696447%2F1%2Foriginal.20251218-173229?auto=format%2Ccompress&q=75&sharp=10&s=6cf6c102ff0d264fbe9faed8c07aac2b",
-      "last_seen": "2026-10-25",
+      "last_seen": "2026-10-26",
       "slug": "free-comedy-every-sunday-at-6pm-in-north-london",
       "source_title": "Free Comedy Every Sunday at 6pm in North London",
       "summary": "The best free Stand Up Comedy in London, every Sunday at 6pm at Brewhouse & Kitchen in North London.",
@@ -14030,7 +13904,7 @@
         "region": "England"
       },
       "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1179214042%2F543747696447%2F1%2Foriginal.20260306-162753?auto=format%2Ccompress&q=75&sharp=10&s=e4014ea77e71c224ce95563687ed09c1",
-      "last_seen": "2026-10-25",
+      "last_seen": "2026-10-26",
       "slug": "byob-comedy-peckham",
       "source_title": "BYOB - Free Comedy Every Thursday in Peckham",
       "summary": "The best stand-up comedy in Peckham, free every Thursday at 8pm at Eagle Eats Bakery. Bring your own beer!",
@@ -14056,7 +13930,7 @@
         "region": "England"
       },
       "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1176403518%2F543747696447%2F1%2Foriginal.20260201-230633?auto=format%2Ccompress&q=75&sharp=10&s=606020b6ba85db1cbee1a7a6759bd052",
-      "last_seen": "2026-10-25",
+      "last_seen": "2026-10-26",
       "slug": "islington-sunday-comedy-8pm",
       "source_title": "Free Comedy Every Sunday at 8pm in Islington",
       "summary": "The best free Stand Up Comedy in London, every Sunday at 8pm at Brewhouse & Kitchen in Islington.",
@@ -14082,7 +13956,7 @@
         "region": "England"
       },
       "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1179000636%2F543747696447%2F1%2Foriginal.20260304-130103?auto=format%2Ccompress&q=75&sharp=10&s=1d7bbd509c54b602b4b708af828d58a7",
-      "last_seen": "2026-10-25",
+      "last_seen": "2026-10-26",
       "slug": "candlemaker-comedy-battersea",
       "source_title": "Candlemaker Comedy - Free Comedy at Battersea's Favourite!",
       "summary": "At the lovely Candlemaker on Battersea High Street, we run a free stand up comedy show every Sunday! Good priced food and drinks to go with!",
@@ -14160,7 +14034,7 @@
         "region": "England"
       },
       "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1194741695%2F543747696447%2F1%2Foriginal.20260930-170210?auto=format%2Ccompress&q=75&sharp=10&s=0a6df5b69ea2eb4658a17fc15b5030b6",
-      "last_seen": "2026-10-25",
+      "last_seen": "2026-10-26",
       "slug": "bear-hug-comedy-free-live-stand-up-comedy-night-central-london",
       "source_title": "Bear Hug Comedy: Free Live Stand-Up Comedy Night (Central London)",
       "summary": "Looking for a hilarious mid-week night out in Central London? Join us for Bear Hug Comedy—a fast-paced, high-energy stand-up show.",
@@ -14186,7 +14060,7 @@
         "region": "England"
       },
       "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1195519211%2F543747696447%2F1%2Foriginal.20261010-183028?auto=format%2Ccompress&q=75&sharp=10&s=5fe231fd806ec291a0fe702d069bb048",
-      "last_seen": "2026-10-25",
+      "last_seen": "2026-10-26",
       "slug": "is-it-lington-special-friday-show",
       "source_title": "Is-It-Lington? | Special Friday Show",
       "summary": "Your favourite Islington based comedy night now has a special Friday show!",
