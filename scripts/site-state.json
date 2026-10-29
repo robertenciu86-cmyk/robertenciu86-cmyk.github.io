@@ -1,12 +1,11 @@
 {
   "lastmod": {
-    "/": "2026-10-27",
+    "/": "2026-10-29",
     "/events/bear-hug-comedy-free-live-stand-up-comedy-night-central-london-2026-11-04-2000-2002640631037/": "2026-09-30",
     "/events/bear-hug-comedy-free-live-stand-up-comedy-night-central-london-2026-11-11-2000-2002640632040/": "2026-09-30",
     "/events/bear-hug-comedy-free-live-stand-up-comedy-night-central-london-2026-11-25-2000-2002640634046/": "2026-09-30",
     "/events/bear-hug-comedy-free-live-stand-up-comedy-night-central-london-2026-12-09-2000-2002640636052/": "2026-09-30",
     "/events/bear-hug-comedy-free-live-stand-up-comedy-night-central-london-2026-12-23-2000-2002640715289/": "2026-09-30",
-    "/events/byob-comedy-peckham-2026-10-29-2000-1999384403573/": "2026-09-01",
     "/events/byob-comedy-peckham-2026-11-05-2000-2004064536978/": "2026-10-29",
     "/events/byob-comedy-peckham-2026-11-12-2000-2004064537981/": "2026-10-29",
     "/events/byob-comedy-peckham-2026-11-19-2000-2004064538984/": "2026-10-29",
@@ -35,15 +34,15 @@
     "/events/islington-sunday-comedy-8pm-2026-11-08-2000-1999934017483/": "2026-09-06",
     "/events/islington-sunday-comedy-8pm-2026-11-15-2000-1999934018486/": "2026-09-06",
     "/hire-comedians-london/": "2026-06-15",
-    "/shows/": "2026-10-27",
-    "/shows/bear-hug-comedy-free-live-stand-up-comedy-night-central-london/": "2026-10-27",
+    "/shows/": "2026-10-29",
+    "/shows/bear-hug-comedy-free-live-stand-up-comedy-night-central-london/": "2026-10-29",
     "/shows/byob-comedy-peckham/": "2026-10-29",
-    "/shows/candlemaker-comedy-battersea/": "2026-10-27",
-    "/shows/free-comedy-every-sunday-at-6pm-in-north-london/": "2026-10-27",
-    "/shows/is-it-lington-special-friday-show/": "2026-10-27",
-    "/shows/is-it-lington-tuesday-comedy/": "2026-10-27",
-    "/shows/islington-sunday-comedy-6pm/": "2026-10-27",
-    "/shows/islington-sunday-comedy-8pm/": "2026-10-27",
+    "/shows/candlemaker-comedy-battersea/": "2026-10-29",
+    "/shows/free-comedy-every-sunday-at-6pm-in-north-london/": "2026-10-29",
+    "/shows/is-it-lington-special-friday-show/": "2026-10-29",
+    "/shows/is-it-lington-tuesday-comedy/": "2026-10-29",
+    "/shows/islington-sunday-comedy-6pm/": "2026-10-29",
+    "/shows/islington-sunday-comedy-8pm/": "2026-10-29",
     "/stay-in-touch/": "2026-06-15"
   },
   "occurrences": {
@@ -6298,7 +6297,7 @@
       },
       "last_seen": "2026-10-29",
       "path": "/events/byob-comedy-peckham-2026-10-29-2000-1999384403573/",
-      "status": "live"
+      "status": "expired"
     },
     "1999385154820": {
       "event": {
