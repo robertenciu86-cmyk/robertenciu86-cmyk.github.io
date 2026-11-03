@@ -40,6 +40,7 @@ STATE = ROOT / "scripts" / "site-state.json"
 MANIFEST = ROOT / "scripts" / "generated-files.json"
 HEARTBEAT = ROOT / "scripts" / "refresh-heartbeat.txt"
 BASE_URL = "https://londoncomedygroup.com"
+SISTER_URL = "https://brendancomedygroup.com/"
 OCCURRENCE_RETENTION_DAYS = 90
 HEARTBEAT_INTERVAL_DAYS = 30
 try:
@@ -507,6 +508,7 @@ def layout(
 </head>
 <body>
     <a class="skip-link" href="#main">Skip to content</a>
+    <div class="sister-banner"><a href="{esc(SISTER_URL)}">Visit our sister site, <strong>Brendan Comedy Group</strong> <span aria-hidden="true">→</span></a></div>
     <header class="site-header">
         <div class="wrap nav">
             <a class="brand" href="/" aria-label="London Comedy Group home">
