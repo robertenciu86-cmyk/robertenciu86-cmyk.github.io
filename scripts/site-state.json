@@ -1,11 +1,10 @@
 {
   "lastmod": {
-    "/": "2026-11-04",
+    "/": "2026-11-06",
     "/events/bear-hug-comedy-free-live-stand-up-comedy-night-central-london-2026-11-11-2000-2002640632040/": "2026-09-30",
     "/events/bear-hug-comedy-free-live-stand-up-comedy-night-central-london-2026-11-25-2000-2002640634046/": "2026-09-30",
     "/events/bear-hug-comedy-free-live-stand-up-comedy-night-central-london-2026-12-09-2000-2002640636052/": "2026-09-30",
     "/events/bear-hug-comedy-free-live-stand-up-comedy-night-central-london-2026-12-23-2000-2002640715289/": "2026-09-30",
-    "/events/byob-comedy-peckham-2026-11-05-2000-2004064536978/": "2026-10-29",
     "/events/byob-comedy-peckham-2026-11-12-2000-2004064537981/": "2026-10-29",
     "/events/byob-comedy-peckham-2026-11-19-2000-2004064538984/": "2026-10-29",
     "/events/byob-comedy-peckham-2026-11-26-2000-2004064539987/": "2026-10-29",
@@ -28,14 +27,14 @@
     "/events/islington-sunday-comedy-8pm-2026-11-08-2000-1999934017483/": "2026-09-06",
     "/events/islington-sunday-comedy-8pm-2026-11-15-2000-1999934018486/": "2026-09-06",
     "/hire-comedians-london/": "2026-06-15",
-    "/shows/": "2026-11-04",
-    "/shows/bear-hug-comedy-free-live-stand-up-comedy-night-central-london/": "2026-11-05",
-    "/shows/byob-comedy-peckham/": "2026-11-05",
-    "/shows/candlemaker-comedy-battersea/": "2026-11-05",
-    "/shows/free-comedy-every-sunday-at-6pm-in-north-london/": "2026-11-05",
-    "/shows/is-it-lington-special-friday-show/": "2026-11-05",
-    "/shows/islington-sunday-comedy-6pm/": "2026-11-05",
-    "/shows/islington-sunday-comedy-8pm/": "2026-11-05",
+    "/shows/": "2026-11-06",
+    "/shows/bear-hug-comedy-free-live-stand-up-comedy-night-central-london/": "2026-11-06",
+    "/shows/byob-comedy-peckham/": "2026-11-06",
+    "/shows/candlemaker-comedy-battersea/": "2026-11-06",
+    "/shows/free-comedy-every-sunday-at-6pm-in-north-london/": "2026-11-06",
+    "/shows/is-it-lington-special-friday-show/": "2026-11-06",
+    "/shows/islington-sunday-comedy-6pm/": "2026-11-06",
+    "/shows/islington-sunday-comedy-8pm/": "2026-11-06",
     "/stay-in-touch/": "2026-06-15"
   },
   "occurrences": {
@@ -6434,7 +6433,7 @@
         "venue_id": "295458905",
         "version": null
       },
-      "last_seen": "2026-11-05",
+      "last_seen": "2026-11-06",
       "path": "/events/islington-sunday-comedy-6pm-2026-11-08-1800-1999385162844/",
       "status": "live"
     },
@@ -6566,7 +6565,7 @@
         "venue_id": "295458905",
         "version": null
       },
-      "last_seen": "2026-11-05",
+      "last_seen": "2026-11-06",
       "path": "/events/islington-sunday-comedy-6pm-2026-11-15-1800-1999385163847/",
       "status": "live"
     },
@@ -7746,7 +7745,7 @@
         "venue_id": "295674687",
         "version": null
       },
-      "last_seen": "2026-11-05",
+      "last_seen": "2026-11-06",
       "path": "/events/free-comedy-every-sunday-at-6pm-in-north-london-2026-11-08-2000-1999385208982/",
       "status": "live"
     },
@@ -7878,7 +7877,7 @@
         "venue_id": "295674687",
         "version": null
       },
-      "last_seen": "2026-11-05",
+      "last_seen": "2026-11-06",
       "path": "/events/free-comedy-every-sunday-at-6pm-in-north-london-2026-11-15-2000-1999385209985/",
       "status": "live"
     },
@@ -8665,7 +8664,7 @@
         "venue_id": "296705621",
         "version": null
       },
-      "last_seen": "2026-11-05",
+      "last_seen": "2026-11-06",
       "path": "/events/candlemaker-comedy-battersea-2026-11-08-1930-1999385306273/",
       "status": "live"
     },
@@ -8797,7 +8796,7 @@
         "venue_id": "296705621",
         "version": null
       },
-      "last_seen": "2026-11-05",
+      "last_seen": "2026-11-06",
       "path": "/events/candlemaker-comedy-battersea-2026-11-15-1930-1999385307276/",
       "status": "live"
     },
@@ -11217,7 +11216,7 @@
         "venue_id": "296236287",
         "version": null
       },
-      "last_seen": "2026-11-05",
+      "last_seen": "2026-11-06",
       "path": "/events/islington-sunday-comedy-8pm-2026-11-08-2000-1999934017483/",
       "status": "live"
     },
@@ -11349,7 +11348,7 @@
         "venue_id": "296236287",
         "version": null
       },
-      "last_seen": "2026-11-05",
+      "last_seen": "2026-11-06",
       "path": "/events/islington-sunday-comedy-8pm-2026-11-15-2000-1999934018486/",
       "status": "live"
     },
@@ -11723,7 +11722,7 @@
         "venue_id": "299652369",
         "version": null
       },
-      "last_seen": "2026-11-05",
+      "last_seen": "2026-11-06",
       "path": "/events/bear-hug-comedy-free-live-stand-up-comedy-night-central-london-2026-11-11-2000-2002640632040/",
       "status": "live"
     },
@@ -11848,7 +11847,7 @@
         "venue_id": "299652369",
         "version": null
       },
-      "last_seen": "2026-11-05",
+      "last_seen": "2026-11-06",
       "path": "/events/bear-hug-comedy-free-live-stand-up-comedy-night-central-london-2026-11-25-2000-2002640634046/",
       "status": "live"
     },
@@ -11973,7 +11972,7 @@
         "venue_id": "299652369",
         "version": null
       },
-      "last_seen": "2026-11-05",
+      "last_seen": "2026-11-06",
       "path": "/events/bear-hug-comedy-free-live-stand-up-comedy-night-central-london-2026-12-09-2000-2002640636052/",
       "status": "live"
     },
@@ -12098,7 +12097,7 @@
         "venue_id": "299652369",
         "version": null
       },
-      "last_seen": "2026-11-05",
+      "last_seen": "2026-11-06",
       "path": "/events/bear-hug-comedy-free-live-stand-up-comedy-night-central-london-2026-12-23-2000-2002640715289/",
       "status": "live"
     },
@@ -12347,7 +12346,7 @@
         "venue_id": "299790870",
         "version": null
       },
-      "last_seen": "2026-11-05",
+      "last_seen": "2026-11-06",
       "path": "/events/is-it-lington-special-friday-show-2026-11-13-1930-2003570604613/",
       "status": "live"
     },
@@ -12481,7 +12480,7 @@
       },
       "last_seen": "2026-11-05",
       "path": "/events/byob-comedy-peckham-2026-11-05-2000-2004064536978/",
-      "status": "live"
+      "status": "expired"
     },
     "2004064537981": {
       "event": {
@@ -12611,7 +12610,7 @@
         "venue_id": "296067022",
         "version": null
       },
-      "last_seen": "2026-11-05",
+      "last_seen": "2026-11-06",
       "path": "/events/byob-comedy-peckham-2026-11-12-2000-2004064537981/",
       "status": "live"
     },
@@ -12743,7 +12742,7 @@
         "venue_id": "296067022",
         "version": null
       },
-      "last_seen": "2026-11-05",
+      "last_seen": "2026-11-06",
       "path": "/events/byob-comedy-peckham-2026-11-19-2000-2004064538984/",
       "status": "live"
     },
@@ -12875,7 +12874,7 @@
         "venue_id": "296067022",
         "version": null
       },
-      "last_seen": "2026-11-05",
+      "last_seen": "2026-11-06",
       "path": "/events/byob-comedy-peckham-2026-11-26-2000-2004064539987/",
       "status": "live"
     },
@@ -13007,7 +13006,7 @@
         "venue_id": "296067022",
         "version": null
       },
-      "last_seen": "2026-11-05",
+      "last_seen": "2026-11-06",
       "path": "/events/byob-comedy-peckham-2026-12-03-2000-2004064540990/",
       "status": "live"
     },
@@ -13139,7 +13138,7 @@
         "venue_id": "296067022",
         "version": null
       },
-      "last_seen": "2026-11-05",
+      "last_seen": "2026-11-06",
       "path": "/events/byob-comedy-peckham-2026-12-10-2000-2004064541993/",
       "status": "live"
     },
@@ -13271,7 +13270,7 @@
         "venue_id": "296067022",
         "version": null
       },
-      "last_seen": "2026-11-05",
+      "last_seen": "2026-11-06",
       "path": "/events/byob-comedy-peckham-2026-12-17-2000-2004064542996/",
       "status": "live"
     },
@@ -13403,7 +13402,7 @@
         "venue_id": "296067022",
         "version": null
       },
-      "last_seen": "2026-11-05",
+      "last_seen": "2026-11-06",
       "path": "/events/byob-comedy-peckham-2026-12-24-2000-2004064543999/",
       "status": "live"
     },
@@ -13535,7 +13534,7 @@
         "venue_id": "296067022",
         "version": null
       },
-      "last_seen": "2026-11-05",
+      "last_seen": "2026-11-06",
       "path": "/events/byob-comedy-peckham-2026-12-31-2000-2004064545002/",
       "status": "live"
     },
@@ -13667,7 +13666,7 @@
         "venue_id": "296067022",
         "version": null
       },
-      "last_seen": "2026-11-05",
+      "last_seen": "2026-11-06",
       "path": "/events/byob-comedy-peckham-2027-01-07-2000-2004064546005/",
       "status": "live"
     },
@@ -13799,7 +13798,7 @@
         "venue_id": "296067022",
         "version": null
       },
-      "last_seen": "2026-11-05",
+      "last_seen": "2026-11-06",
       "path": "/events/byob-comedy-peckham-2027-01-14-2000-2004064547008/",
       "status": "live"
     },
@@ -13931,7 +13930,7 @@
         "venue_id": "296067022",
         "version": null
       },
-      "last_seen": "2026-11-05",
+      "last_seen": "2026-11-06",
       "path": "/events/byob-comedy-peckham-2027-01-21-2000-2004064548011/",
       "status": "live"
     },
@@ -14063,7 +14062,7 @@
         "venue_id": "296067022",
         "version": null
       },
-      "last_seen": "2026-11-05",
+      "last_seen": "2026-11-06",
       "path": "/events/byob-comedy-peckham-2027-01-28-2000-2004064549014/",
       "status": "live"
     }
@@ -14140,7 +14139,7 @@
         "region": "England"
       },
       "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1173215566%2F543747696447%2F1%2Foriginal.20251218-172640?auto=format%2Ccompress&q=75&sharp=10&s=2e8147b3d66dbc25cd453a4108261126",
-      "last_seen": "2026-11-05",
+      "last_seen": "2026-11-06",
       "slug": "islington-sunday-comedy-6pm",
       "source_title": "Free Comedy Every Sunday at 6pm in Islington",
       "summary": "The best free Stand Up Comedy in London, every Sunday at 6pm at Brewhouse & Kitchen in Islington.",
@@ -14192,7 +14191,7 @@
         "region": "England"
       },
       "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1173216047%2F543747696447%2F1%2Foriginal.20251218-173229?auto=format%2Ccompress&q=75&sharp=10&s=6cf6c102ff0d264fbe9faed8c07aac2b",
-      "last_seen": "2026-11-05",
+      "last_seen": "2026-11-06",
       "slug": "free-comedy-every-sunday-at-6pm-in-north-london",
       "source_title": "Free Comedy Every Sunday at 6pm in North London",
       "summary": "The best free Stand Up Comedy in London, every Sunday at 6pm at Brewhouse & Kitchen in North London.",
@@ -14218,7 +14217,7 @@
         "region": "England"
       },
       "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1179214042%2F543747696447%2F1%2Foriginal.20260306-162753?auto=format%2Ccompress&q=75&sharp=10&s=e4014ea77e71c224ce95563687ed09c1",
-      "last_seen": "2026-11-05",
+      "last_seen": "2026-11-06",
       "slug": "byob-comedy-peckham",
       "source_title": "BYOB - Free Comedy Every Thursday in Peckham",
       "summary": "The best stand-up comedy in Peckham, free every Thursday at 8pm at Eagle Eats Bakery. Bring your own beer!",
@@ -14244,7 +14243,7 @@
         "region": "England"
       },
       "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1176403518%2F543747696447%2F1%2Foriginal.20260201-230633?auto=format%2Ccompress&q=75&sharp=10&s=606020b6ba85db1cbee1a7a6759bd052",
-      "last_seen": "2026-11-05",
+      "last_seen": "2026-11-06",
       "slug": "islington-sunday-comedy-8pm",
       "source_title": "Free Comedy Every Sunday at 8pm in Islington",
       "summary": "The best free Stand Up Comedy in London, every Sunday at 8pm at Brewhouse & Kitchen in Islington.",
@@ -14270,7 +14269,7 @@
         "region": "England"
       },
       "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1179000636%2F543747696447%2F1%2Foriginal.20260304-130103?auto=format%2Ccompress&q=75&sharp=10&s=1d7bbd509c54b602b4b708af828d58a7",
-      "last_seen": "2026-11-05",
+      "last_seen": "2026-11-06",
       "slug": "candlemaker-comedy-battersea",
       "source_title": "Candlemaker Comedy - Free Comedy at Battersea's Favourite!",
       "summary": "At the lovely Candlemaker on Battersea High Street, we run a free stand up comedy show every Sunday! Good priced food and drinks to go with!",
@@ -14348,7 +14347,7 @@
         "region": "England"
       },
       "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1194741695%2F543747696447%2F1%2Foriginal.20260930-170210?auto=format%2Ccompress&q=75&sharp=10&s=0a6df5b69ea2eb4658a17fc15b5030b6",
-      "last_seen": "2026-11-05",
+      "last_seen": "2026-11-06",
       "slug": "bear-hug-comedy-free-live-stand-up-comedy-night-central-london",
       "source_title": "Bear Hug Comedy: Free Live Stand-Up Comedy Night (Central London)",
       "summary": "Looking for a hilarious mid-week night out in Central London? Join us for Bear Hug Comedy—a fast-paced, high-energy stand-up show.",
@@ -14374,7 +14373,7 @@
         "region": "England"
       },
       "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1195519211%2F543747696447%2F1%2Foriginal.20261010-183028?auto=format%2Ccompress&q=75&sharp=10&s=5fe231fd806ec291a0fe702d069bb048",
-      "last_seen": "2026-11-05",
+      "last_seen": "2026-11-06",
       "slug": "is-it-lington-special-friday-show",
       "source_title": "Is-It-Lington? | Special Friday Show",
       "summary": "Your favourite Islington based comedy night now has a special Friday show!",
