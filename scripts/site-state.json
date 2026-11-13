@@ -25,7 +25,6 @@
     "/events/free-comedy-every-sunday-at-6pm-in-north-london-2026-12-27-1800-2004552853546/": "2026-11-08",
     "/events/free-comedy-every-sunday-at-6pm-in-north-london-2027-01-03-1800-2004552854549/": "2026-11-08",
     "/events/free-comedy-every-sunday-at-6pm-in-north-london-2027-01-10-1800-2004552855552/": "2026-11-08",
-    "/events/is-it-lington-special-friday-show-2026-11-13-1930-2003570604613/": "2026-10-18",
     "/events/is-it-lington-tuesday-comedy-2026-11-17-1930-2004667257732/": "2026-11-10",
     "/events/is-it-lington-tuesday-comedy-2026-11-24-1930-2004667258735/": "2026-11-10",
     "/events/is-it-lington-tuesday-comedy-2026-12-01-1930-2004667259738/": "2026-11-10",
@@ -59,7 +58,6 @@
     "/shows/byob-comedy-peckham/": "2026-11-13",
     "/shows/candlemaker-comedy-battersea/": "2026-11-13",
     "/shows/free-comedy-every-sunday-at-6pm-in-north-london/": "2026-11-13",
-    "/shows/is-it-lington-special-friday-show/": "2026-11-13",
     "/shows/is-it-lington-tuesday-comedy/": "2026-11-13",
     "/shows/islington-sunday-comedy-6pm/": "2026-11-13",
     "/shows/islington-sunday-comedy-8pm/": "2026-11-13",
@@ -11466,7 +11464,7 @@
       },
       "last_seen": "2026-11-13",
       "path": "/events/is-it-lington-special-friday-show-2026-11-13-1930-2003570604613/",
-      "status": "live"
+      "status": "expired"
     },
     "2004064536978": {
       "event": {
