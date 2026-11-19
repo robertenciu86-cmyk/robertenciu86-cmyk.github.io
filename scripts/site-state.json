@@ -9999,6 +9999,18 @@
         "subcategory_id": "5010",
         "summary": "Looking for a hilarious mid-week night out in Central London? Join us for Bear Hug Comedy—a fast-paced, high-energy stand-up show.",
         "ticket_availability": {
+          "available_maximum_ticket_price": {
+            "currency": "GBP",
+            "display": "0.00 GBP",
+            "major_value": "0.00",
+            "value": 0
+          },
+          "available_minimum_ticket_price": {
+            "currency": "GBP",
+            "display": "0.00 GBP",
+            "major_value": "0.00",
+            "value": 0
+          },
           "has_available_tickets": true,
           "is_sold_out": false,
           "maximum_ticket_price": {
@@ -10124,6 +10136,18 @@
         "subcategory_id": "5010",
         "summary": "Looking for a hilarious mid-week night out in Central London? Join us for Bear Hug Comedy—a fast-paced, high-energy stand-up show.",
         "ticket_availability": {
+          "available_maximum_ticket_price": {
+            "currency": "GBP",
+            "display": "0.00 GBP",
+            "major_value": "0.00",
+            "value": 0
+          },
+          "available_minimum_ticket_price": {
+            "currency": "GBP",
+            "display": "0.00 GBP",
+            "major_value": "0.00",
+            "value": 0
+          },
           "has_available_tickets": true,
           "is_sold_out": false,
           "maximum_ticket_price": {
@@ -10249,6 +10273,18 @@
         "subcategory_id": "5010",
         "summary": "Looking for a hilarious mid-week night out in Central London? Join us for Bear Hug Comedy—a fast-paced, high-energy stand-up show.",
         "ticket_availability": {
+          "available_maximum_ticket_price": {
+            "currency": "GBP",
+            "display": "0.00 GBP",
+            "major_value": "0.00",
+            "value": 0
+          },
+          "available_minimum_ticket_price": {
+            "currency": "GBP",
+            "display": "0.00 GBP",
+            "major_value": "0.00",
+            "value": 0
+          },
           "has_available_tickets": true,
           "is_sold_out": false,
           "maximum_ticket_price": {
@@ -10819,7 +10855,7 @@
         "capacity": 40,
         "capacity_is_custom": false,
         "category_id": "110",
-        "changed": "2026-10-29T12:51:41Z",
+        "changed": "2026-11-19T20:36:15Z",
         "created": "2026-10-29T12:51:07Z",
         "currency": "GBP",
         "description": {
@@ -10890,10 +10926,22 @@
           "timezone": "Europe/London",
           "utc": "2026-11-19T20:00:00Z"
         },
-        "status": "live",
+        "status": "started",
         "subcategory_id": "10003",
         "summary": "The best stand-up comedy in Peckham, free every Thursday at 8pm at Eagle Eats Bakery. Bring your own beer!",
         "ticket_availability": {
+          "available_maximum_ticket_price": {
+            "currency": "GBP",
+            "display": "0.00 GBP",
+            "major_value": "0.00",
+            "value": 0
+          },
+          "available_minimum_ticket_price": {
+            "currency": "GBP",
+            "display": "0.00 GBP",
+            "major_value": "0.00",
+            "value": 0
+          },
           "has_available_tickets": true,
           "is_sold_out": false,
           "maximum_ticket_price": {
@@ -11026,6 +11074,18 @@
         "subcategory_id": "10003",
         "summary": "The best stand-up comedy in Peckham, free every Thursday at 8pm at Eagle Eats Bakery. Bring your own beer!",
         "ticket_availability": {
+          "available_maximum_ticket_price": {
+            "currency": "GBP",
+            "display": "0.00 GBP",
+            "major_value": "0.00",
+            "value": 0
+          },
+          "available_minimum_ticket_price": {
+            "currency": "GBP",
+            "display": "0.00 GBP",
+            "major_value": "0.00",
+            "value": 0
+          },
           "has_available_tickets": true,
           "is_sold_out": false,
           "maximum_ticket_price": {
@@ -11158,6 +11218,18 @@
         "subcategory_id": "10003",
         "summary": "The best stand-up comedy in Peckham, free every Thursday at 8pm at Eagle Eats Bakery. Bring your own beer!",
         "ticket_availability": {
+          "available_maximum_ticket_price": {
+            "currency": "GBP",
+            "display": "0.00 GBP",
+            "major_value": "0.00",
+            "value": 0
+          },
+          "available_minimum_ticket_price": {
+            "currency": "GBP",
+            "display": "0.00 GBP",
+            "major_value": "0.00",
+            "value": 0
+          },
           "has_available_tickets": true,
           "is_sold_out": false,
           "maximum_ticket_price": {
@@ -11290,6 +11362,18 @@
         "subcategory_id": "10003",
         "summary": "The best stand-up comedy in Peckham, free every Thursday at 8pm at Eagle Eats Bakery. Bring your own beer!",
         "ticket_availability": {
+          "available_maximum_ticket_price": {
+            "currency": "GBP",
+            "display": "0.00 GBP",
+            "major_value": "0.00",
+            "value": 0
+          },
+          "available_minimum_ticket_price": {
+            "currency": "GBP",
+            "display": "0.00 GBP",
+            "major_value": "0.00",
+            "value": 0
+          },
           "has_available_tickets": true,
           "is_sold_out": false,
           "maximum_ticket_price": {
@@ -11422,6 +11506,18 @@
         "subcategory_id": "10003",
         "summary": "The best stand-up comedy in Peckham, free every Thursday at 8pm at Eagle Eats Bakery. Bring your own beer!",
         "ticket_availability": {
+          "available_maximum_ticket_price": {
+            "currency": "GBP",
+            "display": "0.00 GBP",
+            "major_value": "0.00",
+            "value": 0
+          },
+          "available_minimum_ticket_price": {
+            "currency": "GBP",
+            "display": "0.00 GBP",
+            "major_value": "0.00",
+            "value": 0
+          },
           "has_available_tickets": true,
           "is_sold_out": false,
           "maximum_ticket_price": {
@@ -11554,6 +11650,18 @@
         "subcategory_id": "10003",
         "summary": "The best stand-up comedy in Peckham, free every Thursday at 8pm at Eagle Eats Bakery. Bring your own beer!",
         "ticket_availability": {
+          "available_maximum_ticket_price": {
+            "currency": "GBP",
+            "display": "0.00 GBP",
+            "major_value": "0.00",
+            "value": 0
+          },
+          "available_minimum_ticket_price": {
+            "currency": "GBP",
+            "display": "0.00 GBP",
+            "major_value": "0.00",
+            "value": 0
+          },
           "has_available_tickets": true,
           "is_sold_out": false,
           "maximum_ticket_price": {
@@ -11686,6 +11794,18 @@
         "subcategory_id": "10003",
         "summary": "The best stand-up comedy in Peckham, free every Thursday at 8pm at Eagle Eats Bakery. Bring your own beer!",
         "ticket_availability": {
+          "available_maximum_ticket_price": {
+            "currency": "GBP",
+            "display": "0.00 GBP",
+            "major_value": "0.00",
+            "value": 0
+          },
+          "available_minimum_ticket_price": {
+            "currency": "GBP",
+            "display": "0.00 GBP",
+            "major_value": "0.00",
+            "value": 0
+          },
           "has_available_tickets": true,
           "is_sold_out": false,
           "maximum_ticket_price": {
@@ -11818,6 +11938,18 @@
         "subcategory_id": "10003",
         "summary": "The best stand-up comedy in Peckham, free every Thursday at 8pm at Eagle Eats Bakery. Bring your own beer!",
         "ticket_availability": {
+          "available_maximum_ticket_price": {
+            "currency": "GBP",
+            "display": "0.00 GBP",
+            "major_value": "0.00",
+            "value": 0
+          },
+          "available_minimum_ticket_price": {
+            "currency": "GBP",
+            "display": "0.00 GBP",
+            "major_value": "0.00",
+            "value": 0
+          },
           "has_available_tickets": true,
           "is_sold_out": false,
           "maximum_ticket_price": {
@@ -11950,6 +12082,18 @@
         "subcategory_id": "10003",
         "summary": "The best stand-up comedy in Peckham, free every Thursday at 8pm at Eagle Eats Bakery. Bring your own beer!",
         "ticket_availability": {
+          "available_maximum_ticket_price": {
+            "currency": "GBP",
+            "display": "0.00 GBP",
+            "major_value": "0.00",
+            "value": 0
+          },
+          "available_minimum_ticket_price": {
+            "currency": "GBP",
+            "display": "0.00 GBP",
+            "major_value": "0.00",
+            "value": 0
+          },
           "has_available_tickets": true,
           "is_sold_out": false,
           "maximum_ticket_price": {
@@ -12082,6 +12226,18 @@
         "subcategory_id": "10003",
         "summary": "The best stand-up comedy in Peckham, free every Thursday at 8pm at Eagle Eats Bakery. Bring your own beer!",
         "ticket_availability": {
+          "available_maximum_ticket_price": {
+            "currency": "GBP",
+            "display": "0.00 GBP",
+            "major_value": "0.00",
+            "value": 0
+          },
+          "available_minimum_ticket_price": {
+            "currency": "GBP",
+            "display": "0.00 GBP",
+            "major_value": "0.00",
+            "value": 0
+          },
           "has_available_tickets": true,
           "is_sold_out": false,
           "maximum_ticket_price": {
@@ -12214,6 +12370,18 @@
         "subcategory_id": "10003",
         "summary": "The best stand-up comedy in Peckham, free every Thursday at 8pm at Eagle Eats Bakery. Bring your own beer!",
         "ticket_availability": {
+          "available_maximum_ticket_price": {
+            "currency": "GBP",
+            "display": "0.00 GBP",
+            "major_value": "0.00",
+            "value": 0
+          },
+          "available_minimum_ticket_price": {
+            "currency": "GBP",
+            "display": "0.00 GBP",
+            "major_value": "0.00",
+            "value": 0
+          },
           "has_available_tickets": true,
           "is_sold_out": false,
           "maximum_ticket_price": {
@@ -12346,6 +12514,18 @@
         "subcategory_id": "5010",
         "summary": "The best free Stand Up Comedy in London, every Sunday at 6pm at Brewhouse & Kitchen in Islington.",
         "ticket_availability": {
+          "available_maximum_ticket_price": {
+            "currency": "GBP",
+            "display": "0.00 GBP",
+            "major_value": "0.00",
+            "value": 0
+          },
+          "available_minimum_ticket_price": {
+            "currency": "GBP",
+            "display": "0.00 GBP",
+            "major_value": "0.00",
+            "value": 0
+          },
           "has_available_tickets": true,
           "is_sold_out": false,
           "maximum_ticket_price": {
@@ -12478,6 +12658,18 @@
         "subcategory_id": "5010",
         "summary": "The best free Stand Up Comedy in London, every Sunday at 6pm at Brewhouse & Kitchen in Islington.",
         "ticket_availability": {
+          "available_maximum_ticket_price": {
+            "currency": "GBP",
+            "display": "0.00 GBP",
+            "major_value": "0.00",
+            "value": 0
+          },
+          "available_minimum_ticket_price": {
+            "currency": "GBP",
+            "display": "0.00 GBP",
+            "major_value": "0.00",
+            "value": 0
+          },
           "has_available_tickets": true,
           "is_sold_out": false,
           "maximum_ticket_price": {
@@ -12610,6 +12802,18 @@
         "subcategory_id": "5010",
         "summary": "The best free Stand Up Comedy in London, every Sunday at 6pm at Brewhouse & Kitchen in Islington.",
         "ticket_availability": {
+          "available_maximum_ticket_price": {
+            "currency": "GBP",
+            "display": "0.00 GBP",
+            "major_value": "0.00",
+            "value": 0
+          },
+          "available_minimum_ticket_price": {
+            "currency": "GBP",
+            "display": "0.00 GBP",
+            "major_value": "0.00",
+            "value": 0
+          },
           "has_available_tickets": true,
           "is_sold_out": false,
           "maximum_ticket_price": {
@@ -12742,6 +12946,18 @@
         "subcategory_id": "5010",
         "summary": "The best free Stand Up Comedy in London, every Sunday at 6pm at Brewhouse & Kitchen in Islington.",
         "ticket_availability": {
+          "available_maximum_ticket_price": {
+            "currency": "GBP",
+            "display": "0.00 GBP",
+            "major_value": "0.00",
+            "value": 0
+          },
+          "available_minimum_ticket_price": {
+            "currency": "GBP",
+            "display": "0.00 GBP",
+            "major_value": "0.00",
+            "value": 0
+          },
           "has_available_tickets": true,
           "is_sold_out": false,
           "maximum_ticket_price": {
@@ -12874,6 +13090,18 @@
         "subcategory_id": "5010",
         "summary": "The best free Stand Up Comedy in London, every Sunday at 6pm at Brewhouse & Kitchen in Islington.",
         "ticket_availability": {
+          "available_maximum_ticket_price": {
+            "currency": "GBP",
+            "display": "0.00 GBP",
+            "major_value": "0.00",
+            "value": 0
+          },
+          "available_minimum_ticket_price": {
+            "currency": "GBP",
+            "display": "0.00 GBP",
+            "major_value": "0.00",
+            "value": 0
+          },
           "has_available_tickets": true,
           "is_sold_out": false,
           "maximum_ticket_price": {
@@ -13006,6 +13234,18 @@
         "subcategory_id": "5010",
         "summary": "The best free Stand Up Comedy in London, every Sunday at 6pm at Brewhouse & Kitchen in Islington.",
         "ticket_availability": {
+          "available_maximum_ticket_price": {
+            "currency": "GBP",
+            "display": "0.00 GBP",
+            "major_value": "0.00",
+            "value": 0
+          },
+          "available_minimum_ticket_price": {
+            "currency": "GBP",
+            "display": "0.00 GBP",
+            "major_value": "0.00",
+            "value": 0
+          },
           "has_available_tickets": true,
           "is_sold_out": false,
           "maximum_ticket_price": {
@@ -13138,6 +13378,18 @@
         "subcategory_id": "5010",
         "summary": "The best free Stand Up Comedy in London, every Sunday at 6pm at Brewhouse & Kitchen in Islington.",
         "ticket_availability": {
+          "available_maximum_ticket_price": {
+            "currency": "GBP",
+            "display": "0.00 GBP",
+            "major_value": "0.00",
+            "value": 0
+          },
+          "available_minimum_ticket_price": {
+            "currency": "GBP",
+            "display": "0.00 GBP",
+            "major_value": "0.00",
+            "value": 0
+          },
           "has_available_tickets": true,
           "is_sold_out": false,
           "maximum_ticket_price": {
@@ -13270,6 +13522,18 @@
         "subcategory_id": "5010",
         "summary": "The best free Stand Up Comedy in London, every Sunday at 6pm at Brewhouse & Kitchen in Islington.",
         "ticket_availability": {
+          "available_maximum_ticket_price": {
+            "currency": "GBP",
+            "display": "0.00 GBP",
+            "major_value": "0.00",
+            "value": 0
+          },
+          "available_minimum_ticket_price": {
+            "currency": "GBP",
+            "display": "0.00 GBP",
+            "major_value": "0.00",
+            "value": 0
+          },
           "has_available_tickets": true,
           "is_sold_out": false,
           "maximum_ticket_price": {
@@ -13402,6 +13666,18 @@
         "subcategory_id": "5010",
         "summary": "The best free Stand Up Comedy in London, every Sunday at 6pm at Brewhouse & Kitchen in North London.",
         "ticket_availability": {
+          "available_maximum_ticket_price": {
+            "currency": "GBP",
+            "display": "0.00 GBP",
+            "major_value": "0.00",
+            "value": 0
+          },
+          "available_minimum_ticket_price": {
+            "currency": "GBP",
+            "display": "0.00 GBP",
+            "major_value": "0.00",
+            "value": 0
+          },
           "has_available_tickets": true,
           "is_sold_out": false,
           "maximum_ticket_price": {
@@ -13534,6 +13810,18 @@
         "subcategory_id": "5010",
         "summary": "The best free Stand Up Comedy in London, every Sunday at 6pm at Brewhouse & Kitchen in North London.",
         "ticket_availability": {
+          "available_maximum_ticket_price": {
+            "currency": "GBP",
+            "display": "0.00 GBP",
+            "major_value": "0.00",
+            "value": 0
+          },
+          "available_minimum_ticket_price": {
+            "currency": "GBP",
+            "display": "0.00 GBP",
+            "major_value": "0.00",
+            "value": 0
+          },
           "has_available_tickets": true,
           "is_sold_out": false,
           "maximum_ticket_price": {
@@ -13666,6 +13954,18 @@
         "subcategory_id": "5010",
         "summary": "The best free Stand Up Comedy in London, every Sunday at 6pm at Brewhouse & Kitchen in North London.",
         "ticket_availability": {
+          "available_maximum_ticket_price": {
+            "currency": "GBP",
+            "display": "0.00 GBP",
+            "major_value": "0.00",
+            "value": 0
+          },
+          "available_minimum_ticket_price": {
+            "currency": "GBP",
+            "display": "0.00 GBP",
+            "major_value": "0.00",
+            "value": 0
+          },
           "has_available_tickets": true,
           "is_sold_out": false,
           "maximum_ticket_price": {
@@ -13798,6 +14098,18 @@
         "subcategory_id": "5010",
         "summary": "The best free Stand Up Comedy in London, every Sunday at 6pm at Brewhouse & Kitchen in North London.",
         "ticket_availability": {
+          "available_maximum_ticket_price": {
+            "currency": "GBP",
+            "display": "0.00 GBP",
+            "major_value": "0.00",
+            "value": 0
+          },
+          "available_minimum_ticket_price": {
+            "currency": "GBP",
+            "display": "0.00 GBP",
+            "major_value": "0.00",
+            "value": 0
+          },
           "has_available_tickets": true,
           "is_sold_out": false,
           "maximum_ticket_price": {
@@ -13930,6 +14242,18 @@
         "subcategory_id": "5010",
         "summary": "The best free Stand Up Comedy in London, every Sunday at 6pm at Brewhouse & Kitchen in North London.",
         "ticket_availability": {
+          "available_maximum_ticket_price": {
+            "currency": "GBP",
+            "display": "0.00 GBP",
+            "major_value": "0.00",
+            "value": 0
+          },
+          "available_minimum_ticket_price": {
+            "currency": "GBP",
+            "display": "0.00 GBP",
+            "major_value": "0.00",
+            "value": 0
+          },
           "has_available_tickets": true,
           "is_sold_out": false,
           "maximum_ticket_price": {
@@ -14062,6 +14386,18 @@
         "subcategory_id": "5010",
         "summary": "The best free Stand Up Comedy in London, every Sunday at 6pm at Brewhouse & Kitchen in North London.",
         "ticket_availability": {
+          "available_maximum_ticket_price": {
+            "currency": "GBP",
+            "display": "0.00 GBP",
+            "major_value": "0.00",
+            "value": 0
+          },
+          "available_minimum_ticket_price": {
+            "currency": "GBP",
+            "display": "0.00 GBP",
+            "major_value": "0.00",
+            "value": 0
+          },
           "has_available_tickets": true,
           "is_sold_out": false,
           "maximum_ticket_price": {
@@ -14194,6 +14530,18 @@
         "subcategory_id": "5010",
         "summary": "The best free Stand Up Comedy in London, every Sunday at 6pm at Brewhouse & Kitchen in North London.",
         "ticket_availability": {
+          "available_maximum_ticket_price": {
+            "currency": "GBP",
+            "display": "0.00 GBP",
+            "major_value": "0.00",
+            "value": 0
+          },
+          "available_minimum_ticket_price": {
+            "currency": "GBP",
+            "display": "0.00 GBP",
+            "major_value": "0.00",
+            "value": 0
+          },
           "has_available_tickets": true,
           "is_sold_out": false,
           "maximum_ticket_price": {
@@ -14326,6 +14674,18 @@
         "subcategory_id": "5010",
         "summary": "The best free Stand Up Comedy in London, every Sunday at 6pm at Brewhouse & Kitchen in North London.",
         "ticket_availability": {
+          "available_maximum_ticket_price": {
+            "currency": "GBP",
+            "display": "0.00 GBP",
+            "major_value": "0.00",
+            "value": 0
+          },
+          "available_minimum_ticket_price": {
+            "currency": "GBP",
+            "display": "0.00 GBP",
+            "major_value": "0.00",
+            "value": 0
+          },
           "has_available_tickets": true,
           "is_sold_out": false,
           "maximum_ticket_price": {
@@ -14458,6 +14818,18 @@
         "subcategory_id": "5010",
         "summary": "The best free Stand Up Comedy in London, every Sunday at 8pm at Brewhouse & Kitchen in Islington.",
         "ticket_availability": {
+          "available_maximum_ticket_price": {
+            "currency": "GBP",
+            "display": "0.00 GBP",
+            "major_value": "0.00",
+            "value": 0
+          },
+          "available_minimum_ticket_price": {
+            "currency": "GBP",
+            "display": "0.00 GBP",
+            "major_value": "0.00",
+            "value": 0
+          },
           "has_available_tickets": true,
           "is_sold_out": false,
           "maximum_ticket_price": {
@@ -14590,6 +14962,18 @@
         "subcategory_id": "5010",
         "summary": "The best free Stand Up Comedy in London, every Sunday at 8pm at Brewhouse & Kitchen in Islington.",
         "ticket_availability": {
+          "available_maximum_ticket_price": {
+            "currency": "GBP",
+            "display": "0.00 GBP",
+            "major_value": "0.00",
+            "value": 0
+          },
+          "available_minimum_ticket_price": {
+            "currency": "GBP",
+            "display": "0.00 GBP",
+            "major_value": "0.00",
+            "value": 0
+          },
           "has_available_tickets": true,
           "is_sold_out": false,
           "maximum_ticket_price": {
@@ -14722,6 +15106,18 @@
         "subcategory_id": "5010",
         "summary": "The best free Stand Up Comedy in London, every Sunday at 8pm at Brewhouse & Kitchen in Islington.",
         "ticket_availability": {
+          "available_maximum_ticket_price": {
+            "currency": "GBP",
+            "display": "0.00 GBP",
+            "major_value": "0.00",
+            "value": 0
+          },
+          "available_minimum_ticket_price": {
+            "currency": "GBP",
+            "display": "0.00 GBP",
+            "major_value": "0.00",
+            "value": 0
+          },
           "has_available_tickets": true,
           "is_sold_out": false,
           "maximum_ticket_price": {
@@ -14854,6 +15250,18 @@
         "subcategory_id": "5010",
         "summary": "The best free Stand Up Comedy in London, every Sunday at 8pm at Brewhouse & Kitchen in Islington.",
         "ticket_availability": {
+          "available_maximum_ticket_price": {
+            "currency": "GBP",
+            "display": "0.00 GBP",
+            "major_value": "0.00",
+            "value": 0
+          },
+          "available_minimum_ticket_price": {
+            "currency": "GBP",
+            "display": "0.00 GBP",
+            "major_value": "0.00",
+            "value": 0
+          },
           "has_available_tickets": true,
           "is_sold_out": false,
           "maximum_ticket_price": {
@@ -14986,6 +15394,18 @@
         "subcategory_id": "5010",
         "summary": "The best free Stand Up Comedy in London, every Sunday at 8pm at Brewhouse & Kitchen in Islington.",
         "ticket_availability": {
+          "available_maximum_ticket_price": {
+            "currency": "GBP",
+            "display": "0.00 GBP",
+            "major_value": "0.00",
+            "value": 0
+          },
+          "available_minimum_ticket_price": {
+            "currency": "GBP",
+            "display": "0.00 GBP",
+            "major_value": "0.00",
+            "value": 0
+          },
           "has_available_tickets": true,
           "is_sold_out": false,
           "maximum_ticket_price": {
@@ -15118,6 +15538,18 @@
         "subcategory_id": "5010",
         "summary": "The best free Stand Up Comedy in London, every Sunday at 8pm at Brewhouse & Kitchen in Islington.",
         "ticket_availability": {
+          "available_maximum_ticket_price": {
+            "currency": "GBP",
+            "display": "0.00 GBP",
+            "major_value": "0.00",
+            "value": 0
+          },
+          "available_minimum_ticket_price": {
+            "currency": "GBP",
+            "display": "0.00 GBP",
+            "major_value": "0.00",
+            "value": 0
+          },
           "has_available_tickets": true,
           "is_sold_out": false,
           "maximum_ticket_price": {
@@ -15250,6 +15682,18 @@
         "subcategory_id": "5010",
         "summary": "The best free Stand Up Comedy in London, every Sunday at 8pm at Brewhouse & Kitchen in Islington.",
         "ticket_availability": {
+          "available_maximum_ticket_price": {
+            "currency": "GBP",
+            "display": "0.00 GBP",
+            "major_value": "0.00",
+            "value": 0
+          },
+          "available_minimum_ticket_price": {
+            "currency": "GBP",
+            "display": "0.00 GBP",
+            "major_value": "0.00",
+            "value": 0
+          },
           "has_available_tickets": true,
           "is_sold_out": false,
           "maximum_ticket_price": {
@@ -15382,6 +15826,18 @@
         "subcategory_id": "5010",
         "summary": "The best free Stand Up Comedy in London, every Sunday at 8pm at Brewhouse & Kitchen in Islington.",
         "ticket_availability": {
+          "available_maximum_ticket_price": {
+            "currency": "GBP",
+            "display": "0.00 GBP",
+            "major_value": "0.00",
+            "value": 0
+          },
+          "available_minimum_ticket_price": {
+            "currency": "GBP",
+            "display": "0.00 GBP",
+            "major_value": "0.00",
+            "value": 0
+          },
           "has_available_tickets": true,
           "is_sold_out": false,
           "maximum_ticket_price": {
@@ -15632,6 +16088,18 @@
         "subcategory_id": "5010",
         "summary": "The best free Stand Up Comedy in London, every Tuesday at 7:30pm at Hoxley & Porter in Highbury & Islington / Angel.",
         "ticket_availability": {
+          "available_maximum_ticket_price": {
+            "currency": "GBP",
+            "display": "0.00 GBP",
+            "major_value": "0.00",
+            "value": 0
+          },
+          "available_minimum_ticket_price": {
+            "currency": "GBP",
+            "display": "0.00 GBP",
+            "major_value": "0.00",
+            "value": 0
+          },
           "has_available_tickets": true,
           "is_sold_out": false,
           "maximum_ticket_price": {
@@ -15757,6 +16225,18 @@
         "subcategory_id": "5010",
         "summary": "The best free Stand Up Comedy in London, every Tuesday at 7:30pm at Hoxley & Porter in Highbury & Islington / Angel.",
         "ticket_availability": {
+          "available_maximum_ticket_price": {
+            "currency": "GBP",
+            "display": "0.00 GBP",
+            "major_value": "0.00",
+            "value": 0
+          },
+          "available_minimum_ticket_price": {
+            "currency": "GBP",
+            "display": "0.00 GBP",
+            "major_value": "0.00",
+            "value": 0
+          },
           "has_available_tickets": true,
           "is_sold_out": false,
           "maximum_ticket_price": {
@@ -15882,6 +16362,18 @@
         "subcategory_id": "5010",
         "summary": "The best free Stand Up Comedy in London, every Tuesday at 7:30pm at Hoxley & Porter in Highbury & Islington / Angel.",
         "ticket_availability": {
+          "available_maximum_ticket_price": {
+            "currency": "GBP",
+            "display": "0.00 GBP",
+            "major_value": "0.00",
+            "value": 0
+          },
+          "available_minimum_ticket_price": {
+            "currency": "GBP",
+            "display": "0.00 GBP",
+            "major_value": "0.00",
+            "value": 0
+          },
           "has_available_tickets": true,
           "is_sold_out": false,
           "maximum_ticket_price": {
@@ -16007,6 +16499,18 @@
         "subcategory_id": "5010",
         "summary": "The best free Stand Up Comedy in London, every Tuesday at 7:30pm at Hoxley & Porter in Highbury & Islington / Angel.",
         "ticket_availability": {
+          "available_maximum_ticket_price": {
+            "currency": "GBP",
+            "display": "0.00 GBP",
+            "major_value": "0.00",
+            "value": 0
+          },
+          "available_minimum_ticket_price": {
+            "currency": "GBP",
+            "display": "0.00 GBP",
+            "major_value": "0.00",
+            "value": 0
+          },
           "has_available_tickets": true,
           "is_sold_out": false,
           "maximum_ticket_price": {
@@ -16132,6 +16636,18 @@
         "subcategory_id": "5010",
         "summary": "The best free Stand Up Comedy in London, every Tuesday at 7:30pm at Hoxley & Porter in Highbury & Islington / Angel.",
         "ticket_availability": {
+          "available_maximum_ticket_price": {
+            "currency": "GBP",
+            "display": "0.00 GBP",
+            "major_value": "0.00",
+            "value": 0
+          },
+          "available_minimum_ticket_price": {
+            "currency": "GBP",
+            "display": "0.00 GBP",
+            "major_value": "0.00",
+            "value": 0
+          },
           "has_available_tickets": true,
           "is_sold_out": false,
           "maximum_ticket_price": {
@@ -16257,6 +16773,18 @@
         "subcategory_id": "5010",
         "summary": "The best free Stand Up Comedy in London, every Tuesday at 7:30pm at Hoxley & Porter in Highbury & Islington / Angel.",
         "ticket_availability": {
+          "available_maximum_ticket_price": {
+            "currency": "GBP",
+            "display": "0.00 GBP",
+            "major_value": "0.00",
+            "value": 0
+          },
+          "available_minimum_ticket_price": {
+            "currency": "GBP",
+            "display": "0.00 GBP",
+            "major_value": "0.00",
+            "value": 0
+          },
           "has_available_tickets": true,
           "is_sold_out": false,
           "maximum_ticket_price": {
@@ -16382,6 +16910,18 @@
         "subcategory_id": "5010",
         "summary": "The best free Stand Up Comedy in London, every Tuesday at 7:30pm at Hoxley & Porter in Highbury & Islington / Angel.",
         "ticket_availability": {
+          "available_maximum_ticket_price": {
+            "currency": "GBP",
+            "display": "0.00 GBP",
+            "major_value": "0.00",
+            "value": 0
+          },
+          "available_minimum_ticket_price": {
+            "currency": "GBP",
+            "display": "0.00 GBP",
+            "major_value": "0.00",
+            "value": 0
+          },
           "has_available_tickets": true,
           "is_sold_out": false,
           "maximum_ticket_price": {
@@ -16507,6 +17047,18 @@
         "subcategory_id": "5010",
         "summary": "The best free Stand Up Comedy in London, every Tuesday at 7:30pm at Hoxley & Porter in Highbury & Islington / Angel.",
         "ticket_availability": {
+          "available_maximum_ticket_price": {
+            "currency": "GBP",
+            "display": "0.00 GBP",
+            "major_value": "0.00",
+            "value": 0
+          },
+          "available_minimum_ticket_price": {
+            "currency": "GBP",
+            "display": "0.00 GBP",
+            "major_value": "0.00",
+            "value": 0
+          },
           "has_available_tickets": true,
           "is_sold_out": false,
           "maximum_ticket_price": {
