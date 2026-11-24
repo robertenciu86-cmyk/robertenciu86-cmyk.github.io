@@ -1,6 +1,6 @@
 {
   "lastmod": {
-    "/": "2026-11-23",
+    "/": "2026-11-24",
     "/events/bear-hug-comedy-free-live-stand-up-comedy-night-central-london-2026-11-25-2000-2002640634046/": "2026-09-30",
     "/events/bear-hug-comedy-free-live-stand-up-comedy-night-central-london-2026-12-09-2000-2002640636052/": "2026-09-30",
     "/events/bear-hug-comedy-free-live-stand-up-comedy-night-central-london-2026-12-23-2000-2002640715289/": "2026-09-30",
@@ -21,7 +21,6 @@
     "/events/free-comedy-every-sunday-at-6pm-in-north-london-2026-12-27-1800-2004552853546/": "2026-11-08",
     "/events/free-comedy-every-sunday-at-6pm-in-north-london-2027-01-03-1800-2004552854549/": "2026-11-08",
     "/events/free-comedy-every-sunday-at-6pm-in-north-london-2027-01-10-1800-2004552855552/": "2026-11-08",
-    "/events/is-it-lington-tuesday-comedy-2026-11-24-1930-2004667258735/": "2026-11-10",
     "/events/is-it-lington-tuesday-comedy-2026-12-01-1930-2004667259738/": "2026-11-10",
     "/events/is-it-lington-tuesday-comedy-2026-12-08-1930-2004667260741/": "2026-11-10",
     "/events/is-it-lington-tuesday-comedy-2026-12-15-1930-2004667261744/": "2026-11-10",
@@ -44,13 +43,13 @@
     "/events/islington-sunday-comedy-8pm-2027-01-03-2000-2004552958861/": "2026-11-08",
     "/events/islington-sunday-comedy-8pm-2027-01-10-2000-2004552959864/": "2026-11-08",
     "/hire-comedians-london/": "2026-06-15",
-    "/shows/": "2026-11-23",
-    "/shows/bear-hug-comedy-free-live-stand-up-comedy-night-central-london/": "2026-11-23",
-    "/shows/byob-comedy-peckham/": "2026-11-23",
-    "/shows/free-comedy-every-sunday-at-6pm-in-north-london/": "2026-11-23",
-    "/shows/is-it-lington-tuesday-comedy/": "2026-11-23",
-    "/shows/islington-sunday-comedy-6pm/": "2026-11-23",
-    "/shows/islington-sunday-comedy-8pm/": "2026-11-23",
+    "/shows/": "2026-11-24",
+    "/shows/bear-hug-comedy-free-live-stand-up-comedy-night-central-london/": "2026-11-24",
+    "/shows/byob-comedy-peckham/": "2026-11-24",
+    "/shows/free-comedy-every-sunday-at-6pm-in-north-london/": "2026-11-24",
+    "/shows/is-it-lington-tuesday-comedy/": "2026-11-24",
+    "/shows/islington-sunday-comedy-6pm/": "2026-11-24",
+    "/shows/islington-sunday-comedy-8pm/": "2026-11-24",
     "/stay-in-touch/": "2026-06-15"
   },
   "occurrences": {
@@ -15498,7 +15497,7 @@
       },
       "last_seen": "2026-11-24",
       "path": "/events/is-it-lington-tuesday-comedy-2026-11-24-1930-2004667258735/",
-      "status": "live"
+      "status": "expired"
     },
     "2004667259738": {
       "event": {
